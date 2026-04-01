@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "usr_grp_nm": "개발 그룹",
+      "tnt_nm": "테넌트A",
+      "total_user_cnt": 120,
+      "active_user_cnt": 108
+    },
+    {
+      "usr_grp_nm": "업무 그룹",
+      "tnt_nm": "테넌트B",
+      "total_user_cnt": 95,
+      "active_user_cnt": 88
+    },
+    {
+      "usr_grp_nm": "기획 그룹",
+      "tnt_nm": "테넌트A",
+      "total_user_cnt": 55,
+      "active_user_cnt": 51
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

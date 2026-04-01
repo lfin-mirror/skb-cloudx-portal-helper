@@ -1,0 +1,25 @@
+{
+  "data": {
+    "permission_yn": "N",
+    "acct_sts_cd": "U013NR",
+    "cert_plcy_id": "bf8db73f-ab36-11f0-8557-3a7bf606d4cf",
+    "cert_plcy_tgt_cd": "U003S",
+    "mob_no": "***",
+    "cert_plcy_tgt_cd_nm": "Super Admin 기본 인증정책",
+    "acct_conn_id": "***@***.kr",
+    "sms_recv_yn": "Y",
+    "acct_id": "8feb884b-eba8-11f0-a5c1-22b10486d9be",
+    "adm_grp_nm": "-",
+    "cert_plcy_nm": "기본 정책 (관리자)",
+    "acct_vlid_end_dt": "2026-12-31",
+    "adm_grp_id": "supadm",
+    "acct_vlid_stt_dt": "2026-01-06",
+    "acct_nm": "***",
+    "email": "***@***.kr",
+    "acct_sts_cd_nm": "정상",
+    "email_recv_yn": "Y",
+    "permission_reason": ""
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "host_nm": "compute-01",
+      "zone_nm": "zone-a",
+      "avg_cpu_pct": 65.3,
+      "max_cpu_pct": 92.1,
+      "min_cpu_pct": 22.4,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "host_nm": "compute-03",
+      "zone_nm": "zone-a",
+      "avg_cpu_pct": 58.7,
+      "max_cpu_pct": 88.5,
+      "min_cpu_pct": 18.2,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "host_nm": "compute-07",
+      "zone_nm": "zone-b",
+      "avg_cpu_pct": 41.0,
+      "max_cpu_pct": 72.3,
+      "min_cpu_pct": 12.5,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

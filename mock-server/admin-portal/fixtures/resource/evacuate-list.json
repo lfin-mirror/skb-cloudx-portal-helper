@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "host_id": "798d2cda-b61b-11f0-819b-4617b2bd76a9",
+      "host_nm": "test_tenant-compute-02",
+      "pfrm_host_id": "d049d94c-085e-4de5-99fe-45c612b44d8d",
+      "host_sts_cd": "H001ENA",
+      "host_sts_cd_nm": "활성",
+      "host_descp": null,
+      "host_ip": "192.168.1.2",
+      "ha_auto_mng_yn": "Y",
+      "hyper_typ": "QEMU",
+      "evac_sts_cd": "E001NONE",
+      "evac_sts_cd_nm": "없음",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "dng_sts_tm": null,
+      "evac_grp_id": null
+    },
+    {
+      "host_id": "3b26908e-ab39-11f0-bce4-22a1b8d92490",
+      "host_nm": "test_tenant-compute-01",
+      "pfrm_host_id": "142afe84-ca5f-46ed-a5b4-96f3056fe782",
+      "host_sts_cd": "H001ENA",
+      "host_sts_cd_nm": "활성",
+      "host_descp": null,
+      "host_ip": "192.168.1.1",
+      "ha_auto_mng_yn": "Y",
+      "hyper_typ": "QEMU",
+      "evac_sts_cd": "E001COMP",
+      "evac_sts_cd_nm": "완료",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "dng_sts_tm": "2026-01-23 16:47:04",
+      "evac_grp_id": "EVAC-GRP-001"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

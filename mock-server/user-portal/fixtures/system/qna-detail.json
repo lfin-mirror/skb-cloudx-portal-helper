@@ -1,0 +1,17 @@
+{
+  "data": {
+    "adv_req_wrt_no": 3,
+    "title": "개인 디스크 연결 후 Cloud PC에서 보이지 않습니다",
+    "adv_cont": "어제 개인 디스크를 VM-001에 연결했는데, Cloud PC에 로그인해도 드라이브가 표시되지 않습니다. 확인 부탁드립니다.",
+    "asw_cont": null,
+    "wri_att_file_l": [
+      {
+        "stor_file_id": "FILE-001",
+        "org_file_nm": "화면캡처_디스크없음.png",
+        "att_file_loc_cd": "U"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "acct_id": 101,
+      "acct_nm": "김운영",
+      "acct_conn_id": "ops_kim",
+      "email": "***@***.kr",
+      "mob_no": "010-1234-5678"
+    },
+    {
+      "acct_id": 102,
+      "acct_nm": "이관리",
+      "acct_conn_id": "admin_lee",
+      "email": "***@***.kr",
+      "mob_no": "010-9876-5432"
+    },
+    {
+      "acct_id": 103,
+      "acct_nm": "박보안",
+      "acct_conn_id": "sec_park",
+      "email": "***@***.kr",
+      "mob_no": "010-5555-7777"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

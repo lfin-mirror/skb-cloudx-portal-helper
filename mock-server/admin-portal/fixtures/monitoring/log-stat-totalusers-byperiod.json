@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "stat_dt": "2026-03-24",
+      "total_user_cnt": 310,
+      "active_user_cnt": 278,
+      "new_user_cnt": 3
+    },
+    {
+      "stat_dt": "2026-03-25",
+      "total_user_cnt": 314,
+      "active_user_cnt": 285,
+      "new_user_cnt": 4
+    },
+    {
+      "stat_dt": "2026-03-26",
+      "total_user_cnt": 320,
+      "active_user_cnt": 287,
+      "new_user_cnt": 6
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

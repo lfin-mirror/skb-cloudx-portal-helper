@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "acct_conn_id": "superadmin",
+      "acct_nm": "슈퍼 관리자",
+      "tnt_nm": "",
+      "serv_grp_nm": "",
+      "action_nm": "알람 설정 수정",
+      "log_dtm": "2026-03-26 10:05:22"
+    },
+    {
+      "acct_conn_id": "ops_kim",
+      "acct_nm": "김운영",
+      "tnt_nm": "테넌트A",
+      "serv_grp_nm": "개발 그룹",
+      "action_nm": "수신 그룹 등록",
+      "log_dtm": "2026-03-26 09:30:11"
+    },
+    {
+      "acct_conn_id": "admin_lee",
+      "acct_nm": "이관리",
+      "tnt_nm": "테넌트B",
+      "serv_grp_nm": "업무 그룹",
+      "action_nm": "사용자 계정 비활성화",
+      "log_dtm": "2026-03-25 16:45:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

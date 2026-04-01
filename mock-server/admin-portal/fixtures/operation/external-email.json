@@ -1,0 +1,22 @@
+{
+  "data": {
+    "linkage_type_cd": "A017EM",
+    "linkage_type_cd_nm": "EMAIL 연동",
+    "tnt_id": "ADMIN",
+    "smtp_host": "relay.skbroadband.com",
+    "smtp_port": "25",
+    "from_mail": "relay.cloudpc2@skbroadband.com",
+    "passwd_cryptval": "mock-encrypted-passwd",
+    "protocol_type": "A036TLS",
+    "descp": null,
+    "use_yn": "Y",
+    "reg_conn_id": "superadmin",
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_ts": "2025-10-17 21:41:32",
+    "mod_conn_id": "mgtsuper",
+    "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+    "mod_ts": "2026-02-04 09:15:40"
+  },
+  "errCode": null,
+  "errMsg": null
+}

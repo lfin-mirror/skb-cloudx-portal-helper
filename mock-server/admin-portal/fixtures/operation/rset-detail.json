@@ -1,0 +1,13 @@
+{
+  "data": {
+    "rset_plcy_id": "RSET-PLY-001",
+    "rset_plcy_cd": "R001W",
+    "rset_end_time": "03:00",
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_ts": "2026-01-15 09:00:00",
+    "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+    "mod_ts": "2026-02-03 10:25:30"
+  },
+  "errCode": null,
+  "errMsg": null
+}

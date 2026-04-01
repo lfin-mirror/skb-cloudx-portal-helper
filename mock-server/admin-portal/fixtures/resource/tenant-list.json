@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "tnt_id": "TNT-001",
+      "tnt_nm": "개발팀",
+      "tnt_grp_id": "TG-001",
+      "tnt_stat_cd": "T001ACT"
+    },
+    {
+      "tnt_id": "TNT-002",
+      "tnt_nm": "운영팀",
+      "tnt_grp_id": "TG-001",
+      "tnt_stat_cd": "T001ACT"
+    },
+    {
+      "tnt_id": "TNT-003",
+      "tnt_nm": "테스트팀",
+      "tnt_grp_id": "TG-002",
+      "tnt_stat_cd": "T001SUS"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

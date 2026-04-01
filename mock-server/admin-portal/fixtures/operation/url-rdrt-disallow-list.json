@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "url_rdrt_disallow_plcy_id": "99db7d31-cf1c-11f0-819b-4617b2bd76a9",
+      "url_rdrt_disallow_plcy_nm": "test_url_redirection1",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "tnt_nm": "TEST_TENANT",
+      "dm_cnt": 2,
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2025-12-02 10:16:59",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-03 10:25:30",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

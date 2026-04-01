@@ -1,0 +1,33 @@
+{
+  "data": {
+    "metrics": [
+      {
+        "unit": "IOPS",
+        "graph": [
+          {
+            "name": "NAS Read",
+            "metrics": [
+              { "timestamp": 1742990400, "value": "1250" },
+              { "timestamp": 1742994000, "value": "1480" },
+              { "timestamp": 1742997600, "value": "980" },
+              { "timestamp": 1743001200, "value": "2100" },
+              { "timestamp": 1743004800, "value": "1750" }
+            ]
+          },
+          {
+            "name": "NAS Write",
+            "metrics": [
+              { "timestamp": 1742990400, "value": "850" },
+              { "timestamp": 1742994000, "value": "920" },
+              { "timestamp": 1742997600, "value": "780" },
+              { "timestamp": 1743001200, "value": "1300" },
+              { "timestamp": 1743004800, "value": "1100" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

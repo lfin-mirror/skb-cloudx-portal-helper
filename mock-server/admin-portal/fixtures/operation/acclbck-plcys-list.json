@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "acc_blck_plcy_id": "363eb356-e01d-41a2-bae7-a76599d32528",
+      "acc_blck_plcy_nm": "***",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "reg_ts": "2026-02-04 19:12:46",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-04 19:12:46",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    {
+      "acc_blck_plcy_id": "ceab2764-15ab-49ed-a1fb-cd53a99dc6ef",
+      "acc_blck_plcy_nm": "internal",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2025-11-12 14:17:57",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_ts": "2025-12-02 14:28:25",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    {
+      "acc_blck_plcy_id": "69a6f3f4-8908-4381-ad58-2f3184fd72d5",
+      "acc_blck_plcy_nm": "external",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2025-11-12 13:16:44",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_ts": "2025-12-02 14:28:19",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

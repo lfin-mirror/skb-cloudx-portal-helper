@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "ui_file_div_nm": "Windows64 Client",
+      "ui_file_nm": "CloudX_VDI_Client_v3.2.1_Windows64.exe",
+      "stor_file_id": "FILE-WIN-001",
+      "mob_url": null,
+      "title": "CloudX VDI 클라이언트 (Windows 64비트)"
+    },
+    {
+      "ui_file_div_nm": "MacOS Client",
+      "ui_file_nm": "CloudX_VDI_Client_v3.2.1_MacOS.dmg",
+      "stor_file_id": "FILE-MAC-001",
+      "mob_url": null,
+      "title": "CloudX VDI 클라이언트 (macOS)"
+    },
+    {
+      "ui_file_div_nm": "PC Client 매뉴얼",
+      "ui_file_nm": "CloudX_사용자_매뉴얼_v2.0.pdf",
+      "stor_file_id": "FILE-MAN-001",
+      "mob_url": null,
+      "title": "CloudX 사용자 포털 이용 매뉴얼"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

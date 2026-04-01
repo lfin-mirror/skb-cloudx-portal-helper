@@ -1,0 +1,13 @@
+{
+  "data": {
+    "menu_id": "MENU-001",
+    "menu_nm": "가상PC 관리",
+    "menu_url": "/vms",
+    "par_menu_id": "",
+    "menu_lv": 1,
+    "sort_ord": 1,
+    "use_yn": "Y"
+  },
+  "errCode": null,
+  "errMsg": null
+}

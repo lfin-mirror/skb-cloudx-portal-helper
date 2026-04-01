@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "faq_wrt_no": 1,
+      "title": "가상PC에 접속이 안 됩니다. 어떻게 해야 하나요?",
+      "faq_typ_cd": "A006USG",
+      "post_yn": "Y",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-03-01 10:00:00"
+    },
+    {
+      "faq_wrt_no": 2,
+      "title": "비밀번호를 잊어버렸습니다. 초기화 방법을 알려주세요.",
+      "faq_typ_cd": "A006ACC",
+      "post_yn": "Y",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-02-20 09:00:00"
+    },
+    {
+      "faq_wrt_no": 3,
+      "title": "USB 장치를 가상PC에서 사용하려면 어떻게 해야 하나요?",
+      "faq_typ_cd": "A006USG",
+      "post_yn": "Y",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-02-10 14:00:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

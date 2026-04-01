@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "host_nm": "compute-01",
+      "zone_nm": "zone-a",
+      "avg_rx_mbps": 28.4,
+      "avg_tx_mbps": 12.1,
+      "max_rx_mbps": 95.3,
+      "max_tx_mbps": 45.8,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "host_nm": "compute-03",
+      "zone_nm": "zone-a",
+      "avg_rx_mbps": 35.7,
+      "avg_tx_mbps": 18.4,
+      "max_rx_mbps": 120.5,
+      "max_tx_mbps": 60.2,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "host_nm": "compute-07",
+      "zone_nm": "zone-b",
+      "avg_rx_mbps": 15.2,
+      "avg_tx_mbps": 7.8,
+      "max_rx_mbps": 55.0,
+      "max_tx_mbps": 25.3,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

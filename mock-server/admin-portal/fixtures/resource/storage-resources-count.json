@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "volm_typ_id": "2f901def-f786-4fbc-8b59-b3368963297b",
+      "volm_typ_nm": "wadfasdfa",
+      "volm_usg_typ": "U034BOT",
+      "volm_usg_typ_nm": "겸용",
+      "allo_vm_cnt": 0,
+      "allo_dsk_cnt": 0,
+      "reg_id": "9de275ae-becb-11f0-819b-4617b2bd76a9",
+      "reg_conn_id": null,
+      "reg_nm": null,
+      "reg_ts": "2025-11-13 11:58:20",
+      "mod_id": "9de275ae-becb-11f0-819b-4617b2bd76a9",
+      "mod_conn_id": null,
+      "mod_nm": null,
+      "mod_ts": "2026-03-27 12:35:00"
+    },
+    {
+      "volm_typ_id": "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340",
+      "volm_typ_nm": "netapp",
+      "volm_usg_typ": "U034BOT",
+      "volm_usg_typ_nm": "겸용",
+      "allo_vm_cnt": 9,
+      "allo_dsk_cnt": 47,
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_conn_id": "superadmin",
+      "reg_nm": "SuperAdmin",
+      "reg_ts": "2025-10-17 18:11:15",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_conn_id": "superadmin",
+      "mod_nm": "SuperAdmin",
+      "mod_ts": "2026-03-27 12:35:00"
+    }
+  ],
+  "pageinfo": {
+    "count": 2,
+    "ispaging": false
+  },
+  "errCode": null,
+  "errMsg": null
+}

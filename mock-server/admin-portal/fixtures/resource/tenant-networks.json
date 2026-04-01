@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "nw_id": "NW-V001",
+      "nw_nm": "가상 네트워크 01",
+      "sbn_id": "SBN-001"
+    },
+    {
+      "nw_id": "NW-V002",
+      "nw_nm": "가상 네트워크 02",
+      "sbn_id": "SBN-002"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

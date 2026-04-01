@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "api_id": 1,
+      "api_nm": "가상PC 목록 조회",
+      "api_url": "/v1/resource/vms",
+      "http_meth_cd": "GET",
+      "use_yn": "Y"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

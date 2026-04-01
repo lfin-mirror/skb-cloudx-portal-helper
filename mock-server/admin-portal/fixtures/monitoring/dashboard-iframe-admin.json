@@ -1,0 +1,7 @@
+{
+  "data": {
+    "iframe_path": "http://grafana.internal:3000/d/admin-dashboard?orgId=1&kiosk=tv"
+  },
+  "errCode": null,
+  "errMsg": null
+}

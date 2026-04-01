@@ -1,0 +1,57 @@
+{
+  "data": {
+    "vm_mdata_id": "bf92a2c3-ab36-11f0-8557-3a7bf606d4cf",
+    "vm_mdata_tgt_cd": "U006S",
+    "vm_mdata_nm": "VM Metadata Default Policy",
+    "tnt_id": "ADMIN",
+    "mdata": {
+      "devices": {
+        "monitor_cnt": "3",
+        "monitor": "4KWIDE",
+        "usb30": {
+          "controller": { "type": "usb", "index": "0", "model": "nec-xhci" }
+        },
+        "usb20": [],
+        "usb_redirection": {
+          "redirdev": [
+            { "bus": "usb", "type": "spicevmc" },
+            { "bus": "usb", "type": "spicevmc" },
+            { "bus": "usb", "type": "spicevmc" },
+            { "bus": "usb", "type": "spicevmc" }
+          ]
+        },
+        "spice_server": {
+          "graphics": {
+            "type": "spice", "listen": "0.0.0.0", "port": "-1", "tlsPort": "-1", "autoport": "yes",
+            "image": { "compression": "glz" },
+            "jpeg": { "compression": "always" },
+            "zlib": { "compression": "always" },
+            "streaming": { "mode": "filter" },
+            "playback": { "mode": "off" }
+          }
+        },
+        "input": [
+          { "type": "mouse", "bus": "ps2" },
+          { "type": "keyboard", "bus": "ps2" }
+        ],
+        "sound": { "model": "ich6" }
+      },
+      "qemu_gstreamer": { "env": { "name": "GST_PLUGIN_PATH", "value": "default" } },
+      "qemu_h264": [
+        { "env": { "name": "SPICE_MAX_BIT_RATE", "value": "10000" } },
+        { "env": { "name": "SPICE_MIN_BIT_RATE", "value": "1000" } },
+        { "env": { "name": "SPICE_SHAREDRIVE_BWLIMIT", "value": "125000" } }
+      ]
+    },
+    "cont": "",
+    "volm_qos_plcy_id": "",
+    "reg_conn_id": "init",
+    "reg_id": "init",
+    "reg_ts": "2025-10-17 17:53:27",
+    "mod_conn_id": "***",
+    "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+    "mod_ts": "2026-02-02 18:12:40"
+  },
+  "errCode": null,
+  "errMsg": null
+}

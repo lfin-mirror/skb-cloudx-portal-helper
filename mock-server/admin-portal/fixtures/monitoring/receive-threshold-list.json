@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "alm_thd_id": 10,
+      "panel_id": "panel-cpu-001",
+      "panel_nm": "VPC CPU 사용률",
+      "thd_val": 90,
+      "thd_unit": "%",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-01-10 09:00:00"
+    },
+    {
+      "alm_thd_id": 11,
+      "panel_id": "panel-mem-001",
+      "panel_nm": "호스트 메모리 사용률",
+      "thd_val": 85,
+      "thd_unit": "%",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-01-10 09:05:00"
+    },
+    {
+      "alm_thd_id": 12,
+      "panel_id": "panel-disk-001",
+      "panel_nm": "스토리지 디스크 사용률",
+      "thd_val": 80,
+      "thd_unit": "%",
+      "reg_conn_id": "ops_kim",
+      "reg_ts": "2026-02-05 13:00:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

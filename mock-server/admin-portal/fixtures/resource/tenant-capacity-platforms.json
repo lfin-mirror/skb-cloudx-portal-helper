@@ -1,0 +1,20 @@
+{
+  "data": {
+    "platforms": [
+      {
+        "host_id": "HOST-001",
+        "host_nm": "compute-01",
+        "vcpu_avail": 40,
+        "vmm_avail": 163840
+      },
+      {
+        "host_id": "HOST-002",
+        "host_nm": "compute-02",
+        "vcpu_avail": 32,
+        "vmm_avail": 131072
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

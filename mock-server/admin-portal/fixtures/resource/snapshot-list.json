@@ -1,0 +1,43 @@
+{
+  "data": {
+    "acct_conn_id": "***",
+    "acct_id": "554c6d89-afca-11f0-b1c9-d6d4b9a99c07",
+    "acct_nm": "***",
+    "vm_auth_id": "DI0-150001",
+    "vm_id": "a40aea6b-2439-4b46-9c74-266e43e9a6b0",
+    "vm_nm": "WD00-0I0-141003",
+    "max_snap_cnt": 5,
+    "snap_list": [
+      {
+        "snap_id": "snap-001-aaa1-bbbb-cccc-ddddeeee0001",
+        "vm_id": "a40aea6b-2439-4b46-9c74-266e43e9a6b0",
+        "cre_mtd_cd": "S003MAN",
+        "cre_mtd_cd_nm": "수동",
+        "snap_sts_cd": "S001INAC",
+        "snap_sts_cd_nm": "비활성",
+        "rec_usg_yn": "N",
+        "rec_sts_cd": null,
+        "rec_sts_cd_nm": null,
+        "del_yn": "N",
+        "reg_ts": "2026-03-01 03:00:00",
+        "mod_ts": "2026-03-01 03:00:00"
+      },
+      {
+        "snap_id": "snap-002-aaa2-bbbb-cccc-ddddeeee0002",
+        "vm_id": "a40aea6b-2439-4b46-9c74-266e43e9a6b0",
+        "cre_mtd_cd": "S003MAN",
+        "cre_mtd_cd_nm": "수동",
+        "snap_sts_cd": "S001CRE",
+        "snap_sts_cd_nm": "생성중",
+        "rec_usg_yn": "N",
+        "rec_sts_cd": null,
+        "rec_sts_cd_nm": null,
+        "del_yn": "N",
+        "reg_ts": "2026-03-15 03:00:00",
+        "mod_ts": "2026-03-15 03:00:00"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

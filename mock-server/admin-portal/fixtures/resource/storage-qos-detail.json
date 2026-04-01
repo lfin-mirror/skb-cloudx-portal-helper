@@ -1,0 +1,24 @@
+{
+  "data": {
+    "volm_qos_plcy_id": "VQOS-001",
+    "volm_qos_plcy_nm": "SSD QoS 정책",
+    "volm_typ_id": null,
+    "volm_typ_nm": null,
+    "volm_qos_rule_unit_cd": "V018IOP",
+    "volm_qos_rule_unit_cd_nm": "IOPS",
+    "volm_read": 5000,
+    "volm_read_max": 10000,
+    "volm_write": 3000,
+    "volm_write_max": 6000,
+    "reg_id": null,
+    "reg_conn_id": "***",
+    "reg_nm": "***",
+    "reg_ts": null,
+    "mod_id": null,
+    "mod_conn_id": "***",
+    "mod_nm": "***",
+    "mod_ts": null
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,16 @@
+{
+    "data": {
+        "reg_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+        "reg_conn_id": "***@***.kr",
+        "reg_ts": "2025-11-06 19:17:05",
+        "mod_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+        "mod_conn_id": "***@***.kr",
+        "mod_ts": "2025-11-06 19:17:05",
+        "usb_vendor_id": "0ad5d528-cff5-469b-bb7b-498ca2a32374",
+        "usb_vendor_target_code": "U006T",
+        "usb_vendor_uid": "05ac",
+        "usb_vendor_name": "Apple, Inc.",
+        "usb_vendor_description": "Apple Company",
+        "tenant_id": "02157c4b5e534cb492ed5c886d3b44d7"
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "volm_typ_id": "VT-001",
+      "volm_typ_nm": "SSD 볼륨"
+    },
+    {
+      "volm_typ_id": "VT-002",
+      "volm_typ_nm": "HDD 볼륨"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

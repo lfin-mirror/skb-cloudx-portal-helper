@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "menu_id": "T",
+      "menu_nm": "T",
+      "menuList": [
+        {
+          "menu_id": "T01",
+          "menu_nm": "테넌트 대시보드",
+          "menuList": []
+        },
+        {
+          "menu_id": "T02",
+          "menu_nm": "사용자 정보",
+          "menuList": [
+            { "menu_id": "T0201", "menu_nm": "사용자 그룹", "menuList": [] },
+            { "menu_id": "T0202", "menu_nm": "사용자", "menuList": [] },
+            { "menu_id": "T0203", "menu_nm": "업무 요청", "menuList": [] },
+            { "menu_id": "T0204", "menu_nm": "단말 접속", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "T03",
+          "menu_nm": "가상 PC 관리",
+          "menuList": [
+            { "menu_id": "T0301", "menu_nm": "가상 PC 풀", "menuList": [] },
+            { "menu_id": "T0302", "menu_nm": "가상 PC 그룹", "menuList": [] },
+            { "menu_id": "T0303", "menu_nm": "가상 PC", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "T04",
+          "menu_nm": "정책",
+          "menuList": [
+            { "menu_id": "T0401", "menu_nm": "사용자 인증 정책", "menuList": [] },
+            {
+              "menu_id": "T0402",
+              "menu_nm": "상세 정책",
+              "menuList": [
+                { "menu_id": "T040201", "menu_nm": "예외 네트워크", "menuList": [] },
+                { "menu_id": "T040202", "menu_nm": "접근 통제", "menuList": [] }
+              ]
+            },
+            { "menu_id": "T0403", "menu_nm": "가상 PC 정책", "menuList": [] },
+            { "menu_id": "T0404", "menu_nm": "백업/스냅샷 정책", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "T05",
+          "menu_nm": "모니터링/통계",
+          "menuList": [
+            { "menu_id": "T0501", "menu_nm": "사용자 통계", "menuList": [] },
+            { "menu_id": "T0502", "menu_nm": "가상 PC 통계", "menuList": [] },
+            { "menu_id": "T0503", "menu_nm": "품질 통계", "menuList": [] },
+            { "menu_id": "T0504", "menu_nm": "감사로그", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "T06",
+          "menu_nm": "관리자",
+          "menuList": [
+            { "menu_id": "T0601", "menu_nm": "관리자 계정", "menuList": [] },
+            { "menu_id": "T0602", "menu_nm": "관리자 그룹", "menuList": [] }
+          ]
+        }
+      ]
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

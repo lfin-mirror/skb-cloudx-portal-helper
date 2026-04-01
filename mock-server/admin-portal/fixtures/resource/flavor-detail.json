@@ -1,0 +1,11 @@
+{
+  "data": {
+    "flavor_id": "FLVR-001",
+    "flavor_nm": "Small (4vCPU/8GB)",
+    "vcpu_cnt": 4,
+    "vmm_capa": 8192,
+    "vhd_capa": 100
+  },
+  "errCode": null,
+  "errMsg": null
+}

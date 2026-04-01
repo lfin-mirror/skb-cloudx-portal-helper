@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "vpc_nm": "vpc-dev-01",
+      "tnt_nm": "테넌트A",
+      "acct_nm": "최사용",
+      "cpu_usage_avg": 42.3,
+      "mem_usage_avg": 65.1,
+      "conn_cnt": 42,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "vpc_nm": "vpc-dev-03",
+      "tnt_nm": "테넌트B",
+      "acct_nm": "정이용",
+      "cpu_usage_avg": 28.7,
+      "mem_usage_avg": 50.4,
+      "conn_cnt": 35,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "vpc_nm": "vpc-prod-01",
+      "tnt_nm": "테넌트A",
+      "acct_nm": "강고객",
+      "cpu_usage_avg": 55.0,
+      "mem_usage_avg": 72.8,
+      "conn_cnt": 28,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,21 @@
+{
+  "data": {
+    "usg_yn": "Y",
+    "ver": "1.0",
+    "reg_ts": "2025-10-20 11:36:28",
+    "ui_file_div_cd": "A009P",
+    "ui_file_div_nm": "Linux32 Client",
+    "ptal_ui_file_id": "949d1404-ad5d-11f0-bce4-22a1b8d92490",
+    "ui_file_nm": "user.msi",
+    "reg_id": "initdata",
+    "descp": "",
+    "mob_url": null,
+    "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+    "hash_cd_val": "111",
+    "mod_ts": "2026-02-04 18:49:18",
+    "forc_upd_ver": "0.9",
+    "stor_file_id": "20260204cbdeeb"
+  },
+  "errCode": null,
+  "errMsg": null
+}

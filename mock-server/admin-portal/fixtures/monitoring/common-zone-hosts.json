@@ -1,0 +1,9 @@
+{
+  "data": [
+    { "host_id": "HOST-001", "host_nm": "compute-01" },
+    { "host_id": "HOST-003", "host_nm": "compute-03" },
+    { "host_id": "HOST-005", "host_nm": "compute-05" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

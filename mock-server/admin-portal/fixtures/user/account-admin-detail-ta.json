@@ -1,0 +1,25 @@
+{
+  "data": {
+    "permission_yn": "N",
+    "acct_sts_cd": "U013NR",
+    "cert_plcy_id": "29e84e6b-ab57-11f0-8557-3a7bf606d4cf",
+    "cert_plcy_tgt_cd": "U003B",
+    "mob_no": "***",
+    "cert_plcy_tgt_cd_nm": "기본 인증정책",
+    "acct_conn_id": "***@***.kr",
+    "sms_recv_yn": "Y",
+    "acct_id": "3692d6e7-ef59-11f0-814a-d2425695d54c",
+    "adm_grp_nm": "전체 권한",
+    "cert_plcy_nm": "TEST_TENANT 관리자 기본 인증 정책",
+    "acct_vlid_end_dt": "2026-12-31",
+    "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+    "adm_grp_id": "a67c2a1c-d0e9-4772-98bd-4dc636e4c666",
+    "acct_vlid_stt_dt": "2026-01-12",
+    "acct_nm": "***",
+    "email": "***@***.kr",
+    "acct_sts_cd_nm": "정상",
+    "email_recv_yn": "Y"
+  },
+  "errCode": null,
+  "errMsg": null
+}

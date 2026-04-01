@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "audit_id": 3001,
+      "acct_conn_id": "superadmin",
+      "acct_nm": "슈퍼 관리자",
+      "api_url": "/v1/management/alarm",
+      "http_meth_cd": "GET",
+      "req_param": "{\"page\":1,\"limit\":20}",
+      "resp_cd": "200",
+      "log_dtm": "2026-03-26 10:05:22"
+    },
+    {
+      "audit_id": 3002,
+      "acct_conn_id": "ops_kim",
+      "acct_nm": "김운영",
+      "api_url": "/v1/management/alarm/1",
+      "http_meth_cd": "PUT",
+      "req_param": "{\"usg_yn\":\"N\"}",
+      "resp_cd": "200",
+      "log_dtm": "2026-03-26 09:30:11"
+    },
+    {
+      "audit_id": 3003,
+      "acct_conn_id": "admin_lee",
+      "acct_nm": "이관리",
+      "api_url": "/v1/management/receive/group",
+      "http_meth_cd": "POST",
+      "req_param": "{\"alm_rcv_grp_nm\":\"신규 그룹\"}",
+      "resp_cd": "200",
+      "log_dtm": "2026-03-25 16:45:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

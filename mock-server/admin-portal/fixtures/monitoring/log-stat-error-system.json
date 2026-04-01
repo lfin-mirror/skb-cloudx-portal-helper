@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "error_cd": "ERR_VM_001",
+      "error_nm": "VM 기동 실패",
+      "service_cd": "RESOURCE",
+      "occur_cnt": 12,
+      "last_occur_dtm": "2026-03-26 08:45:00"
+    },
+    {
+      "error_cd": "ERR_NET_003",
+      "error_nm": "네트워크 연결 타임아웃",
+      "service_cd": "NETWORK",
+      "occur_cnt": 5,
+      "last_occur_dtm": "2026-03-25 21:30:00"
+    },
+    {
+      "error_cd": "ERR_STR_002",
+      "error_nm": "스토리지 마운트 실패",
+      "service_cd": "STORAGE",
+      "occur_cnt": 3,
+      "last_occur_dtm": "2026-03-24 14:20:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

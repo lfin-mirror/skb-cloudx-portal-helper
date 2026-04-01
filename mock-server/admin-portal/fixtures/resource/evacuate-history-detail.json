@@ -1,0 +1,58 @@
+{
+  "data": {
+    "host_nm": "test_tenant-compute-01",
+    "evac_grp_id": "EVAC-GRP-001",
+    "vmList": [
+      {
+        "evac_job_no": "1",
+        "evac_grp_id": "EVAC-GRP-001",
+        "tgt_host_nm": "test_tenant-compute-02",
+        "src_host_nm": "test_tenant-compute-01",
+        "tgt_vm_id": "a40aea6b-2439-4b46-9c74-266e43e9a6b0",
+        "tgt_vm_nm": "WD00-0I0-141003",
+        "evac_vm_sts_cd": "E002SUCC",
+        "evac_vm_sts_cd_nm": "성공",
+        "vm_power_sts_cd": "V002ONC",
+        "vm_power_sts_cd_nm": "켜짐",
+        "job_rslt_val": null,
+        "job_rslt_detl": null,
+        "reg_ts": "2026-01-23 16:47:04",
+        "mod_ts": "2026-01-23 16:52:10"
+      },
+      {
+        "evac_job_no": "2",
+        "evac_grp_id": "EVAC-GRP-001",
+        "tgt_host_nm": "test_tenant-compute-02",
+        "src_host_nm": "test_tenant-compute-01",
+        "tgt_vm_id": "b51bfb7c-3540-5c57-ad85-7728fd826e21",
+        "tgt_vm_nm": "WD00-0I0-141004",
+        "evac_vm_sts_cd": "E002SUCC",
+        "evac_vm_sts_cd_nm": "성공",
+        "vm_power_sts_cd": "V002OFC",
+        "vm_power_sts_cd_nm": "꺼짐",
+        "job_rslt_val": null,
+        "job_rslt_detl": null,
+        "reg_ts": "2026-01-23 16:48:00",
+        "mod_ts": "2026-01-23 16:52:10"
+      },
+      {
+        "evac_job_no": "3",
+        "evac_grp_id": "EVAC-GRP-001",
+        "tgt_host_nm": "test_tenant-compute-02",
+        "src_host_nm": "test_tenant-compute-01",
+        "tgt_vm_id": "c62cfc8d-4651-6d68-be96-8839ge937f32",
+        "tgt_vm_nm": "WD00-0I0-141005",
+        "evac_vm_sts_cd": "E002FAIL",
+        "evac_vm_sts_cd_nm": "실패",
+        "vm_power_sts_cd": "V002SUS",
+        "vm_power_sts_cd_nm": "일시중지",
+        "job_rslt_val": "ERROR",
+        "job_rslt_detl": "Failed to migrate VM",
+        "reg_ts": "2026-01-23 16:49:00",
+        "mod_ts": "2026-01-23 16:52:10"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

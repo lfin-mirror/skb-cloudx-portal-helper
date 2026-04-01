@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vmId": "vm-aabbcc001",
+    "vmPowerStateCode": "V002ONC",
+    "vmAllocationStatus": "할당됨",
+    "vmAllocationStatusCode": "U017DVA",
+    "tenantMethodCode": "V001DED",
+    "vmValidStartDate": "20250101",
+    "vmValidEndDate": "29990101",
+    "lastStartTime": "2026-03-25 09:00:00",
+    "lastUserConnectionTime": "2026-03-25 09:05:32",
+    "hostStatusCode": null,
+    "securityPolicyId": "SECPLCY-001",
+    "vmAuthorizationId": "VA-001",
+    "vmName": "VM-001",
+    "vcpuCount": 4,
+    "vmemoryCapacity": 8192,
+    "vharddiskCapacity": 100,
+    "ip": "192.168.10.101",
+    "adInterlockUsageYn": "Y",
+    "adInterlockSuccessYn": "Y",
+    "userVmConnectStatusCode": null
+  },
+  "errCode": null,
+  "errMsg": null
+}

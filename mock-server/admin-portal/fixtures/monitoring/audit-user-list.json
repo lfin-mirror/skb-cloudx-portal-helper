@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "audit_id": 4001,
+      "acct_conn_id": "user_choi",
+      "acct_nm": "최사용",
+      "tnt_nm": "테넌트A",
+      "api_url": "/api/v1/resource/vm/connect",
+      "http_meth_cd": "POST",
+      "req_param": "{\"vm_id\":\"vm-001\"}",
+      "resp_cd": "200",
+      "log_dtm": "2026-03-26 09:55:00"
+    },
+    {
+      "audit_id": 4002,
+      "acct_conn_id": "user_jung",
+      "acct_nm": "정이용",
+      "tnt_nm": "테넌트B",
+      "api_url": "/api/v1/resource/vm/disconnect",
+      "http_meth_cd": "POST",
+      "req_param": "{\"vm_id\":\"vm-003\"}",
+      "resp_cd": "200",
+      "log_dtm": "2026-03-26 08:20:00"
+    },
+    {
+      "audit_id": 4003,
+      "acct_conn_id": "user_kang",
+      "acct_nm": "강고객",
+      "tnt_nm": "테넌트A",
+      "api_url": "/api/v1/resource/vm/snapshot",
+      "http_meth_cd": "POST",
+      "req_param": "{\"vm_id\":\"vm-002\",\"snapshot_nm\":\"백업-0326\"}",
+      "resp_cd": "200",
+      "log_dtm": "2026-03-25 22:10:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

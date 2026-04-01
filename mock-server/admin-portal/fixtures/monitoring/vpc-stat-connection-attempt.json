@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "stat_dt": "2026-03-26",
+      "vpc_nm": "vpc-dev-01",
+      "tnt_nm": "테넌트A",
+      "acct_nm": "최사용",
+      "attempt_cnt": 5,
+      "success_cnt": 5,
+      "fail_cnt": 0
+    },
+    {
+      "stat_dt": "2026-03-26",
+      "vpc_nm": "vpc-prod-01",
+      "tnt_nm": "테넌트A",
+      "acct_nm": "강고객",
+      "attempt_cnt": 3,
+      "success_cnt": 2,
+      "fail_cnt": 1
+    },
+    {
+      "stat_dt": "2026-03-25",
+      "vpc_nm": "vpc-dev-03",
+      "tnt_nm": "테넌트B",
+      "acct_nm": "정이용",
+      "attempt_cnt": 4,
+      "success_cnt": 4,
+      "fail_cnt": 0
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "scert_infm_no": "1",
+      "infm_tm": "2026.03.27 03:00",
+      "infm_typ_cd": "M00530M",
+      "infm_typ_cd_nm": "30일 알림(e-mail)",
+      "scert_typ_cd": "M006SV",
+      "scert_typ_cd_nm": "서버 인증서",
+      "host_id": "127.0.0.1",
+      "host_nm": "localhost",
+      "vlid_stt_dt": "2024.10.22",
+      "vlid_end_dt": "2025.11.23",
+      "scert_ver": "3",
+      "isur_nm": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018",
+      "reg_id": "scheduler",
+      "reg_ts": "2026-03-27 03:00:58",
+      "mod_id": "scheduler",
+      "mod_ts": "2026-03-27 03:00:58"
+    },
+    {
+      "scert_infm_no": "2",
+      "infm_tm": "2026.03.27 03:00",
+      "infm_typ_cd": "M00530M",
+      "infm_typ_cd_nm": "30일 알림(e-mail)",
+      "scert_typ_cd": "M006SV",
+      "scert_typ_cd_nm": "서버 인증서",
+      "host_id": "127.0.0.1",
+      "host_nm": "localhost",
+      "vlid_stt_dt": "2024.10.22",
+      "vlid_end_dt": "2025.11.23",
+      "scert_ver": "3",
+      "isur_nm": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018",
+      "reg_id": "scheduler",
+      "reg_ts": "2026-03-27 03:00:58",
+      "mod_id": "scheduler",
+      "mod_ts": "2026-03-27 03:00:58"
+    },
+    {
+      "scert_infm_no": "3",
+      "infm_tm": "2026.03.26 03:00",
+      "infm_typ_cd": "M00530M",
+      "infm_typ_cd_nm": "30일 알림(e-mail)",
+      "scert_typ_cd": "M006SV",
+      "scert_typ_cd_nm": "서버 인증서",
+      "host_id": "127.0.0.1",
+      "host_nm": "localhost",
+      "vlid_stt_dt": "2024.10.22",
+      "vlid_end_dt": "2025.11.23",
+      "scert_ver": "3",
+      "isur_nm": "C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018",
+      "reg_id": "scheduler",
+      "reg_ts": "2026-03-26 03:00:37",
+      "mod_id": "scheduler",
+      "mod_ts": "2026-03-26 03:00:37"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

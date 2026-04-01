@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "volm_sched_plcy_id": "STOR-SCHED-001",
+      "volm_sched_plcy_nm": "일간 스케줄 정책",
+      "volm_sched_plcy_typ_cd": "S001D",
+      "volm_sched_plcy_typ_cd_nm": "일간",
+      "volm_sched_plcy_tgt_cd": "T001NAS",
+      "volm_sched_plcy_tgt_cd_nm": "NAS",
+      "volm_typ_id": null,
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2026-01-15 09:00:00",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-03 10:25:30"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

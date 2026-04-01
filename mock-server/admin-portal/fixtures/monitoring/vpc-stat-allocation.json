@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "host_nm": "compute-01",
+      "vpc_nm": "vpc-dev-01",
+      "cpu_total": 32,
+      "cpu_used": 18,
+      "mem_total": 131072,
+      "mem_used": 65536
+    },
+    {
+      "host_nm": "compute-01",
+      "vpc_nm": "vpc-dev-02",
+      "cpu_total": 32,
+      "cpu_used": 8,
+      "mem_total": 131072,
+      "mem_used": 32768
+    },
+    {
+      "host_nm": "compute-03",
+      "vpc_nm": "vpc-prod-01",
+      "cpu_total": 64,
+      "cpu_used": 40,
+      "mem_total": 262144,
+      "mem_used": 180224
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "adv_req_wrt_no": 1,
+      "title": "가상PC 할당 요청드립니다",
+      "adv_typ_cd_nm": "가상PC 관련",
+      "usr_grp_nm": "개발1팀",
+      "reg_conn_id": "user001",
+      "adv_req_tm": "2026-03-25 11:00:00"
+    },
+    {
+      "adv_req_wrt_no": 2,
+      "title": "스냅샷 복구가 되지 않습니다",
+      "adv_typ_cd_nm": "장애 신고",
+      "usr_grp_nm": "기획팀",
+      "reg_conn_id": "user002",
+      "adv_req_tm": "2026-03-24 16:30:00"
+    },
+    {
+      "adv_req_wrt_no": 3,
+      "title": "비밀번호 변경 문의",
+      "adv_typ_cd_nm": "계정 관련",
+      "usr_grp_nm": "영업팀",
+      "reg_conn_id": "user003",
+      "adv_req_tm": "2026-03-23 09:15:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

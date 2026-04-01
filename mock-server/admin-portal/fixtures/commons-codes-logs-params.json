@@ -1,0 +1,9 @@
+{
+  "data": [
+    { "cd": "tnt_id", "cd_nm": "테넌트 ID" },
+    { "cd": "vm_id", "cd_nm": "가상PC ID" },
+    { "cd": "acct_id", "cd_nm": "계정 ID" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

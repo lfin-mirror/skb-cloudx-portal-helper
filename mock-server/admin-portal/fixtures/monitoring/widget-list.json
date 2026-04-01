@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "widget_id": 1,
+      "widget_nm": "사용자 접속 현황",
+      "widget_typ": "chart_line",
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 2,
+      "widget_nm": "VPC 상태 현황",
+      "widget_typ": "chart_pie",
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 3,
+      "widget_nm": "알람 현황",
+      "widget_typ": "count_card",
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 4,
+      "widget_nm": "스토리지 사용량",
+      "widget_typ": "chart_gauge",
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 5,
+      "widget_nm": "이벤트 로그",
+      "widget_typ": "table",
+      "use_yn": "Y"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

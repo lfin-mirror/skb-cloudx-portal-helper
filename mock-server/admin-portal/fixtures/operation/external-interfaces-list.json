@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "linkage_type_cd": "EMAIL",
+      "linkage_type_cd_nm": "이메일",
+      "ad_itlk_usg_yn": "N",
+      "shar_str_usg_yn": "Y",
+      "reg_id": "init",
+      "reg_ts": "2025-10-17 17:53:27",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-03 10:25:30",
+      "reg_conn_id": "init",
+      "mod_conn_id": "***"
+    },
+    {
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "linkage_type_cd": "NETAPP",
+      "linkage_type_cd_nm": "네트워크 스토리지",
+      "ad_itlk_usg_yn": "N",
+      "shar_str_usg_yn": "Y",
+      "reg_id": "init",
+      "reg_ts": "2025-10-17 17:53:27",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-03 10:25:30",
+      "reg_conn_id": "init",
+      "mod_conn_id": "***"
+    },
+    {
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "linkage_type_cd": "AD",
+      "linkage_type_cd_nm": "AD 연동",
+      "ad_itlk_usg_yn": "Y",
+      "shar_str_usg_yn": "N",
+      "reg_id": "init",
+      "reg_ts": "2025-10-17 17:53:27",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-03 10:25:30",
+      "reg_conn_id": "init",
+      "mod_conn_id": "***"
+    },
+    {
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "linkage_type_cd": "OCTATCO",
+      "linkage_type_cd_nm": "Octatco",
+      "ad_itlk_usg_yn": "N",
+      "shar_str_usg_yn": "N",
+      "reg_id": "init",
+      "reg_ts": "2025-10-17 17:53:27",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-03 10:25:30",
+      "reg_conn_id": "init",
+      "mod_conn_id": "***"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

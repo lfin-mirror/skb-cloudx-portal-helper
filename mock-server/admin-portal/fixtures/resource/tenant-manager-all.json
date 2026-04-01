@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7", "tnt_nm": "TEST_TENANT", "dm_id": "default" },
+    { "tnt_id": "a3f2e1d0-bc45-11f0-9abc-1234567890ab", "tnt_nm": "개발팀", "dm_id": "default" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

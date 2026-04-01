@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "bkup_dsk_id": "bkup-001-aaa1-bbbb-cccc-ddddeeee0001",
+      "bkup_tgt_dsk_id": "6fe3ca0f-300e-4b88-9989-ed69072d3f0d",
+      "bkup_tgt_dsk_nm": "user01_1769566910532",
+      "bkup_dsk_nm": "user01_1769566910532_backup_01",
+      "max_bkup_cnt": "7",
+      "bkup_snap_id": null,
+      "job_sts_val": null,
+      "org_dsk_id": null,
+      "cre_mtd_cd": "B003SCH",
+      "cre_mtd_cd_nm": "스케줄",
+      "bkup_dsk_sts_cd": "B001FAIL",
+      "bkup_dsk_sts_cd_nm": "실패",
+      "rec_sts_cd": null,
+      "rec_sts_cd_nm": null,
+      "reg_ts": "2026-03-01 02:00:00",
+      "mod_ts": "2026-03-01 02:05:00"
+    },
+    {
+      "bkup_dsk_id": "bkup-002-aaa2-bbbb-cccc-ddddeeee0002",
+      "bkup_tgt_dsk_id": "6fe3ca0f-300e-4b88-9989-ed69072d3f0d",
+      "bkup_tgt_dsk_nm": "user01_1769566910532",
+      "bkup_dsk_nm": "user01_1769566910532_backup_02",
+      "max_bkup_cnt": "7",
+      "bkup_snap_id": null,
+      "job_sts_val": null,
+      "org_dsk_id": null,
+      "cre_mtd_cd": "B003SCH",
+      "cre_mtd_cd_nm": "스케줄",
+      "bkup_dsk_sts_cd": "B001PROC",
+      "bkup_dsk_sts_cd_nm": "진행중",
+      "rec_sts_cd": null,
+      "rec_sts_cd_nm": null,
+      "reg_ts": "2026-03-08 02:00:00",
+      "mod_ts": "2026-03-08 02:05:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

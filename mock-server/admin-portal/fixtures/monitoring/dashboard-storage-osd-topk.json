@@ -1,0 +1,40 @@
+{
+  "data": {
+    "threshold": [
+      {
+        "critical": 90,
+        "warning": 80,
+        "caution": 70
+      }
+    ],
+    "metrics": [
+      {
+        "name": "NAS",
+        "value": "0.56",
+        "labels": { "unitNm": "NAS-Unit-01" }
+      },
+      {
+        "name": "OS 디스크",
+        "value": "0.64",
+        "labels": { "unitNm": "OS-Disk-01" }
+      },
+      {
+        "name": "로컬 디스크",
+        "value": "0.48",
+        "labels": { "unitNm": "Local-Disk-02" }
+      },
+      {
+        "name": "NAS",
+        "value": "0.43",
+        "labels": { "unitNm": "NAS-Unit-02" }
+      },
+      {
+        "name": "OS 디스크",
+        "value": "0.38",
+        "labels": { "unitNm": "OS-Disk-03" }
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

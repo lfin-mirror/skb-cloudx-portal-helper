@@ -1,0 +1,6 @@
+{
+  "data": [
+    {"ca_typ_cd":"M006PB","secret_name":"CA","namespace":"cloudpc","version":"3","serial_number":"1ee5f221dfc623bd4333a8557","signature_algorithm":"SHA256withRSA","issuer":"OU=GlobalSign Root CA - R3, O=GlobalSign, CN=GlobalSign","subject":"C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018","valid_start":"2018-11-21 09:00:00","valid_end":"2028-11-21 09:00:00"}
+  ],
+  "errCode": null, "errMsg": null
+}

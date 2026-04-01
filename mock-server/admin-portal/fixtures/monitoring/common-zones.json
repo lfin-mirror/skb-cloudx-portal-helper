@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "zone_nm": "zone-a", "zone_display_nm": "존-A (서울)" },
+    { "zone_nm": "zone-b", "zone_display_nm": "존-B (부산)" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

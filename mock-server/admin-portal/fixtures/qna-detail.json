@@ -1,0 +1,20 @@
+{
+  "data": {
+    "adv_req_wrt_no": 1,
+    "title": "가상PC 할당 요청드립니다",
+    "adv_typ_cd_nm": "가상PC 관련",
+    "usr_grp_nm": "개발1팀",
+    "adv_cont": "<p>안녕하세요. 신규 입사자 3명에 대해 가상PC 할당을 요청드립니다. 빠른 처리 부탁드립니다.</p>",
+    "adv_req_tm": "2026-03-25 11:00:00",
+    "adv_req_acct_conn_id": "user001",
+    "adv_req_acct_nm": "김담당",
+    "asw_cont": "<p>안녕하세요. 요청하신 가상PC 3대를 할당 완료하였습니다. 이용 가이드를 참고하여 접속해 주세요.</p>",
+    "asw_acct_conn_id": "tenantadmin",
+    "asw_acct_nm": "테넌트 관리자",
+    "asw_reg_tm": "2026-03-25 14:00:00",
+    "wri_att_file_l": [],
+    "reg_conn_id": "user001"
+  },
+  "errCode": null,
+  "errMsg": null
+}

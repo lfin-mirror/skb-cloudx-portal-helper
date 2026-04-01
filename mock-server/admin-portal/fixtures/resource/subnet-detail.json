@@ -1,0 +1,31 @@
+{
+  "data": {
+    "sbn_id": "c7a73202-e488-4cb3-9b6a-fa1326fd4887",
+    "sbn_nm": "테스트서브넷",
+    "cidr": "192.168.0.0/24",
+    "sbn": "192.168.0.0",
+    "gw": "192.168.0.1",
+    "dns_1": "192.168.0.1",
+    "dns_2": "192.168.2.1",
+    "sbn_descp": null,
+    "nw_id": "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e",
+    "nw_nm": "tenant_network",
+    "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+    "nw_qos_plcy_nm": null,
+    "nw_qos_detail": null,
+    "usg_use_cd": "P004V",
+    "usg_use_cd_nm": "Virtual Network (Internal Network)",
+    "pool_usg_cnt": "0",
+    "port_usg_cnt": "0",
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_ts": "2025-12-17 09:47:24",
+    "reg_conn_id": "superadmin",
+    "reg_nm": "SuperAdmin",
+    "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "mod_conn_id": "superadmin",
+    "mod_nm": "SuperAdmin",
+    "mod_ts": "2025-12-17 09:47:24"
+  },
+  "errCode": null,
+  "errMsg": null
+}

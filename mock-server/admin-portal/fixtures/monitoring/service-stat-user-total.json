@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "tnt_nm": "테넌트A",
+      "total_user_cnt": 175,
+      "active_user_cnt": 158,
+      "total_vpc_cnt": 28,
+      "active_vpc_cnt": 25
+    },
+    {
+      "tnt_nm": "테넌트B",
+      "total_user_cnt": 95,
+      "active_user_cnt": 88,
+      "total_vpc_cnt": 15,
+      "active_vpc_cnt": 14
+    },
+    {
+      "tnt_nm": "테넌트C",
+      "total_user_cnt": 50,
+      "active_user_cnt": 41,
+      "total_vpc_cnt": 5,
+      "active_vpc_cnt": 3
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

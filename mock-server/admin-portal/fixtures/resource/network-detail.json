@@ -1,0 +1,29 @@
+{
+  "data": {
+    "nw_id": "52f2f93f-4571-41b9-8c29-ede42ee1128d",
+    "nw_nm": "public-net",
+    "usg_use_cd": "P004P",
+    "usg_use_cd_nm": "Physical Network (External Network)",
+    "nw_typ_cd": "P008FLT",
+    "nw_typ_cd_nm": "FLAT",
+    "nw_descp": null,
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_conn_id": "superadmin",
+    "reg_nm": "SuperAdmin",
+    "reg_ts": "2025-10-17 18:11:14",
+    "mod_id": "34dbe69d-afa6-11f0-8896-e288d288c3ed",
+    "mod_conn_id": "mgtsuper",
+    "mod_nm": "관리자",
+    "mod_ts": "2026-02-03 14:13:14",
+    "grp_usg_cnt": "2",
+    "port_usg_cnt": "14",
+    "subnet_cnt": "1",
+    "tenants": [{"tnt_id": "02157c4b5e534cb492ed5c886d3b44d7", "tnt_nm": "TEST_TENANT"}],
+    "subnets": [{"sbn_id": "7490641a-cea8-49e1-a996-5ff65b1b5a7d", "sbn_nm": "public-subnet", "cidr": "192.168.221.0/24", "sbn": null, "gw": "192.168.221.1", "dns_1": "8.8.8.8", "dns_2": "", "sbn_descp": null, "nw_id": "52f2f93f-4571-41b9-8c29-ede42ee1128d", "nw_nm": "public-net", "nw_qos_plcy_id": null, "nw_qos_plcy_nm": null, "nw_qos_detail": null, "usg_use_cd": "P004P", "usg_use_cd_nm": "Physical Network (External Network)", "pool_usg_cnt": "4", "port_usg_cnt": "14", "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf", "reg_ts": "2025-10-17 18:11:14", "reg_conn_id": "superadmin", "reg_nm": "SuperAdmin", "mod_id": "34dbe69d-afa6-11f0-8896-e288d288c3ed", "mod_conn_id": "mgtsuper", "mod_nm": "관리자", "mod_ts": "2026-02-03 14:13:14"}],
+    "nw_qos_plcy_id": null,
+    "nw_qos_plcy_nm": null,
+    "nw_qos_detail": null
+  },
+  "errCode": null,
+  "errMsg": null
+}

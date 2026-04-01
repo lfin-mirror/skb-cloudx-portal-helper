@@ -1,0 +1,20 @@
+{
+  "data": {
+    "reg_id": "7bc9a112-bcd3-11f0-9a12-f410c388d4fe",
+    "reg_ts": "2026-02-10 09:21:44",
+    "mod_id": "7bc9a112-bcd3-11f0-9a12-f410c388d4fe",
+    "mod_ts": "2026-02-10 09:21:44",
+    "reg_conn_id": "***",
+    "mod_conn_id": "***",
+    "usb_policy_id": "4bc6fe90-1d2e-4a83-b7c5-e91f2d3a8b04",
+    "usb_policy_target_code": "U006T",
+    "usb_policy_name": "USB정책01",
+    "usb_policy_auth_code": "U011AL",
+    "usb_policy_description": "테넌트 기본 USB 정책",
+    "usb_types": null,
+    "usb_vendors": null,
+    "tenant_id": "TEST_TENANT"
+  },
+  "errCode": null,
+  "errMsg": null
+}

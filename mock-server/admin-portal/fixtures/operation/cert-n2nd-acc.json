@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "cert_plcy_id": "312352b0-2be0-11f1-a5c1-22b10486d9be",
+      "usr_grp_id": "grp-001",
+      "usr_grp_nm": "기본 그룹",
+      "acct_id": "ACCT-001",
+      "ognz_nm": "SKB",
+      "blng_dept_nm": "개발팀",
+      "acct_descp": "관리자 계정",
+      "grp_typ_cd": "U002GRP",
+      "grp_typ_cd_nm": "그룹"
+    },
+    {
+      "cert_plcy_id": "312352b0-2be0-11f1-a5c1-22b10486d9be",
+      "usr_grp_id": "grp-002",
+      "usr_grp_nm": "운영 그룹",
+      "acct_id": "ACCT-002",
+      "ognz_nm": "SKB",
+      "blng_dept_nm": "운영팀",
+      "acct_descp": "운영 계정",
+      "grp_typ_cd": "U002GRP",
+      "grp_typ_cd_nm": "그룹"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

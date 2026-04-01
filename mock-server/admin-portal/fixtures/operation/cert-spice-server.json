@@ -1,0 +1,7 @@
+{
+  "data": [
+    {"ca_typ_cd":"M006PB","secret_name":"spice-cert","namespace":"openstack","version":"3","serial_number":"e80ba9dc6a1a3eb645cc92da66b2d9a7","signature_algorithm":"SHA256withRSA","issuer":"CN=Cert Manager","subject":"O=TESTroadband","valid_start":"2025-11-13 14:18:36","valid_end":"2035-11-11 14:18:36"},
+    {"ca_typ_cd":"M006PB","secret_name":"spice-cert","namespace":"cloudpc","version":"3","serial_number":"e80ba9dc6a1a3eb645cc92da66b2d9a7","signature_algorithm":"SHA256withRSA","issuer":"CN=Cert Manager","subject":"O=TESTroadband","valid_start":"2025-11-13 14:18:36","valid_end":"2035-11-11 14:18:36"}
+  ],
+  "errCode": null, "errMsg": null
+}

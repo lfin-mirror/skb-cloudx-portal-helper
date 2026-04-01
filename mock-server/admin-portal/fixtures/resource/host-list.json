@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "host_id": "3b26908e-ab39-11f0-bce4-22a1b8d92490",
+      "host_nm": "test_tenant-compute-01",
+      "pfrm_host_id": "142afe84-ca5f-46ed-a5b4-96f3056fe782",
+      "host_descp": null,
+      "host_ip": "192.168.132.44",
+      "host_sts_cd": "P003NOR",
+      "host_sts_cd_nm": "정상",
+      "hyper_typ": "QEMU",
+      "vcpu_tot_cnt": "96",
+      "vcpu_usg_cnt": "25",
+      "mem_tot_capa": "125",
+      "mem_usg_capa": "49",
+      "str_tot_capa": "1536",
+      "str_usg_capa": "0",
+      "allo_enable_yn": "N",
+      "vm_tot_cnt": "5",
+      "vm_usg_cnt": "4",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_nm": "슈퍼관리자",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2025-10-17 18:11:14",
+      "mod_id": "platform.scheduler",
+      "mod_ts": "2026-03-27 09:58:00",
+      "zone_nm": "Default Zone"
+    },
+    {
+      "host_id": "798d2cda-b61b-11f0-819b-4617b2bd76a9",
+      "host_nm": "test_tenant-compute-02",
+      "pfrm_host_id": "d049d94c-085e-4de5-99fe-45c612b44d8d",
+      "host_descp": null,
+      "host_ip": "192.168.132.45",
+      "host_sts_cd": "P003ERR",
+      "host_sts_cd_nm": "오류",
+      "hyper_typ": "QEMU",
+      "vcpu_tot_cnt": "96",
+      "vcpu_usg_cnt": "24",
+      "mem_tot_capa": "125",
+      "mem_usg_capa": "48",
+      "str_tot_capa": "1536",
+      "str_usg_capa": "0",
+      "allo_enable_yn": "N",
+      "vm_tot_cnt": "5",
+      "vm_usg_cnt": "5",
+      "reg_id": "34dbe69d-afa6-11f0-8896-e288d288c3ed",
+      "reg_nm": "관리자",
+      "reg_conn_id": "mgtsuper",
+      "reg_ts": "2025-10-31 14:35:56",
+      "mod_id": "platform.scheduler",
+      "mod_ts": "2026-03-27 09:58:00",
+      "zone_nm": "Default Zone"
+    }
+  ],
+  "pageinfo": {
+    "count": 2,
+    "ispaging": false
+  },
+  "errCode": null,
+  "errMsg": null
+}

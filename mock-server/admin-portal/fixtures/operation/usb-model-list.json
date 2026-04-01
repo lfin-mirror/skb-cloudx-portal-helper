@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "reg_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+            "reg_ts": "2025-11-06 19:21:02",
+            "mod_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+            "mod_ts": "2025-11-06 19:21:02",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***",
+            "usb_vendor_id": "0ad5d528-cff5-469b-bb7b-498ca2a32374",
+            "usb_vendor_uid": "05ac",
+            "usb_vendor_name": "Apple, Inc.",
+            "usb_model_id": "4ffd9eb9-0aa7-4c99-b003-e8f351250f68",
+            "usb_model_uid": "0205",
+            "usb_model_name": "Extended Keyboard [Mitsumi]",
+            "usb_model_target_code": "U006T",
+            "usb_model_description": "Extended Keyboard [Mitsumi]",
+            "tenant_id": "02157c4b5e534cb492ed5c886d3b44d7"
+        },
+        {
+            "reg_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+            "reg_ts": "2026-02-04 19:48:55",
+            "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+            "mod_ts": "2026-02-04 19:52:35",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***",
+            "usb_vendor_id": "c80c1311-4606-45b8-b93f-9dcb4a8aa877",
+            "usb_vendor_uid": "B091",
+            "usb_vendor_name": "jwizard",
+            "usb_model_id": "541f2399-28c2-42b6-a64e-199e6dede62f",
+            "usb_model_uid": "abcd",
+            "usb_model_name": "abcd-j09912",
+            "usb_model_target_code": "U006T",
+            "usb_model_description": null,
+            "tenant_id": "02157c4b5e534cb492ed5c886d3b44d7"
+        }
+    ]
+}

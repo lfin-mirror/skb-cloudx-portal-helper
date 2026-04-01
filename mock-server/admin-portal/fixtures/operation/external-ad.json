@@ -1,0 +1,11 @@
+{
+  "data": {
+    "ad_host": "ad.internal",
+    "ad_port": 389,
+    "ad_domain": "example.local",
+    "base_dn": "DC=example,DC=local",
+    "use_yn": "N"
+  },
+  "errCode": null,
+  "errMsg": null
+}

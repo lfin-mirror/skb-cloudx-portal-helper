@@ -1,0 +1,31 @@
+{
+  "data": {
+    "threshold": [
+      {
+        "critical": 90,
+        "warning": 80,
+        "caution": 70
+      }
+    ],
+    "metrics": [
+      {
+        "graph": [
+          {
+            "name": "compute-01",
+            "unit": "Mbps",
+            "labels": { "hostname": "compute-01" },
+            "metrics": [
+              { "timestamp": 1742990400, "value": "320.5" },
+              { "timestamp": 1742994000, "value": "415.3" },
+              { "timestamp": 1742997600, "value": "380.7" },
+              { "timestamp": 1743001200, "value": "510.4" },
+              { "timestamp": 1743004800, "value": "475.0" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "tnt_grp_id": "TG-001",
+      "tnt_grp_nm": "그룹 A",
+      "tnt_cnt": 2
+    },
+    {
+      "tnt_grp_id": "TG-002",
+      "tnt_grp_nm": "그룹 B",
+      "tnt_cnt": 1
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

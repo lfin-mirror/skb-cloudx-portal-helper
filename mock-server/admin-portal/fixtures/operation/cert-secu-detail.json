@@ -1,0 +1,11 @@
+{
+  "data": {
+    "cert_secu_id": "CERT-SECU-001",
+    "cert_secu_nm": "기본 보안 인증 정책",
+    "tnt_id": "TNT-001",
+    "exc_nw_grp_id": "EXCN-GRP-001",
+    "blck_plcy_id": "ACC-BLCK-001"
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "tnt_rsr_req_id": "REQ-001",
+      "tnt_id": "TNT-001",
+      "req_stat_cd": "R001PEND",
+      "reg_ts": "2026-03-20T10:00:00"
+    },
+    {
+      "tnt_rsr_req_id": "REQ-002",
+      "tnt_id": "TNT-002",
+      "req_stat_cd": "R001APPR",
+      "reg_ts": "2026-03-18T09:00:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

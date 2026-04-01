@@ -1,0 +1,33 @@
+{
+  "data": {
+    "total": 12,
+    "list": [
+      {
+        "node_nm": "compute-01",
+        "node_ip": "10.10.1.11",
+        "status": "active",
+        "cpu_usage": 72.3,
+        "mem_usage": 65.4,
+        "disk_usage": 48.2
+      },
+      {
+        "node_nm": "compute-02",
+        "node_ip": "10.10.1.12",
+        "status": "active",
+        "cpu_usage": 41.0,
+        "mem_usage": 55.1,
+        "disk_usage": 37.8
+      },
+      {
+        "node_nm": "compute-03",
+        "node_ip": "10.10.1.13",
+        "status": "active",
+        "cpu_usage": 68.1,
+        "mem_usage": 70.3,
+        "disk_usage": 52.0
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

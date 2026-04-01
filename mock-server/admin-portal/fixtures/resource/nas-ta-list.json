@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "usr_grp_nm": "개발1팀",
+      "dept_cd": "DEV-STORAGE-01",
+      "used_size": 120,
+      "total_size": 500
+    },
+    {
+      "usr_grp_nm": "개발2팀",
+      "dept_cd": "DEV-STORAGE-02",
+      "used_size": 80,
+      "total_size": 300
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,10 @@
+{
+  "data": {
+    "netapp_host": "netapp.internal",
+    "netapp_port": 443,
+    "netapp_user": "admin",
+    "use_yn": "Y"
+  },
+  "errCode": null,
+  "errMsg": null
+}

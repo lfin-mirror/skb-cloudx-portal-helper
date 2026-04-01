@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "acct_conn_id": "user_choi",
+      "acct_nm": "최사용",
+      "tnt_nm": "테넌트A",
+      "vpc_nm": "vpc-dev-01",
+      "vpc_status": "ACTIVE",
+      "vm_auth_id": "VMAUTH-001"
+    },
+    {
+      "acct_conn_id": "user_jung",
+      "acct_nm": "정이용",
+      "tnt_nm": "테넌트B",
+      "vpc_nm": "vpc-dev-03",
+      "vpc_status": "ACTIVE",
+      "vm_auth_id": "VMAUTH-003"
+    },
+    {
+      "acct_conn_id": "user_kang",
+      "acct_nm": "강고객",
+      "tnt_nm": "테넌트A",
+      "vpc_nm": "vpc-prod-01",
+      "vpc_status": "SHUTOFF",
+      "vm_auth_id": "VMAUTH-002"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

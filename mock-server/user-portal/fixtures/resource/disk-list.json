@@ -1,0 +1,38 @@
+{
+  "data": {
+    "usr_dsk_cnt": 2,
+    "dsk_size": 60,
+    "usr_dsk_rstt_cnt": 5,
+    "usr_dsk_max_size": 200,
+    "usr_disk": [
+      {
+        "dsk_id": "DSK-001",
+        "dsk_nm": "개인디스크-1",
+        "size": 50,
+        "acct_id": "user001",
+        "vm_nm": "VM-001",
+        "vm_auth_id": "VA-001"
+      },
+      {
+        "dsk_id": "DSK-002",
+        "dsk_nm": "개인디스크-2",
+        "size": 10,
+        "acct_id": "user001",
+        "vm_nm": null,
+        "vm_auth_id": null
+      }
+    ],
+    "usr_vm": [
+      {
+        "vm_nm": "VM-001",
+        "vm_auth_id": "VA-001"
+      },
+      {
+        "vm_nm": "VM-002",
+        "vm_auth_id": "VA-002"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

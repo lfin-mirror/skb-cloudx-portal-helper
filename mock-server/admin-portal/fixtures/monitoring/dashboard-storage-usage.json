@@ -1,0 +1,33 @@
+{
+  "data": {
+    "metrics": [
+      {
+        "unit": "GB",
+        "graph": [
+          {
+            "name": "NAS",
+            "metrics": [
+              { "timestamp": 1742990400, "value": "28160" },
+              { "timestamp": 1742994000, "value": "28416" },
+              { "timestamp": 1742997600, "value": "28544" },
+              { "timestamp": 1743001200, "value": "28672" },
+              { "timestamp": 1743004800, "value": "28800" }
+            ]
+          },
+          {
+            "name": "OS 디스크",
+            "metrics": [
+              { "timestamp": 1742990400, "value": "32256" },
+              { "timestamp": 1742994000, "value": "32384" },
+              { "timestamp": 1742997600, "value": "32512" },
+              { "timestamp": 1743001200, "value": "32768" },
+              { "timestamp": 1743004800, "value": "32896" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

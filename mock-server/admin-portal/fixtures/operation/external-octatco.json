@@ -1,0 +1,9 @@
+{
+  "data": {
+    "octatco_host": "octatco.internal",
+    "octatco_port": 8443,
+    "use_yn": "N"
+  },
+  "errCode": null,
+  "errMsg": null
+}

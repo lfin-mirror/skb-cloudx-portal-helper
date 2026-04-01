@@ -1,0 +1,18 @@
+{
+  "data": {
+    "power_mng_plcy_id": "PWR-PLY-001",
+    "plcy_stt_dt": "2026-01-01",
+    "plcy_end_dt": "2026-12-31",
+    "power_end_time": "23:00",
+    "power_stt_time": "08:00",
+    "sche_type": "WEEK",
+    "week_sche": "1111100",
+    "mons_sche": null,
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_ts": "2026-01-15 09:00:00",
+    "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+    "mod_ts": "2026-02-03 10:25:30"
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "reg_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+            "reg_ts": "2025-11-06 19:17:05",
+            "mod_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+            "mod_ts": "2025-11-06 19:17:05",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***",
+            "usb_vendor_id": "0ad5d528-cff5-469b-bb7b-498ca2a32374",
+            "usb_vendor_target_code": "U006T",
+            "usb_vendor_uid": "05ac",
+            "usb_vendor_name": "Apple, Inc.",
+            "usb_vendor_description": "Apple Company",
+            "tenant_id": "02157c4b5e534cb492ed5c886d3b44d7"
+        },
+        {
+            "reg_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+            "reg_ts": "2026-02-04 19:48:12",
+            "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+            "mod_ts": "2026-02-04 19:48:12",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***",
+            "usb_vendor_id": "c80c1311-4606-45b8-b93f-9dcb4a8aa877",
+            "usb_vendor_target_code": "U006T",
+            "usb_vendor_uid": "B091",
+            "usb_vendor_name": "jwizard",
+            "usb_vendor_description": "jwizard-B091",
+            "tenant_id": "02157c4b5e534cb492ed5c886d3b44d7"
+        }
+    ]
+}

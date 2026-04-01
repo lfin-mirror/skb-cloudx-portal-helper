@@ -1,0 +1,35 @@
+# AGENTS.md
+
+## Project Overview
+
+- CloudX 포털(admin-portal, user-portal)을 위한 로컬 테스트 헬퍼.
+- `mock-server/`: Express 기반 mock API 서버.
+- `e2e/`: Playwright E2E 테스트.
+- 포털 원본 소스 수정 없이 mock 응답과 테스트로 동작 검증.
+
+## Key Paths
+
+- `mock-server/server.js`: mock 서버 진입점
+- `mock-server/user-portal/handlers/`: user portal API 핸들러
+- `mock-server/admin-portal/handlers/`: admin portal API 핸들러
+- `mock-server/*/fixtures/`: 시나리오별 fixture 데이터
+- `mock-server/constants.js`: SA/TA 토큰, getRoleFromToken()
+- `e2e/playwright.config.js`: Playwright 설정
+- `e2e/tests/`: E2E 테스트
+- `.claude/rules/`: 작업 규칙 (세부 내용)
+
+## Run Commands
+
+- 의존성 설치: `npm install`
+- mock 서버 실행: `npm run mock`
+- 통합 실행: `npm start`
+- E2E 실행: `npm test`
+- Headed 실행: `npm run test:headed`
+- UI 모드: `npm run test:ui`
+- 리포트 확인: `npm run report`
+
+## Safety Notes
+
+- 기존 사용자 변경 사항은 임의로 되돌리지 않는다.
+- 관련 없는 파일은 건드리지 않는다.
+- `node_modules/`와 테스트 산출물은 수정 대상에서 제외한다.

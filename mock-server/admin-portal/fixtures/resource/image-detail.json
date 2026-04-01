@@ -1,0 +1,29 @@
+{
+  "data": {
+    "img_id": "72de23d9-437d-4a1b-bf1f-61852ec6afa4",
+    "img_nm": "windows10",
+    "img_descp": null,
+    "img_cre_tm": "2025-10-17 17:47",
+    "img_file_size": "51200",
+    "os_typ_cd": "T002W64",
+    "os_typ_cd_nm": "Windows 64bit",
+    "img_serv_yn": "Y",
+    "img_sts_cd": "T003CC",
+    "img_sts_cd_nm": "생성 완료",
+    "init_cre_yn": "Y",
+    "img_sw_l": [],
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_nm": "a5RuXmZNow/vdFF78Mn/EQ==",
+    "reg_conn_id": "superadmin",
+    "reg_ts": "2025-10-17 18:11",
+    "mod_id": "34dbe69d-afa6-11f0-8896-e288d288c3ed",
+    "mod_nm": "HNy1bxCJRdVkyh0QTGDwDA==",
+    "mod_conn_id": "mgtsuper",
+    "mod_ts": "2026-02-03 14:13",
+    "tnt_id": null,
+    "img_cre_vm_id": null,
+    "visibility": "public"
+  },
+  "errCode": null,
+  "errMsg": null
+}

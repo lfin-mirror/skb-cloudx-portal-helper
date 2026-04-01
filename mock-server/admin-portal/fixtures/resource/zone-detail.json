@@ -1,0 +1,14 @@
+{
+  "data": {
+    "zone_nm": "zone-a",
+    "zone_descp": "기본 가용 영역 A",
+    "tnt_id": null,
+    "host_grp_id": "HG-001",
+    "hosts": [
+      { "host_id": "HOST-001", "host_nm": "compute-01" },
+      { "host_id": "HOST-002", "host_nm": "compute-02" }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

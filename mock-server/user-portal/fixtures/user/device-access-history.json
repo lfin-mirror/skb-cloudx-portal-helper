@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "acct_dvc_ident_hist_id": "DVC-HIST-001",
+      "clnt_dvc_type": "Windows",
+      "dvc_nm": "LAPTOP-KIM-DEV",
+      "dvc_id": "ABC1234567890",
+      "mac_addr": "AA-BB-CC-DD-EE-01",
+      "ip_addr": "10.10.1.55"
+    },
+    {
+      "acct_dvc_ident_hist_id": "DVC-HIST-002",
+      "clnt_dvc_type": "MacOS",
+      "dvc_nm": "MacBook-Pro-김개발",
+      "dvc_id": "DEF9876543210",
+      "mac_addr": "AA-BB-CC-DD-EE-02",
+      "ip_addr": "10.10.1.88"
+    },
+    {
+      "acct_dvc_ident_hist_id": "DVC-HIST-003",
+      "clnt_dvc_type": "iOS",
+      "dvc_nm": "iPhone-김개발",
+      "dvc_id": null,
+      "mac_addr": null,
+      "ip_addr": "10.10.2.15"
+    }
+  ],
+  "pageinfo": {
+    "count": 3
+  },
+  "errCode": null,
+  "errMsg": null
+}

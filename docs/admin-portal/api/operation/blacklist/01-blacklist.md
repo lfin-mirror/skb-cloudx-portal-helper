@@ -1,0 +1,114 @@
+# 블랙리스트 / 화이트리스트 (SW 차단 목록) API
+
+리소스 경로 기준: `/v1/operation/policys/swblst`
+
+---
+
+## SW 차단 목록 조회
+
+```
+GET /v1/operation/policys/swblst
+```
+
+**Query Parameters**
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| tnt_id | string | N | 테넌트 ID |
+
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | array | SW 차단 목록 파일 목록 |
+| data[].blst_file_id | string | 차단 목록 파일 ID |
+| data[].blst_file_nm | string | 파일명 |
+| data[].tnt_id | string | 테넌트 ID |
+| data[].blst_typ_cd | string | 차단 유형 코드 (`블랙리스트`/`화이트리스트`) |
+| data[].reg_ts | string | 등록 일시 |
+
+**에러 코드**
+
+| 코드 | 설명 |
+|------|------|
+| 400 | 잘못된 요청 파라미터 |
+| 403 | 권한 없음 |
+
+**호출 위치**
+
+| 컴포넌트 | 라인 |
+|----------|------|
+| `views/policy/BlacklistUpload.vue` | 170 |
+| `views/policy/WhitelistUpload.vue` | 154 |
+
+---
+
+## SW 차단 목록 파일 상세 조회
+
+```
+GET /v1/operation/policys/swblst/{blst_file_id}
+```
+
+**Path Parameters**
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| blst_file_id | string | Y | 차단 목록 파일 ID |
+
+**Query Parameters**
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| page | number | N | 페이지 번호 |
+| limit | number | N | 페이지당 항목 수 |
+
+**호출 위치**
+
+| 컴포넌트 | 라인 |
+|----------|------|
+| `views/policy/BlacklistUpload.vue` | 183 |
+| `views/policy/WhitelistUpload.vue` | 168 |
+
+---
+
+## SW 차단 목록 다운로드
+
+```
+GET /v1/operation/policys/swblst/{blst_file_id}/downLoad
+```
+
+**Path Parameters**
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| blst_file_id | string | Y | 차단 목록 파일 ID |
+
+**호출 위치**
+
+| 컴포넌트 | 라인 |
+|----------|------|
+| `views/policy/BlacklistUpload.vue` | 233 |
+| `views/policy/WhitelistUpload.vue` | 212 |
+
+---
+
+## SW 차단 목록 업로드
+
+```
+POST /v1/operation/policys/swblst
+```
+
+**Request Body** (`multipart/form-data`)
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| file | file | Y | CSV/텍스트 파일 |
+| tnt_id | string | Y | 테넌트 ID |
+| blst_typ_cd | string | Y | 차단 유형 코드 |
+
+**호출 위치**
+
+| 컴포넌트 | 라인 |
+|----------|------|
+| `views/policy/BlacklistUploadDetail.vue` | 436 |
+| `views/policy/WhitelistUploadDetail.vue` | 377 |

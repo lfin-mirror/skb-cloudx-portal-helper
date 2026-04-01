@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "label": "Windows 11",
+      "value": 120,
+      "pct": 50.0
+    },
+    {
+      "label": "Windows 10",
+      "value": 85,
+      "pct": 35.4
+    },
+    {
+      "label": "macOS 14",
+      "value": 35,
+      "pct": 14.6
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

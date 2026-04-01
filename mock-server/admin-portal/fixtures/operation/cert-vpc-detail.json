@@ -1,0 +1,13 @@
+{
+  "data": {
+    "policy_id": "VPC-CERT-001",
+    "cert_plcy_nm": "기본 VPC 인증 정책",
+    "tnt_id": "TNT-001",
+    "n2nd_auth_type_cd": "A008OTP",
+    "exc_nw_grp_id": "EXCN-GRP-001",
+    "login_fail_cnt": 5,
+    "session_timeout_min": 30
+  },
+  "errCode": null,
+  "errMsg": null
+}

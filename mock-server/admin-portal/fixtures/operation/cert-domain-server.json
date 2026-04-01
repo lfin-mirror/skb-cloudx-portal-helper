@@ -1,0 +1,6 @@
+{
+  "data": [
+    {"ca_typ_cd":"M006PB","secret_name":"proxy-nginx-tls","namespace":"cloudpc","version":"3","serial_number":"57bfc19692d2d0aa5494af7d","signature_algorithm":"SHA256withRSA","issuer":"C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018","subject":"C=KR, ST=Daejeon, L=Dong-gu, O=Korea Railroad Corporation, CN=*.korail.com","valid_start":"2024-10-22 09:46:02","valid_end":"2025-11-23 09:46:01"}
+  ],
+  "errCode": null, "errMsg": null
+}

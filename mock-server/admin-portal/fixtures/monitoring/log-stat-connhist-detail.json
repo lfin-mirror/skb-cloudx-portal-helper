@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "acct_conn_id": "user_choi",
+      "acct_nm": "최사용",
+      "vpc_nm": "vpc-dev-01",
+      "conn_dtm": "2026-03-26 09:55:00",
+      "disconn_dtm": "2026-03-26 12:10:00",
+      "usage_min": 135,
+      "client_ip": "192.168.1.50"
+    },
+    {
+      "acct_conn_id": "user_jung",
+      "acct_nm": "정이용",
+      "vpc_nm": "vpc-dev-03",
+      "conn_dtm": "2026-03-26 08:20:00",
+      "disconn_dtm": "2026-03-26 10:45:00",
+      "usage_min": 145,
+      "client_ip": "192.168.2.30"
+    },
+    {
+      "acct_conn_id": "user_kang",
+      "acct_nm": "강고객",
+      "vpc_nm": "vpc-prod-01",
+      "conn_dtm": "2026-03-25 22:10:00",
+      "disconn_dtm": "2026-03-25 23:55:00",
+      "usage_min": 105,
+      "client_ip": "192.168.1.75"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "reg_ts": "2025-11-12 15:56:49",
+      "reg_nm": "***",
+      "adm_grp_nm": "전체 권한",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "mod_conn_id": "***",
+      "mod_ts": "2025-11-12 15:56:49",
+      "adm_grp_id": "a67c2a1c-d0e9-4772-98bd-4dc636e4c666",
+      "mod_nm": "***",
+      "lang": "A001KO",
+      "reg_conn_id": "***"
+    },
+    {
+      "reg_ts": "2025-10-21 15:27:11",
+      "reg_nm": "***",
+      "adm_grp_nm": "기본권한그룹",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "mod_ts": "2025-10-21 15:27:11",
+      "adm_grp_id": "b31107bb-d904-4de4-a364-7b9b51ac065d",
+      "mod_nm": "-",
+      "lang": "A001KO",
+      "reg_conn_id": "***"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

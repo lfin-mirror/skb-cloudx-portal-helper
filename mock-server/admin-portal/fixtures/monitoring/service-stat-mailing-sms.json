@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "stat_dt": "2026-03-24",
+      "send_cnt": 8,
+      "success_cnt": 8,
+      "fail_cnt": 0
+    },
+    {
+      "stat_dt": "2026-03-25",
+      "send_cnt": 12,
+      "success_cnt": 11,
+      "fail_cnt": 1
+    },
+    {
+      "stat_dt": "2026-03-26",
+      "send_cnt": 5,
+      "success_cnt": 5,
+      "fail_cnt": 0
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

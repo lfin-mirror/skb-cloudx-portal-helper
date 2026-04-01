@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "rtr_id": "2b77372a-3610-467f-8fbb-e560e4303603",
+      "rtr_nm": "테스트라우터",
+      "rtr_descp": null,
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "tnt_nm": "TEST_TENANT",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2025-12-17 09:54:09",
+      "reg_nm": null,
+      "reg_conn_id": "superadmin",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_ts": null,
+      "mod_nm": null,
+      "mod_conn_id": "superadmin",
+      "sbn_cnt": 1,
+      "nw_nm": "public-net",
+      "nw_id": "52f2f93f-4571-41b9-8c29-ede42ee1128d",
+      "subnetList": null
+    }
+  ],
+  "pageinfo": {"count": 1, "ispaging": false},
+  "errCode": null,
+  "errMsg": null
+}

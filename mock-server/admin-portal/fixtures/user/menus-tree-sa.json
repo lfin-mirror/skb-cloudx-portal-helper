@@ -1,0 +1,252 @@
+{
+  "data": [
+    {
+      "menu_id": "A",
+      "menu_nm": "A",
+      "menuList": [
+        {
+          "menu_id": "A01",
+          "menu_nm": "대시보드",
+          "menuList": []
+        },
+        {
+          "menu_id": "A04",
+          "menu_nm": "포털",
+          "menuList": [
+            { "menu_id": "A0401", "menu_nm": "관리자 UI", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "A05",
+          "menu_nm": "정책",
+          "menuList": [
+            { "menu_id": "A0501", "menu_nm": "사용자 인증 정책", "menuList": [] },
+            { "menu_id": "A0502", "menu_nm": "관리자 인증 정책", "menuList": [] },
+            { "menu_id": "A0503", "menu_nm": "가상 PC 정책", "menuList": [] },
+            { "menu_id": "A0505", "menu_nm": "백업/스냅샷 정책", "menuList": [] },
+            {
+              "menu_id": "A0506",
+              "menu_nm": "상세 정책",
+              "menuList": [
+                { "menu_id": "A050608", "menu_nm": "Metadata", "menuList": [] },
+                {
+                  "menu_id": "A050609",
+                  "menu_nm": "USB 정책",
+                  "menuList": [
+                    { "menu_id": "A05060901", "menu_nm": "USB 정책", "menuList": [] },
+                    { "menu_id": "A05060902", "menu_nm": "USB 유형", "menuList": [] },
+                    { "menu_id": "A05060903", "menu_nm": "USB 제조사", "menuList": [] },
+                    { "menu_id": "A05060904", "menu_nm": "USB 모델", "menuList": [] }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "menu_id": "A06",
+          "menu_nm": "서비스",
+          "menuList": [
+            {
+              "menu_id": "A0603",
+              "menu_nm": "보안 인증서",
+              "menuList": [
+                { "menu_id": "A060301", "menu_nm": "보안 인증서", "menuList": [] },
+                { "menu_id": "A060302", "menu_nm": "유효기간 알림", "menuList": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "menu_id": "A08",
+          "menu_nm": "테넌트",
+          "menuList": [
+            { "menu_id": "A0802", "menu_nm": "테넌트", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "A09",
+          "menu_nm": "템플릿",
+          "menuList": [
+            { "menu_id": "A0901", "menu_nm": "템플릿", "menuList": [] },
+            { "menu_id": "A0902", "menu_nm": "가상 PC 사양", "menuList": [] },
+            { "menu_id": "A0903", "menu_nm": "베이스 이미지", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "A10",
+          "menu_nm": "시스템 자원",
+          "menuList": [
+            { "menu_id": "A1001", "menu_nm": "도메인", "menuList": [] },
+            { "menu_id": "A1002", "menu_nm": "Zone", "menuList": [] },
+            { "menu_id": "A1003", "menu_nm": "호스트", "menuList": [] },
+            {
+              "menu_id": "A1004",
+              "menu_nm": "네트워크",
+              "menuList": [
+                { "menu_id": "A100401", "menu_nm": "물리 네트워크", "menuList": [] },
+                { "menu_id": "A100402", "menu_nm": "서브넷", "menuList": [] },
+                { "menu_id": "A100403", "menu_nm": "라우터", "menuList": [] },
+                { "menu_id": "A100404", "menu_nm": "네트워크 QoS", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1005",
+              "menu_nm": "스토리지",
+              "menuList": [
+                { "menu_id": "A100501", "menu_nm": "볼륨 타입", "menuList": [] },
+                { "menu_id": "A100502", "menu_nm": "디스크 QoS", "menuList": [] },
+                { "menu_id": "A100503", "menu_nm": "볼륨 자원", "menuList": [] }
+              ]
+            },
+            { "menu_id": "A1006", "menu_nm": "마이그레이션", "menuList": [] },
+            { "menu_id": "A1007", "menu_nm": "네트워크 스토리지", "menuList": [] },
+            {
+              "menu_id": "A1009",
+              "menu_nm": "Proxy 서버",
+              "menuList": [
+                { "menu_id": "A100901", "menu_nm": "L4 Proxy 서버", "menuList": [] },
+                { "menu_id": "A100902", "menu_nm": "L7 Proxy 서버", "menuList": [] }
+              ]
+            },
+            { "menu_id": "A1010", "menu_nm": "이메일", "menuList": [] },
+            {
+              "menu_id": "A1011",
+              "menu_nm": "HA",
+              "menuList": [
+                { "menu_id": "A101101", "menu_nm": "HA 실행", "menuList": [] },
+                { "menu_id": "A101102", "menu_nm": "HA 이력", "menuList": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "menu_id": "A11",
+          "menu_nm": "모니터링/통계",
+          "menuList": [
+            { "menu_id": "A1102", "menu_nm": "통합 로그 시스템", "menuList": [] },
+            {
+              "menu_id": "A1103",
+              "menu_nm": "사용자 통계",
+              "menuList": [
+                { "menu_id": "A110301", "menu_nm": "전체 사용자", "menuList": [] },
+                { "menu_id": "A110302", "menu_nm": "Client 별 접속자", "menuList": [] },
+                { "menu_id": "A110303", "menu_nm": "가상 PC 보유 현황", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1104",
+              "menu_nm": "가상 PC 통계",
+              "menuList": [
+                { "menu_id": "A110401", "menu_nm": "가상 PC 할당 수", "menuList": [] },
+                { "menu_id": "A110402", "menu_nm": "동시 접속 가상 PC", "menuList": [] },
+                { "menu_id": "A110404", "menu_nm": "가상 PC 사용량", "menuList": [] },
+                { "menu_id": "A110405", "menu_nm": "장기 미접속 현황", "menuList": [] },
+                { "menu_id": "A110406", "menu_nm": "사용자별 가상 PC 조회", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1108",
+              "menu_nm": "업무 처리 통계",
+              "menuList": [
+                { "menu_id": "A110801", "menu_nm": "업무 처리 통계", "menuList": [] },
+                { "menu_id": "A110802", "menu_nm": "고객지원 상담 통계", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1109",
+              "menu_nm": "SMS/이메일 통계",
+              "menuList": [
+                { "menu_id": "A110901", "menu_nm": "SMS 발송 통계", "menuList": [] },
+                { "menu_id": "A110902", "menu_nm": "이메일 발송 통계", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1111",
+              "menu_nm": "품질 통계",
+              "menuList": [
+                { "menu_id": "A111101", "menu_nm": "Viewer 지연 시간", "menuList": [] },
+                { "menu_id": "A111102", "menu_nm": "Viewer 대역폭", "menuList": [] },
+                { "menu_id": "A111103", "menu_nm": "Viewer 구동 환경", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1113",
+              "menu_nm": "로그 통계",
+              "menuList": [
+                { "menu_id": "A111301", "menu_nm": "Client 에러 통계", "menuList": [] },
+                { "menu_id": "A111302", "menu_nm": "시스템 에러 통계", "menuList": [] }
+              ]
+            },
+            { "menu_id": "A1114", "menu_nm": "월간 리포트", "menuList": [] },
+            {
+              "menu_id": "A1117",
+              "menu_nm": "작업 예약",
+              "menuList": [
+                { "menu_id": "A111701", "menu_nm": "작업 예약", "menuList": [] },
+                { "menu_id": "A111702", "menu_nm": "작업 예약 실행 결과", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1118",
+              "menu_nm": "감사로그",
+              "menuList": [
+                { "menu_id": "A111801", "menu_nm": "Admin 감사로그", "menuList": [] },
+                { "menu_id": "A111802", "menu_nm": "User 감사로그", "menuList": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "menu_id": "A12",
+          "menu_nm": "관리자",
+          "menuList": [
+            { "menu_id": "A1201", "menu_nm": "관리자 계정", "menuList": [] },
+            { "menu_id": "A1205", "menu_nm": "시스템 라이선스 정보", "menuList": [] },
+            { "menu_id": "A1206", "menu_nm": "S/W 버전 정보", "menuList": [] },
+            {
+              "menu_id": "A1208",
+              "menu_nm": "메뉴",
+              "menuList": [
+                { "menu_id": "A120801", "menu_nm": "메뉴", "menuList": [] },
+                { "menu_id": "A120802", "menu_nm": "API", "menuList": [] },
+                { "menu_id": "A120803", "menu_nm": "기능", "menuList": [] }
+              ]
+            },
+            { "menu_id": "A1209", "menu_nm": "환경 설정", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "A15",
+          "menu_nm": "실시간 모니터링",
+          "menuList": [
+            { "menu_id": "A1501", "menu_nm": "Grafana 대시보드", "menuList": [] },
+            {
+              "menu_id": "A1502",
+              "menu_nm": "알림",
+              "menuList": [
+                { "menu_id": "A150201", "menu_nm": "알림 그룹", "menuList": [] },
+                { "menu_id": "A150202", "menu_nm": "알림 임계치", "menuList": [] },
+                { "menu_id": "A150203", "menu_nm": "알림 이력", "menuList": [] }
+              ]
+            },
+            {
+              "menu_id": "A1503",
+              "menu_nm": "서버 모니터링",
+              "menuList": [
+                { "menu_id": "A150301", "menu_nm": "Compute 노드", "menuList": [] },
+                { "menu_id": "A150302", "menu_nm": "Control 노드", "menuList": [] }
+              ]
+            },
+            { "menu_id": "A1504", "menu_nm": "스토리지 모니터링", "menuList": [] },
+            { "menu_id": "A1505", "menu_nm": "네트워크 모니터링", "menuList": [] },
+            { "menu_id": "A1506", "menu_nm": "가상 PC 모니터링", "menuList": [] },
+            { "menu_id": "A1507", "menu_nm": "Pod 모니터링", "menuList": [] }
+          ]
+        }
+      ]
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

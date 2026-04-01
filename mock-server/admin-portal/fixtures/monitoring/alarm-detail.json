@@ -1,0 +1,33 @@
+{
+  "data": {
+    "alm_set_id": 1,
+    "alm_tgt_cd": "ALM_TGT_VPC",
+    "alm_typ_class_cd": "ALM_CLASS_PERF",
+    "alm_typ_cd": "ALM_CPU_HIGH",
+    "alm_detl": "VPC CPU 사용률 90% 초과 시 알람 발송",
+    "alm_ptal_send_yn": "Y",
+    "alm_sms_send_yn": "Y",
+    "alm_email_send_yn": "Y",
+    "usg_yn": "Y",
+    "target_list": [
+      {
+        "acct_id": 101,
+        "acct_nm": "김운영",
+        "acct_conn_id": "ops_kim",
+        "email": "***@***.kr",
+        "mob_no": "010-1234-5678",
+        "alm_set_id": 1
+      },
+      {
+        "acct_id": 102,
+        "acct_nm": "이관리",
+        "acct_conn_id": "admin_lee",
+        "email": "***@***.kr",
+        "mob_no": "010-9876-5432",
+        "alm_set_id": 1
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "usr_req_id": "REQ-001",
+      "reg_ts": "2026-03-20 10:15:00",
+      "demd_tm": "2026-03-20 10:15:00",
+      "usr_req_div_cd": "J003USE",
+      "usr_req_div_cd_nm": "Cloud PC 신청",
+      "pgrs_sts_cd": "J001S",
+      "pgrs_sts_cd_nm": "신청",
+      "had_tm": null,
+      "had_detl": null,
+      "demd_detl": "개발 업무용 Cloud PC 신청합니다.",
+      "tnt_mtd_cd": "V001DED",
+      "tgt_vm_nm": null,
+      "reg_id": "user001"
+    },
+    {
+      "usr_req_id": "REQ-002",
+      "reg_ts": "2026-03-10 14:00:00",
+      "demd_tm": "2026-03-10 14:00:00",
+      "usr_req_div_cd": "J003DAR",
+      "usr_req_div_cd_nm": "단말 등록",
+      "pgrs_sts_cd": "J001A",
+      "pgrs_sts_cd_nm": "승인",
+      "had_tm": "2026-03-11 09:30:00",
+      "had_detl": "단말 정보 확인 후 승인 처리하였습니다.",
+      "demd_detl": "업무용 노트북 단말 등록 요청합니다.",
+      "tnt_mtd_cd": null,
+      "tgt_vm_nm": null,
+      "reg_id": "user001"
+    },
+    {
+      "usr_req_id": "REQ-003",
+      "reg_ts": "2026-02-28 16:45:00",
+      "demd_tm": "2026-02-28 16:45:00",
+      "usr_req_div_cd": "J003PET",
+      "usr_req_div_cd_nm": "기간 연장",
+      "pgrs_sts_cd": "J001C",
+      "pgrs_sts_cd_nm": "취소",
+      "had_tm": null,
+      "had_detl": null,
+      "demd_detl": "사용 기간 3개월 연장 요청합니다.",
+      "tnt_mtd_cd": "V001DED",
+      "tgt_vm_nm": "VM-001",
+      "reg_id": "user001"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

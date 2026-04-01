@@ -1,0 +1,18 @@
+{
+  "data": {
+    "challenge_id": "mock-challenge-001",
+    "acct_sts_cd": "U013SL",
+    "acct_2nd_cert_tgt_yn": "N",
+    "n2nd_cert_typ_cd": "",
+    "passwd_mdfy_tgt_yn": "N",
+    "passwd_mdfy_vlid_yn": "N",
+    "ad_itlk_acct_yn": "N",
+    "acct_conn_id": "testuser",
+    "acct_id": "ACCT-001",
+    "acct_nm": "테스트 사용자",
+    "grp_typ_cd": "USR",
+    "tnt_url_id": "tenant1"
+  },
+  "errCode": null,
+  "errMsg": null
+}

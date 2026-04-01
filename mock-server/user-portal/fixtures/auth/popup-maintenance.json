@@ -1,0 +1,13 @@
+{
+  "data": {
+    "show_yn": "Y",
+    "show_stt_dtm_str": "2026-01-01 00:00",
+    "show_end_dtm_str": "2099-12-31 23:59",
+    "cont": "시스템 점검 중입니다.",
+    "att_file_loc_cd": "U",
+    "wri_att_file_l": [],
+    "check_yn": "Y"
+  },
+  "errCode": null,
+  "errMsg": null
+}

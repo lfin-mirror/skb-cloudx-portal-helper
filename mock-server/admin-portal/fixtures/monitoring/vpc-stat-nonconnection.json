@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "vpc_nm": "vpc-unused-01",
+      "tnt_nm": "테넌트A",
+      "acct_nm": "미접속자1",
+      "last_conn_dtm": "2026-02-10 14:00:00",
+      "no_conn_days": 44
+    },
+    {
+      "vpc_nm": "vpc-unused-02",
+      "tnt_nm": "테넌트B",
+      "acct_nm": "미접속자2",
+      "last_conn_dtm": "2026-01-20 09:30:00",
+      "no_conn_days": 65
+    },
+    {
+      "vpc_nm": "vpc-unused-03",
+      "tnt_nm": "테넌트A",
+      "acct_nm": "미접속자3",
+      "last_conn_dtm": null,
+      "no_conn_days": null
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

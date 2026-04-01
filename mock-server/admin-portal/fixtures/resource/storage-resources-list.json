@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "volm_typ_id": "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340",
+      "volm_typ_nm": "netapp",
+      "dsk_id": "22911232-f74a-4eda-be18-7992659ef56c",
+      "dsk_nm": "",
+      "size": 60,
+      "dsk_sts_cd": "V009USE",
+      "dsk_sts_cd_nm": "사용 중",
+      "path": "/dev/vda",
+      "vm_id": "e091b039-b993-49ed-ab6f-8b7800d19b78",
+      "vm_nm": "WD00-0IA-171017",
+      "reg_id": "platform.sync.manager",
+      "reg_ts": "2026-01-20 15:40:49",
+      "mod_id": "platform.sync.manager",
+      "mod_ts": "2026-01-20 15:40:53"
+    },
+    {
+      "volm_typ_id": "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340",
+      "volm_typ_nm": "netapp",
+      "dsk_id": "10f946b9-9fcc-40dc-bedf-4951447cd803",
+      "dsk_nm": "test_vol",
+      "size": 5,
+      "dsk_sts_cd": "V009AVL",
+      "dsk_sts_cd_nm": "사용 가능",
+      "path": null,
+      "vm_id": null,
+      "vm_nm": null,
+      "reg_id": "platform.sync.manager",
+      "reg_ts": "2026-03-17 15:06:43",
+      "mod_id": "platform.sync.manager",
+      "mod_ts": "2026-03-17 17:54:53"
+    },
+    {
+      "volm_typ_id": "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340",
+      "volm_typ_nm": "netapp",
+      "dsk_id": "1c7e3cd3-b2dc-4607-9041-e8e1c3a6ce74",
+      "dsk_nm": "test-vol-2",
+      "size": 60,
+      "dsk_sts_cd": "V009AVL",
+      "dsk_sts_cd_nm": "사용 가능",
+      "path": null,
+      "vm_id": null,
+      "vm_nm": null,
+      "reg_id": "platform.sync.manager",
+      "reg_ts": "2025-12-04 10:13:43",
+      "mod_id": "platform.sync.manager",
+      "mod_ts": "2025-12-15 13:48:59"
+    }
+  ],
+  "pageinfo": {
+    "count": 47,
+    "ispaging": false
+  },
+  "errCode": null,
+  "errMsg": null
+}

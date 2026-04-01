@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "noti_wrt_no": 1,
+      "title": "[필독] 시스템 정기 점검 안내 (2026년 4월)",
+      "rep_yn_nm": "Y",
+      "noti_meth_cd": "U016REP",
+      "noti_tgt_cd": "U015AL",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-03-20 10:00:00"
+    },
+    {
+      "noti_wrt_no": 2,
+      "title": "가상PC 스냅샷 기능 업데이트 안내",
+      "rep_yn_nm": "N",
+      "noti_meth_cd": "U016GEN",
+      "noti_tgt_cd": "U015AL",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-03-15 14:30:00"
+    },
+    {
+      "noti_wrt_no": 3,
+      "title": "보안 인증서 갱신 완료 안내",
+      "rep_yn_nm": "N",
+      "noti_meth_cd": "U016GEN",
+      "noti_tgt_cd": "U015AL",
+      "reg_conn_id": "tenantadmin",
+      "reg_ts": "2026-03-10 09:00:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

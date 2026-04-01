@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "host_nm": "compute-01",
+      "zone_nm": "zone-a",
+      "total_gb": 1000,
+      "used_gb": 482,
+      "free_gb": 518,
+      "usage_pct": 48.2,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "host_nm": "compute-03",
+      "zone_nm": "zone-a",
+      "total_gb": 1000,
+      "used_gb": 550,
+      "free_gb": 450,
+      "usage_pct": 55.0,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "host_nm": "compute-07",
+      "zone_nm": "zone-b",
+      "total_gb": 1000,
+      "used_gb": 385,
+      "free_gb": 615,
+      "usage_pct": 38.5,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

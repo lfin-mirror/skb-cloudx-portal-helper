@@ -1,0 +1,26 @@
+{
+  "data": {
+    "dsk_id": "6fe3ca0f-300e-4b88-9989-ed69072d3f0d",
+    "dsk_nm": "user01_1769566910532",
+    "cre_volm_id": null,
+    "dsk_typ_cd": "V008ULD",
+    "dsk_typ_cd_nm": "사용자 로컬 디스크",
+    "dsk_sts_cd": "V009USE",
+    "dsk_sts_cd_nm": "사용중",
+    "dsk_conn_yn": "Y",
+    "root_volm_yn": "N",
+    "size": 10,
+    "path": null,
+    "vm_id": "a40aea6b-2439-4b46-9c74-266e43e9a6b0",
+    "vm_nm": "WD00-0I0-141003",
+    "del_yn": "N",
+    "acct_id": "554c6d89-afca-11f0-b1c9-d6d4b9a99c07",
+    "vm_auth_id": "DI0-150001",
+    "volm_typ_nm": null,
+    "tnt_mtd_cd": null,
+    "dsk_visibility_yn": "Y",
+    "volm_qos_plcy_id": null
+  },
+  "errCode": null,
+  "errMsg": null
+}

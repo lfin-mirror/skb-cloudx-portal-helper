@@ -1,0 +1,20 @@
+{
+  "data": {
+    "acct_conn_id": "kim.dev",
+    "acct_nm": "김개발",
+    "acct_id": "user001",
+    "email": "kim.dev@skb.co.kr",
+    "mob_no": "010-1234-5678",
+    "ognz_nm": "SK브로드밴드",
+    "blng_dept_nm": "클라우드플랫폼개발팀",
+    "acct_vlid_stt_dt": "20250101",
+    "acct_vlid_end_dt": "29990101",
+    "usr_grp_nm": "일반 사용자",
+    "serv_grp_id": "SG-001",
+    "ad_itlk_acct_yn": "Y",
+    "tnt_url_id": "skb",
+    "acct_descp": "클라우드 개발 업무용 계정"
+  },
+  "errCode": null,
+  "errMsg": null
+}

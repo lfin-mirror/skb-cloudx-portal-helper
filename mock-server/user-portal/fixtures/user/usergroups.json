@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "usr_grp_id": "GRP-001",
+      "usr_grp_nm": "일반 사용자",
+      "acct_mod_psb_yn": "Y"
+    },
+    {
+      "usr_grp_id": "GRP-002",
+      "usr_grp_nm": "공용 PC 사용자",
+      "acct_mod_psb_yn": "N"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

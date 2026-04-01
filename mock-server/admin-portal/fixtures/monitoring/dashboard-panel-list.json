@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "panel_board_id": "panel-001",
+      "component": "EVTSTAT",
+      "display_yn": "Y",
+      "order": 1,
+      "position": "L",
+      "title": "이벤트 현황"
+    },
+    {
+      "panel_board_id": "panel-002",
+      "component": "EVTLOG",
+      "display_yn": "Y",
+      "order": 2,
+      "position": "L",
+      "title": "이벤트 로그"
+    },
+    {
+      "panel_board_id": "panel-003",
+      "component": "VPSSC",
+      "display_yn": "Y",
+      "order": 3,
+      "position": "L",
+      "title": "가상PC 현황"
+    },
+    {
+      "panel_board_id": "panel-004",
+      "component": "SRVSTAT",
+      "display_yn": "Y",
+      "order": 1,
+      "position": "R",
+      "title": "서버 현황"
+    },
+    {
+      "panel_board_id": "panel-005",
+      "component": "STGSTAT",
+      "display_yn": "Y",
+      "order": 2,
+      "position": "R",
+      "title": "스토리지 현황"
+    },
+    {
+      "panel_board_id": "panel-006",
+      "component": "VPCSTAT",
+      "display_yn": "Y",
+      "order": 3,
+      "position": "R",
+      "title": "가상PC 상태"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

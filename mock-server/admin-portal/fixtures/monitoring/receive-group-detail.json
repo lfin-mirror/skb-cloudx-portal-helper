@@ -1,0 +1,40 @@
+{
+  "data": {
+    "alm_rcv_grp_id": 1,
+    "alm_rcv_grp_nm": "인프라 운영팀",
+    "receiver_list": [
+      {
+        "acct_id": 101,
+        "acct_conn_id": "ops_kim",
+        "acct_nm": "김운영",
+        "email": "***@***.kr",
+        "mob_no": "010-1234-5678",
+        "alm_set_id": 1
+      },
+      {
+        "acct_id": 102,
+        "acct_conn_id": "admin_lee",
+        "acct_nm": "이관리",
+        "email": "***@***.kr",
+        "mob_no": "010-9876-5432",
+        "alm_set_id": 2
+      }
+    ],
+    "threshold_list": [
+      {
+        "alm_thd_id": 10,
+        "panel_id": "panel-cpu-001",
+        "panel_nm": "VPC CPU 사용률"
+      },
+      {
+        "alm_thd_id": 11,
+        "panel_id": "panel-mem-001",
+        "panel_nm": "호스트 메모리 사용률"
+      }
+    ],
+    "reg_conn_id": "superadmin",
+    "reg_ts": "2026-01-10 09:00:00"
+  },
+  "errCode": null,
+  "errMsg": null
+}

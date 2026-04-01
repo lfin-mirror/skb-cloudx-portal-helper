@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "vm_mdata_id": "MDATA-001",
+      "vm_mdata_nm": "사용자 부서 정보",
+      "tnt_id": "TNT-001"
+    },
+    {
+      "vm_mdata_id": "MDATA-002",
+      "vm_mdata_nm": "VM 용도 태그",
+      "tnt_id": "TNT-001"
+    },
+    {
+      "vm_mdata_id": "MDATA-003",
+      "vm_mdata_nm": "비용 센터",
+      "tnt_id": "TNT-001"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

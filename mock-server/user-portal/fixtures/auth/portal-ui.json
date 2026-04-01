@@ -1,0 +1,23 @@
+{
+  "data": {
+    "lin_bg_yn": "N",
+    "lin_bg_stor_path": "",
+    "lin_img_1_yn": "N",
+    "lin_img_1_stor_path": "",
+    "lin_img_2_yn": "N",
+    "lin_img_2_stor_path": "",
+    "lin_img_3_yn": "N",
+    "lin_img_3_stor_path": "",
+    "ptal_bg_yn": "N",
+    "ptal_bg_stor_path": "",
+    "ptal_img_yn": "N",
+    "ptal_img_stor_path": "",
+    "fvcn_yn": "N",
+    "fvcn_stor_path": "",
+    "copyright_txt": "© 2026 SK Broadband. All rights reserved.",
+    "inquiry_txt": "문의: support@skbroadband.com",
+    "contact_txt": "1588-0000"
+  },
+  "errCode": null,
+  "errMsg": null
+}

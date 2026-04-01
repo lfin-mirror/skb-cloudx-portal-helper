@@ -1,0 +1,11 @@
+{
+  "data": [
+    "cloudpc-system",
+    "monitoring",
+    "kube-system",
+    "default",
+    "ingress-nginx"
+  ],
+  "errCode": null,
+  "errMsg": null
+}

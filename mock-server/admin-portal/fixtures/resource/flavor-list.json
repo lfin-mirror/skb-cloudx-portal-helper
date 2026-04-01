@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "flavor_id": "FLVR-001",
+      "flavor_nm": "Small (4vCPU/8GB)",
+      "vcpu_cnt": 4,
+      "vmm_capa": 8192,
+      "vhd_capa": 100
+    },
+    {
+      "flavor_id": "FLVR-002",
+      "flavor_nm": "Medium (8vCPU/16GB)",
+      "vcpu_cnt": 8,
+      "vmm_capa": 16384,
+      "vhd_capa": 200
+    },
+    {
+      "flavor_id": "FLVR-003",
+      "flavor_nm": "Large (16vCPU/32GB)",
+      "vcpu_cnt": 16,
+      "vmm_capa": 32768,
+      "vhd_capa": 500
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,23 @@
+{
+  "data": {
+    "metrics": [
+      {
+        "unit": "개",
+        "graph": [
+          {
+            "name": "접속량",
+            "metrics": [
+              { "timestamp": 1742990400, "value": 24 },
+              { "timestamp": 1742994000, "value": 27 },
+              { "timestamp": 1742997600, "value": 30 },
+              { "timestamp": 1743001200, "value": 35 },
+              { "timestamp": 1743004800, "value": 32 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

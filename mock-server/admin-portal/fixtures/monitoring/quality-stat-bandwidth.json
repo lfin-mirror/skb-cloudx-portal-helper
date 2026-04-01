@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "vpc_nm": "vpc-dev-01",
+      "tnt_nm": "테넌트A",
+      "usr_grp_nm": "개발 그룹",
+      "avg_bw_mbps": 8.4,
+      "max_bw_mbps": 25.2,
+      "min_bw_mbps": 2.1,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "vpc_nm": "vpc-prod-01",
+      "tnt_nm": "테넌트A",
+      "usr_grp_nm": "업무 그룹",
+      "avg_bw_mbps": 12.7,
+      "max_bw_mbps": 40.5,
+      "min_bw_mbps": 3.8,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "vpc_nm": "vpc-dev-03",
+      "tnt_nm": "테넌트B",
+      "usr_grp_nm": "개발 그룹",
+      "avg_bw_mbps": 6.1,
+      "max_bw_mbps": 18.3,
+      "min_bw_mbps": 1.5,
+      "stat_dt": "2026-03-25"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

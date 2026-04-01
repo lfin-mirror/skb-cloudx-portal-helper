@@ -1,0 +1,13 @@
+{
+  "data": {
+    "acct_dvc_ident_id": "dvc-001",
+    "acct_id": "554c6d89-afca-11f0-b1c9-d6d4b9a99c07",
+    "acct_conn_id": "***",
+    "acct_nm": "***",
+    "dvc_ident_val": "AA:BB:CC:DD:EE:01",
+    "dvc_nm": "DESKTOP-001",
+    "use_yn": "Y",
+    "reg_ts": "2025-12-01 10:00:00",
+    "mod_ts": "2025-12-01 10:00:00"
+  }
+}

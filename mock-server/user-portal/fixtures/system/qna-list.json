@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "adv_req_wrt_no": 3,
+      "title": "개인 디스크 연결 후 Cloud PC에서 보이지 않습니다",
+      "adv_typ_cd": "A003ERR",
+      "adv_typ_cd_nm": "장애",
+      "adv_cont": "어제 개인 디스크를 VM-001에 연결했는데, Cloud PC에 로그인해도 드라이브가 표시되지 않습니다. 확인 부탁드립니다.",
+      "adv_pgrs_sts_cd": "A004I",
+      "adv_pgrs_sts_cd_nm": "답변 대기",
+      "asw_cont": null,
+      "reg_ts": "2026-03-24 16:20:00"
+    },
+    {
+      "adv_req_wrt_no": 2,
+      "title": "Cloud PC 사용 기간 연장 신청 방법 문의",
+      "adv_typ_cd": "A003USG",
+      "adv_typ_cd_nm": "이용 방법",
+      "adv_cont": "현재 사용 중인 Cloud PC의 사용 기간이 다음 달 말에 만료됩니다. 기간 연장 신청은 어떻게 하나요?",
+      "adv_pgrs_sts_cd": "A004E",
+      "adv_pgrs_sts_cd_nm": "답변 완료",
+      "asw_cont": "안녕하세요. Cloud PC 기간 연장은 포털 홈 화면의 Cloud PC 카드에서 '기간 연장' 버튼을 클릭하여 신청하실 수 있습니다. 만료 30일 전부터 신청 가능합니다.",
+      "reg_ts": "2026-03-10 11:05:00"
+    },
+    {
+      "adv_req_wrt_no": 1,
+      "title": "단말 등록 요청 후 승인까지 얼마나 걸리나요?",
+      "adv_typ_cd": "A003USG",
+      "adv_typ_cd_nm": "이용 방법",
+      "adv_cont": "단말 접속 정보 등록 요청을 제출했는데, 언제 처리되는지 궁금합니다.",
+      "adv_pgrs_sts_cd": "A004E",
+      "adv_pgrs_sts_cd_nm": "답변 완료",
+      "asw_cont": "단말 등록 요청은 영업일 기준 1~2일 이내 처리됩니다. 승인 완료 시 이메일로 안내 드립니다. 긴급한 경우 운영팀에 직접 연락주시기 바랍니다.",
+      "reg_ts": "2026-03-01 09:45:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

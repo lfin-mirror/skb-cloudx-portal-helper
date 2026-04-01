@@ -1,0 +1,55 @@
+{
+  "data": {
+    "grpInfo": {
+      "exc_nw_grp_id": "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b",
+      "exc_nw_grp_nm": "서초IDC",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2026-02-03 10:12:30",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-10 14:33:05",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    "excNwInfo": [
+      {
+        "exc_nw_id": "nw-001-seocho",
+        "exc_nw_nm": "서초IDC-NW-01",
+        "exc_nw_grp_id": "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b",
+        "cidr": "10.10.1.0",
+        "bit": "24",
+        "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+        "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "reg_ts": "2026-02-03 10:12:30",
+        "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "mod_ts": "2026-02-03 10:12:30"
+      },
+      {
+        "exc_nw_id": "nw-002-seocho",
+        "exc_nw_nm": "서초IDC-NW-02",
+        "exc_nw_grp_id": "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b",
+        "cidr": "10.10.2.0",
+        "bit": "24",
+        "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+        "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "reg_ts": "2026-02-03 10:12:30",
+        "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "mod_ts": "2026-02-03 10:12:30"
+      },
+      {
+        "exc_nw_id": "nw-003-seocho",
+        "exc_nw_nm": "서초IDC-NW-03",
+        "exc_nw_grp_id": "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b",
+        "cidr": "10.10.3.0",
+        "bit": "24",
+        "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+        "reg_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+        "reg_ts": "2026-02-10 14:33:05",
+        "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+        "mod_ts": "2026-02-10 14:33:05"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

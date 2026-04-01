@@ -1,0 +1,40 @@
+{
+  "data": {
+    "rtr_id": "2b77372a-3610-467f-8fbb-e560e4303603",
+    "rtr_nm": "테스트라우터",
+    "rtr_descp": null,
+    "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+    "tnt_nm": null,
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_ts": "2025-12-17 09:54",
+    "reg_nm": null,
+    "reg_conn_id": "superadmin",
+    "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "mod_ts": "2025-12-17 09:54",
+    "mod_nm": null,
+    "mod_conn_id": "superadmin",
+    "sbn_cnt": 0,
+    "nw_nm": "public-net",
+    "nw_id": "52f2f93f-4571-41b9-8c29-ede42ee1128d",
+    "subnetList": [
+      {
+        "rtr_id": null,
+        "nw_id": "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e",
+        "sbn_id": "c7a73202-e488-4cb3-9b6a-fa1326fd4887",
+        "nw_nm": "tenant_network",
+        "usg_use_cd": "P004V",
+        "usg_use_cd_nm": "Virtual Network (Internal Network)",
+        "nw_typ_cd": "P008VXL",
+        "sbn_nm": "테스트서브넷",
+        "cidr": "192.168.0.0/24",
+        "sbn": "192.168.0.0",
+        "gw": "192.168.0.1",
+        "dns_1": "192.168.0.1",
+        "dns_2": "192.168.2.1",
+        "sbn_descp": null
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

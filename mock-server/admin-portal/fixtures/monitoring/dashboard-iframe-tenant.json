@@ -1,0 +1,7 @@
+{
+  "data": {
+    "iframe_path": "http://grafana.internal:3000/d/tenant-dashboard?orgId=1&var-tenant=tenant1&kiosk=tv"
+  },
+  "errCode": null,
+  "errMsg": null
+}

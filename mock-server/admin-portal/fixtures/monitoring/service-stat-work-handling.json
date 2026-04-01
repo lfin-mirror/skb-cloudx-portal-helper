@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "stat_dt": "2026-03-24",
+      "total_req_cnt": 45,
+      "complete_cnt": 40,
+      "pending_cnt": 5,
+      "avg_handling_hour": 2.3
+    },
+    {
+      "stat_dt": "2026-03-25",
+      "total_req_cnt": 52,
+      "complete_cnt": 49,
+      "pending_cnt": 3,
+      "avg_handling_hour": 1.8
+    },
+    {
+      "stat_dt": "2026-03-26",
+      "total_req_cnt": 28,
+      "complete_cnt": 25,
+      "pending_cnt": 3,
+      "avg_handling_hour": 2.1
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

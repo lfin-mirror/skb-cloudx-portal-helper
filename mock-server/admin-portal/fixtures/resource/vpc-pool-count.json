@@ -1,0 +1,11 @@
+{
+  "data": {
+    "total": 3,
+    "ded_count": 2,
+    "poo_count": 1,
+    "vm_total": 25,
+    "vm_count": 7
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,11 @@
+{
+  "data": {
+    "max_vm_psb_cnt": "1000",
+    "tnt_cnt": "1",
+    "tot_vm_psb_cnt": "1000",
+    "vcpu_psb_cnt": "-1",
+    "vmm_psb_capa": "-1"
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,27 @@
+{
+  "data": {
+    "pop_wrt_no": 1,
+    "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+    "tnt_nm": "TEST_TENANT",
+    "cont": "&lt;p&gt;팝업 공지 입니다.&lt;/p&gt;",
+    "org_file_nm": null,
+    "stor_file_id": "",
+    "stor_path": null,
+    "att_file_loc_cd": "U",
+    "show_stt_dtm": "202511060000",
+    "show_end_dtm": "202812020000",
+    "show_stt_dtm_str": "2025-11-06 00:00:00",
+    "show_end_dtm_str": "2028-12-02 00:00:00",
+    "show_yn": "Y",
+    "check_yn": "N",
+    "reg_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+    "reg_ts": "2025-11-06 17:10:34",
+    "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+    "mod_ts": "2026-02-04 18:57:25",
+    "wri_att_file_l": null,
+    "reg_conn_id": "***",
+    "mod_conn_id": "***"
+  },
+  "errCode": null,
+  "errMsg": null
+}

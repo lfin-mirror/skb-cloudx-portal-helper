@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "vm_auth_id": "VA-001",
+      "vm_nm": "VM-001",
+      "vm_als": "개발용 PC",
+      "tnt_mtd_cd": "V001DED",
+      "tnt_mtd_cd_nm": "전용",
+      "vm_allo_sts_cd": "U017DVA",
+      "vm_power_sts_cd": "V002ONC",
+      "vm_allo_typ_static_ip_yn": "Y",
+      "acct_id": "user001",
+      "usr_grp_id": "GRP-001",
+      "tgt_vm_auth_id": null,
+      "vm_id": "vm-aabbcc001",
+      "flavor_id": "flavor-4c8g",
+      "vcpu_cnt": 4,
+      "vmm_capa": 8192,
+      "vhd_capa": 100
+    },
+    {
+      "vm_auth_id": "VA-002",
+      "vm_nm": "VM-002",
+      "vm_als": "업무용 PC",
+      "tnt_mtd_cd": "V001DED",
+      "tnt_mtd_cd_nm": "전용",
+      "vm_allo_sts_cd": "U017DVA",
+      "vm_power_sts_cd": "V002OFC",
+      "vm_allo_typ_static_ip_yn": "Y",
+      "acct_id": "user001",
+      "usr_grp_id": "GRP-001",
+      "tgt_vm_auth_id": null,
+      "vm_id": "vm-aabbcc002",
+      "flavor_id": "flavor-2c4g",
+      "vcpu_cnt": 2,
+      "vmm_capa": 4096,
+      "vhd_capa": 50
+    },
+    {
+      "vm_auth_id": "VA-003",
+      "vm_nm": "VM-003",
+      "vm_als": "공용 PC",
+      "tnt_mtd_cd": "V001POO",
+      "tnt_mtd_cd_nm": "공용",
+      "vm_allo_sts_cd": "U017DVA",
+      "vm_power_sts_cd": "V002SUS",
+      "vm_allo_typ_static_ip_yn": "N",
+      "acct_id": "user001",
+      "usr_grp_id": "GRP-002",
+      "tgt_vm_auth_id": null,
+      "vm_id": "vm-aabbcc003",
+      "flavor_id": "flavor-2c4g",
+      "vcpu_cnt": 2,
+      "vmm_capa": 4096,
+      "vhd_capa": 50
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

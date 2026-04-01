@@ -1,0 +1,24 @@
+{
+  "name": "cloudx-test-harness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mock server and E2E test harness for CloudX portals",
+  "scripts": {
+    "mock": "nodemon mock-server/server.js",
+    "test": "npx playwright test --config=e2e/playwright.config.js",
+    "test:headed": "npx playwright test --config=e2e/playwright.config.js --headed",
+    "test:ui": "npx playwright test --config=e2e/playwright.config.js --ui",
+    "test:auth": "npx playwright test --config=e2e/playwright.config.js tests/auth/",
+    "report": "npx playwright show-report e2e/report",
+    "start": "bash scripts/start.sh"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "http-proxy-middleware": "^3.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "nodemon": "^3.1.14"
+  }
+}

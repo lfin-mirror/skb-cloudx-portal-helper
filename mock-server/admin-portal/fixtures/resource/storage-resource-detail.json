@@ -1,0 +1,20 @@
+{
+  "data": {
+    "volm_typ_id": "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340",
+    "volm_typ_nm": "netapp",
+    "dsk_id": "10f946b9-9fcc-40dc-bedf-4951447cd803",
+    "dsk_nm": "test_vol",
+    "size": 5,
+    "dsk_sts_cd": "V009AVL",
+    "dsk_sts_cd_nm": "사용 가능",
+    "path": null,
+    "vm_id": null,
+    "vm_nm": null,
+    "reg_id": "platform.sync.manager",
+    "reg_ts": "2026-03-17 15:06:43",
+    "mod_id": "platform.sync.manager",
+    "mod_ts": "2026-03-17 17:54:53"
+  },
+  "errCode": null,
+  "errMsg": null
+}

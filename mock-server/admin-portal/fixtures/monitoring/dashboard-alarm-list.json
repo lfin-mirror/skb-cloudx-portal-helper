@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "alm_sts_cd": "M001SER",
+      "alm_dis_typ": "server",
+      "alm_occ_id_nm": "compute-03",
+      "occ_tm": "2026-03-26 10:12:05",
+      "alm_detl": "호스트 [compute-03] 메모리 사용률 88% 초과"
+    },
+    {
+      "alm_sts_cd": "M001SER",
+      "alm_dis_typ": "vpc",
+      "alm_occ_id_nm": "vpc-prod-03",
+      "occ_tm": "2026-03-26 09:47:22",
+      "alm_detl": "가상PC [vpc-prod-03] CPU 사용률 91% 초과"
+    },
+    {
+      "alm_sts_cd": "M001WAN",
+      "alm_dis_typ": "storage",
+      "alm_occ_id_nm": "NAS-01",
+      "occ_tm": "2026-03-26 09:30:11",
+      "alm_detl": "NAS 스토리지 사용률 83% 경고"
+    },
+    {
+      "alm_sts_cd": "M001WAN",
+      "alm_dis_typ": "server",
+      "alm_occ_id_nm": "compute-07",
+      "occ_tm": "2026-03-26 09:15:44",
+      "alm_detl": "호스트 [compute-07] 디스크 사용률 78% 경고"
+    },
+    {
+      "alm_sts_cd": "M001WAN",
+      "alm_dis_typ": "pod",
+      "alm_occ_id_nm": "cloudx-gateway-5d9f8",
+      "occ_tm": "2026-03-26 08:55:30",
+      "alm_detl": "Pod [cloudx-gateway-5d9f8] 재시작 반복 감지"
+    },
+    {
+      "alm_sts_cd": "M001WAN",
+      "alm_dis_typ": "vpc",
+      "alm_occ_id_nm": "vpc-dev-11",
+      "occ_tm": "2026-03-26 08:20:09",
+      "alm_detl": "가상PC [vpc-dev-11] 네트워크 지연 75ms 경고"
+    },
+    {
+      "alm_sts_cd": "M001WAN",
+      "alm_dis_typ": "server",
+      "alm_occ_id_nm": "compute-01",
+      "occ_tm": "2026-03-26 07:48:55",
+      "alm_detl": "호스트 [compute-01] CPU 사용률 76% 경고"
+    },
+    {
+      "alm_sts_cd": "M001WAN",
+      "alm_dis_typ": "storage",
+      "alm_occ_id_nm": "OS-Disk-02",
+      "occ_tm": "2026-03-26 07:10:33",
+      "alm_detl": "OS 디스크 [OS-Disk-02] 사용률 71% 경고"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

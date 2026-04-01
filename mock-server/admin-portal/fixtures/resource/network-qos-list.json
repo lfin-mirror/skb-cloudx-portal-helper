@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+            "nw_qos_plcy_nm": "tenant_network_qos",
+            "reg_conn_id": "***",
+            "reg_nm": "***",
+            "reg_ts": "2025-12-09 11:12:39",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2025-12-09 11:12:39",
+            "rules": [
+                {
+                    "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+                    "nw_qos_rule_id": "2a6ab313-bbf4-40fc-8a28-94cd7c9caeb3",
+                    "direction_cd": "V017ISS",
+                    "direction_cd_nm": "들어옴",
+                    "max_kbps": 10000,
+                    "max_burst_kbps": 10000,
+                    "reg_conn_id": "***",
+                    "reg_nm": "***",
+                    "reg_ts": "2025-12-09 11:12",
+                    "mod_conn_id": "***",
+                    "mod_nm": "***",
+                    "mod_ts": "2025-12-09 11:12"
+                },
+                {
+                    "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+                    "nw_qos_rule_id": "d292b00c-2528-4f30-9b9b-dd5cd71a3222",
+                    "direction_cd": "V017ESS",
+                    "direction_cd_nm": "내보냄",
+                    "max_kbps": 1000,
+                    "max_burst_kbps": 1000,
+                    "reg_conn_id": "***",
+                    "reg_nm": "***",
+                    "reg_ts": "2025-12-09 11:12",
+                    "mod_conn_id": "***",
+                    "mod_nm": "***",
+                    "mod_ts": "2025-12-09 11:12"
+                }
+            ],
+            "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+            "tnt_nm": "TEST_TENANT"
+        }
+    ]
+}

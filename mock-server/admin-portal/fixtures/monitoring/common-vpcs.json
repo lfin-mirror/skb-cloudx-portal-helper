@@ -1,0 +1,10 @@
+{
+  "data": [
+    { "vm_auth_id": "VMAUTH-001", "vpc_nm": "vpc-dev-01", "tnt_nm": "테넌트A" },
+    { "vm_auth_id": "VMAUTH-002", "vpc_nm": "vpc-prod-01", "tnt_nm": "테넌트A" },
+    { "vm_auth_id": "VMAUTH-003", "vpc_nm": "vpc-dev-03", "tnt_nm": "테넌트B" },
+    { "vm_auth_id": "VMAUTH-004", "vpc_nm": "vpc-dev-04", "tnt_nm": "테넌트B" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

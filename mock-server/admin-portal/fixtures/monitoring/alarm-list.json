@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "alm_set_id": 1,
+      "alm_tgt_cd": "ALM_TGT_VPC",
+      "alm_typ_class_cd": "ALM_CLASS_PERF",
+      "alm_typ_cd": "ALM_CPU_HIGH",
+      "alm_detl": "VPC CPU 사용률 90% 초과 시 알람 발송",
+      "alm_ptal_send_yn": "Y",
+      "alm_sms_send_yn": "Y",
+      "alm_email_send_yn": "Y",
+      "usg_yn": "Y",
+      "target_list": []
+    },
+    {
+      "alm_set_id": 2,
+      "alm_tgt_cd": "ALM_TGT_HOST",
+      "alm_typ_class_cd": "ALM_CLASS_PERF",
+      "alm_typ_cd": "ALM_MEM_HIGH",
+      "alm_detl": "호스트 메모리 사용률 85% 초과 시 알람 발송",
+      "alm_ptal_send_yn": "Y",
+      "alm_sms_send_yn": "N",
+      "alm_email_send_yn": "Y",
+      "usg_yn": "Y",
+      "target_list": []
+    },
+    {
+      "alm_set_id": 3,
+      "alm_tgt_cd": "ALM_TGT_STORAGE",
+      "alm_typ_class_cd": "ALM_CLASS_CAPACITY",
+      "alm_typ_cd": "ALM_DISK_HIGH",
+      "alm_detl": "스토리지 사용률 80% 초과 시 알람 발송",
+      "alm_ptal_send_yn": "N",
+      "alm_sms_send_yn": "N",
+      "alm_email_send_yn": "Y",
+      "usg_yn": "N",
+      "target_list": []
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

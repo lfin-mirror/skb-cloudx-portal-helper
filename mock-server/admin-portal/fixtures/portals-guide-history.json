@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "hist_no": 3,
+      "gui_no": 1,
+      "org_file_nm": "CloudX_VDI_사용자_매뉴얼_v1.0.pdf",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-03-01 10:00:00"
+    },
+    {
+      "hist_no": 2,
+      "gui_no": 1,
+      "org_file_nm": "CloudX_VDI_사용자_매뉴얼_v0.9_beta.pdf",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-02-15 11:00:00"
+    },
+    {
+      "hist_no": 1,
+      "gui_no": 1,
+      "org_file_nm": "CloudX_VDI_사용자_매뉴얼_초안.pdf",
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-01-20 09:00:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

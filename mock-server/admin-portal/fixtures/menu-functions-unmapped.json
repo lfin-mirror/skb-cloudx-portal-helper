@@ -1,0 +1,11 @@
+{
+  "data": [
+    {
+      "func_auth_id": 3,
+      "func_auth_nm": "테넌트 관리",
+      "use_yn": "Y"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

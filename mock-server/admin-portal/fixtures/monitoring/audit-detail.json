@@ -1,0 +1,12 @@
+{
+  "data": {
+    "audit_id": 3001,
+    "api_url": "/v1/management/alarm",
+    "http_meth_cd": "GET",
+    "req_param": "{\"page\":1,\"limit\":20,\"usg_yn\":\"Y\"}",
+    "resp_body": "{\"data\":[{\"alm_set_id\":1,\"alm_tgt_cd\":\"ALM_TGT_VPC\",\"usg_yn\":\"Y\"}],\"errCode\":null,\"errMsg\":null}",
+    "log_dtm": "2026-03-26 10:05:22"
+  },
+  "errCode": null,
+  "errMsg": null
+}

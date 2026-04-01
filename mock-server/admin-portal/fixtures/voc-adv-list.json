@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "voc_adv_wrt_no": 1,
+      "voc_adv_typ_cd": "A019USG",
+      "voc_adv_typ_cd_nm": "가상 PC 이용 방법",
+      "adv_reg_tm": "20251031000000",
+      "title": "상담 등록",
+      "adv_cont": "가상 PC 이용방법 문의드립니다.",
+      "reg_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+      "reg_conn_id": "***",
+      "reg_ts": "2025-10-31 15:46:05",
+      "mod_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+      "mod_conn_id": "***",
+      "mod_ts": "2025-10-31 15:46:05"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

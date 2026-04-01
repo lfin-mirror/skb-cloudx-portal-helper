@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "url_disallow_id": "URL-DISALLOW-001",
+      "url_disallow_nm": "소셜미디어 차단",
+      "tnt_id": "TNT-001"
+    },
+    {
+      "url_disallow_id": "URL-DISALLOW-002",
+      "url_disallow_nm": "게임 사이트 차단",
+      "tnt_id": "TNT-001"
+    },
+    {
+      "url_disallow_id": "URL-DISALLOW-003",
+      "url_disallow_nm": "동영상 스트리밍 차단",
+      "tnt_id": "TNT-001"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

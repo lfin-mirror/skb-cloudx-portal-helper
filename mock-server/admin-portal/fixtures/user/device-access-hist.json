@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "acct_dvc_ident_hist_id": "hist-001",
+      "acct_dvc_ident_id": "dvc-001",
+      "dvc_ident_val": "AA:BB:CC:DD:EE:01",
+      "dvc_nm": "DESKTOP-001",
+      "chg_rsn": "최초 등록",
+      "reg_ts": "2025-12-01 10:00:00"
+    }
+  ]
+}

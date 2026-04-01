@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "stat_dt": "2026-03-24",
+      "conn_cnt": 215,
+      "disconn_cnt": 210,
+      "avg_usage_min": 142
+    },
+    {
+      "stat_dt": "2026-03-25",
+      "conn_cnt": 248,
+      "disconn_cnt": 245,
+      "avg_usage_min": 156
+    },
+    {
+      "stat_dt": "2026-03-26",
+      "conn_cnt": 183,
+      "disconn_cnt": 180,
+      "avg_usage_min": 98
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

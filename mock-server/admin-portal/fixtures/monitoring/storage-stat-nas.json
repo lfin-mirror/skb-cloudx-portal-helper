@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "nas_nm": "nas-storage-01",
+      "zone_nm": "zone-a",
+      "total_gb": 51200,
+      "used_gb": 28672,
+      "free_gb": 22528,
+      "usage_pct": 56.0,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "nas_nm": "nas-storage-02",
+      "zone_nm": "zone-b",
+      "total_gb": 25600,
+      "used_gb": 10240,
+      "free_gb": 15360,
+      "usage_pct": 40.0,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

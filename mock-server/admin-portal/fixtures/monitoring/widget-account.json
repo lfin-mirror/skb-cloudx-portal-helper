@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "widget_id": 1,
+      "widget_nm": "사용자 접속 현황",
+      "ord": 1,
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 3,
+      "widget_nm": "알람 현황",
+      "ord": 2,
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 2,
+      "widget_nm": "VPC 상태 현황",
+      "ord": 3,
+      "use_yn": "Y"
+    },
+    {
+      "widget_id": 4,
+      "widget_nm": "스토리지 사용량",
+      "ord": 4,
+      "use_yn": "N"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

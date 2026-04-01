@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "vm_grp_id": "a1b2c3d4-0001-11f0-aaaa-111111111111",
+      "vm_grp_nm": "TEST_TENANT 그룹 A",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "tnt_nm": "TEST_TENANT",
+      "secu_plcy_id": "sp-0001-aaaa-bbbb-cccccccccccc",
+      "secu_plcy_nm": "기본 보안 정책",
+      "bkup_snap_plcy_id": "bsp-0001-aaaa-bbbb-cccccccccccc",
+      "bkup_snap_plcy_nm": "기본 백업스냅샷 정책",
+      "temp_id": "5b239b4d-ab56-11f0-bce4-22a1b8d92490",
+      "temp_nm": "Win10",
+      "gdn_img_cre_yn": "N",
+      "pool_usg_cnt": 2,
+      "tot_pool_max_vm_cnt": 20,
+      "network_cnt": 1,
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_conn_id": "***",
+      "reg_nm": "***",
+      "reg_ts": "2025-10-20 10:00:00",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_conn_id": "***",
+      "mod_nm": "***",
+      "mod_ts": "2026-03-10 14:00:00"
+    },
+    {
+      "vm_grp_id": "a1b2c3d4-0002-11f0-aaaa-222222222222",
+      "vm_grp_nm": "TEST_TENANT 그룹 B",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "tnt_nm": "TEST_TENANT",
+      "secu_plcy_id": "sp-0002-aaaa-bbbb-cccccccccccc",
+      "secu_plcy_nm": "강화 보안 정책",
+      "bkup_snap_plcy_id": "bsp-0002-aaaa-bbbb-cccccccccccc",
+      "bkup_snap_plcy_nm": "주간 백업스냅샷 정책",
+      "temp_id": "5b239b4d-ab56-11f0-bce4-22a1b8d92490",
+      "temp_nm": "Win10",
+      "gdn_img_cre_yn": "Y",
+      "pool_usg_cnt": 1,
+      "tot_pool_max_vm_cnt": 10,
+      "network_cnt": 2,
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_conn_id": "***",
+      "reg_nm": "***",
+      "reg_ts": "2025-11-05 09:30:00",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_conn_id": "***",
+      "mod_nm": "***",
+      "mod_ts": "2026-02-15 11:20:00"
+    }
+  ],
+  "pageinfo": {
+    "count": 2,
+    "ispaging": false
+  },
+  "errCode": null,
+  "errMsg": null
+}

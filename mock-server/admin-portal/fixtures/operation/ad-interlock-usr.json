@@ -1,0 +1,23 @@
+{
+  "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+  "ad_itlk_usg_yn": "N",
+  "info_reg_allow_yn": "N",
+  "ad_cert_id": "***",
+  "ad_cert_passwd_cryptval": "***",
+  "ad_cert_info": "***",
+  "ad_cert_file_nm": null,
+  "ad_dm": null,
+  "ad_ip": null,
+  "ad_port": 389,
+  "ad_base_dept_ou": null,
+  "ad_base_usr_ou": null,
+  "ad_vdi_ou": null,
+  "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+  "reg_conn_id": "***",
+  "reg_nm": "***",
+  "reg_ts": "2025-10-17 21:39:43",
+  "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+  "mod_conn_id": "***",
+  "mod_nm": "***",
+  "mod_ts": "2026-03-10 14:00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "cert_plcy_id": "CERT-N2ND-001",
+      "cert_plcy_nm": "기본 2차 인증 정책",
+      "ptal_type_cd": "A007ADM",
+      "tnt_id": "TNT-001",
+      "cert_plcy_tgt_cd": "U003B"
+    },
+    {
+      "cert_plcy_id": "CERT-N2ND-002",
+      "cert_plcy_nm": "OTP 인증 정책",
+      "ptal_type_cd": "A007ADM",
+      "tnt_id": "TNT-001",
+      "cert_plcy_tgt_cd": "U003B"
+    },
+    {
+      "cert_plcy_id": "CERT-N2ND-003",
+      "cert_plcy_nm": "이메일 인증 정책",
+      "ptal_type_cd": "A007ADM",
+      "tnt_id": "TNT-001",
+      "cert_plcy_tgt_cd": "U003S"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

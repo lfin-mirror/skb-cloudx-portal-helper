@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "nw_id": "NW-V001",
+      "nw_nm": "가상 네트워크 01",
+      "nw_typ_cd": "P008VXL",
+      "usg_use_cd": "P004V",
+      "usg_use_cd_nm": "가상",
+      "subnets": [
+        { "sbn_id": "SBN-001", "sbn_nm": "서브넷 192.168.10.0/24" }
+      ]
+    },
+    {
+      "nw_id": "NW-V002",
+      "nw_nm": "가상 네트워크 02",
+      "nw_typ_cd": "P008VXL",
+      "usg_use_cd": "P004V",
+      "usg_use_cd_nm": "가상",
+      "subnets": [
+        { "sbn_id": "SBN-002", "sbn_nm": "서브넷 192.168.20.0/24" }
+      ]
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

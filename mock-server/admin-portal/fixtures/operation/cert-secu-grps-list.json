@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "secu_plcy_id": "bf92a294-ab36-11f0-8557-3a7bf606d4cf",
+      "secu_plcy_nm": "가상 PC 보안 기본 정책",
+      "secu_plcy_tgt_cd": "U006S",
+      "secu_plcy_tgt_cd_nm": "Super Admin 기본 보안정책",
+      "group_cnt": 0,
+      "pool_cnt": 0,
+      "vm_cnt": 0,
+      "reg_ts": "2025-10-17 17:53:27",
+      "mod_ts": "2026-03-24 15:06:38",
+      "reg_conn_id": "init",
+      "mod_conn_id": "***"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

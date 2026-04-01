@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "sbn_id": "SBN-001",
+      "sbn_nm": "내부 서브넷 A",
+      "tnt_id": "TNT-001",
+      "ip_range": "192.168.10.0/24",
+      "use_yn": "Y"
+    },
+    {
+      "sbn_id": "SBN-002",
+      "sbn_nm": "내부 서브넷 B",
+      "tnt_id": "TNT-001",
+      "ip_range": "192.168.20.0/24",
+      "use_yn": "Y"
+    },
+    {
+      "sbn_id": "SBN-003",
+      "sbn_nm": "관리 서브넷",
+      "tnt_id": "TNT-001",
+      "ip_range": "10.0.0.0/16",
+      "use_yn": "N"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

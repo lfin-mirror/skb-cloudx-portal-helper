@@ -1,0 +1,20 @@
+{
+  "data": {
+    "threshold": [
+      {
+        "critical": 90,
+        "warning": 80,
+        "caution": 70
+      }
+    ],
+    "metrics": [
+      { "name": "compute-01", "value": "72.3", "labels": {} },
+      { "name": "compute-03", "value": "68.1", "labels": {} },
+      { "name": "compute-07", "value": "55.0", "labels": {} },
+      { "name": "compute-02", "value": "48.4", "labels": {} },
+      { "name": "compute-05", "value": "41.7", "labels": {} }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

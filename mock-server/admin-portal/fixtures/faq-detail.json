@@ -1,0 +1,15 @@
+{
+  "data": {
+    "faq_wrt_no": 1,
+    "title": "가상PC에 접속이 안 됩니다. 어떻게 해야 하나요?",
+    "faq_typ_cd": "A006USG",
+    "asw_cont": "<p><strong>A.</strong> 아래 방법을 순서대로 확인해 주세요.</p><ol><li>네트워크 연결 상태를 확인합니다.</li><li>CloudX 에이전트가 정상 실행 중인지 확인합니다.</li><li>문제가 지속되면 관리자에게 문의하세요.</li></ol>",
+    "att_file_loc_cd": "D",
+    "post_yn": "Y",
+    "wri_att_file_l": [],
+    "reg_conn_id": "superadmin",
+    "reg_ts": "2026-03-01 10:00:00"
+  },
+  "errCode": null,
+  "errMsg": null
+}

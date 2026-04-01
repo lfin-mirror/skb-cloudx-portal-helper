@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "cert_secu_id": "CERT-SECU-001",
+      "cert_secu_nm": "기본 보안 인증 정책",
+      "tnt_id": "TNT-001",
+      "sg_grp_id": "SG-001",
+      "secu_plcy_tgt_cd": "U006T"
+    },
+    {
+      "cert_secu_id": "CERT-SECU-002",
+      "cert_secu_nm": "강화 보안 인증 정책",
+      "tnt_id": "TNT-001",
+      "sg_grp_id": "SG-002",
+      "secu_plcy_tgt_cd": "U006T"
+    },
+    {
+      "cert_secu_id": "CERT-SECU-003",
+      "cert_secu_nm": "SA 전용 보안 정책",
+      "tnt_id": "",
+      "sg_grp_id": "",
+      "secu_plcy_tgt_cd": "U006S"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

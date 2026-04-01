@@ -1,0 +1,12 @@
+{
+  "data": {
+    "cert_plcy_id": "CERT-N2ND-001",
+    "cert_plcy_nm": "기본 2차 인증 정책",
+    "ptal_type_cd": "A007ADM",
+    "tnt_id": "TNT-001",
+    "exc_nw_grp_id": "EXCN-GRP-001",
+    "n2nd_auth_type_cd": "A008OTP"
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "chg_ts": "2026-03-01T10:00:00",
+      "chg_typ_cd": "CHG001ADD",
+      "chg_usr_id": "admin",
+      "chg_detail": "규칙 추가: ingress tcp 22"
+    },
+    {
+      "chg_ts": "2026-03-10T14:00:00",
+      "chg_typ_cd": "CHG001MOD",
+      "chg_usr_id": "admin",
+      "chg_detail": "보안 그룹명 변경"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

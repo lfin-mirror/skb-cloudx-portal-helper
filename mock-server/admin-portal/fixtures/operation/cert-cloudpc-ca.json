@@ -1,0 +1,6 @@
+{
+  "data": [
+    {"ca_typ_cd":"M006PV","secret_name":"ci-handler-cert","namespace":"cloudpc","version":"3","serial_number":"98d0283d5f1e4ab0da283c1a123fd0e7","signature_algorithm":"SHA256withRSA","issuer":"CN=plat-ci-handler","subject":"CN=plat-ci-handler","valid_start":"2025-10-17 17:54:18","valid_end":"2035-10-15 17:54:18"}
+  ],
+  "errCode": null, "errMsg": null
+}

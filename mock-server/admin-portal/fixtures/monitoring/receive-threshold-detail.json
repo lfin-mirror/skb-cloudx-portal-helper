@@ -1,0 +1,13 @@
+{
+  "data": {
+    "alm_thd_id": 10,
+    "panel_id": "panel-cpu-001",
+    "panel_nm": "VPC CPU 사용률",
+    "thd_val": 90,
+    "thd_unit": "%",
+    "reg_conn_id": "superadmin",
+    "reg_ts": "2026-01-10 09:00:00"
+  },
+  "errCode": null,
+  "errMsg": null
+}

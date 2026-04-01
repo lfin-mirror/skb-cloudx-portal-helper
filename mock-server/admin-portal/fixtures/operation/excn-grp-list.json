@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "exc_nw_grp_id": "c3b32e48-4e55-11f0-b64d-8ab4b11e8b29",
+      "exc_nw_grp_nm": "exc_network_260108",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2026-01-08 14:53:20",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_ts": "2026-01-08 14:53:20",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    {
+      "exc_nw_grp_id": "a1f04c12-5d31-11f0-b64d-8ab4b11e8b29",
+      "exc_nw_grp_nm": "예외테스트01",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2026-01-15 09:22:11",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_ts": "2026-01-15 09:22:11",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    {
+      "exc_nw_grp_id": "b2e15d23-6e42-11f0-c75e-9bc5c22f9c3a",
+      "exc_nw_grp_nm": "예외테스트02",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2026-01-20 11:05:44",
+      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "mod_ts": "2026-01-20 11:05:44",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    {
+      "exc_nw_grp_id": "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b",
+      "exc_nw_grp_nm": "서초IDC",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_ts": "2026-02-03 10:12:30",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_ts": "2026-02-10 14:33:05",
+      "reg_conn_id": "***",
+      "mod_conn_id": "***"
+    },
+    {
+      "exc_nw_grp_id": "e4d62cbe-8064-11f0-e97g-bde7e4h1e5c",
+      "exc_nw_grp_nm": "internal",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "init",
+      "reg_ts": "2025-11-05 08:00:00",
+      "mod_id": "init",
+      "mod_ts": "2025-11-05 08:00:00",
+      "reg_conn_id": null,
+      "mod_conn_id": null
+    },
+    {
+      "exc_nw_grp_id": "f5e73dcf-9175-11f0-f08h-cef8f5i2f6d",
+      "exc_nw_grp_nm": "external",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "init",
+      "reg_ts": "2025-11-05 08:01:00",
+      "mod_id": "init",
+      "mod_ts": "2025-11-05 08:01:00",
+      "reg_conn_id": null,
+      "mod_conn_id": null
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

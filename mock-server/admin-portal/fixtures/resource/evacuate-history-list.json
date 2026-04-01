@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "evac_grp_id": "EVAC-GRP-001",
+      "host_nm": "test_tenant-compute-01",
+      "evac_sts_cd": "E001COMP",
+      "evac_sts_cd_nm": "완료",
+      "tgt_vm_cnt": 3,
+      "act_vm_cnt": 3,
+      "auto_mng_yn": "Y",
+      "evac_stt_ts": "2026-01-23 16:47:04",
+      "evac_done_ts": "2026-01-23 16:52:10"
+    },
+    {
+      "evac_grp_id": "EVAC-GRP-002",
+      "host_nm": "test_tenant-compute-02",
+      "evac_sts_cd": "E001PROC",
+      "evac_sts_cd_nm": "진행중",
+      "tgt_vm_cnt": 2,
+      "act_vm_cnt": 1,
+      "auto_mng_yn": "N",
+      "evac_stt_ts": "2026-03-31 09:10:00",
+      "evac_done_ts": null
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

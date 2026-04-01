@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "vmId": "vm-0003-aaaa-bbbb-cccccccccccc",
+      "vmName": "OPS-VM-001",
+      "vmPoolTypeCode": "V001DED",
+      "userConnectStatusCode": "V012DCN",
+      "adminConnectStatusCode": "V012DCN"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

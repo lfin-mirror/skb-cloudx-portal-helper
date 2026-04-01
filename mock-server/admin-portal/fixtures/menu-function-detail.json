@@ -1,0 +1,14 @@
+{
+  "data": {
+    "func_auth_id": "FUNC001",
+    "func_auth_nm": "가상PC 풀 조회",
+    "menu_id": "A0301",
+    "menu_nm": "가상PC 풀",
+    "apilist": [
+      { "gw_uri": "/v1/resource/vpcs/pool", "api_id": "API001", "api_nm": "가상PC 풀 목록 조회", "ms_div_cd": "resource", "mtd": "GET" },
+      { "gw_uri": "/v1/resource/vpcs/pool/{vmPoolId}", "api_id": "API003", "api_nm": "가상PC 풀 상세 조회", "ms_div_cd": "resource", "mtd": "GET" }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

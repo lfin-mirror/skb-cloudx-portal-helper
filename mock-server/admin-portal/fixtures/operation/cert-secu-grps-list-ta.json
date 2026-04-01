@@ -1,0 +1,95 @@
+{
+    "data": [
+        {
+            "secu_plcy_id": "3c6a88d7-6860-4a35-88c8-5a1b6553694f",
+            "secu_plcy_nm": "[신청] TEST_TENANT 가상 PC 보안 기본 정책",
+            "secu_plcy_tgt_cd": "U006R",
+            "secu_plcy_tgt_cd_nm": null,
+            "group_cnt": 0,
+            "pool_cnt": 0,
+            "vm_cnt": 0,
+            "reg_ts": "2026-03-30 19:37:13",
+            "mod_ts": "2026-03-30 19:37:13",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        },
+        {
+            "secu_plcy_id": "b189ae2b-1ee6-480c-b669-19fb6de40212",
+            "secu_plcy_nm": "[신청] TEST_TENANT 가상 PC 보안 기본 정책 2",
+            "secu_plcy_tgt_cd": "U006T",
+            "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+            "group_cnt": 0,
+            "pool_cnt": 0,
+            "vm_cnt": 0,
+            "reg_ts": "2026-03-30 19:35:41",
+            "mod_ts": "2026-03-30 19:35:41",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        },
+        {
+            "secu_plcy_id": "a543e9b5-4d95-4ddf-b448-e89e83ae1a79",
+            "secu_plcy_nm": "[신청] TEST_TENANT 가상 PC 보안 기본 정책",
+            "secu_plcy_tgt_cd": "U006T",
+            "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+            "group_cnt": 0,
+            "pool_cnt": 0,
+            "vm_cnt": 0,
+            "reg_ts": "2026-03-24 15:58:47",
+            "mod_ts": "2026-03-30 19:28:29",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        },
+        {
+            "secu_plcy_id": "b7dff7ff-2ca1-49e2-8a50-7a800f171caf",
+            "secu_plcy_nm": "QA_보안정책01",
+            "secu_plcy_tgt_cd": "U006T",
+            "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+            "group_cnt": 0,
+            "pool_cnt": 0,
+            "vm_cnt": 1,
+            "reg_ts": "2026-01-07 16:56:42",
+            "mod_ts": "2026-03-30 19:23:50",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        },
+        {
+            "secu_plcy_id": "0f3dfbff-9c99-4a5a-b838-cdb7734c5363",
+            "secu_plcy_nm": "SWUSB정책테스트",
+            "secu_plcy_tgt_cd": "U006T",
+            "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+            "group_cnt": 0,
+            "pool_cnt": 0,
+            "vm_cnt": 0,
+            "reg_ts": "2026-02-03 13:24:10",
+            "mod_ts": "2026-03-30 19:02:13",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        },
+        {
+            "secu_plcy_id": "880ca5ce-4a18-4365-88d4-c7429d02cc71",
+            "secu_plcy_nm": "TEST_TENANT_NO_PROXY",
+            "secu_plcy_tgt_cd": "U006T",
+            "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+            "group_cnt": 1,
+            "pool_cnt": 2,
+            "vm_cnt": 3,
+            "reg_ts": "2025-11-03 17:48:06",
+            "mod_ts": "2026-03-27 16:27:41",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        },
+        {
+            "secu_plcy_id": "69421473-67c0-4873-b86e-e72621942016",
+            "secu_plcy_nm": "TEST_TENANT 가상 PC 보안 기본 정책",
+            "secu_plcy_tgt_cd": "U006T",
+            "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+            "group_cnt": 1,
+            "pool_cnt": 2,
+            "vm_cnt": 6,
+            "reg_ts": "2025-10-17 21:45:30",
+            "mod_ts": "2026-03-27 16:06:12",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***"
+        }
+    ]
+}

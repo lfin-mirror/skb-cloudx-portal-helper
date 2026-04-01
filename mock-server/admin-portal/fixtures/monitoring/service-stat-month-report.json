@@ -1,0 +1,18 @@
+{
+  "data": {
+    "year": 2026,
+    "month": 3,
+    "tnt_nm": "전체",
+    "total_user_cnt": 320,
+    "new_user_cnt": 13,
+    "total_vpc_cnt": 48,
+    "total_conn_cnt": 6480,
+    "avg_daily_conn_cnt": 216,
+    "total_usage_min": 933120,
+    "avg_usage_min": 144,
+    "alarm_cnt": 24,
+    "error_cnt": 8
+  },
+  "errCode": null,
+  "errMsg": null
+}

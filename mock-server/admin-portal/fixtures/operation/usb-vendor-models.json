@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "reg_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+            "reg_ts": "2025-11-06 19:21:02",
+            "mod_id": "4fd463b1-b5fa-11f0-a082-9e558d565baa",
+            "mod_ts": "2025-11-06 19:21:02",
+            "reg_conn_id": "***",
+            "mod_conn_id": "***",
+            "usb_model_id": "4ffd9eb9-0aa7-4c99-b003-e8f351250f68",
+            "usb_model_target_code": "U006T",
+            "usb_model_uid": "0205",
+            "usb_model_name": "Extended Keyboard [Mitsumi]",
+            "usb_model_description": "Extended Keyboard [Mitsumi]",
+            "usb_vendor_id": "0ad5d528-cff5-469b-bb7b-498ca2a32374",
+            "tenant_id": null
+        }
+    ]
+}

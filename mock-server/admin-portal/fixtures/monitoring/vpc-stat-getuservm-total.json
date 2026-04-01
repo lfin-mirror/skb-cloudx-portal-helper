@@ -1,0 +1,11 @@
+{
+  "data": {
+    "total_vpc_cnt": 48,
+    "active_cnt": 42,
+    "shutoff_cnt": 4,
+    "error_cnt": 2,
+    "total_user_cnt": 320
+  },
+  "errCode": null,
+  "errMsg": null
+}

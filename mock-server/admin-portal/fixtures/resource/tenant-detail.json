@@ -1,0 +1,13 @@
+{
+  "data": {
+    "tnt_id": "TNT-001",
+    "tnt_nm": "개발팀",
+    "tnt_grp_id": "TG-001",
+    "secu_plcy_id": "SP-001",
+    "secu_plcy_nm": "기본 보안 정책",
+    "bkup_snap_plcy_id": "BSP-001",
+    "bkup_snap_plcy_nm": "일별 백업 정책"
+  },
+  "errCode": null,
+  "errMsg": null
+}

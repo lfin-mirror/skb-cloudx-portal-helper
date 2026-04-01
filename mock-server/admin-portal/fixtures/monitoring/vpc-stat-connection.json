@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "stat_dt": "2026-03-24",
+      "tnt_nm": "테넌트A",
+      "max_concurrent_cnt": 58,
+      "avg_concurrent_cnt": 42
+    },
+    {
+      "stat_dt": "2026-03-25",
+      "tnt_nm": "테넌트A",
+      "max_concurrent_cnt": 65,
+      "avg_concurrent_cnt": 48
+    },
+    {
+      "stat_dt": "2026-03-26",
+      "tnt_nm": "테넌트A",
+      "max_concurrent_cnt": 51,
+      "avg_concurrent_cnt": 38
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

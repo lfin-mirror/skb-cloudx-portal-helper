@@ -1,0 +1,30 @@
+{
+  "data": {
+    "nas": {
+      "name": "NAS",
+      "status": "ON",
+      "utilization": 0.56,
+      "totalGb": 51200,
+      "usedGb": 28672,
+      "freeGb": 22528
+    },
+    "os": {
+      "name": "OS 디스크",
+      "status": "ON",
+      "utilization": 0.64,
+      "totalGb": 51200,
+      "usedGb": 32768,
+      "freeGb": 18432
+    },
+    "all": {
+      "name": "전체",
+      "status": "ON",
+      "utilization": 0.60,
+      "totalGb": 102400,
+      "usedGb": 61440,
+      "freeGb": 40960
+    }
+  },
+  "errCode": null,
+  "errMsg": null
+}

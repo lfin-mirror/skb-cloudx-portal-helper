@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "ip_id": "IP-001",
+      "ip_addr": "192.168.10.101",
+      "ip_usg_typ_cd": "P005USE",
+      "vm_auth_id": "VM-001",
+      "acct_id": "ACCT-001"
+    },
+    {
+      "ip_id": "IP-002",
+      "ip_addr": "192.168.10.102",
+      "ip_usg_typ_cd": "P005USE",
+      "vm_auth_id": "VM-002",
+      "acct_id": "ACCT-002"
+    },
+    {
+      "ip_id": "IP-003",
+      "ip_addr": "192.168.10.103",
+      "ip_usg_typ_cd": "P005FREE",
+      "vm_auth_id": null,
+      "acct_id": null
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

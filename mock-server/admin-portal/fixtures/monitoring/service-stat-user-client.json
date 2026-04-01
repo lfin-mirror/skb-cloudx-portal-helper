@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "tnt_nm": "테넌트A",
+      "client_type": "Windows",
+      "client_version": "5.2.1",
+      "user_cnt": 120,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "tnt_nm": "테넌트A",
+      "client_type": "macOS",
+      "client_version": "5.2.0",
+      "user_cnt": 35,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "tnt_nm": "테넌트B",
+      "client_type": "Windows",
+      "client_version": "5.1.3",
+      "user_cnt": 60,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

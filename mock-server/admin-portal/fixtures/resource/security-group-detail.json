@@ -1,0 +1,27 @@
+{
+  "data": {
+    "security_group_id": "SG-001",
+    "secu_grp_nm": "기본 보안 그룹",
+    "secu_grp_descp": "기본 인바운드/아웃바운드 규칙",
+    "rules": [
+      {
+        "id": "RULE-001",
+        "direction": "ingress",
+        "protocol": "tcp",
+        "port_range_min": 22,
+        "port_range_max": 22,
+        "remote_ip_prefix": "0.0.0.0/0"
+      },
+      {
+        "id": "RULE-002",
+        "direction": "egress",
+        "protocol": null,
+        "port_range_min": null,
+        "port_range_max": null,
+        "remote_ip_prefix": "0.0.0.0/0"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

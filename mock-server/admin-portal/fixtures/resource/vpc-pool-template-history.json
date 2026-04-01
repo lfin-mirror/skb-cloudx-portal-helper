@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "poolId": "pool-0001-aaaa-bbbb-111111111111",
+      "templateId": "5b239b4d-ab56-11f0-bce4-22a1b8d92490",
+      "templateName": "Windows 10 기본",
+      "flavorId": "flvr-0001-aaaa-bbbb-cccccccccccc",
+      "flavorName": "2vCPU-4GB",
+      "imageId": "img-0001-aaaa-bbbb-cccccccccccc",
+      "imageName": "Win10-golden-v1",
+      "createdBy": "***",
+      "createdAt": "2026-01-15T09:00:00"
+    },
+    {
+      "poolId": "pool-0001-aaaa-bbbb-111111111111",
+      "templateId": "7c45de2e-cd78-11f0-aaaa-33b2c9e03601",
+      "templateName": "Windows 11 Pro",
+      "flavorId": "flvr-0002-aaaa-bbbb-cccccccccccc",
+      "flavorName": "4vCPU-8GB",
+      "imageId": "img-0002-aaaa-bbbb-cccccccccccc",
+      "imageName": "Win11-golden-v2",
+      "createdBy": "***",
+      "createdAt": "2026-02-20T14:30:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,9 @@
+{
+  "data": {
+    "proxy_id": "PROXY-001",
+    "proxy_ip": "10.0.100.1",
+    "proxy_port": 8080
+  },
+  "errCode": null,
+  "errMsg": null
+}

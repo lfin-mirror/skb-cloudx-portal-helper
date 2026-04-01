@@ -1,0 +1,20 @@
+{
+  "data": {
+    "threshold": [
+      {
+        "critical": 90,
+        "warning": 80,
+        "caution": 70
+      }
+    ],
+    "metrics": [
+      { "name": "vpc-prod-03", "value": "91.5", "labels": { "usrGrpNm": "테넌트A" } },
+      { "name": "vpc-dev-01", "value": "78.2", "labels": { "usrGrpNm": "테넌트B" } },
+      { "name": "vpc-dev-04", "value": "65.9", "labels": { "usrGrpNm": "테넌트A" } },
+      { "name": "vpc-prod-01", "value": "58.3", "labels": { "usrGrpNm": "테넌트C" } },
+      { "name": "vpc-dev-08", "value": "47.1", "labels": { "usrGrpNm": "테넌트B" } }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

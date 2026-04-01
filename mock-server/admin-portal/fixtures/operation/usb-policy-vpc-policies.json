@@ -1,0 +1,15 @@
+[
+    {
+        "secu_plcy_id": "880ca5ce-4a18-4365-88d4-c7429d02cc71",
+        "secu_plcy_nm": "TEST_TENANT_NO_PROXY",
+        "secu_plcy_tgt_cd": "U006T",
+        "secu_plcy_tgt_cd_nm": "테넌트 보안정책",
+        "group_cnt": 0,
+        "pool_cnt": 0,
+        "vm_cnt": 0,
+        "reg_ts": "2025-11-03 17:48:06",
+        "mod_ts": "2026-03-27 16:27:41",
+        "reg_conn_id": "***",
+        "mod_conn_id": "***"
+    }
+]

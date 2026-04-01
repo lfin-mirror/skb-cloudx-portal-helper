@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "usr_grp_id": "grp-001",
+      "usr_grp_nm": "TEST",
+      "usr_grp_full_nm": "TEST",
+      "up_usr_grp_id": null,
+      "usr_grp_descp": "기본 사용자 그룹",
+      "acct_cnt": 5,
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "init",
+      "reg_ts": "2025-10-17 21:45:30",
+      "mod_id": "init",
+      "mod_ts": "2025-10-17 21:45:30"
+    },
+    {
+      "usr_grp_id": "grp-002",
+      "usr_grp_nm": "TEST.DEV",
+      "usr_grp_full_nm": "TEST.DEV",
+      "up_usr_grp_id": "grp-001",
+      "usr_grp_descp": "개발팀",
+      "acct_cnt": 3,
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "init",
+      "reg_ts": "2025-11-01 10:00:00",
+      "mod_id": "init",
+      "mod_ts": "2025-11-01 10:00:00"
+    }
+  ],
+  "pageinfo": { "count": 2, "ispaging": false }
+}

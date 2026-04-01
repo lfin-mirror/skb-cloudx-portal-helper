@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "vpc_nm": "vpc-dev-01",
+      "tnt_nm": "테넌트A",
+      "usr_grp_nm": "개발 그룹",
+      "avg_delay_ms": 18.4,
+      "max_delay_ms": 95.2,
+      "min_delay_ms": 8.1,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "vpc_nm": "vpc-prod-01",
+      "tnt_nm": "테넌트A",
+      "usr_grp_nm": "업무 그룹",
+      "avg_delay_ms": 22.7,
+      "max_delay_ms": 120.5,
+      "min_delay_ms": 10.3,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "vpc_nm": "vpc-dev-03",
+      "tnt_nm": "테넌트B",
+      "usr_grp_nm": "개발 그룹",
+      "avg_delay_ms": 15.1,
+      "max_delay_ms": 75.8,
+      "min_delay_ms": 7.5,
+      "stat_dt": "2026-03-25"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

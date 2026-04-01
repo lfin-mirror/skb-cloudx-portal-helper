@@ -1,0 +1,16 @@
+{
+  "data": [
+    { "func_auth_id": "FUNC001", "func_auth_nm": "가상PC 풀 조회", "menu_id": "A0301", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC002", "func_auth_nm": "가상PC 풀 생성/수정/삭제", "menu_id": "A0301", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC003", "func_auth_nm": "가상PC 그룹 조회", "menu_id": "A0302", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC004", "func_auth_nm": "가상PC 그룹 생성/수정/삭제", "menu_id": "A0302", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC005", "func_auth_nm": "테넌트 조회", "menu_id": "A0802", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC006", "func_auth_nm": "테넌트 생성/수정/삭제", "menu_id": "A0802", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC007", "func_auth_nm": "관리자 계정 조회", "menu_id": "A1201", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC008", "func_auth_nm": "관리자 계정 생성/수정/삭제", "menu_id": "A1201", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC009", "func_auth_nm": "API 조회", "menu_id": "A120802", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" },
+    { "func_auth_id": "FUNC010", "func_auth_nm": "기능 조회", "menu_id": "A120803", "reg_ts": "2025-01-10 09:00:00", "mod_ts": "2025-01-10 09:00:00" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "dm_id": "DM-001",
+      "dm_nm": "corp.example.com",
+      "dm_descp": "기본 도메인"
+    },
+    {
+      "dm_id": "DM-002",
+      "dm_nm": "dev.example.com",
+      "dm_descp": "개발팀 도메인"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

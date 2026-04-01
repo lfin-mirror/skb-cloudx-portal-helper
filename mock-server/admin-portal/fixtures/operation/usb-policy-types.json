@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "reg_conn_id": null,
+            "reg_ts": "2025-10-17 21:45:30.585019",
+            "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "mod_conn_id": null,
+            "mod_ts": "2026-02-04 19:55:25.000000",
+            "usb_type_id": "7afb8b1f-f3f6-4945-a560-406d8a5d8a39",
+            "usb_type_target_code": null,
+            "usb_type_base": "00h",
+            "usb_type_meaning": "Use class code info from Interface Descriptors",
+            "usb_type_description": null,
+            "tenant_id": null
+        }
+    ]
+}

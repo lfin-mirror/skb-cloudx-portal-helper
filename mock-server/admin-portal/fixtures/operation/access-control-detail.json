@@ -1,0 +1,45 @@
+{
+  "data": {
+    "plcyInfo": {
+      "acc_blck_plcy_id": "ACC-BLCK-001",
+      "acc_blck_plcy_nm": "IP 차단 정책",
+      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+      "reg_conn_id": "***",
+      "reg_ts": "2026-01-15 09:00:00",
+      "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+      "mod_conn_id": "***",
+      "mod_ts": "2026-02-03 10:25:30"
+    },
+    "blckList": [
+      {
+        "acc_blck_plcy_id": "ACC-BLCK-001",
+        "acc_blck_plcy_nm": "IP 차단 정책",
+        "acc_blck_serv_id": "SVC-001",
+        "acc_blck_serv_nm": "웹 서비스",
+        "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+        "ip": "192.168.100.0/24",
+        "port": "80",
+        "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "reg_ts": "2026-01-15 09:00:00",
+        "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+        "mod_ts": "2026-02-03 10:25:30"
+      },
+      {
+        "acc_blck_plcy_id": "ACC-BLCK-001",
+        "acc_blck_plcy_nm": "IP 차단 정책",
+        "acc_blck_serv_id": "SVC-002",
+        "acc_blck_serv_nm": "내부 API",
+        "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+        "ip": "10.10.0.0/16",
+        "port": "8080",
+        "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "reg_ts": "2026-01-15 09:00:00",
+        "mod_id": "34dcc29e-afa6-11f0-8896-e288d288c3ed",
+        "mod_ts": "2026-02-03 10:25:30"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "browser_nm": "Chrome",
+      "browser_version": "123.0",
+      "access_cnt": 185,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "browser_nm": "Edge",
+      "browser_version": "122.0",
+      "access_cnt": 72,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "browser_nm": "Firefox",
+      "browser_version": "124.0",
+      "access_cnt": 20,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

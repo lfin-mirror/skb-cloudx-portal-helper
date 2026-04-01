@@ -1,0 +1,10 @@
+{
+  "data": [
+    { "error_cd": "ERR_VM_001", "error_nm": "VM 기동 실패" },
+    { "error_cd": "ERR_VM_002", "error_nm": "VM 중지 실패" },
+    { "error_cd": "ERR_NET_003", "error_nm": "네트워크 연결 타임아웃" },
+    { "error_cd": "ERR_STR_002", "error_nm": "스토리지 마운트 실패" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

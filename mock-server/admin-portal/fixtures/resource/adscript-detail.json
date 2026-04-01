@@ -1,0 +1,9 @@
+{
+  "data": {
+    "cadno": "CADNO-001",
+    "tnt_id": "TNT-001",
+    "script_content": "# AD 스크립트 내용\nnet use Z: \\\\server\\share /persistent:yes"
+  },
+  "errCode": null,
+  "errMsg": null
+}

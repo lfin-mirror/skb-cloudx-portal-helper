@@ -1,0 +1,17 @@
+{
+  "data": {
+    "noti_wrt_no": 1,
+    "title": "[필독] 시스템 정기 점검 안내 (2026년 4월)",
+    "cont": "<p>안녕하세요. CloudX VDI 운영팀입니다.</p><p>2026년 4월 1일(수) 00:00 ~ 06:00에 시스템 정기 점검이 진행됩니다. 해당 시간에는 서비스 이용이 불가합니다.</p><p>이용에 불편을 드려 죄송합니다.</p>",
+    "noti_meth_cd": "U016REP",
+    "noti_meth_cd_nm": "대표 공지",
+    "noti_tgt_cd": "U015AL",
+    "noti_tgt_grp_id": "",
+    "att_file_loc_cd": "D",
+    "wri_att_file_l": [],
+    "reg_conn_id": "superadmin",
+    "reg_ts": "2026-03-20 10:00:00"
+  },
+  "errCode": null,
+  "errMsg": null
+}

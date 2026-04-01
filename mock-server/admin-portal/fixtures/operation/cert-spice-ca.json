@@ -1,0 +1,6 @@
+{
+  "data": [
+    {"ca_typ_cd":"M006PB","secret_name":"CA","namespace":"openstack","version":"3","serial_number":"6fd878008e3100e240d75839d84797c63f8d63d3","signature_algorithm":"SHA256withRSA","issuer":"CN=Cert Manager","subject":"CN=Cert Manager","valid_start":"2025-10-17 16:57:57","valid_end":"2035-10-15 16:57:57"}
+  ],
+  "errCode": null, "errMsg": null
+}

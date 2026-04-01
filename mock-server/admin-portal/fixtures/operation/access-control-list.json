@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "acc_blck_plcy_id": "ACC-BLCK-001",
+      "acc_blck_plcy_nm": "IP 차단 정책",
+      "tnt_id": "TNT-001",
+      "blck_type_cd": "B001IP"
+    },
+    {
+      "acc_blck_plcy_id": "ACC-BLCK-002",
+      "acc_blck_plcy_nm": "시간 차단 정책",
+      "tnt_id": "TNT-001",
+      "blck_type_cd": "B001TM"
+    },
+    {
+      "acc_blck_plcy_id": "ACC-BLCK-003",
+      "acc_blck_plcy_nm": "복합 차단 정책",
+      "tnt_id": "TNT-001",
+      "blck_type_cd": "B001CP"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

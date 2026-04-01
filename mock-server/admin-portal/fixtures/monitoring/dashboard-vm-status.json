@@ -1,0 +1,10 @@
+{
+  "data": {
+    "total": 48,
+    "active": 42,
+    "shutoff": 4,
+    "error": 2
+  },
+  "errCode": null,
+  "errMsg": null
+}

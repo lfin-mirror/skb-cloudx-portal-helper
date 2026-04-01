@@ -1,0 +1,12 @@
+{
+  "data": {
+    "sbn_id": "SBN-001",
+    "sbn_nm": "내부 서브넷 A",
+    "tnt_id": "TNT-001",
+    "ip_range": "192.168.10.0/24",
+    "gateway": "192.168.10.1",
+    "use_yn": "Y"
+  },
+  "errCode": null,
+  "errMsg": null
+}

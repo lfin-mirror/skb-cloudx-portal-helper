@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "tnt_nm": "테넌트A",
+      "total_vpc_cnt": 28,
+      "deployed_cnt": 25,
+      "connected_cnt": 22,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "tnt_nm": "테넌트B",
+      "total_vpc_cnt": 15,
+      "deployed_cnt": 14,
+      "connected_cnt": 13,
+      "stat_dt": "2026-03-26"
+    },
+    {
+      "tnt_nm": "테넌트C",
+      "total_vpc_cnt": 5,
+      "deployed_cnt": 3,
+      "connected_cnt": 2,
+      "stat_dt": "2026-03-26"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

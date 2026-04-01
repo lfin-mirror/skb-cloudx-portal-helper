@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "acct_conn_id": "user_choi",
+      "acct_nm": "최사용",
+      "tnt_nm": "테넌트A",
+      "vpc_nm": "vpc-dev-01",
+      "conn_dtm": "2026-03-26 09:55:00",
+      "status": "connected",
+      "client_ip": "192.168.1.50"
+    },
+    {
+      "acct_conn_id": "user_oh",
+      "acct_nm": "오접속",
+      "tnt_nm": "테넌트B",
+      "vpc_nm": "vpc-dev-05",
+      "conn_dtm": "2026-03-26 10:15:00",
+      "status": "connected",
+      "client_ip": "192.168.3.11"
+    },
+    {
+      "acct_conn_id": "user_shin",
+      "acct_nm": "신사용",
+      "tnt_nm": "테넌트A",
+      "vpc_nm": "vpc-prod-02",
+      "conn_dtm": "2026-03-26 10:30:00",
+      "status": "connected",
+      "client_ip": "192.168.1.88"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

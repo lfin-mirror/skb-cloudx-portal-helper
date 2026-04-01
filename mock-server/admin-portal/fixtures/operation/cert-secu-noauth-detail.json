@@ -1,0 +1,24 @@
+{
+  "data": {
+    "noauth_proc_blck_plcy_id": "9b0a3624-00a0-11f1-a5c1-22b10486d9be",
+    "noauth_proc_blck_plcy_nm": "비인가정책01",
+    "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "reg_ts": "2026-02-03 10:35:22",
+    "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+    "mod_ts": "2026-02-03 10:38:26",
+    "noauth_proc_blck": [
+      {
+        "noauth_proc_blck_plcy_id": "9b0a3624-00a0-11f1-a5c1-22b10486d9be",
+        "noauth_proc_blck_id": "blck-proc-001",
+        "proc_nm": "unauthorized_tool.exe",
+        "cont": "비인가 도구 실행 차단",
+        "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "reg_ts": "2026-02-03 10:35:22",
+        "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+        "mod_ts": "2026-02-03 10:35:22"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

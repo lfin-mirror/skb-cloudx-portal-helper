@@ -1,0 +1,33 @@
+{
+  "data": {
+    "total": 84,
+    "list": [
+      {
+        "pod_nm": "cloudpc-api-7d9f8c-xkzqp",
+        "namespace": "cloudpc-system",
+        "status": "Running",
+        "cpu_usage": "120m",
+        "mem_usage": "256Mi",
+        "node_nm": "compute-01"
+      },
+      {
+        "pod_nm": "cloudpc-worker-6b8d5f-mnbvp",
+        "namespace": "cloudpc-system",
+        "status": "Running",
+        "cpu_usage": "80m",
+        "mem_usage": "192Mi",
+        "node_nm": "compute-02"
+      },
+      {
+        "pod_nm": "prometheus-0",
+        "namespace": "monitoring",
+        "status": "Running",
+        "cpu_usage": "200m",
+        "mem_usage": "512Mi",
+        "node_nm": "compute-03"
+      }
+    ]
+  },
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,26 @@
+{
+  "data": [
+    { "sw_nm": "CloudX Portal", "sub_sw_nm": "Admin Portal", "ver": "v.2.2.9" },
+    { "sw_nm": "CloudX Portal", "sub_sw_nm": "User Portal", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-resource", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-operation", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "plat-ms-vid4o", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-nauth", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-user", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-system", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-monitoring", "ver": "v.2.2.9" },
+    { "sw_nm": "Microservice", "sub_sw_nm": "app-ms-log", "ver": "v.2.2.9" },
+    { "sw_nm": "Agent", "sub_sw_nm": "CloudX Viewer Agent", "ver": "v.1.5.3" },
+    { "sw_nm": "Agent", "sub_sw_nm": "KeyLogging Agent", "ver": "v.1.2.1" },
+    { "sw_nm": "Agent", "sub_sw_nm": "USB Control Agent", "ver": "v.1.1.0" },
+    { "sw_nm": "Agent", "sub_sw_nm": "Security Agent", "ver": "v.1.3.2" },
+    { "sw_nm": "Infrastructure", "sub_sw_nm": "OpenStack Nova", "ver": "v.27.3.0" },
+    { "sw_nm": "Infrastructure", "sub_sw_nm": "OpenStack Neutron", "ver": "v.22.1.0" },
+    { "sw_nm": "Infrastructure", "sub_sw_nm": "OpenStack Cinder", "ver": "v.21.2.0" },
+    { "sw_nm": "Infrastructure", "sub_sw_nm": "OpenStack Glance", "ver": "v.26.0.0" },
+    { "sw_nm": "Infrastructure", "sub_sw_nm": "OpenStack Keystone", "ver": "v.23.0.0" },
+    { "sw_nm": "Infrastructure", "sub_sw_nm": "OpenStack Horizon", "ver": "v.25.5.1" }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

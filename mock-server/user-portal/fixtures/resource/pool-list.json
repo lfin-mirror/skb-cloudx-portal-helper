@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "vm_pool_id": "POOL-001",
+      "vm_pool_nm": "표준 개발 풀",
+      "vcpu_cnt": 4,
+      "vmm_capa": 8192,
+      "os_name": "Windows 10 Enterprise"
+    },
+    {
+      "vm_pool_id": "POOL-002",
+      "vm_pool_nm": "고성능 업무 풀",
+      "vcpu_cnt": 8,
+      "vmm_capa": 16384,
+      "os_name": "Windows 11 Enterprise"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "alm_rcv_grp_id": 1,
+      "alm_rcv_grp_nm": "인프라 운영팀",
+      "receiver_list": [],
+      "threshold_list": [],
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-01-10 09:00:00"
+    },
+    {
+      "alm_rcv_grp_id": 2,
+      "alm_rcv_grp_nm": "DBA 팀",
+      "receiver_list": [],
+      "threshold_list": [],
+      "reg_conn_id": "superadmin",
+      "reg_ts": "2026-01-15 14:30:00"
+    },
+    {
+      "alm_rcv_grp_id": 3,
+      "alm_rcv_grp_nm": "보안 관제 팀",
+      "receiver_list": [],
+      "threshold_list": [],
+      "reg_conn_id": "ops_kim",
+      "reg_ts": "2026-02-01 11:00:00"
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}
