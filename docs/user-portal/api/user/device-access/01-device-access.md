@@ -1,5 +1,8 @@
 # 단말 접속 정보 API
 
+## 사용 화면
+- [단말 접속 관리](../../../vpcinfo/07-device-access.md)
+
 ## GET `/v1/user/device-access/{acctId}/identifier-info`
 
 승인된 단말 접속 정보(식별자) 목록 조회. 단말 접속 정보 현황 페이지에서 사용한다.

@@ -11,8 +11,8 @@ mock 서버의 fixture 또는 handler를 추가/수정/삭제할 때, 해당 API
 
 | 변경 위치 | 명세서 위치 |
 |-----------|------------|
-| `mock-server/user-portal/` | `/Users/jay/skb/cloudx/docs/user-portal/api/` |
-| `mock-server/admin-portal/` | `/Users/jay/skb/cloudx/docs/admin-portal/api/` |
+| `mock-server/user-portal/` | `docs/user-portal/api/` |
+| `mock-server/admin-portal/` | `docs/admin-portal/api/` |
 
 ## 업데이트 범위
 
@@ -20,8 +20,27 @@ mock 서버의 fixture 또는 handler를 추가/수정/삭제할 때, 해당 API
 - 새 API 핸들러 추가 시 → 해당 명세서 파일 + `01-api-index.md` 인덱스 테이블 추가
 - 새 공통코드 그룹(codeMap) 추가 시 → 관련 기능 명세서의 "관련 공통코드" 표에 추가
 
+## 화면 문서 ↔ API 명세 역할 분리
+
+API 정보가 두 곳에 존재하면 동기화 부담이 커진다. 역할을 분리:
+
+| 문서 | 담당 내용 |
+|------|----------|
+| 화면 문서 `## API` | API 경로 + 동작 설명 + 명세 링크. **필드 상세는 적지 않음** |
+| api/ 명세 | 요청 파라미터, 응답 필드 구조, 타입, 예시. **정보의 원본** |
+
+화면 문서에서 API 필드 상세를 중복 기술하지 않는다. "이 API가 뭘 하는지"만 쓰고 "어떤 필드를 주고받는지"는 명세 링크로 연결.
+
+## 화면 문서 ↔ API 명세 동기화
+
+| 변경 | 동기화 대상 |
+|------|-----------|
+| api/ 명세의 요청/응답 구조 변경 | 화면 문서 수정 불필요 (링크만 유지) |
+| api/ 명세 파일 추가/삭제/이동 | 화면 문서의 API 명세 링크 업데이트 |
+| 화면 문서의 `api_endpoints` frontmatter 변경 | api/ 명세의 `## 사용 화면` 역참조 업데이트 |
+
 ## 문체
 
-`/Users/jay/skb/cloudx/docs/CLAUDE.md`의 규칙을 따른다:
+`docs/CLAUDE.md`의 규칙을 따른다:
 - 문장을 동사로 끝내지 않는다. 명사/단어로 끝낸다.
 - 표 안의 셀도 동일.

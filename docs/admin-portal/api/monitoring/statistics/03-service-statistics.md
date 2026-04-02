@@ -1,5 +1,24 @@
 # 서비스 통계 API
 
+## 사용 화면
+- (화면 문서 미작성)
+
+## 알람 카운트 (Navbar 뱃지)
+
+```
+GET /v1/management/statistics/service/alarmconform/count
+```
+
+Navbar 상단 알람 뱃지에 표시되는 미확인 알람 건수.
+
+**응답**
+
+문자열 숫자. 예: `"0"`
+
+**호출 위치**: Navbar 컴포넌트에서 페이지 로드 시 자동 호출.
+
+---
+
 ## 사용자/리소스 현황
 
 ```

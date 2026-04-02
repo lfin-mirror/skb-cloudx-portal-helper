@@ -1,5 +1,8 @@
 # 개인 디스크(로컬) API
 
+## 사용 화면
+- [개인 디스크 관리](../../../vpcinfo/02-prs-disk.md)
+
 ## GET `/v1/resource/disk/local/{acctId}`
 
 계정의 개인 디스크 목록과 사용 현황, 연결 가능한 Cloud PC 목록을 반환한다.

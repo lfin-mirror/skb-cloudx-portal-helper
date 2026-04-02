@@ -1,5 +1,8 @@
 # AuthRemake API
 
+## 사용 화면
+- (화면 문서 미작성 — SA/TA 권한 전환 기능에서 사용)
+
 Super Admin ↔ Tenant Admin 권한 전환 API.
 
 > **인증 토큰 필요**: 요청 헤더에 `Authorization` 토큰 필요

@@ -1,5 +1,8 @@
 # VM 보안 정책 (Security Group) API
 
+## 사용 화면
+- (화면 문서 미작성)
+
 ## 목차
 
 - [보안 그룹 (Security Group)](#보안-그룹-security-group)

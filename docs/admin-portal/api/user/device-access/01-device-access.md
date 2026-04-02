@@ -1,5 +1,8 @@
 # 단말 접속 API
 
+## 사용 화면
+- [업무요청/단말접속/사용자모니터링](../../화면/사용자%20정보/03-업무요청-단말접속-사용자모니터링.md)
+
 리소스 경로 기준: `/v1/user/clientmac`, `/v1/user/device-identifier`
 
 ---
@@ -169,11 +172,17 @@ GET /v1/user/device-identifier/users
 | 필드 | 타입 | 설명 |
 |------|------|------|
 | data | array | 단말 접속 목록 |
-| data[].acct_conn_id | string | 계정 로그인 ID |
+| data[].acct_dvc_ident_id | string | 단말 식별자 ID |
 | data[].acct_id | string | 계정 ID |
-| data[].acct_nm | string | 사용자명 |
-| data[].mod_ts | string | 최근 수정 일시 |
+| data[].acct_conn_id | string | 계정 로그인 ID (마스킹) |
+| data[].acct_nm | string | 사용자명 (마스킹) |
+| data[].dvc_ident_val | string | 단말 식별값 (MAC 주소 등) |
+| data[].dvc_nm | string | 단말명 |
+| data[].use_yn | string | 사용 여부 (`Y`/`N`) |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_ts | string | 수정 일시 |
 | pageinfo.count | number | 전체 건수 |
+| pageinfo.ispaging | boolean | 페이징 여부 |
 
 **호출 위치**
 
@@ -199,12 +208,16 @@ GET /v1/user/device-identifier/{acct_id}
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| data | array | 단말 식별자 목록 |
-| data[].acct_dvc_ident_id | string | 단말 식별자 ID |
-| data[].acct_id | string | 계정 ID |
-| data[].dvc_ident_val | string | 단말 식별값 |
-| data[].dvc_ident_typ_cd | string | 단말 식별 유형 코드 |
-| data[].use_yn | string | 사용 여부 |
+| data | object | 단말 식별자 상세 |
+| data.acct_dvc_ident_id | string | 단말 식별자 ID |
+| data.acct_id | string | 계정 ID |
+| data.acct_conn_id | string | 계정 로그인 ID (마스킹) |
+| data.acct_nm | string | 사용자명 (마스킹) |
+| data.dvc_ident_val | string | 단말 식별값 (MAC 주소 등) |
+| data.dvc_nm | string | 단말명 |
+| data.use_yn | string | 사용 여부 (`Y`/`N`) |
+| data.reg_ts | string | 등록 일시 |
+| data.mod_ts | string | 수정 일시 |
 
 **호출 위치**
 
@@ -230,11 +243,13 @@ GET /v1/user/device-identifier/{acct_id}/hist
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| data | array | 단말 접속 이력 |
+| data | array | 단말 식별자 이력 목록 |
+| data[].acct_dvc_ident_hist_id | string | 이력 ID |
 | data[].acct_dvc_ident_id | string | 단말 식별자 ID |
 | data[].dvc_ident_val | string | 단말 식별값 |
-| data[].conn_ts | string | 접속 일시 |
-| data[].use_yn | string | 사용 여부 |
+| data[].dvc_nm | string | 단말명 |
+| data[].chg_rsn | string | 변경 사유 |
+| data[].reg_ts | string | 등록 일시 |
 
 **호출 위치**
 

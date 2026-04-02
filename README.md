@@ -29,6 +29,28 @@ skb-cloudx-portal-helper/
 │       ├── resource/          #   VPC, 스냅샷, 디스크, 풀
 │       ├── user/              #   계정, 요청, 디바이스, 그룹
 │       └── system/            #   공지, FAQ, QNA, 가이드, 정책
+├── docs/
+│   ├── CLAUDE.md              # 문서 규칙 인덱스
+│   ├── prd.md                 # 플랫폼 PRD
+│   ├── ia/                    # 정보 아키텍처 (메뉴 트리, 유저플로우, 데이터 관계도)
+│   ├── admin-portal/
+│   │   ├── 화면/              #   화면 문서 43개 (SA/TA 통합)
+│   │   ├── api/               #   API 명세
+│   │   ├── 개요/              #   SA/TA 메뉴 개요
+│   │   ├── openstack/         #   OpenStack/VDI 배경 지식
+│   │   └── internals/         #   내부 구조 분석
+│   ├── user-portal/
+│   │   ├── vpcinfo/           #   화면 문서 (가상PC 관련)
+│   │   ├── support/           #   화면 문서 (공지/FAQ/문의)
+│   │   ├── auth/              #   흐름 문서 (로그인/인증)
+│   │   ├── mobile/            #   흐름 문서 (모바일)
+│   │   ├── internals/         #   내부 구조 (Vuex/interceptor)
+│   │   ├── term/              #   용어 (AD/Octatco/키로깅)
+│   │   └── api/               #   API 명세
+│   ├── term/                  #   VDI 공통 용어
+│   ├── changelog/             #   버전별 변경 요약
+│   ├── speculation/           #   추측 문서
+│   └── mapping/               #   API 매핑 테이블
 ├── e2e/
 │   ├── playwright.config.js
 │   ├── helpers/
@@ -361,4 +383,18 @@ mock-server/admin-portal/
 2. `handlers/` 해당 핸들러에 라우트 추가
 3. 시나리오 분기가 필요하면 `getScenario()` 패턴 적용
 
-API 명세는 `docs/user-portal/api/`에 정리되어 있다.
+## 문서
+
+`docs/` 폴더에 플랫폼 문서가 통합 관리된다.
+
+| 폴더 | 내용 |
+|------|------|
+| `docs/prd.md` | 플랫폼 PRD (목적, 대상, 핵심 기능) |
+| `docs/ia/` | 정보 아키텍처 — 메뉴 트리, 유저플로우, 데이터 관계도 |
+| `docs/admin-portal/화면/` | admin-portal 화면 문서 43개 (SA/TA 통합) |
+| `docs/admin-portal/api/` | admin-portal API 명세 |
+| `docs/user-portal/` | user-portal 문서 (화면/흐름/내부구조/용어) |
+| `docs/user-portal/api/` | user-portal API 명세 |
+| `docs/CLAUDE.md` | 문서 규칙 인덱스 |
+
+상세 규칙은 `docs/CLAUDE.md` 참조.

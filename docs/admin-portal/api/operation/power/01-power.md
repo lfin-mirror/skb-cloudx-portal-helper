@@ -1,5 +1,8 @@
 # 전원 관리 정책 API
 
+## 사용 화면
+- (화면 문서 미작성)
+
 리소스 경로 기준: `/v1/operation/policys/powermgt`, `/v1/operation/policys/rset`
 
 ---

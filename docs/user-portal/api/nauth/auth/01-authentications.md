@@ -1,5 +1,9 @@
 # NAUTH 인증 API
 
+## 사용 화면
+- [로그인 → 홈 화면 진입 흐름](../../../auth/02-login-to-home-flow.md)
+- [아이디 찾기, 비밀번호 초기화, AD 연동](../../../auth/03-account-recovery-and-ad.md)
+
 인증 없이 접근 가능한 인증 관련 API (2차 인증 코드 요청, 아이디 찾기, 임시 비밀번호 발급).
 
 ---

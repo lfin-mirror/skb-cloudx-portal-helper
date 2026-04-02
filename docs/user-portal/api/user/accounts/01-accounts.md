@@ -1,5 +1,9 @@
 # 계정 API
 
+## 사용 화면
+- [이용 내역](../../../vpcinfo/03-usage-history.md)
+- [Cloud PC 초기화](../../../vpcinfo/05-initialization.md)
+
 ## GET `/v1/user/accounts/{acctId}`
 
 계정 상세 정보 조회.

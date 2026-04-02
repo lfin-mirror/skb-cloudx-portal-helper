@@ -1,5 +1,8 @@
 # 서비스 그룹 API
 
+## 사용 화면
+- 사용자 정보 관리 (`AccountSetting.vue`) — 화면 문서 미작성
+
 ## GET `/v1/user/servGroup/usergroups`
 
 사용자 그룹 정보 조회. 계정의 정보 수정 가능 여부를 확인하는 용도로 사용한다.

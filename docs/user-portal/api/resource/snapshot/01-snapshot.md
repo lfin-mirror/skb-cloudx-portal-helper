@@ -1,5 +1,8 @@
 # 스냅샷 API
 
+## 사용 화면
+- [스냅샷 및 복원](../../../vpcinfo/04-snapshot.md)
+
 ## GET `/v1/resource/snapshot/{vmAuthId}`
 
 선택한 VM의 스냅샷 목록과 최대 허용 개수를 반환한다.

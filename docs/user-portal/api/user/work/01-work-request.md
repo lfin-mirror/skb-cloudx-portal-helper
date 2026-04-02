@@ -1,5 +1,12 @@
 # 업무 요청 API
 
+## 사용 화면
+- [Cloud PC 신청](../../../vpcinfo/01-vpc-req.md)
+- [Cloud PC 반납](../../../vpcinfo/06-vpc-return.md)
+- [단말 접속 관리](../../../vpcinfo/07-device-access.md)
+- [Cloud PC 기간 연장](../../../vpcinfo/home/04-period-extension.md)
+- [장애처리 신청](../../../support/06-trouble-request.md)
+
 ## GET `/v1/user/work/request`
 
 업무 요청 목록 조회. `usr_req_div_cd` 값으로 요청 유형을 구분한다.

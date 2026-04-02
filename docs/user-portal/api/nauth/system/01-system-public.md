@@ -1,5 +1,10 @@
 # 시스템 공개 API
 
+## 사용 화면
+- [Cloud PC 신청](../../../vpcinfo/01-vpc-req.md)
+- [전원 제어](../../../vpcinfo/home/03-power-control.md)
+- [엔트리 → 로그인 흐름](../../../auth/01-entry-to-login-flow.md)
+
 인증 없이 접근 가능한 시스템 정보 조회 API. 로그인 화면 진입 시 호출된다.
 
 ---

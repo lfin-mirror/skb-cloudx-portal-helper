@@ -1,5 +1,9 @@
 # Octatco 인증 API
 
+## 사용 화면
+- [로그인 → 홈 화면 진입 흐름](../../../auth/02-login-to-home-flow.md)
+- [MQTT 기반 모바일 생체 인증](../../../mobile/03-mqtt-mobile-biometric.md)
+
 Octatco 외부 인증 연동 API. 아이디 확인 → 인증 토큰 요청 → 인증 검증 순서로 호출한다.
 
 ---

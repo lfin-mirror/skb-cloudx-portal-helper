@@ -1,5 +1,8 @@
 # FAQ API
 
+## 사용 화면
+- [자주 묻는 질문 (FAQ)](../../../support/03-faq.md)
+
 ## GET `/v1/system/faqs`
 
 FAQ 목록 조회.

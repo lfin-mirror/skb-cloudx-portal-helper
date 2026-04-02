@@ -1,5 +1,9 @@
 # VM 인가 API
 
+## 사용 화면
+- [홈 화면 레이아웃 및 폴링](../../../vpcinfo/home/01-layout-and-polling.md)
+- [Cloud PC 상세 정보 및 상태](../../../vpcinfo/home/02-vpc-info-and-status.md)
+
 ## GET `/v1/resource/vm-authorization/{vmAuthId}`
 
 VM 인가 정보를 조회한다. Cloud PC 실행(뷰어 연결) 전 연결 상태 및 AD 조인 여부 확인, 그리고 전원 상태 폴링에 사용된다.

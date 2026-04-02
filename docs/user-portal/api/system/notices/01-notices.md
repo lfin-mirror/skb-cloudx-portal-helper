@@ -1,5 +1,9 @@
 # 공지사항 API
 
+## 사용 화면
+- [공지사항](../../../support/01-notice.md)
+- [홈 화면 레이아웃 및 폴링](../../../vpcinfo/home/01-layout-and-polling.md)
+
 ## GET `/v1/system/notices`
 
 공지사항 목록 조회.

@@ -1,5 +1,9 @@
 # 외부 연동 인터페이스 API
 
+## 사용 화면
+- [서비스 (접근 통제/외부 연동/Push 메시지)](../../화면/서비스/02-서비스.md)
+- [Proxy-이메일](../../화면/시스템%20자원/05-Proxy-이메일.md)
+
 리소스 경로 기준: `/v1/operation/outs/interfaces`
 
 ---
@@ -308,6 +312,27 @@ GET /v1/operation/log/vm/vm
 | tnt_id | string | N | 테넌트 ID |
 | page | number | N | 페이지 번호 |
 | limit | number | N | 페이지당 항목 수 |
+
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | array | VM 접속 로그 목록 |
+| data[].vm_auth_id | string | VM 인증 ID |
+| data[].acct_conn_id | string | 계정 로그인 ID (마스킹) |
+| data[].acct_nm | string | 계정명 (마스킹) |
+| data[].vm_nm | string | VM명 |
+| data[].vm_pool_nm | string | 풀명 |
+| data[].puc_ts | string\|null | 프로토콜 접속 시작 일시 |
+| data[].pud_ts | string\|null | 프로토콜 접속 종료 일시 |
+| data[].tuc_ts | string\|null | 터널 접속 시작 일시 |
+| data[].tud_ts | string\|null | 터널 접속 종료 일시 |
+| data[].iuc_ts | string\|null | 내부 접속 시작 일시 |
+| data[].iud_ts | string\|null | 내부 접속 종료 일시 |
+| data[].auc_ts | string\|null | 관리자 접속 시작 일시 |
+| data[].aud_ts | string\|null | 관리자 접속 종료 일시 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 
 **호출 위치**
 

@@ -1,5 +1,8 @@
 # VPN 자동 로그인 API
 
+## 사용 화면
+- [VPN 자동 로그인](../../../auth/04-vpn-auto-login.md)
+
 VPN 환경에서 원패스 토큰 기반 자동 로그인 API.
 
 ---

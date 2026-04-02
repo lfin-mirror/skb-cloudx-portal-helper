@@ -1,5 +1,9 @@
 # 네트워크 API
 
+## 사용 화면
+- [네트워크](../../화면/시스템%20자원/03-네트워크.md)
+- [포트/공용PC대기/자동할당/IP관리](../../화면/가상%20PC/05-포트-공용PC대기-자동할당-IP관리.md)
+
 ## 목차
 
 - [네트워크](#네트워크)
@@ -245,9 +249,11 @@
 | data[].rules[].direction_cd_nm | string | 방향명 |
 | data[].rules[].max_kbps | number | 최대 대역폭 (kbps) |
 | data[].rules[].max_burst_kbps | number | 최대 버스트 대역폭 (kbps) |
-| data[].rules[].reg_conn_id | string | 등록자 계정 ID |
+| data[].rules[].reg_conn_id | string | 등록자 계정 ID (마스킹) |
+| data[].rules[].reg_nm | string | 등록자명 (마스킹) |
 | data[].rules[].reg_ts | string | 등록일시 |
-| data[].rules[].mod_conn_id | string | 수정자 계정 ID |
+| data[].rules[].mod_conn_id | string | 수정자 계정 ID (마스킹) |
+| data[].rules[].mod_nm | string | 수정자명 (마스킹) |
 | data[].rules[].mod_ts | string | 수정일시 |
 | data[].tnt_id | string\|null | 테넌트 ID |
 | data[].tnt_nm | string\|null | 테넌트명 |

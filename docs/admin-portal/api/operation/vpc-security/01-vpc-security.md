@@ -1,5 +1,8 @@
 # VPC 보안 그룹 정책 API
 
+## 사용 화면
+- [가상 PC 정책](../../화면/정책/02-가상%20PC%20정책.md)
+
 리소스 경로 기준: `/v1/operation/cert/secu/grps`, `/v1/operation/policys/{id}/cert/vpc`
 
 > VPC 보안 정책은 두 개의 하위 도메인으로 구성된다.

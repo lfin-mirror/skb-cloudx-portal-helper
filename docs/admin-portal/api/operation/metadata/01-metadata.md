@@ -1,5 +1,9 @@
 # VM 메타데이터 정책 API
 
+## 사용 화면
+- [Metadata](../../화면/정책/07-Metadata.md)
+- [가상 PC 정책](../../화면/정책/02-가상%20PC%20정책.md)
+
 리소스 경로 기준: `/v1/operation/policys/vm/mdata`
 
 ---

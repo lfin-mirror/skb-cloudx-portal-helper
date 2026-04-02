@@ -1,5 +1,9 @@
 # 포털 가이드 파일 API
 
+## 사용 화면
+- [매뉴얼](../../../support/02-manual.md)
+- [다운로드](../../../support/05-file-download.md)
+
 ## GET `/v1/system/portals/guides`
 
 포털 클라이언트 프로그램 및 매뉴얼 파일 목록 조회. 다운로드 페이지와 매뉴얼 페이지에서 각각 다른 파라미터로 호출한다.

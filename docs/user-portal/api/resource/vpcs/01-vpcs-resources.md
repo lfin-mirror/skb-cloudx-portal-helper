@@ -1,5 +1,14 @@
 # VPC 리소스 API
 
+## 사용 화면
+- [Cloud PC 신청](../../../vpcinfo/01-vpc-req.md)
+- [스냅샷 및 복원](../../../vpcinfo/04-snapshot.md)
+- [Cloud PC 초기화](../../../vpcinfo/05-initialization.md)
+- [Cloud PC 반납](../../../vpcinfo/06-vpc-return.md)
+- [전원 제어](../../../vpcinfo/home/03-power-control.md)
+- [홈 화면 레이아웃 및 폴링](../../../vpcinfo/home/01-layout-and-polling.md)
+- [장애처리 신청](../../../support/06-trouble-request.md)
+
 ## GET `/v1/resource/vpcs/resources`
 
 현재 사용자에게 할당된 VPC 목록을 반환한다.

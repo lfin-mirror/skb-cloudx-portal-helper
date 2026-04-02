@@ -1,5 +1,10 @@
 # 파일 서비스 API
 
+## 사용 화면
+- [1:1 문의](../../support/04-contact.md)
+- [매뉴얼](../../support/02-manual.md)
+- [다운로드](../../support/05-file-download.md)
+
 파일서비스는 별도 서버(`FILE_URI`)에서 운영된다. 환경변수 `VUE_APP_FILE_URI`로 base URL을 설정하며, 코드에서는 `configMap.VUE_APP_FILE_URI`로 참조한다.
 
 ---

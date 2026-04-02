@@ -1,5 +1,8 @@
 # 사용자 그룹 API
 
+## 사용 화면
+- [사용자 그룹](../../화면/사용자%20정보/01-사용자%20그룹.md)
+
 리소스 경로 기준: `/v1/user/usergroups`
 
 ---
@@ -33,12 +36,17 @@ GET /v1/user/usergroups
 | data | array | 사용자 그룹 목록 |
 | data[].usr_grp_id | string | 사용자 그룹 ID |
 | data[].usr_grp_nm | string | 사용자 그룹명 |
+| data[].usr_grp_full_nm | string | 사용자 그룹 전체명 (계층 포함) |
+| data[].up_usr_grp_id | string\|null | 상위 그룹 ID |
+| data[].usr_grp_descp | string | 그룹 설명 |
+| data[].acct_cnt | number | 소속 계정 수 |
 | data[].tnt_id | string | 테넌트 ID |
-| data[].serv_grp_id | string | 서비스 그룹 ID |
-| data[].grp_typ_cd | string | 그룹 유형 코드 |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
 | pageinfo.count | number | 전체 건수 |
+| pageinfo.ispaging | boolean | 페이징 여부 |
 
 **호출 위치**
 

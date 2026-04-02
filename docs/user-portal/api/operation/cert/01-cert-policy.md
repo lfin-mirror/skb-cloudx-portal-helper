@@ -1,5 +1,9 @@
 # 인증/보안 정책 API
 
+## 사용 화면
+- [Cloud PC 신청](../../../vpcinfo/01-vpc-req.md)
+- [홈 화면 레이아웃 및 폴링](../../../vpcinfo/home/01-layout-and-polling.md)
+
 ## GET `/v1/operation/cert/n2nd/info/{certPlcyId}`
 
 2차 인증 정책 정보 조회. Cloud PC 신청 전 사용자의 최대 VM 보유 수량 제한을 확인한다.

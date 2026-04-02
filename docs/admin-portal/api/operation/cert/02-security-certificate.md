@@ -1,5 +1,8 @@
 # 보안 인증서 API
 
+## 사용 화면
+- [보안 인증서](../../화면/서비스/01-보안%20인증서.md)
+
 리소스 경로 기준: `/v1/operation/secu/cert`
 
 Kubernetes/OpenStack/CloudPC 클러스터의 TLS 인증서(CA, 서버) 목록 조회 및 만료 알림 이력 관리.

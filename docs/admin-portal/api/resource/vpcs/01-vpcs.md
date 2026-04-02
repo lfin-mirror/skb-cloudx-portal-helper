@@ -1,5 +1,13 @@
 # VPC (가상 PC) API
 
+## 사용 화면
+- [가상 PC 그룹](../../화면/가상%20PC/01-가상%20PC%20그룹.md)
+- [가상 PC](../../화면/가상%20PC/02-가상%20PC.md)
+- [가상 PC 예약](../../화면/가상%20PC/04-가상%20PC%20예약.md)
+- [포트/공용PC대기/자동할당/IP관리](../../화면/가상%20PC/05-포트-공용PC대기-자동할당-IP관리.md)
+- [가상 PC 원격 제어](../../화면/사용자%20지원/01-가상%20PC%20원격%20제어.md)
+- [업무 처리 요청](../../화면/사용자%20지원/02-업무%20처리%20요청.md)
+
 ## 목차
 
 - [VPC 그룹](#vpc-그룹)
@@ -443,6 +451,16 @@ VPC 풀 카운트 조회.
 |---|---|---|---|
 | vm_grp_id | string | N | 그룹 ID |
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| data.total | number | 전체 풀 수 |
+| data.ded_count | number | 전용 PC 풀 수 |
+| data.poo_count | number | 공용 PC 풀 수 |
+| data.vm_total | number | 전체 VM 수 |
+| data.vm_count | number | 배정된 VM 수 |
+
 ---
 
 ### DELETE /v1/resource/vpcs/pool/{vmPoolId}/collection
@@ -569,15 +587,113 @@ VM 상세 조회.
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| vm_auth_id | string | VM 인증 ID |
-| vm_nm | string | VM명 |
-| tnt_id | string | 테넌트 ID |
-| vm_pool_id | string | 풀 ID |
-| vm_pwr_stat_cd | string | 전원 상태 코드 |
-| vm_allo_stat_cd | string | 할당 상태 코드 |
-| vmm_capa | number | 메모리 용량 (MB) |
-| vcpu_cnt | number | vCPU 수 |
-| flavor_id | string | 플레이버 ID |
+| data.vm_auth_id | string | VM 인증 ID |
+| data.acct_id | string | 계정 ID |
+| data.acct_conn_id | string | 계정 로그인 ID (마스킹) |
+| data.acct_nm | string | 계정명 (마스킹) |
+| data.usr_grp_id | string | 사용자 그룹 ID |
+| data.usr_grp_nm | string | 사용자 그룹명 |
+| data.vm_als | string\|null | VM 별칭 |
+| data.vm_vlid_stt_dt | string | VM 유효기간 시작일 |
+| data.vm_vlid_end_dt | string | VM 유효기간 종료일 |
+| data.tnt_mtd_cd | string | 테넌트 운영 방식 코드 |
+| data.tnt_mtd_cd_nm | string | 테넌트 운영 방식명 |
+| data.tnt_id | string | 테넌트 ID |
+| data.tnt_nm | string | 테넌트명 |
+| data.vm_pool_id | string | 풀 ID |
+| data.vm_pool_nm | string | 풀명 |
+| data.suppl_dsk_usg_yn | string | 보조 디스크 사용 여부 |
+| data.ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| data.gdn_img_cre_yn | string | 골든이미지 생성 여부 |
+| data.vm_grp_nm | string | VM 그룹명 |
+| data.vm_allo_sts_cd | string | VM 할당 상태 코드 |
+| data.vm_allo_sts_cd_nm | string | VM 할당 상태명 |
+| data.vm_allo_typ_cd | string | VM 할당 유형 코드 (`U028M` 수동, `U028A` 자동) |
+| data.vm_allo_typ_cd_nm | string | VM 할당 유형명 |
+| data.vm_allo_typ_static_ip_yn | string | 정적 IP 할당 여부 |
+| data.rstr_sts_cd | string | 제한 상태 코드 |
+| data.rstr_sts_cd_nm | string | 제한 상태명 |
+| data.secu_plcy_id | string | 보안 정책 ID |
+| data.secu_plcy_nm | string | 보안 정책명 |
+| data.bkup_snap_plcy_id | string | 백업 스냅샷 정책 ID |
+| data.bkup_snap_plcy_nm | string | 백업 스냅샷 정책명 |
+| data.sort_ord | number\|null | 정렬 순서 |
+| data.vm_descp | string\|null | VM 설명 |
+| data.reg_id | string | 등록자 ID |
+| data.reg_conn_id | string | 등록자 로그인 ID (마스킹) |
+| data.reg_nm | string | 등록자명 (마스킹) |
+| data.reg_ts | string | 등록 일시 |
+| data.mod_id | string | 수정자 ID |
+| data.mod_conn_id | string | 수정자 로그인 ID (마스킹) |
+| data.mod_nm | string | 수정자명 (마스킹) |
+| data.mod_ts | string | 수정 일시 |
+| data.allo_fail_msg | string\|null | 할당 실패 메시지 |
+| data.vm_id | string | VM UUID |
+| data.vm_nm | string | VM명 |
+| data.mnt_yn | string | 유지보수 여부 |
+| data.ad_itlk_succ_yn | string\|null | AD 연동 성공 여부 |
+| data.vcpu_cnt | string | vCPU 수 |
+| data.vmm_capa | string | 메모리 용량 (MB) |
+| data.vhd_capa | string | 디스크 용량 (GB) |
+| data.host_id | string | 호스트 ID |
+| data.host_nm | string | 호스트명 |
+| data.zone_nm | string | 존명 |
+| data.host_sts_cd | string | 호스트 상태 코드 |
+| data.temp_id | string | 템플릿 ID |
+| data.flavor_id | string | 플레이버 ID |
+| data.img_id | string | 이미지 ID |
+| data.vm_on_ctrl_tm | string | VM 전원 제어 일시 |
+| data.vm_ip | string | VM IP 주소 |
+| data.static_ip_usg_yn | string | 정적 IP 사용 여부 |
+| data.os_typ_cd | string | OS 유형 코드 |
+| data.os_typ_cd_nm | string | OS 유형명 |
+| data.usr_vm_conn_sts_cd | string | 사용자-VM 접속 상태 코드 |
+| data.usr_vm_conn_sts_cd_nm | string | 사용자-VM 접속 상태명 |
+| data.adm_vm_conn_sts_cd | string | 관리자-VM 접속 상태 코드 |
+| data.adm_vm_conn_sts_cd_nm | string | 관리자-VM 접속 상태명 |
+| data.vm_power_sts_cd | string | VM 전원 상태 코드 |
+| data.vm_power_sts_cd_nm | string | VM 전원 상태명 |
+| data.vm_state | string | VM OpenStack 상태 (`active` 등) |
+| data.task_state | string\|null | VM task 상태 |
+| data.usr_vm_ctrl_tm | string | 사용자 VM 제어 일시 |
+| data.vm_str_ctrl_tm | string | VM 시작 제어 일시 |
+| data.temp_nm | string | 템플릿명 |
+| data.img_nm | string | 이미지명 |
+| data.vm_pool_cnt | number\|null | 풀 VM 수 |
+| data.volm_typ_id | string | 볼륨 타입 ID |
+| data.volm_typ_nm | string | 볼륨 타입명 |
+| data.volm_qos_plcy_id | string | 볼륨 QoS 정책 ID |
+| data.volm_qos_plcy_nm | string | 볼륨 QoS 정책명 |
+| data.volm_qos_detail | object\|null | 볼륨 QoS 상세 |
+| data.volm_qos_detail.volm_qos_plcy_id | string | 볼륨 QoS 정책 ID |
+| data.volm_qos_detail.volm_qos_plcy_nm | string | 볼륨 QoS 정책명 |
+| data.volm_qos_detail.volm_typ_id | string | 볼륨 타입 ID |
+| data.volm_qos_detail.volm_typ_nm | string | 볼륨 타입명 |
+| data.volm_qos_detail.volm_qos_rule_unit_cd | string | QoS 규칙 단위 코드 (`V018IOP` IOPS 등) |
+| data.volm_qos_detail.volm_qos_rule_unit_cd_nm | string | QoS 규칙 단위명 |
+| data.volm_qos_detail.volm_read | number | 읽기 제한값 |
+| data.volm_qos_detail.volm_read_max | number | 읽기 최대값 |
+| data.volm_qos_detail.volm_write | number | 쓰기 제한값 |
+| data.volm_qos_detail.volm_write_max | number | 쓰기 최대값 |
+| data.dsk_sum | string | 추가 디스크 합계 용량 (GB) |
+| data.vhd_capa_total | string | 전체 디스크 용량 (GB) |
+| data.ports | array | 연결된 포트 목록 |
+| data.ports[].port_id | string | 포트 ID |
+| data.ports[].port_nm | string | 포트명 |
+| data.ports[].port_sts_val | string | 포트 상태 (`UP` / `DOWN`) |
+| data.ports[].mac | string | MAC 주소 |
+| data.ports[].nw_id | string | 네트워크 ID |
+| data.ports[].nw_nm | string | 네트워크명 |
+| data.ports[].sbn_id | string | 서브넷 ID |
+| data.ports[].sbn_nm | string | 서브넷명 |
+| data.ports[].cidr | string | CIDR |
+| data.ports[].ip | string | IP 주소 |
+| data.ports[].dev_id | string | 디바이스 ID |
+| data.ports[].dev_ownr | string | 디바이스 소유자 |
+| data.ports[].nw_qos_plcy_id | string\|null | 네트워크 QoS 정책 ID |
+| data.ports[].port_typ_cd | string\|null | 포트 유형 코드 |
+| data.network_qos | object\|null | VM 네트워크 QoS 정책 |
+| data.port_qos | object\|null | VM 포트 QoS 정책 |
 
 ---
 
@@ -941,13 +1057,19 @@ VNC 연결 해제.
 
 **응답**
 
-배열 형태.
-
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| vm_auth_id | string | VM 인증 ID |
-| vm_nm | string | VM명 |
-| vm_pwr_stat_cd | string | 전원 상태 코드 |
+| data | array | 대기 VM 목록 |
+| data[].vm_auth_id | string | VM 인증 ID |
+| data[].acct_id | string | 계정 ID |
+| data[].acct_nm | string | 계정명 (마스킹) |
+| data[].usr_grp_nm | string | 사용자 그룹명 |
+| data[].vm_id | string | VM UUID (`-` = 미할당) |
+| data[].vm_nm | string | VM명 (`-` = 미할당) |
+| data[].vm_power_sts_cd | string | 전원 상태 코드 (`-` = 미할당) |
+| data[].vm_power_sts_cd_nm | string | 전원 상태명 (`-` = 미할당) |
+| data[].resrv_alloc_tm | string | 예약 할당 일시 |
+| data[].vm_pool_id | string | 풀 ID |
 
 ---
 

@@ -16,6 +16,14 @@
 - `mock-server/constants.js`: SA/TA 토큰, getRoleFromToken()
 - `e2e/playwright.config.js`: Playwright 설정
 - `e2e/tests/`: E2E 테스트
+- `docs/`: 플랫폼 문서 (화면 분석, API 명세, IA, PRD)
+- `docs/CLAUDE.md`: 문서 규칙 인덱스
+- `docs/admin-portal/화면/`: admin-portal 화면 문서 (43개, SA/TA 통합)
+- `docs/admin-portal/api/`: admin-portal API 명세
+- `docs/user-portal/`: user-portal 문서 (screen/flow/internal/concept)
+- `docs/user-portal/api/`: user-portal API 명세
+- `docs/ia/`: 정보 아키텍처 (메뉴 트리, 유저플로우, 데이터 관계도)
+- `docs/prd.md`: 플랫폼 PRD
 - `.claude/rules/`: 작업 규칙 (세부 내용)
 
 ## Run Commands

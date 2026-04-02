@@ -114,7 +114,7 @@ admin-portal이 호출하는 모든 API 목록.
 | 구버전 위젯 대시보드 | 위젯 대시보드 | [링크](monitoring/dashboard/02-user-widget.md) |
 | 로그/접속/사용자수/사용시간/오류 통계 | 로그 통계 | [링크](monitoring/statistics/01-log-statistics.md) |
 | VPC 배정/사용/동시접속/미접속 통계 | VPC 통계 | [링크](monitoring/statistics/02-vpc-statistics.md) |
-| 서비스/브라우저/업무처리/이메일SMS/월간리포트 | 서비스 통계 | [링크](monitoring/statistics/03-service-statistics.md) |
+| 알람 카운트(Navbar 뱃지), 서비스/브라우저/업무처리/이메일SMS/월간리포트 | 서비스 통계 | [링크](monitoring/statistics/03-service-statistics.md) |
 | 품질/호스트/스토리지 통계 | 품질/인프라 통계 | [링크](monitoring/statistics/04-quality-host-storage-statistics.md) |
 
 ---
