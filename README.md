@@ -49,8 +49,7 @@ skb-cloudx-portal-helper/
 │   │   └── api/               #   API 명세
 │   ├── term/                  #   VDI 공통 용어
 │   ├── changelog/             #   버전별 변경 요약
-│   ├── speculation/           #   추측 문서
-│   └── mapping/               #   API 매핑 테이블
+│   └── speculation/           #   추측 문서
 ├── e2e/
 │   ├── playwright.config.js
 │   ├── helpers/

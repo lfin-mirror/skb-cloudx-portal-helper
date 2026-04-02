@@ -47,7 +47,6 @@ docs/
 ├── changelog/                   ← 버전별 변경 요약
 ├── ia/                          ← IA (정보 아키텍처, 메뉴 트리, 유저플로우)
 ├── prd.md                       ← PRD (플랫폼 목적, 대상 사용자, 핵심 기능)
-├── mapping/                     ← API 매핑 분석/리뷰
 └── CLAUDE.md                    ← 이 파일
 
 ## 문서 타입과 frontmatter
