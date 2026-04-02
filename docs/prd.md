@@ -94,6 +94,14 @@ admin-portal (SA/TA)          user-portal (최종 사용자)
 - **app-ms-operation** — 정책/운영 설정, 외부 연동(Netapp/Email/Octatco).
 - **plat-ms-vid4o** — OpenStack API를 내부 REST API로 래핑하는 어댑터.
 
+## 정보 아키텍처
+
+- [플랫폼 전체 흐름](ia/01-platform-overview.md) — SA → TA → 사용자 역할별 업무 흐름
+- [SA 메뉴 트리](ia/02-admin-sa-menu-tree.md) / [TA 메뉴 트리](ia/03-admin-ta-menu-tree.md) / [user-portal 메뉴 트리](ia/04-user-menu-tree.md)
+- [포털 간 연결](ia/05-cross-portal-flow.md) — admin ↔ user 유저플로우
+- [정책 흐름](ia/06-policy-flow.md) / [VM 라이프사이클](ia/07-vm-lifecycle.md) / [테넌트 구축](ia/08-tenant-setup-flow.md)
+- [데이터 관계도](ia/09-data-relationship.md) — 테넌트·Zone·네트워크·VM 관계
+
 ## 용어
 
 플랫폼 공통 용어: `term/` 참고.
