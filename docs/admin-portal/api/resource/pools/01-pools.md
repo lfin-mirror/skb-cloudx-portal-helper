@@ -64,10 +64,15 @@
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| temp_id | string | 템플릿 ID |
-| temp_nm | string | 템플릿명 |
-| chg_ts | string | 변경 일시 |
-| chg_usr_id | string | 변경자 ID |
+| poolId | string | 풀 ID |
+| templateId | string | 템플릿 ID |
+| templateName | string | 템플릿명 |
+| flavorId | string | 플레이버 ID |
+| flavorName | string | 플레이버명 |
+| imageId | string | 이미지 ID |
+| imageName | string | 이미지명 |
+| createdBy | string | 변경자 ID |
+| createdAt | string | 변경 일시 |
 
 ---
 
@@ -213,10 +218,11 @@
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| vm_auth_id | string | VM 인증 ID |
-| vm_nm | string | VM명 |
-| cur_img_id | string | 현재 이미지 ID |
-| tgt_img_id | string | 목표 이미지 ID |
+| vmId | string | VM ID |
+| vmName | string | VM명 |
+| vmPoolTypeCode | string | 풀 유형 코드 |
+| userConnectStatusCode | string | 사용자 접속 상태 코드 |
+| adminConnectStatusCode | string | 관리자 접속 상태 코드 |
 
 ---
 

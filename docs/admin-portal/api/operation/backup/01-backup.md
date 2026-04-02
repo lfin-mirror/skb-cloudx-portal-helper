@@ -49,10 +49,8 @@ GET /v1/operation/policy/bkupsnap/grps
 | data[].max_snap_cnt | string | 최대 스냅샷 보관 수 |
 | data[].tnt_id | string | 테넌트 ID |
 | data[].reg_id | string | 등록자 ID |
-| data[].reg_conn_id | string | 등록자 계정 |
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_id | string | 수정자 ID |
-| data[].mod_conn_id | string | 수정자 계정 |
 | data[].mod_ts | string | 수정 일시 |
 | data[].group_cnt | number | 연결된 그룹 수 |
 | data[].pool_cnt | number | 연결된 풀 수 |

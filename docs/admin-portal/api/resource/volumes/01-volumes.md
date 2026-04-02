@@ -288,13 +288,20 @@
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| volm_id | string | 볼륨 ID |
-| volm_nm | string | 볼륨명 |
 | volm_typ_id | string | 볼륨 타입 ID |
-| volm_stat_cd | string | 볼륨 상태 코드 |
-| capa | number | 용량 (GB) |
-| vm_auth_id | string | 연결된 VM 인증 ID |
+| volm_typ_nm | string | 볼륨 타입명 |
+| dsk_id | string | 디스크 ID |
+| dsk_nm | string | 디스크명 |
+| size | number | 용량 (GB) |
+| dsk_sts_cd | string | 디스크 상태 코드 |
+| dsk_sts_cd_nm | string | 디스크 상태명 |
+| path | string\|null | 마운트 경로 |
+| vm_id | string\|null | 연결된 VM ID |
+| vm_nm | string\|null | 연결된 VM명 |
+| reg_id | string | 등록자 ID |
 | reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 

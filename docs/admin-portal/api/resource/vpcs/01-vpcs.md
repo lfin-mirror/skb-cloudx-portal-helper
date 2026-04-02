@@ -46,10 +46,25 @@ VPC 그룹 목록 조회.
 | vm_grp_id | string | 그룹 ID |
 | vm_grp_nm | string | 그룹명 |
 | tnt_id | string | 테넌트 ID |
-| temp_id | string | 템플릿 ID |
+| tnt_nm | string | 테넌트명 |
 | secu_plcy_id | string | 보안 정책 ID |
+| secu_plcy_nm | string | 보안 정책명 |
 | bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
-| policy_yn | string | 정책 적용 여부 (Y/N) |
+| bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
+| temp_id | string | 템플릿 ID |
+| temp_nm | string | 템플릿명 |
+| gdn_img_cre_yn | string | 골든 이미지 생성 여부 |
+| pool_usg_cnt | string | 풀 사용 수량 |
+| tot_pool_max_vm_cnt | string | 풀 최대 VM 수량 합계 |
+| network_cnt | string | 그룹 네트워크 수 |
+| reg_id | string | 등록자 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_nm | string | 등록자명 |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_nm | string | 수정자명 |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -72,11 +87,33 @@ VPC 그룹 상세 조회.
 | vm_grp_id | string | 그룹 ID |
 | vm_grp_nm | string | 그룹명 |
 | tnt_id | string | 테넌트 ID |
-| temp_id | string | 템플릿 ID |
+| tnt_nm | string | 테넌트명 |
 | secu_plcy_id | string | 보안 정책 ID |
 | secu_plcy_nm | string | 보안 정책명 |
 | bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
 | bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
+| temp_id | string | 템플릿 ID |
+| temp_nm | string | 템플릿명 |
+| gdn_img_cre_yn | string | 골든 이미지 생성 여부 |
+| pool_usg_cnt | string | 풀 사용 수량 |
+| tot_pool_max_vm_cnt | string | 풀 최대 VM 수량 합계 |
+| network_cnt | string | 그룹 네트워크 수 |
+| networks | array | 그룹 매핑 네트워크 목록 |
+| networks[].vm_grp_id | string | 그룹 ID |
+| networks[].nw_id | string | 네트워크 ID |
+| networks[].nw_nm | string | 네트워크명 |
+| networks[].tnt_id | string | 테넌트 ID |
+| networks[].pool_nw_usg_cnt | string | 풀 네트워크 사용 수 |
+| zones | array | 테넌트 할당 ZONE 목록 |
+| subnets | array | 사용 가능 서브넷 목록 |
+| reg_id | string | 등록자 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_nm | string | 등록자명 |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_nm | string | 수정자명 |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -202,9 +239,67 @@ VPC 풀 목록 조회.
 | vm_pool_id | string | 풀 ID |
 | vm_pool_nm | string | 풀명 |
 | vm_grp_id | string | 그룹 ID |
+| tnt_id | string | 테넌트 ID |
+| tnt_mtd_cd | string | 테넌트 방식 코드 |
+| tnt_mtd_cd_nm | string | 테넌트 방식 코드명 |
+| vm_pool_sts_cd | string | 풀 상태 코드 |
+| vm_pool_sts_cd_nm | string | 풀 상태 코드명 |
+| ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| auto_allo_yn | string | 자동 할당 여부 |
+| ad_vdi_ou | string | AD VDI OU |
+| alw_power_on_yn | string | 상시 전원 여부 |
+| secu_plcy_id | string | 보안 정책 ID |
+| secu_plcy_nm | string | 보안 정책명 |
+| bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
+| bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
+| power_mng_plcy_usg_yn | string | 전원 관리 정책 사용 여부 |
+| power_mng_plcy_id | string | 전원 관리 정책 ID |
+| rset_plcy_id | string | 초기화 정책 ID |
+| volm_sched_plcy_id | string | 볼륨 스케줄링 정책 ID |
+| suppl_dsk_usg_yn | string | 추가 디스크 사용 여부 |
 | temp_id | string | 템플릿 ID |
-| suppl_dsk_usg_yn | string | 보조 디스크 사용 여부 (Y/N) |
-| volm_typ_id | string | 볼륨 타입 ID |
+| cre_resv_vm_cnt | string | 생성 예약 VM 수 |
+| max_vm_cnt | string | 최대 VM 수 |
+| min_vm_cnt | string | 최소 VM 수 |
+| spr_vm_cnt | string | 여분 VM 수 |
+| allo_vm_cnt | string | 할당 VM 수 |
+| tot_vm_cnt | string | 전체 VM 수 |
+| assign_ready_vm_cnt | string | 할당 준비 VM 수 |
+| pool_ready_vm_cnt | string | 공용 대기 VM 수 |
+| zone_nm | string | ZONE명 |
+| fail_msg | string | 실패 메시지 |
+| fail_cnt | string | 실패 수 |
+| gdn_img_cre_yn | string | 골든 이미지 생성 여부 |
+| allo_enable_yn | string | 할당 가능 여부 |
+| init_use_yn | string | 초기화 여부 |
+| os_typ_cd | string | OS 유형 코드 |
+| name_rule_use_yn | string | 네이밍 정책 사용 여부 |
+| vpc_name_rule_id | string | 네이밍 정책 ID |
+| vpc_name_rule_nm | string | 네이밍 정책명 |
+| alias_rule_use_yn | string | 별칭 정책 사용 여부 |
+| vpc_alias_rule_id | string | 별칭 정책 ID |
+| vpc_alias_rule_nm | string | 별칭 정책명 |
+| volumes | array | 볼륨 타입 목록 |
+| volumes[].vm_pool_id | string | 풀 ID |
+| volumes[].volm_typ_id | string | 볼륨 타입 ID |
+| volumes[].volm_typ_nm | string | 볼륨 타입명 |
+| volumes[].volm_usg_typ | string | 볼륨 사용 타입 코드 |
+| volumes[].volm_usg_typ_nm | string | 볼륨 사용 타입명 |
+| volumes[].tot_capa | number | 전체 용량 |
+| volumes[].usg_capa | number | 사용 용량 |
+| volumes[].psb_capa | number | 잔여 용량 |
+| volumes[].usg_ratio | number | 사용 비율 |
+| volumes[].volm_qos_plcy_id | string | QoS 정책 ID |
+| volumes[].volm_qos_plcy_nm | string | QoS 정책명 |
+| volumes[].volm_qos_detail | object | QoS 정책 상세 |
+| reg_id | string | 등록자 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_nm | string | 등록자명 |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_nm | string | 수정자명 |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -222,15 +317,21 @@ VPC 풀 상세 조회.
 
 **응답**
 
+풀 목록 응답 필드 전체 + 아래 추가 필드.
+
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| vm_pool_id | string | 풀 ID |
-| vm_pool_nm | string | 풀명 |
-| vm_grp_id | string | 그룹 ID |
-| temp_id | string | 템플릿 ID |
-| suppl_dsk_usg_yn | string | 보조 디스크 사용 여부 (Y/N) |
-| volm_typ_id | string | 볼륨 타입 ID |
-| volm_typ_nm | string | 볼륨 타입명 |
+| subnets | array | 풀 매핑 서브넷 목록 |
+| subnets[].vm_pool_id | string | 풀 ID |
+| subnets[].sbn_id | string | 서브넷 ID |
+| subnets[].sbn_nm | string | 서브넷명 |
+| subnets[].cidr | string | CIDR |
+| subnets[].vm_grp_id | string | 그룹 ID |
+| subnets[].nw_id | string | 네트워크 ID |
+| subnets[].nw_nm | string | 네트워크명 |
+| subnets[].nw_qos_plcy_id | string | 네트워크 QoS 정책 ID |
+| subnets[].nw_qos_plcy_nm | string | 네트워크 QoS 정책명 |
+| subnets[].nw_qos_detail | object | 네트워크 QoS 상세 |
 
 ---
 
@@ -514,28 +615,69 @@ VPC 리소스(VM) 목록 조회.
 | vm_als | string | VM 별칭 |
 | vm_descp | string | VM 설명 |
 | vm_on_ctrl_tm | string | VM 전원 제어 일시 |
+| vm_vlid_stt_dt | string | VM 유효기간 시작일 |
+| vm_vlid_end_dt | string | VM 유효기간 종료일 |
 | rstr_sts_cd | string | 제한 상태 코드 |
 | rstr_sts_cd_nm | string | 제한 상태명 |
+| static_ip_usg_yn | string | 정적 IP 사용 여부 |
+| vm_state | string | VM OpenStack 상태 |
+| task_state | string | VM task 상태 |
 | vm_allo_sts_cd | string | VM 할당 상태 코드 |
 | vm_allo_sts_cd_nm | string | VM 할당 상태명 |
+| vm_allo_typ_cd | string | VM 할당 유형 코드 |
+| vm_allo_typ_cd_nm | string | VM 할당 유형명 |
 | usr_vm_conn_sts_cd | string | 사용자-VM 접속 상태 코드 |
 | usr_vm_conn_sts_cd_nm | string | 사용자-VM 접속 상태명 |
+| adm_vm_conn_sts_cd | string | 관리자-VM 접속 상태 코드 |
+| adm_vm_conn_sts_cd_nm | string | 관리자-VM 접속 상태명 |
 | vm_power_sts_cd | string | VM 전원 상태 코드 |
 | vm_power_sts_cd_nm | string | VM 전원 상태명 |
+| temp_id | string | 템플릿 ID |
+| temp_nm | string | 템플릿명 |
+| flavor_id | string | 플레이버 ID |
+| img_id | string | 이미지 ID |
+| img_nm | string | 이미지명 |
+| os_typ_cd | string | OS 유형 코드 |
+| os_typ_cd_nm | string | OS 유형명 |
 | vcpu_cnt | string | vCPU 수 |
 | vmm_capa | string | 메모리 용량 (MB) |
 | vhd_capa | string | 디스크 용량 (GB) |
+| dsk_sum | string | 추가 디스크 합계 (GB) |
+| vhd_capa_total | string | 전체 디스크 용량 (GB) |
+| volm_typ_id | string | 볼륨 타입 ID |
+| volm_typ_nm | string | 볼륨 타입명 |
+| volm_qos_plcy_id | string | 볼륨 QoS 정책 ID |
+| volm_qos_plcy_nm | string | 볼륨 QoS 정책명 |
+| volm_qos_detail | object | 볼륨 QoS 상세 |
+| secu_plcy_id | string | 보안 정책 ID |
+| secu_plcy_nm | string | 보안 정책명 |
+| bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
+| bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
 | tnt_id | string | 테넌트 ID |
 | tnt_nm | string | 테넌트명 |
 | tnt_mtd_cd | string | 테넌트 운영 방식 코드 |
 | tnt_mtd_cd_nm | string | 테넌트 운영 방식명 |
+| usr_vm_ctrl_tm | string | 사용자 VM 제어 일시 |
+| vm_str_ctrl_tm | string | VM 시작 제어 일시 |
+| allo_fail_msg | string | 할당 실패 메시지 |
+| vm_allo_typ_static_ip_yn | string | 정적 IP 할당 여부 |
 | vm_pool_id | string | 풀 ID |
 | vm_pool_nm | string | 풀명 |
+| suppl_dsk_usg_yn | string | 추가 디스크 사용 여부 |
+| ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| gdn_img_cre_yn | string | 골든 이미지 생성 여부 |
+| mnt_yn | string | 유지보수 여부 |
+| host_id | string | 호스트 ID |
+| host_nm | string | 호스트명 |
+| host_sts_cd | string | 호스트 상태 코드 |
+| zone_nm | string | 존명 |
 | acct_conn_id | string | 계정 로그인 ID (마스킹) |
 | acct_nm | string | 계정명 (마스킹) |
+| reg_id | string | 등록자 ID |
 | reg_conn_id | string | 등록자 로그인 ID (마스킹) |
-| mod_conn_id | string | 수정자 로그인 ID (마스킹) |
 | reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_conn_id | string | 수정자 로그인 ID (마스킹) |
 | mod_ts | string | 수정 일시 |
 
 ---
@@ -901,6 +1043,7 @@ VNC 콘솔 URL 조회.
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | url | string | VNC 콘솔 URL |
+| type | string | VNC 콘솔 연결 유형 |
 
 ---
 
@@ -1108,9 +1251,25 @@ VPC 일괄 할당 내역 목록 조회.
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | req_id | string | 요청 ID |
+| tnt_id | string | 테넌트 ID |
 | vm_pool_id | string | 풀 ID |
-| req_stat_cd | string | 요청 상태 코드 |
+| vm_pool_nm | string | 풀명 |
+| suppl_dsk_usg_yn | string | 추가 디스크 사용 여부 |
+| suppl_dsk_size | string | 추가 디스크 사이즈 |
+| vm_vlid_stt_dt | string | VM 유효기간 시작일 |
+| vm_vlid_end_dt | string | VM 유효기간 종료일 |
+| secu_plcy_id | string | 보안 정책 ID |
+| secu_plcy_nm | string | 보안 정책명 |
+| bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
+| bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
+| reg_id | string | 등록자 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_nm | string | 등록자명 |
 | reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_nm | string | 수정자명 |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -1341,7 +1500,7 @@ VNC 콘솔 URL 조회.
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | url | string | VNC 콘솔 URL |
-| token | string | VNC 토큰 |
+| type | string | VNC 콘솔 연결 유형 |
 
 ---
 

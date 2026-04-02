@@ -36,8 +36,12 @@ GET /v1/operation/policies/usb
 | data[].usb_types | array | 적용된 USB 유형 목록 (미설정 시 `null`) |
 | data[].usb_vendors | array | 적용된 USB 공급업체 목록 (미설정 시 `null`) |
 | data[].tenant_id | string | 테넌트 ID |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
+
+> `UsbPolicyPlain` 서브클래스는 추가로 `reg_conn_id`, `mod_conn_id` 포함.
 
 **에러 코드**
 

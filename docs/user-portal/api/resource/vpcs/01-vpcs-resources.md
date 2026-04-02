@@ -33,7 +33,6 @@ Query Parameter 없음. 사용자 인증 토큰에서 사용자 식별.
 | vm_allo_typ_static_ip_yn | string | 정적 IP 여부 (`Y`/`N`) |
 | acct_id | string | 계정 ID |
 | usr_grp_id | string | 사용자 그룹 ID |
-| tgt_vm_auth_id | string | 대상 VM 인가 ID |
 | vm_id | string | VM ID |
 | flavor_id | string | 플래버 ID |
 | vcpu_cnt | number | vCPU 수 |
@@ -275,9 +274,25 @@ VM 별칭 수정 또는 목록 정렬 순서 변경.
 |------|------|------|
 | vm_pool_id | string | Pool ID |
 | vm_pool_nm | string | Pool 이름 |
+| vm_pool_sts_cd | string | Pool 상태 코드 |
+| tnt_mtd_cd | string | 테넌트 방식 코드 |
+| tnt_mtd_cd_nm | string | 테넌트 방식 코드명 |
+| auto_allo_yn | string | 자동 할당 여부 (`Y`/`N`) |
 | vcpu_cnt | number | vCPU 수 |
 | vmm_capa | number | 메모리 용량 (MB). UI에서 `/1024`하여 GB로 표시. |
+| vhd_capa | number | HDD 용량 (GB) |
 | os_name | string | OS 이름 |
+| max_vm_cnt | number | 최대 VM 수 |
+| allo_vm_cnt | number | 할당된 VM 수 |
+| gdn_img_cre_yn | string | 골든 이미지 생성 여부 (`Y`/`N`) |
+| init_use_yn | string | 초기화 사용 여부 (`Y`/`N`) |
+| dept_map_id | string | 부서 매핑 ID |
+| pool_map_id | string | Pool 매핑 ID |
+| dept_pool_map_id | string | 부서-Pool 매핑 ID |
+| dept_cd | string | 부서 코드 |
+| usr_grp_id | string | 사용자 그룹 ID |
+| usr_grp_nm | string | 사용자 그룹명 |
+| usr_cnt | number | 사용자 수 |
 
 ### 호출 위치
 

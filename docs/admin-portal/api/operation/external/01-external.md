@@ -19,9 +19,17 @@ GET /v1/operation/outs/interfaces
 | 필드 | 타입 | 설명 |
 |------|------|------|
 | data | array | 외부 연동 인터페이스 목록 |
-| data[].ext_itlk_div_cd | string | 외부 연동 구분 코드 |
-| data[].ext_itlk_nm | string | 외부 연동명 |
-| data[].use_yn | string | 사용 여부 |
+| data[].tnt_id | string | 테넌트 ID |
+| data[].linkage_type_cd | string | 연동 유형 코드 |
+| data[].linkage_type_cd_nm | string | 연동 유형 코드명 |
+| data[].ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| data[].shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
+| data[].reg_conn_id | string | 등록자 접속 ID |
+| data[].reg_id | string | 등록자 ID |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_conn_id | string | 수정자 접속 ID |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_ts | string | 수정 일시 |
 
 **호출 위치**
 
@@ -41,11 +49,22 @@ GET /v1/operation/outs/interfaces/email
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
+| linkage_type_cd | string | 연동 유형 코드 |
+| linkage_type_cd_nm | string | 연동 유형 코드명 |
+| tnt_id | string | 테넌트 ID |
 | smtp_host | string | SMTP 호스트 |
 | smtp_port | number | SMTP 포트 |
-| smtp_user | string | SMTP 사용자 |
-| from_addr | string | 발신 이메일 주소 |
+| from_mail | string | 발신 이메일 주소 |
 | use_yn | string | 사용 여부 |
+| passwd_cryptval | string | 비밀번호 암호화 값 |
+| protocol_type | string | 프로토콜 유형 |
+| descp | string | 설명 |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 **호출 위치**
 
@@ -68,9 +87,8 @@ PUT /v1/operation/outs/interfaces/email
 |------|------|------|------|
 | smtp_host | string | Y | SMTP 호스트 |
 | smtp_port | number | Y | SMTP 포트 |
-| smtp_user | string | N | SMTP 사용자 |
-| smtp_pw | string | N | SMTP 비밀번호 |
-| from_addr | string | Y | 발신 이메일 주소 |
+| passwd_cryptval | string | N | 비밀번호 암호화 값 |
+| from_mail | string | Y | 발신 이메일 주소 |
 | use_yn | string | N | 사용 여부 (`Y`/`N`) |
 
 **호출 위치**
@@ -92,10 +110,21 @@ GET /v1/operation/outs/interfaces/netapp
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| netapp_host | string | Netapp 호스트 |
-| netapp_port | number | Netapp 포트 |
-| netapp_user | string | Netapp 사용자 |
-| use_yn | string | 사용 여부 |
+| linkage_type_cd | string | 연동 유형 코드 |
+| linkage_type_cd_nm | string | 연동 유형 코드명 |
+| tnt_id | string | 테넌트 ID |
+| ip | string | Netapp 호스트 IP |
+| port | number | Netapp 포트 |
+| cert_id | string | 인증 ID |
+| cert_passwd_cryptval | string | 인증 비밀번호 암호화 값 |
+| grp_fold_cre_size | string | 그룹 폴더 생성 크기 |
+| descp | string | 설명 |
+| ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 **호출 위치**
 
@@ -115,11 +144,10 @@ PUT /v1/operation/outs/interfaces/netapp
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| netapp_host | string | Y | Netapp 호스트 |
-| netapp_port | number | Y | Netapp 포트 |
-| netapp_user | string | Y | Netapp 사용자 |
-| netapp_pw | string | N | Netapp 비밀번호 |
-| use_yn | string | N | 사용 여부 (`Y`/`N`) |
+| ip | string | Y | Netapp 호스트 IP |
+| port | number | Y | Netapp 포트 |
+| cert_id | string | Y | 인증 ID |
+| cert_passwd_cryptval | string | N | 인증 비밀번호 암호화 값 |
 
 **호출 위치**
 
@@ -139,11 +167,29 @@ GET /v1/operation/outs/interfaces/usr
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| ad_host | string | AD 서버 호스트 |
+| linkage_type_cd | string | 연동 유형 코드 |
+| linkage_type_cd_nm | string | 연동 유형 코드명 |
+| tnt_id | string | 테넌트 ID |
+| ad_ip | string | AD 서버 IP |
 | ad_port | number | AD 서버 포트 |
-| ad_domain | string | AD 도메인 |
-| base_dn | string | Base DN |
-| use_yn | string | 사용 여부 |
+| ad_dm | string | AD 도메인 |
+| ad_base | string | AD Base DN |
+| ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| ad_cert_id | string | AD 인증 ID |
+| ad_cert_passwd_cryptval | string | AD 인증 비밀번호 암호화 값 |
+| ad_vdi_ou | string | AD VDI OU |
+| ad_base_dept_ou | string | AD 부서 기본 OU |
+| ad_base_usr_ou | string | AD 사용자 기본 OU |
+| ad_cert_info | string | AD 인증서 정보 |
+| ad_cert_info_yn | string | AD 인증서 정보 사용 여부 |
+| ad_cert_file_nm | string | AD 인증서 파일명 |
+| ad_itlk_descp | string | AD 연동 설명 |
+| shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
+| info_reg_allow_yn | string | 정보 등록 허용 여부 |
+| ad_itlk_mod_id | string | AD 연동 수정자 ID |
+| ad_itlk_mod_ts | string | AD 연동 수정 일시 |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
 
 **호출 위치**
 
@@ -164,13 +210,13 @@ PUT /v1/operation/outs/interfaces/usr
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| ad_host | string | Y | AD 서버 호스트 |
+| ad_ip | string | Y | AD 서버 IP |
 | ad_port | number | Y | AD 서버 포트 |
-| ad_domain | string | Y | AD 도메인 |
-| base_dn | string | Y | Base DN |
-| bind_dn | string | N | Bind DN |
-| bind_pw | string | N | Bind 비밀번호 |
-| use_yn | string | N | 사용 여부 (`Y`/`N`) |
+| ad_dm | string | Y | AD 도메인 |
+| ad_base | string | Y | AD Base DN |
+| ad_cert_id | string | N | AD 인증 ID |
+| ad_cert_passwd_cryptval | string | N | AD 인증 비밀번호 암호화 값 |
+| ad_itlk_usg_yn | string | N | AD 연동 사용 여부 (`Y`/`N`) |
 
 **호출 위치**
 

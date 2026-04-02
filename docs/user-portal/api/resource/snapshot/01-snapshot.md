@@ -19,14 +19,26 @@
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
+| acct_id | string | 계정 ID |
+| acct_nm | string | 계정명 |
+| acct_conn_id | string | 계정 연결 ID |
+| vm_auth_id | string | VM 인가 ID |
+| vm_id | string | VM ID |
+| vm_nm | string | VM 이름 |
 | max_snap_cnt | number | 최대 허용 스냅샷 수 |
 | snap_list | array | 스냅샷 목록 |
 | snap_list[].snap_id | string | 스냅샷 ID |
+| snap_list[].vm_id | string | VM ID |
+| snap_list[].cre_mtd_cd | string | 생성 구분 코드 |
 | snap_list[].cre_mtd_cd_nm | string | 생성 구분 코드명 (구분 컬럼 표시) |
 | snap_list[].reg_ts | string | 생성 일시 |
+| snap_list[].snap_sts_cd | string | 스냅샷 상태 코드 |
 | snap_list[].snap_sts_cd_nm | string | 스냅샷 결과 상태 코드명 |
 | snap_list[].rec_sts_cd | string | 복원 상태 코드 (`V012RC`: 복원완료, `V012RI`: 복원중, `V012RF`: 복원실패, `null`: 없음) |
 | snap_list[].rec_sts_cd_nm | string | 복원 상태 코드명 |
+| snap_list[].rec_usg_yn | string | 복원 사용 여부 (`Y`/`N`) |
+| snap_list[].del_yn | string | 삭제 여부 (`Y`/`N`) |
+| snap_list[].mod_ts | string | 수정 일시 |
 
 복원 진행 중인 항목(`rec_sts_cd === 'V012RI'`)이 있으면 3초 간격으로 자동 재조회.
 

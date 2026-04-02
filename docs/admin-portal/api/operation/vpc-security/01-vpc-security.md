@@ -29,11 +29,16 @@ GET /v1/operation/cert/secu/grps?sg_grp_id={security_group_id}
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| data | array | 보안 그룹 목록 |
-| data[].cert_secu_id | string | 보안 인증 정책 ID |
-| data[].cert_secu_nm | string | 보안 인증 정책명 |
-| data[].sg_grp_id | string | 보안 그룹 ID |
-| data[].tnt_id | string | 테넌트 ID |
+| data | array | 보안 정책 목록 |
+| data[].secu_plcy_id | string | 보안 정책 ID |
+| data[].secu_plcy_nm | string | 보안 정책명 |
+| data[].secu_plcy_tgt_cd | string | 정책 대상 코드 |
+| data[].secu_plcy_tgt_cd_nm | string | 정책 대상명 |
+| data[].group_cnt | number | 연결된 그룹 수 |
+| data[].pool_cnt | number | 연결된 풀 수 |
+| data[].vm_cnt | number | 연결된 VM 수 |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_ts | string | 수정 일시 |
 
 **호출 위치**
 

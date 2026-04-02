@@ -68,12 +68,13 @@
 | pcly_cert[].drag_drop_auth_cd_nm | string | 파일 Drag & Drop 허용 코드명 |
 | pcly_cert[].usb_plcy_id | string | USB 정책 ID |
 | pcly_cert[].usb_plcy_nm | string | USB 정책명 |
-| pcly_cert[].sg_grp_id | string | 보안 그룹 ID |
 | pcly_cert[].url_rdrt_auth_cd | string | URL Redirection 권한 코드 |
 | pcly_cert[].url_rdrt_auth_cd_nm | string | URL Redirection 허용 코드명 |
 | pcly_cert[].mult_mtor_auth_cd | string | 다중 디스플레이 권한 코드 |
 | pcly_cert[].mult_mtor_auth_cd_nm | string | 다중 디스플레이 허용 코드명 |
 | pcly_cert[].scr_capture_yn | string | 화면 캡처 허용 여부 (`Y`/`N`) |
+| pcly_cert[].url_rdrt_to_vm_auth_cd | string | URL Redirection(VM→로컬) 권한 코드 |
+| pcly_cert[].url_rdrt_to_vm_auth_cd_nm | string | URL Redirection(VM→로컬) 허용 코드명 |
 | pcly_cert[].reg_id | string | 등록자 ID |
 | pcly_cert[].reg_ts | string | 등록 일시 |
 | pcly_cert[].mod_id | string | 수정자 ID |
@@ -93,6 +94,8 @@
 | mod_ts | string | 수정 일시 |
 | noauth_proc_blck_plcy_id | string | 미인증 처리 차단 정책 ID |
 | noAuthProcBlckPlcyDetailVo | object | 미인증 처리 차단 정책 상세 |
+| vpc_auto_login_yn | string | VPC 자동 로그인 여부 (`Y`/`N`) |
+| url_rdrt_disallow_to_vm_plcy_id | string | URL 리다이렉션 비허용(VM→로컬) 정책 ID |
 
 ### 호출 위치
 

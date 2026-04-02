@@ -69,8 +69,6 @@
 | tnt_id | string | 테넌트 ID |
 | tnt_nm | string | 테넌트명 |
 | tnt_grp_id | string | 테넌트 그룹 ID |
-| secu_plcy_id | string | 보안 정책 ID |
-| secu_plcy_nm | string | 보안 정책명 |
 | bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
 | bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
 
@@ -141,10 +139,44 @@
 |---|---|---|
 | tnt_id | string | 테넌트 ID |
 | tnt_nm | string | 테넌트명 |
-| tnt_stat_cd | string | 테넌트 상태 코드 |
+| pfrm_tnt_nm | string | 플랫폼 테넌트명 |
 | dm_id | string | 도메인 ID |
-| secu_plcy_id | string | 보안 정책 ID |
+| tnt_descp | string | 테넌트 설명 |
+| ha_auto_mng_yn | string | HA 자동 관리 여부 |
+| host_tnt_yn | string | 호스트 전용 할당 여부 |
+| vm_grp_usg_yn | string | VM 그룹 사용 여부 |
+| vcpu_psb_cnt | string | 최대 vCPU 수 |
+| vmm_psb_capa | string | 최대 메모리 MB |
+| tot_vm_psb_cnt | string | 최대 VM 수 (할당 라이선스) |
+| tot_vm_usg_cnt | string | 사용 중 VM 수 |
+| phy_sbn_tot_cnt | string | 물리 서브넷 총 수 |
+| phy_sbn_usg_cnt | string | 물리 서브넷 사용 수 |
+| vcpu_usg_cnt | string | vCPU 사용 수 |
+| vmm_usg_capa | string | 메모리 사용 용량 MB |
+| rtr_cnt | string | 라우터 수 |
+| img_cnt | string | 이미지 수 |
 | bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
+| bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
+| volm_sched_plcy_id | string | 볼륨 스케줄 정책 ID |
+| l4_proxy_asg_yn | string | L4 프록시 할당 여부 |
+| l7_proxy_asg_yn | string | L7 프록시 할당 여부 |
+| tnt_url_id | string | 테넌트 URL ID |
+| main_tnt_yn | string | 메인 테넌트 여부 |
+| ad_itlk_usg_yn | string | AD 연동 사용 여부 |
+| octatco_usg_yn | string | Octatco 사용 여부 |
+| shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
+| viwr_con_plcy_yn | string | 단말 접속 관리 사용 여부 |
+| viwr_con_cnt | string | Mac 주소 최대 등록 수 |
+| netApp_interlock | object | NetApp 연동 정보 |
+| email_interlock | object | 이메일 연동 정보 |
+| adScript | object | AD 스크립트 정보 |
+| octatco | object | Octatco 연동 정보 |
+| reg_id | string | 등록자 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_nm | string | 등록자명 |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -157,6 +189,12 @@
 **응답**
 
 배열 형태 (페이징 없이 전체 반환).
+
+| 필드 | 타입 | 설명 |
+|---|---|---|
+| tnt_id | string | 테넌트 ID |
+| tnt_nm | string | 테넌트명 |
+| dm_id | string | 도메인 ID |
 
 ---
 
@@ -204,8 +242,8 @@
 | ad_itlk_usg_yn | string | AD 연동 사용 여부 |
 | octatco_usg_yn | string | Octatco 사용 여부 |
 | shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
-| viwr_con_plcy_yn | string | 뷰어 접속 정책 사용 여부 |
-| viwr_con_cnt | string | 뷰어 동시 접속 수 |
+| viwr_con_plcy_yn | string | 단말 접속 관리 사용 여부 |
+| viwr_con_cnt | string | Mac 주소 최대 등록 수 |
 | networks | array | 할당 네트워크 목록 (네트워크 + subnets 중첩) |
 | templates | array | 할당 템플릿 목록 (temp_id, temp_nm, os_typ_cd 등) |
 | flavors | array | 할당 Flavor 목록 (flavor_id, vcpu_cnt, vmm_capa, vhd_capa 등) |
@@ -217,6 +255,12 @@
 | email_interlock | object | 이메일 연동 설정 (smtp_host, smtp_port, protocol_type 등) |
 | adScript | object | AD 스크립트 (cadno, use_yn, adscript_contents) |
 | octatco | object | Octatco 연동 설정 (app_id, server_domain, did) |
+| reg_id | string | 등록자 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_nm | string | 등록자명 |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 

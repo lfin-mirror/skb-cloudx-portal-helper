@@ -106,6 +106,8 @@ GET /v1/operation/secu/cert/infm
 | data[].isur_nm | string | 발급자 DN |
 | data[].reg_id | string | 등록자 (`scheduler`) |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_ts | string | 수정 일시 |
 
 **호출 위치**
 

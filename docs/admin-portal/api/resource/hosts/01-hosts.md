@@ -32,18 +32,32 @@
 
 **응답**
 
-배열 형태.
+배열 형태. OpenStack Hypervisor 정보를 직접 반환 (camelCase).
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| host_id | string | 호스트 ID |
-| host_nm | string | 호스트명 |
-| host_ip | string | 호스트 IP |
-| host_stat_cd | string | 호스트 상태 코드 |
-| tnt_id | string | 테넌트 ID (테넌트 전용 호스트인 경우) |
-| zone_nm | string | Zone명 |
-| vcpu_tot | number | 총 vCPU 수 |
-| vmm_tot | number | 총 메모리 (MB) |
+| id | string | 호스트 ID (`hostId` → `id`로 JsonGetter 변환) |
+| hypervisorHostName | string | 하이퍼바이저 호스트명 |
+| hostIp | string | 호스트 IP |
+| status | string | 호스트 상태 |
+| state | string | 호스트 state |
+| availabilityZone | string | 가용 Zone명 |
+| vcpus | number | 총 vCPU 수 |
+| vcpusUsed | number | 사용 중 vCPU 수 |
+| memoryMb | number | 총 메모리 (MB) |
+| memoryMbUsed | number | 사용 중 메모리 (MB) |
+| localGb | number | 총 로컬 디스크 (GB) |
+| localGbUsed | number | 사용 중 로컬 디스크 (GB) |
+| freeDiskGb | number | 여유 디스크 (GB) |
+| freeRamMb | number | 여유 메모리 (MB) |
+| diskAvailableLeast | number | 최소 가용 디스크 (GB) |
+| currentWorkload | number | 현재 워크로드 |
+| runningVms | number | 실행 중 VM 수 |
+| hypervisorType | string | 하이퍼바이저 유형 |
+| hypervisorVersion | number | 하이퍼바이저 버전 |
+| servers | array | 서버 목록 (null이면 미포함) |
+| servers[].name | string | 서버명 |
+| servers[].uuid | string | 서버 UUID |
 
 ---
 
@@ -83,6 +97,14 @@
 | data[].vm_tot_cnt | string | 총 VM 수 |
 | data[].vm_usg_cnt | string | 사용 중 VM 수 |
 | data[].zone_nm | string | Zone명 |
+| data[].pfrm_host_id | string | 플랫폼 호스트 ID |
+| data[].host_descp | string | 호스트 설명 |
+| data[].reg_id | string | 등록자 ID |
+| data[].reg_nm | string | 등록자명 |
+| data[].reg_conn_id | string | 등록자 접속 ID |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_ts | string | 수정 일시 |
 | pageinfo.count | string | 총 건수 |
 | pageinfo.ispaging | string | 페이징 여부 |
 
@@ -102,16 +124,34 @@
 
 **응답**
 
+DTO는 목록(`/admin`)과 동일한 `HostAdminList` 사용.
+
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | host_id | string | 호스트 ID |
 | host_nm | string | 호스트명 |
 | host_ip | string | 호스트 IP |
-| host_stat_cd | string | 호스트 상태 코드 |
-| vcpu_tot | number | 총 vCPU 수 |
-| vmm_tot | number | 총 메모리 (MB) |
-| vcpu_use | number | 사용 중 vCPU 수 |
-| vmm_use | number | 사용 중 메모리 (MB) |
+| host_sts_cd | string | 호스트 상태 코드 |
+| host_sts_cd_nm | string | 호스트 상태명 |
+| hyper_typ | string | 하이퍼바이저 유형 |
+| vcpu_tot_cnt | string | 총 vCPU 수 |
+| vcpu_usg_cnt | string | 사용 중 vCPU 수 |
+| mem_tot_capa | string | 총 메모리 (GB) |
+| mem_usg_capa | string | 사용 중 메모리 (GB) |
+| str_tot_capa | string | 총 스토리지 (GB) |
+| str_usg_capa | string | 사용 중 스토리지 (GB) |
+| allo_enable_yn | string | 할당 가능 여부 |
+| vm_tot_cnt | string | 총 VM 수 |
+| vm_usg_cnt | string | 사용 중 VM 수 |
+| zone_nm | string | Zone명 |
+| pfrm_host_id | string | 플랫폼 호스트 ID |
+| host_descp | string | 호스트 설명 |
+| reg_id | string | 등록자 ID |
+| reg_nm | string | 등록자명 |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -194,10 +234,21 @@ Zone 목록 조회.
 | zone_nm | string | Zone명 |
 | zone_descp | string | Zone 설명 |
 | tnt_id | string | 테넌트 ID |
-| host_grp_id | string | 호스트 그룹 ID |
+| host_grp_id | number | 호스트 그룹 ID |
+| host_grp_nm | string | 호스트 그룹명 |
+| maint_yn | string | 유지보수 여부 (Y/N) |
+| hostIds | string[] | 소속 호스트 ID 배열 |
+| hostNames | string[] | 소속 호스트명 배열 |
+| public_zone_yn | string | Public Zone 여부 (Y/N) |
 | hosts | array | 소속 호스트 목록 |
 | hosts[].host_id | string | 호스트 ID |
 | hosts[].host_nm | string | 호스트명 |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| reg_nm | string | 등록자명 |
+| reg_conn_id | string | 등록자 접속 ID |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -215,13 +266,28 @@ Zone 상세 조회.
 
 **응답**
 
+Zone 목록과 동일한 `Zone` DTO 사용.
+
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | zone_nm | string | Zone명 |
 | zone_descp | string | Zone 설명 |
 | tnt_id | string | 테넌트 ID |
-| host_grp_id | string | 호스트 그룹 ID |
+| host_grp_id | number | 호스트 그룹 ID |
+| host_grp_nm | string | 호스트 그룹명 |
+| maint_yn | string | 유지보수 여부 (Y/N) |
+| hostIds | string[] | 소속 호스트 ID 배열 |
+| hostNames | string[] | 소속 호스트명 배열 |
+| public_zone_yn | string | Public Zone 여부 (Y/N) |
 | hosts | array | 소속 호스트 목록 |
+| hosts[].host_id | string | 호스트 ID |
+| hosts[].host_nm | string | 호스트명 |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| reg_nm | string | 등록자명 |
+| reg_conn_id | string | 등록자 접속 ID |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -382,8 +448,18 @@ Zone 유지보수 상태 변경.
 |---|---|---|
 | host_id | string | 호스트 ID |
 | host_nm | string | 호스트명 |
-| evac_stat_cd | string | 대피 상태 코드 |
-| reg_ts | string | 등록 일시 |
+| pfrm_host_id | string | 플랫폼 호스트 ID |
+| host_ip | string | 호스트 IP |
+| host_sts_cd | string | 호스트 상태 코드 |
+| host_sts_cd_nm | string | 호스트 상태명 |
+| host_descp | string | 호스트 설명 |
+| hyper_typ | string | 하이퍼바이저 유형 |
+| ha_auto_mng_yn | string | HA 자동화 여부 (Y/N) |
+| evac_sts_cd | string | 대피 상태 코드 |
+| evac_sts_cd_nm | string | 대피 상태명 |
+| tnt_id | string | 테넌트 ID |
+| dng_sts_tm | string | 위험 상태 일시 |
+| evac_grp_id | string | 대피 그룹 ID |
 
 ---
 
@@ -422,10 +498,14 @@ Zone 유지보수 상태 변경.
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | evac_grp_id | string | 대피 그룹 ID |
-| host_id | string | 호스트 ID |
 | host_nm | string | 호스트명 |
-| evac_stat_cd | string | 대피 상태 코드 |
-| reg_ts | string | 등록 일시 |
+| evac_sts_cd | string | 대피 상태 코드 |
+| evac_sts_cd_nm | string | 대피 상태명 |
+| tgt_vm_cnt | number | 대피 대상 VM 수 |
+| act_vm_cnt | number | 대피 실행 VM 수 |
+| auto_mng_yn | string | 자동 관리 여부 (Y/N) |
+| evac_stt_ts | string | 대피 시작 일시 |
+| evac_done_ts | string | 대피 완료 일시 |
 
 ---
 
@@ -446,11 +526,22 @@ Zone 유지보수 상태 변경.
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | evac_grp_id | string | 대피 그룹 ID |
-| host_id | string | 호스트 ID |
-| vm_list | array | 대피된 VM 목록 |
-| vm_list[].vm_auth_id | string | VM 인증 ID |
-| vm_list[].vm_nm | string | VM명 |
-| vm_list[].evac_result_cd | string | 대피 결과 코드 |
+| host_nm | string | 호스트명 |
+| vmList | array | 대피 대상 VM 목록 |
+| vmList[].evac_job_no | string | 대피 작업 번호 |
+| vmList[].evac_grp_id | string | 대피 그룹 ID |
+| vmList[].tgt_host_nm | string | 대상 호스트명 |
+| vmList[].src_host_nm | string | 소스 호스트명 |
+| vmList[].tgt_vm_id | string | 대상 VM ID |
+| vmList[].tgt_vm_nm | string | 대상 VM명 |
+| vmList[].evac_vm_sts_cd | string | 대피 VM 상태 코드 |
+| vmList[].evac_vm_sts_cd_nm | string | 대피 VM 상태명 |
+| vmList[].vm_power_sts_cd | string | VM 전원 상태 코드 |
+| vmList[].vm_power_sts_cd_nm | string | VM 전원 상태명 |
+| vmList[].job_rslt_val | string | 작업 결과 값 |
+| vmList[].job_rslt_detl | string | 작업 결과 상세 |
+| vmList[].reg_ts | string | 등록 일시 |
+| vmList[].mod_ts | string | 수정 일시 |
 
 ---
 

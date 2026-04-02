@@ -66,6 +66,7 @@ GET /v1/operation/cert/n2nd/ptalType/{ptal_type_cd}
 | data[].account_cnt | number | 적용된 계정 수 |
 | data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].exc_nw_n2nd_cert_mtd_cd_nm | string | 예외 네트워크 2차 인증 방식 코드명 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
 
@@ -438,6 +439,8 @@ GET /v1/operation/cert/secu/info/{cert_secu_id}
 | wmk_usg_yn | string | 워터마크 사용 여부 (`Y`/`N`) |
 | wmk_plcy | object | 워터마크 정책 상세 (미사용 시 `null`) |
 | noauth_proc_blck_plcy_id | string | 미인증 처리 차단 정책 ID |
+| vpc_auto_login_yn | string | VPC 자동 로그인 여부 (`Y`/`N`) |
+| url_rdrt_disallow_to_vm_plcy_id | string | URL 리다이렉션 비허용(VM→호스트) 정책 ID |
 | noAuthProcBlckPlcyDetailVo | object | 미인증 처리 차단 정책 상세 (미설정 시 `null`) |
 | acc_blck | array | 접근 차단 항목 목록 |
 | url_blck | object | URL 차단 정보 (미설정 시 `null`) |
@@ -452,13 +455,14 @@ GET /v1/operation/cert/secu/info/{cert_secu_id}
 | pcly_cert[].drag_drop_auth_cd_nm | string | 드래그앤드롭 권한 코드명 |
 | pcly_cert[].usb_plcy_id | string | USB 정책 ID |
 | pcly_cert[].usb_plcy_nm | string | USB 정책명 |
-| pcly_cert[].sg_grp_id | string | 보안 그룹 ID |
 | pcly_cert[].url_rdrt_auth_cd | string | URL 리다이렉션 권한 코드 |
 | pcly_cert[].url_rdrt_auth_cd_nm | string | URL 리다이렉션 권한 코드명 |
 | pcly_cert[].prt_conn_auth_cd | string | 프린터 연결 권한 코드 |
 | pcly_cert[].prt_conn_auth_cd_nm | string | 프린터 연결 권한 코드명 |
 | pcly_cert[].mult_mtor_auth_cd | string | 멀티모니터 권한 코드 |
 | pcly_cert[].mult_mtor_auth_cd_nm | string | 멀티모니터 권한 코드명 |
+| pcly_cert[].url_rdrt_to_vm_auth_cd | string | URL 리다이렉션(VM→호스트) 권한 코드 |
+| pcly_cert[].url_rdrt_to_vm_auth_cd_nm | string | URL 리다이렉션(VM→호스트) 권한 코드명 |
 | pcly_cert[].scr_capture_yn | string | 화면 캡처 허용 여부 (`Y`/`N`) |
 | pcly_cert[].reg_id | string | 등록자 ID |
 | pcly_cert[].reg_ts | string | 등록 일시 |

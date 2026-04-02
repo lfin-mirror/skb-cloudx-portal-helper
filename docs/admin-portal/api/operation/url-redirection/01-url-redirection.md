@@ -24,7 +24,9 @@ GET /v1/operation/policy/url/rdrt/disallow/policy
 | data[].tnt_id | string | 테넌트 ID |
 | data[].tnt_nm | string | 테넌트명 |
 | data[].dm_cnt | number | 등록된 도메인 수 |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
 
 **에러 코드**
@@ -49,23 +51,28 @@ GET /v1/operation/policy/url/rdrt/disallow/policy
 ## URL 차단 정책 상세 조회
 
 ```
-GET /v1/operation/policy/url/rdrt/disallow/policy/{url_disallow_id}
+GET /v1/operation/policy/url/rdrt/disallow/policy/{url_rdrt_disallow_plcy_id}
 ```
 
 **Path Parameters**
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| url_disallow_id | string | Y | URL 차단 정책 ID |
+| url_rdrt_disallow_plcy_id | string | Y | URL 리다이렉션 차단 정책 ID |
 
 **응답**
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| url_disallow_id | string | URL 차단 정책 ID |
-| url_disallow_nm | string | URL 차단 정책명 |
+| url_rdrt_disallow_plcy_id | string | URL 리다이렉션 차단 정책 ID |
+| url_rdrt_disallow_plcy_nm | string | URL 리다이렉션 차단 정책명 |
 | tnt_id | string | 테넌트 ID |
-| url_list | array | 차단 URL 목록 |
+| tnt_nm | string | 테넌트명 |
+| dms | array | 차단 도메인 목록 (UrlRdrtDisallowDmVO) |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 **호출 위치**
 
@@ -89,9 +96,9 @@ POST /v1/operation/policy/url/rdrt/disallow/policy
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| url_disallow_nm | string | Y | URL 차단 정책명 |
+| url_rdrt_disallow_plcy_nm | string | Y | URL 리다이렉션 차단 정책명 |
 | tnt_id | string | Y | 테넌트 ID |
-| url_list | array | N | 차단 URL 목록 |
+| dms | array | N | 차단 도메인 목록 |
 
 **호출 위치**
 
@@ -105,14 +112,14 @@ POST /v1/operation/policy/url/rdrt/disallow/policy
 ## URL 차단 정책 수정
 
 ```
-PUT /v1/operation/policy/url/rdrt/disallow/policy/{url_disallow_id}
+PUT /v1/operation/policy/url/rdrt/disallow/policy/{url_rdrt_disallow_plcy_id}
 ```
 
 **Path Parameters**
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| url_disallow_id | string | Y | URL 차단 정책 ID |
+| url_rdrt_disallow_plcy_id | string | Y | URL 리다이렉션 차단 정책 ID |
 
 **Request Body** — 생성 바디와 동일
 
@@ -127,14 +134,14 @@ PUT /v1/operation/policy/url/rdrt/disallow/policy/{url_disallow_id}
 ## URL 차단 정책 삭제
 
 ```
-DELETE /v1/operation/policy/url/rdrt/disallow/policy/{url_disallow_id}
+DELETE /v1/operation/policy/url/rdrt/disallow/policy/{url_rdrt_disallow_plcy_id}
 ```
 
 **Path Parameters**
 
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
-| url_disallow_id | string | Y | URL 차단 정책 ID |
+| url_rdrt_disallow_plcy_id | string | Y | URL 리다이렉션 차단 정책 ID |
 
 **호출 위치**
 

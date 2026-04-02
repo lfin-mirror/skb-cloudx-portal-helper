@@ -36,11 +36,20 @@ GET /v1/resource/images
 | data[].img_descp | string | 이미지 설명 |
 | data[].os_typ_cd | string | OS 유형 코드 (`T002W64` 등) |
 | data[].os_typ_cd_nm | string | OS 유형명 |
+| data[].sw_nm | string | SW명 |
+| data[].sw_typ_cd | string | SW 유형 코드 |
+| data[].sw_typ_cd_nm | string | SW 유형명 |
 | data[].visibility | string | 가시성 (`public` / `private`) |
 | data[].tnt_id | string | 테넌트 ID (null = 공용) |
+| data[].ad_itlk_usg_yn | string | AD 연동 사용 여부 (hidden=true) |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_conn_id | string | 등록자 로그인 ID |
 | data[].reg_nm | string | 등록자명 |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_nm | string | 수정자명 |
+| data[].mod_conn_id | string | 수정자 접속 ID |
+| data[].mod_ts | string | 수정 일시 |
 | pageinfo.count | string | 전체 건수 |
 
 ---
@@ -76,6 +85,14 @@ GET /v1/resource/images/{imgId}
 | visibility | string | 가시성 |
 | tnt_id | string | 테넌트 ID |
 | img_cre_vm_id | string | 이미지 생성 VM ID |
+| reg_id | string | 등록자 ID |
+| reg_nm | string | 등록자명 |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_nm | string | 수정자명 |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 

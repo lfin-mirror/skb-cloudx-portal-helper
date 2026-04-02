@@ -25,10 +25,16 @@ GET /v1/operation/policys/swblst
 |------|------|------|
 | data | array | SW 차단 목록 파일 목록 |
 | data[].blst_file_id | string | 차단 목록 파일 ID |
-| data[].blst_file_nm | string | 파일명 |
+| data[].att_file_nm | string | 첨부 파일명 |
 | data[].tnt_id | string | 테넌트 ID |
-| data[].blst_typ_cd | string | 차단 유형 코드 (`블랙리스트`/`화이트리스트`) |
+| data[].wtst_yn | string | 화이트리스트 여부 (`Y`/`N`) |
+| data[].json_data | string | JSON 데이터 |
+| data[].reg_conn_id | string | 등록자 계정 |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_conn_id | string | 수정자 계정 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_ts | string | 수정 일시 |
 
 **에러 코드**
 

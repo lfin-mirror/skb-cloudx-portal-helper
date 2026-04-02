@@ -63,6 +63,16 @@
 | data[].subnets[].gw | string | 게이트웨이 |
 | data[].nw_qos_plcy_id | string | 네트워크 QoS 정책 ID |
 | data[].nw_qos_plcy_nm | string | 네트워크 QoS 정책명 |
+| data[].nw_descp | string\|null | 네트워크 설명 |
+| data[].nw_qos_detail | object\|null | 네트워크 QoS 상세 정보 |
+| data[].reg_id | string | 등록자 ID |
+| data[].reg_conn_id | string | 등록자 접속 ID |
+| data[].reg_nm | string | 등록자명 |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_conn_id | string | 수정자 접속 ID |
+| data[].mod_nm | string | 수정자명 |
+| data[].mod_ts | string | 수정 일시 |
 | pageinfo.count | string | 총 건수 |
 | pageinfo.ispaging | string | 페이징 여부 |
 

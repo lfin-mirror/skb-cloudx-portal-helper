@@ -22,6 +22,10 @@ GET /v1/operation/policy/excn/excngrp
 | data[].exc_nw_grp_id | string | 예외 네트워크 그룹 ID |
 | data[].exc_nw_grp_nm | string | 예외 네트워크 그룹명 |
 | data[].tnt_id | string | 테넌트 ID |
+| data[].reg_id | string | 등록자 ID |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_ts | string | 수정 일시 |
 
 **에러 코드**
 
@@ -54,10 +58,17 @@ GET /v1/operation/policy/excn/excngrps/{exc_nw_grp_id}
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| exc_nw_grp_id | string | 예외 네트워크 그룹 ID |
-| exc_nw_grp_nm | string | 예외 네트워크 그룹명 |
-| tnt_id | string | 테넌트 ID |
-| ip_list | array | 예외 IP 목록 |
+| grpInfo | object | 그룹 정보 |
+| grpInfo.exc_nw_grp_id | string | 예외 네트워크 그룹 ID |
+| grpInfo.exc_nw_grp_nm | string | 예외 네트워크 그룹명 |
+| grpInfo.tnt_id | string | 테넌트 ID |
+| grpInfo.reg_conn_id | string | 등록자 접속 ID |
+| grpInfo.reg_id | string | 등록자 ID |
+| grpInfo.reg_ts | string | 등록 일시 |
+| grpInfo.mod_conn_id | string | 수정자 접속 ID |
+| grpInfo.mod_id | string | 수정자 ID |
+| grpInfo.mod_ts | string | 수정 일시 |
+| excNwInfo | array | 예외 IP 목록 |
 
 **호출 위치**
 

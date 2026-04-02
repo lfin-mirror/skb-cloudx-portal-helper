@@ -175,8 +175,18 @@
 |---|---|---|
 | host_id | string | 호스트 ID |
 | host_nm | string | 호스트명 |
-| evac_stat_cd | string | 대피 상태 코드 |
-| reg_ts | string | 등록 일시 |
+| pfrm_host_id | string | 플랫폼 호스트 ID |
+| host_sts_cd | string | 호스트 상태 코드 |
+| host_sts_cd_nm | string | 호스트 상태명 |
+| host_descp | string | 호스트 설명 |
+| host_ip | string | 호스트 IP |
+| ha_auto_mng_yn | string | HA 자동 관리 여부 |
+| hyper_typ | string | 하이퍼바이저 유형 |
+| evac_sts_cd | string | 대피 상태 코드 |
+| evac_sts_cd_nm | string | 대피 상태명 |
+| tnt_id | string | 테넌트 ID |
+| dng_sts_tm | string | 호스트 위험 상태 일시 |
+| evac_grp_id | string | 대피 그룹 ID |
 
 ---
 
@@ -215,11 +225,14 @@
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | evac_grp_id | string | 대피 그룹 ID |
-| host_id | string | 호스트 ID |
 | host_nm | string | 호스트명 |
-| evac_stat_cd | string | 대피 상태 코드 |
-| vm_cnt | number | 대피된 VM 수 |
-| reg_ts | string | 등록 일시 |
+| evac_sts_cd | string | 대피 상태 코드 |
+| evac_sts_cd_nm | string | 대피 상태명 |
+| tgt_vm_cnt | number | 대피 대상 VM 수 |
+| act_vm_cnt | number | 대피 실행 VM 수 |
+| auto_mng_yn | string | 자동 관리 여부 |
+| evac_stt_ts | string | 대피 시작 일시 |
+| evac_done_ts | string | 대피 완료 일시 |
 
 ---
 
@@ -240,14 +253,22 @@
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | evac_grp_id | string | 대피 그룹 ID |
-| host_id | string | 호스트 ID |
 | host_nm | string | 호스트명 |
-| evac_stat_cd | string | 대피 상태 코드 |
-| vm_list | array | 대피된 VM 목록 |
-| vm_list[].vm_auth_id | string | VM 인증 ID |
-| vm_list[].vm_nm | string | VM명 |
-| vm_list[].dst_host_id | string | 대피 목적지 호스트 ID |
-| vm_list[].evac_result_cd | string | 대피 결과 코드 |
+| vmList | array | 대피 VM 목록 |
+| vmList[].evac_job_no | string | 대피 작업 번호 |
+| vmList[].evac_grp_id | string | 대피 그룹 ID |
+| vmList[].tgt_host_nm | string | 대상 호스트명 |
+| vmList[].src_host_nm | string | 원본 호스트명 |
+| vmList[].tgt_vm_id | string | 대상 VM ID |
+| vmList[].tgt_vm_nm | string | 대상 VM명 |
+| vmList[].evac_vm_sts_cd | string | 대피 VM 상태 코드 |
+| vmList[].evac_vm_sts_cd_nm | string | 대피 VM 상태명 |
+| vmList[].vm_power_sts_cd | string | VM 전원 상태 코드 |
+| vmList[].vm_power_sts_cd_nm | string | VM 전원 상태명 |
+| vmList[].job_rslt_val | string | 작업 결과 값 |
+| vmList[].job_rslt_detl | string | 작업 결과 상세 |
+| vmList[].reg_ts | string | 등록 일시 |
+| vmList[].mod_ts | string | 수정 일시 |
 
 ---
 

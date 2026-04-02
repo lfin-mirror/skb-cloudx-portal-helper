@@ -25,12 +25,18 @@ GET /v1/operation/policys/powermgt/{policy_id}
 
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| powermgt_plcy_id | string | 전원 관리 정책 ID |
-| powermgt_plcy_nm | string | 전원 관리 정책명 |
-| tnt_id | string | 테넌트 ID |
-| auto_off_yn | string | 자동 종료 여부 |
-| auto_off_time | string | 자동 종료 시각 |
-| idle_off_min | number | 유휴 종료 대기 시간 (분) |
+| power_mng_plcy_id | string | 전원 관리 정책 ID |
+| plcy_stt_dt | string | 정책 시작일 |
+| plcy_end_dt | string | 정책 종료일 |
+| power_stt_time | string | 전원 시작 시각 |
+| power_end_time | string | 전원 종료 시각 |
+| sche_type | string | 스케줄 유형 |
+| week_sche | string | 주간 스케줄 |
+| mons_sche | string | 월간 스케줄 |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 **에러 코드**
 
@@ -111,10 +117,12 @@ GET /v1/operation/policys/rset/{policy_id}
 | 필드 | 타입 | 설명 |
 |------|------|------|
 | rset_plcy_id | string | 재설정 정책 ID |
-| rset_plcy_nm | string | 재설정 정책명 |
-| tnt_id | string | 테넌트 ID |
-| auto_rset_yn | string | 자동 재설정 여부 |
-| rset_cycle_cd | string | 재설정 주기 코드 |
+| rset_plcy_cd | string | 재설정 정책 코드 |
+| rset_end_time | string | 재설정 종료 시각 |
+| reg_id | string | 등록자 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 **호출 위치**
 

@@ -72,15 +72,29 @@
 |---|---|---|
 | temp_id | string | 템플릿 ID |
 | temp_nm | string | 템플릿명 |
+| descp | string | 템플릿 설명 |
 | img_id | string | 이미지 ID |
 | img_nm | string | 이미지명 |
 | os_typ_cd_nm | string | OS 타입명 |
+| img_ad_itlk_usg_yn | string | 이미지 AD 연동 여부 |
+| img_sw_l | array | 이미지 SW 목록 (hidden=true, 직렬화 포함) |
 | sw_count | number | SW 수 |
+| flavor_id | string | 플레이버 ID |
+| flavor_bas_yn | string | 플레이버 기본 여부 (hidden=true) |
+| bas_temp_yn | string | 기본 템플릿 여부 (Y/N) |
 | flavor_m | object | 플레이버 정보 |
 | flavor_m.flavor_id | string | 플레이버 ID |
+| flavor_m.flavor_nm | string | 플레이버명 |
 | flavor_m.vcpu_cnt | number | vCPU 수 |
 | flavor_m.vmm_capa | number | 메모리 용량 (MB) |
 | flavor_m.vhd_capa | number | 디스크 용량 (GB) |
+| flavor_m.flavor_descp | string | 플레이버 설명 |
+| reg_id | string | 등록자 ID |
+| reg_nm | string | 등록자명 |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_ts | string | 등록 일시 |
+| mod_id | string | 수정자 ID |
+| mod_ts | string | 수정 일시 |
 
 ---
 
@@ -541,6 +555,14 @@ VM 이미지 변환.
 | vcpu_cnt | number | vCPU 수 |
 | vmm_capa | number | 메모리 용량 (MB) |
 | vhd_capa | number | 디스크 용량 (GB) |
+| flavor_descp | string | 플레이버 설명 |
+| flavor_bas_yn | string | 기본 플레이버 여부 (Y/N) |
+| tpm_yn | string | TPM 여부 |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_ts | string | 등록 일시 |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_ts | string | 수정 일시 |
+| tnt_id | string | 테넌트 ID |
 
 ---
 
@@ -558,13 +580,23 @@ VM 이미지 변환.
 
 **응답**
 
+목록과 동일한 `Spec` DTO 사용.
+
 | 필드 | 타입 | 설명 |
 |---|---|---|
 | flavor_id | string | 플레이버 ID |
 | flavor_nm | string | 플레이버명 |
 | vcpu_cnt | number | vCPU 수 |
-| vmm_capa | number | 메모리 용량 (MB) — 단위 치환 처리됨 |
+| vmm_capa | number | 메모리 용량 (MB) — 단위 치환 적용 |
 | vhd_capa | number | 디스크 용량 (GB) |
+| flavor_descp | string | 플레이버 설명 |
+| flavor_bas_yn | string | 기본 플레이버 여부 (Y/N) |
+| tpm_yn | string | TPM 여부 |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_ts | string | 등록 일시 |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_ts | string | 수정 일시 |
+| tnt_id | string | 테넌트 ID |
 
 ---
 

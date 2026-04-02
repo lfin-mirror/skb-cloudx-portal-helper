@@ -22,7 +22,9 @@ GET /v1/operation/policys/acclbck/plcys/
 | data[].acc_blck_plcy_id | string | 접근 차단 정책 ID |
 | data[].acc_blck_plcy_nm | string | 접근 차단 정책명 |
 | data[].tnt_id | string | 테넌트 ID |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
 
 **에러 코드**
@@ -59,15 +61,32 @@ GET /v1/operation/policys/acclbck/plcys/{acc_blck_plcy_id}
 
 **응답**
 
+> 응답은 `{ plcyInfo: {...}, blckList: [...] }` 중첩 구조.
+
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| acc_blck_plcy_id | string | 접근 차단 정책 ID |
-| acc_blck_plcy_nm | string | 접근 차단 정책명 |
-| tnt_id | string | 테넌트 ID |
-| blck_type_cd | string | 차단 유형 코드 |
-| blck_ip_list | array | 차단 IP 목록 |
-| blck_time_stt | string | 차단 시작 시각 |
-| blck_time_end | string | 차단 종료 시각 |
+| plcyInfo | object | 정책 정보 |
+| plcyInfo.acc_blck_plcy_id | string | 접근 차단 정책 ID |
+| plcyInfo.acc_blck_plcy_nm | string | 접근 차단 정책명 |
+| plcyInfo.tnt_id | string | 테넌트 ID |
+| plcyInfo.reg_id | string | 등록자 ID |
+| plcyInfo.reg_conn_id | string | 등록자 계정 |
+| plcyInfo.reg_ts | string | 등록 일시 |
+| plcyInfo.mod_id | string | 수정자 ID |
+| plcyInfo.mod_conn_id | string | 수정자 계정 |
+| plcyInfo.mod_ts | string | 수정 일시 |
+| blckList | array | 차단 항목 목록 |
+| blckList[].acc_blck_plcy_id | string | 접근 차단 정책 ID |
+| blckList[].acc_blck_plcy_nm | string | 접근 차단 정책명 |
+| blckList[].acc_blck_serv_id | string | 차단 서비스 ID |
+| blckList[].acc_blck_serv_nm | string | 차단 서비스명 |
+| blckList[].tnt_id | string | 테넌트 ID |
+| blckList[].ip | string | 차단 IP |
+| blckList[].port | string | 차단 포트 |
+| blckList[].reg_id | string | 등록자 ID |
+| blckList[].reg_ts | string | 등록 일시 |
+| blckList[].mod_id | string | 수정자 ID |
+| blckList[].mod_ts | string | 수정 일시 |
 
 **호출 위치**
 

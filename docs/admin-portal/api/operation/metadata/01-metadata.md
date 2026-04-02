@@ -34,7 +34,11 @@ GET /v1/operation/policys/vm/mdata
 | data[].mdata.devices | object | 디바이스 설정 (모니터, USB, SPICE 서버, 입력장치, 사운드) |
 | data[].mdata.qemu_gstreamer | object | GStreamer 환경변수 설정 |
 | data[].mdata.qemu_h264 | array | H.264 인코딩 관련 환경변수 목록 |
+| data[].cont | string | 기타 설정 내용 |
+| data[].volm_qos_plcy_id | string | 볼륨 QoS 정책 ID |
+| data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
 
 **에러 코드**
@@ -90,7 +94,11 @@ GET /v1/operation/policys/vm/mdata/{vm_mdata_id}
 | mdata.qemu_h264 | array | H.264 관련 환경변수 목록 (`name`, `value`) |
 | cont | string | 기타 설정 내용 |
 | volm_qos_plcy_id | string | 볼륨 QoS 정책 ID |
+| reg_conn_id | string | 등록자 접속 ID |
+| reg_id | string | 등록자 ID |
 | reg_ts | string | 등록 일시 |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_id | string | 수정자 ID |
 | mod_ts | string | 수정 일시 |
 
 **호출 위치**
