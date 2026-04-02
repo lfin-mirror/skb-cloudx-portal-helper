@@ -1,43 +1,60 @@
 {
-  "data": [
-    {
-      "sbn_id": "c7a73202-e488-4cb3-9b6a-fa1326fd4887",
-      "sbn_nm": "테스트서브넷",
-      "cidr": "192.168.0.0/24",
-      "sbn": "192.168.0.0",
-      "gw": "192.168.0.1",
-      "dns_1": "192.168.0.1",
-      "dns_2": "192.168.2.1",
-      "sbn_descp": null,
-      "nw_id": "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e",
-      "nw_nm": "tenant_network",
-      "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
-      "nw_qos_plcy_nm": "tenant_network_qos",
-      "nw_qos_detail": {
-        "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
-        "nw_qos_plcy_nm": "tenant_network_qos",
-        "rules": [
-          {"nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757", "nw_qos_rule_id": "2a6ab313-bbf4-40fc-8a28-94cd7c9caeb3", "direction_cd": "V017ISS", "direction_cd_nm": "들어옴", "max_kbps": 10000, "max_burst_kbps": 10000},
-          {"nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757", "nw_qos_rule_id": "d292b00c-2528-4f30-9b9b-dd5cd71a3222", "direction_cd": "V017ESS", "direction_cd_nm": "내보냄", "max_kbps": 1000, "max_burst_kbps": 1000}
-        ],
-        "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
-        "tnt_nm": "TEST_TENANT"
-      },
-      "usg_use_cd": "P004V",
-      "usg_use_cd_nm": "Virtual Network (Internal Network)",
-      "pool_usg_cnt": "0",
-      "port_usg_cnt": "0",
-      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
-      "reg_ts": "2025-12-17 09:47:24",
-      "reg_conn_id": "superadmin",
-      "reg_nm": "SuperAdmin",
-      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
-      "mod_conn_id": "superadmin",
-      "mod_nm": "SuperAdmin",
-      "mod_ts": "2025-12-17 09:47:24"
-    }
-  ],
-  "pageinfo": {"count": 1, "ispaging": false},
-  "errCode": null,
-  "errMsg": null
+    "data": [
+        {
+            "sbn_id": "c7a73202-e488-4cb3-9b6a-fa1326fd4887",
+            "sbn_nm": "테스트서브넷",
+            "cidr": "192.168.0.0/24",
+            "sbn": "192.168.0.0",
+            "gw": "192.168.0.1",
+            "dns_1": "192.168.0.1",
+            "dns_2": "192.168.2.1",
+            "sbn_descp": null,
+            "nw_id": "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e",
+            "nw_nm": "tenant_network",
+            "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+            "nw_qos_plcy_nm": "tenant_network_qos",
+            "nw_qos_detail": {
+                "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+                "nw_qos_plcy_nm": "tenant_network_qos",
+                "rules": [
+                    {
+                        "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+                        "nw_qos_rule_id": "2a6ab313-bbf4-40fc-8a28-94cd7c9caeb3",
+                        "direction_cd": "V017ISS",
+                        "direction_cd_nm": "들어옴",
+                        "max_kbps": 10000,
+                        "max_burst_kbps": 10000
+                    },
+                    {
+                        "nw_qos_plcy_id": "8a8c3e87-f1e7-4842-9222-5dfb4f96c757",
+                        "nw_qos_rule_id": "d292b00c-2528-4f30-9b9b-dd5cd71a3222",
+                        "direction_cd": "V017ESS",
+                        "direction_cd_nm": "내보냄",
+                        "max_kbps": 1000,
+                        "max_burst_kbps": 1000
+                    }
+                ],
+                "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+                "tnt_nm": "TEST_TENANT"
+            },
+            "usg_use_cd": "P004V",
+            "usg_use_cd_nm": "Virtual Network (Internal Network)",
+            "pool_usg_cnt": "0",
+            "port_usg_cnt": "0",
+            "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "reg_ts": "2025-12-17 09:47:24",
+            "reg_conn_id": "superadmin",
+            "reg_nm": "SuperAdmin",
+            "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "mod_conn_id": "superadmin",
+            "mod_nm": "SuperAdmin",
+            "mod_ts": "2025-12-17 09:47:24"
+        }
+    ],
+    "pageinfo": {
+        "count": 1,
+        "ispaging": false
+    },
+    "errCode": null,
+    "errMsg": null
 }

@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "vm_auth_id": "PIF-261002",
+            "acct_id": "16f86f5e-ba1b-11f0-819b-4617b2bd76a9",
+            "acct_nm": "***",
+            "usr_grp_nm": "TEST",
+            "vm_id": "-",
+            "vm_nm": "-",
+            "vm_power_sts_cd": "-",
+            "vm_power_sts_cd_nm": "-",
+            "resrv_alloc_tm": "2026-03-24 14:36:41",
+            "vm_pool_id": "4374408c-dbaa-11f0-a082-9e558d565baa"
+        },
+        {
+            "vm_auth_id": "PIE-255001",
+            "acct_id": "0d14c9a4-1ce9-11f1-814a-d2425695d54c",
+            "acct_nm": "***",
+            "usr_grp_nm": "TEST.DEV",
+            "vm_id": "-",
+            "vm_nm": "-",
+            "vm_power_sts_cd": "-",
+            "vm_power_sts_cd_nm": "-",
+            "resrv_alloc_tm": "2026-03-19 15:32:09",
+            "vm_pool_id": "4374408c-dbaa-11f0-a082-9e558d565baa"
+        },
+        {
+            "vm_auth_id": "PIB-243001",
+            "acct_id": "16f86f5e-ba1b-11f0-819b-4617b2bd76a9",
+            "acct_nm": "***",
+            "usr_grp_nm": "TEST",
+            "vm_id": "-",
+            "vm_nm": "-",
+            "vm_power_sts_cd": "-",
+            "vm_power_sts_cd_nm": "-",
+            "resrv_alloc_tm": "2026-02-03 13:24:18",
+            "vm_pool_id": "4374408c-dbaa-11f0-a082-9e558d565baa"
+        }
+    ]
+}

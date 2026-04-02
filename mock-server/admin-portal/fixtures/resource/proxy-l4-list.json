@@ -1,42 +1,42 @@
 {
-  "data": [
-    {
-      "proxy_id": "PROXY-L4-001",
-      "proxy_nm": "L4 프록시 01",
-      "sts_cd": "P013NOR",
-      "sts_cd_nm": "정상",
-      "service_ip": "10.0.100.10",
-      "service_min_port": "30000",
-      "service_max_port": "30100",
-      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
-      "tnt_nm": "TEST_TENANT",
-      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
-      "reg_conn_id": "superadmin",
-      "reg_ts": "2025-10-17 18:11:14",
-      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
-      "mod_ts": "2026-02-03 14:13:14"
+    "data": [
+        {
+            "proxy_id": "PROXY-L4-001",
+            "proxy_nm": "L4 프록시 01",
+            "sts_cd": "P013NOR",
+            "sts_cd_nm": "정상",
+            "service_ip": "10.0.100.10",
+            "service_min_port": "30000",
+            "service_max_port": "30100",
+            "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+            "tnt_nm": "TEST_TENANT",
+            "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "reg_conn_id": "superadmin",
+            "reg_ts": "2025-10-17 18:11:14",
+            "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "mod_ts": "2026-02-03 14:13:14"
+        },
+        {
+            "proxy_id": "PROXY-L4-002",
+            "proxy_nm": "L4 프록시 02",
+            "sts_cd": "P013NOR",
+            "sts_cd_nm": "정상",
+            "service_ip": "10.0.100.11",
+            "service_min_port": "30200",
+            "service_max_port": "30300",
+            "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+            "tnt_nm": "TEST_TENANT",
+            "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "reg_conn_id": "superadmin",
+            "reg_ts": "2025-11-01 10:00:00",
+            "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
+            "mod_ts": "2026-01-15 09:00:00"
+        }
+    ],
+    "pageinfo": {
+        "count": 2,
+        "ispaging": false
     },
-    {
-      "proxy_id": "PROXY-L4-002",
-      "proxy_nm": "L4 프록시 02",
-      "sts_cd": "P013NOR",
-      "sts_cd_nm": "정상",
-      "service_ip": "10.0.100.11",
-      "service_min_port": "30200",
-      "service_max_port": "30300",
-      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
-      "tnt_nm": "TEST_TENANT",
-      "reg_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
-      "reg_conn_id": "superadmin",
-      "reg_ts": "2025-11-01 10:00:00",
-      "mod_id": "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf",
-      "mod_ts": "2026-01-15 09:00:00"
-    }
-  ],
-  "pageinfo": {
-    "count": 2,
-    "ispaging": false
-  },
-  "errCode": null,
-  "errMsg": null
+    "errCode": null,
+    "errMsg": null
 }

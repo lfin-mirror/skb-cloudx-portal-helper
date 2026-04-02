@@ -43,9 +43,10 @@ module.exports = function (router, getScenario) {
     res.json(require('../fixtures/resource/vpc-pool-count.json'));
   });
 
-  // 풀 목록 v2 (pool2)
+  // 풀 목록 v2 (pool2) — 컴포넌트가 res.data를 배열로 직접 사용
   router.get('/api/v1/resource/vpcs/pool2', (req, res) => {
-    res.json(require('../fixtures/resource/vpc-pool-list.json'));
+    const fixture = require('../fixtures/resource/vpc-pool-list.json');
+    res.json({ data: fixture.data });
   });
 
   // 자동 Pool 조회 (초기화)
@@ -124,7 +125,18 @@ module.exports = function (router, getScenario) {
 
   // 공용 PC 대기 VM 목록
   router.get('/api/v1/resource/vpcs/resources/pooled/user_vm', (req, res) => {
+    res.json(require('../fixtures/resource/vpc-pooled-user-vm.json'));
+  });
+
+  // 포트 관리 목록
+  router.get('/api/v1/resource/port', (req, res) => {
     res.json({ data: [], errCode: null, errMsg: null });
+  });
+  router.put('/api/v1/resource/port/:devId', (req, res) => {
+    res.json({ data: null, errCode: null, errMsg: null });
+  });
+  router.delete('/api/v1/resource/port/:portId', (req, res) => {
+    res.json({ data: null, errCode: null, errMsg: null });
   });
 
   // ============================================================

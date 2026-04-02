@@ -1,20 +1,20 @@
 {
-  "data": [
-    {
-      "tnt_nm": "TEST_TENANT",
-      "usedSize": 11876,
-      "totalSize": 157357
+    "data": [
+        {
+            "tnt_nm": "TEST_TENANT",
+            "usedSize": 11876,
+            "totalSize": 157357
+        },
+        {
+            "tnt_nm": "TEST_TENANTTWO",
+            "usedSize": 0,
+            "totalSize": 0
+        }
+    ],
+    "pageinfo": {
+        "count": 2,
+        "ispaging": false
     },
-    {
-      "tnt_nm": "TEST_TENANTTWO",
-      "usedSize": 0,
-      "totalSize": 0
-    }
-  ],
-  "pageinfo": {
-    "count": 2,
-    "ispaging": false
-  },
-  "errCode": null,
-  "errMsg": null
+    "errCode": null,
+    "errMsg": null
 }

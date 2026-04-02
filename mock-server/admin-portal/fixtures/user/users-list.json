@@ -1,41 +1,46 @@
 {
-  "data": [
-    {
-      "acct_id": "554c6d89-afca-11f0-b1c9-d6d4b9a99c07",
-      "acct_conn_id": "***",
-      "acct_nm": "***",
-      "usr_grp_nm": "TEST",
-      "acct_sts_cd": "U013NR",
-      "acct_sts_cd_nm": "정상",
-      "cert_plcy_nm": "TEST_TENANT 사용자 기본 인증 정책",
-      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
-      "reg_ts": "2025-11-01 10:00:00",
-      "mod_ts": "2025-11-01 10:00:00"
-    },
-    {
-      "acct_id": "16f86f5e-ba1b-11f0-819b-4617b2bd76a9",
-      "acct_conn_id": "***",
-      "acct_nm": "***",
-      "usr_grp_nm": "TEST",
-      "acct_sts_cd": "U013NR",
-      "acct_sts_cd_nm": "정상",
-      "cert_plcy_nm": "TEST_TENANT 사용자 기본 인증 정책",
-      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
-      "reg_ts": "2025-10-20 14:30:00",
-      "mod_ts": "2025-10-20 14:30:00"
-    },
-    {
-      "acct_id": "4f609411-ab5b-11f0-bce4-22a1b8d92490",
-      "acct_conn_id": "***",
-      "acct_nm": "***",
-      "usr_grp_nm": "TEST.DEV",
-      "acct_sts_cd": "U013LK",
-      "acct_sts_cd_nm": "잠김",
-      "cert_plcy_nm": "TEST_TENANT 사용자 기본 인증 정책",
-      "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
-      "reg_ts": "2025-10-22 13:45:00",
-      "mod_ts": "2026-01-15 09:00:00"
+    "data": {
+        "data": [
+            {
+                "acct_id": "554c6d89-afca-11f0-b1c9-d6d4b9a99c07",
+                "acct_conn_id": "***",
+                "acct_nm": "***",
+                "usr_grp_nm": "TEST",
+                "acct_sts_cd": "U013NR",
+                "acct_sts_cd_nm": "정상",
+                "cert_plcy_nm": "TEST_TENANT 사용자 기본 인증 정책",
+                "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+                "reg_ts": "2025-11-01 10:00:00",
+                "mod_ts": "2025-11-01 10:00:00"
+            },
+            {
+                "acct_id": "16f86f5e-ba1b-11f0-819b-4617b2bd76a9",
+                "acct_conn_id": "***",
+                "acct_nm": "***",
+                "usr_grp_nm": "TEST",
+                "acct_sts_cd": "U013NR",
+                "acct_sts_cd_nm": "정상",
+                "cert_plcy_nm": "TEST_TENANT 사용자 기본 인증 정책",
+                "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+                "reg_ts": "2025-10-20 14:30:00",
+                "mod_ts": "2025-10-20 14:30:00"
+            },
+            {
+                "acct_id": "4f609411-ab5b-11f0-bce4-22a1b8d92490",
+                "acct_conn_id": "***",
+                "acct_nm": "***",
+                "usr_grp_nm": "TEST.DEV",
+                "acct_sts_cd": "U013LK",
+                "acct_sts_cd_nm": "잠김",
+                "cert_plcy_nm": "TEST_TENANT 사용자 기본 인증 정책",
+                "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
+                "reg_ts": "2025-10-22 13:45:00",
+                "mod_ts": "2026-01-15 09:00:00"
+            }
+        ],
+        "pageinfo": {
+            "count": 3,
+            "ispaging": false
+        }
     }
-  ],
-  "pageinfo": { "count": 3, "ispaging": false }
 }
