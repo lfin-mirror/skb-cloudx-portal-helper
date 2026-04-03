@@ -32,10 +32,13 @@
 
 **응답**
 
-배열 형태.
+래퍼: `{ data: [...], errCode, errMsg }`
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
+| data[] | array | IP 목록 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | ip_id | string | IP ID |
 | ip_addr | string | IP 주소 |
 | ip_usg_typ_cd | string | IP 사용 타입 코드 |
@@ -60,10 +63,13 @@
 
 **응답**
 
-배열 형태.
+래퍼: `{ data: [...], errCode, errMsg }`
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
+| data[] | array | 템플릿 이력 목록 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | poolId | string | 풀 ID |
 | templateId | string | 템플릿 ID |
 | templateName | string | 템플릿명 |
@@ -214,10 +220,13 @@
 
 **응답**
 
-배열 형태.
+래퍼: `{ data: [...], errCode, errMsg }`
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
+| data[] | array | 이미지 불일치 VM 목록 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | vmId | string | VM ID |
 | vmName | string | VM명 |
 | vmPoolTypeCode | string | 풀 유형 코드 |

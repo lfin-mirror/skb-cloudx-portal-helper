@@ -69,6 +69,8 @@ GET /v1/operation/cert/n2nd/ptalType/{ptal_type_cd}
 | data[].exc_nw_n2nd_cert_mtd_cd_nm | string | 예외 네트워크 2차 인증 방식 코드명 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
+| data[].reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **호출 위치**
 
@@ -142,6 +144,21 @@ GET /v1/operation/cert/n2nd/{cert_plcy_id}/acc
 |------|------|------|------|
 | cert_plcy_id | string | Y | 인증 정책 ID |
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | array | 적용 계정/그룹 목록 |
+| data[].cert_plcy_id | string | 인증 정책 ID |
+| data[].usr_grp_id | string | 사용자 그룹 ID |
+| data[].usr_grp_nm | string | 사용자 그룹명 |
+| data[].acct_id | string | 계정 ID |
+| data[].ognz_nm | string | 조직명 |
+| data[].blng_dept_nm | string | 소속 부서명 |
+| data[].acct_descp | string | 계정 설명 |
+| data[].grp_typ_cd | string | 그룹 유형 코드 |
+| data[].grp_typ_cd_nm | string | 그룹 유형 코드명 |
+
 **호출 위치**
 
 | 컴포넌트 | 라인 |
@@ -161,6 +178,8 @@ GET /v1/operation/policys/cert/n2nd
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
 | tnt_id | string | N | 테넌트 ID |
+
+**응답** — `2차 인증 정책 목록 조회`와 동일한 필드 구조 (`CertN2ndPolicy` 배열)
 
 **호출 위치**
 
@@ -278,7 +297,7 @@ GET /v1/operation/policys/cert/A007ADM/{cert_plcy_id}
 |------|------|------|------|
 | cert_plcy_id | string | Y | 인증 정책 ID |
 
-**응답** — 인증/로그인/세션/비밀번호/잠금 정책 상세 필드 포함
+**응답** — `CertN2ndPolicyDetail`과 동일한 필드 구조 (인증/로그인/세션/비밀번호/잠금 정책 상세 필드 포함, `reg_conn_id`/`mod_conn_id` 포함)
 
 **호출 위치**
 
@@ -331,6 +350,8 @@ GET /v1/operation/policys/cert/A007USR/{cert_plcy_id}
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
 | cert_plcy_id | string | Y | 인증 정책 ID |
+
+**응답** — `CertN2ndPolicyDetail`과 동일한 필드 구조 (`reg_conn_id`/`mod_conn_id` 포함)
 
 **호출 위치**
 
@@ -393,6 +414,8 @@ GET /v1/operation/cert/secu/grps
 | data[].vm_cnt | number | 적용된 VM 수 |
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_ts | string | 수정 일시 |
+| data[].reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **호출 위치**
 
@@ -490,6 +513,19 @@ GET /v1/operation/cert/secu/info/{cert_secu_id}
 GET /v1/operation/cert/secu/noauth
 ```
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | array | 미인증 차단 정책 목록 |
+| data[].noauth_proc_blck_plcy_id | string | 미인증 처리 차단 정책 ID |
+| data[].noauth_proc_blck_plcy_nm | string | 미인증 처리 차단 정책명 |
+| data[].cnt | number | 차단 항목 수 |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_ts | string | 수정 일시 |
+| data[].reg_conn_id | string\|null | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string\|null | 수정자 접속 ID (마스킹) |
+
 **호출 위치**
 
 | 컴포넌트 | 라인 |
@@ -514,6 +550,27 @@ GET /v1/operation/cert/secu/noauth/{blck_plcy_id}
 |------|------|------|------|
 | blck_plcy_id | string | Y | 차단 정책 ID |
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | object | 미인증 처리 차단 정책 상세 |
+| data.noauth_proc_blck_plcy_id | string | 미인증 처리 차단 정책 ID |
+| data.noauth_proc_blck_plcy_nm | string | 미인증 처리 차단 정책명 |
+| data.reg_id | string | 등록자 ID |
+| data.reg_ts | string | 등록 일시 |
+| data.mod_id | string | 수정자 ID |
+| data.mod_ts | string | 수정 일시 |
+| data.noauth_proc_blck | array | 차단 프로세스 목록 |
+| data.noauth_proc_blck[].noauth_proc_blck_plcy_id | string | 미인증 처리 차단 정책 ID |
+| data.noauth_proc_blck[].noauth_proc_blck_id | string | 차단 항목 ID |
+| data.noauth_proc_blck[].proc_nm | string | 프로세스명 |
+| data.noauth_proc_blck[].cont | string | 설명 |
+| data.noauth_proc_blck[].reg_id | string | 등록자 ID |
+| data.noauth_proc_blck[].reg_ts | string | 등록 일시 |
+| data.noauth_proc_blck[].mod_id | string | 수정자 ID |
+| data.noauth_proc_blck[].mod_ts | string | 수정 일시 |
+
 **호출 위치**
 
 | 컴포넌트 | 라인 |
@@ -528,12 +585,56 @@ GET /v1/operation/cert/secu/noauth/{blck_plcy_id}
 GET /v1/operation/cert/secu/noauth/{blck_plcy_id}/blck
 ```
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | array | 차단 프로세스 목록 |
+| data[].noauth_proc_blck_plcy_id | string | 미인증 처리 차단 정책 ID |
+| data[].noauth_proc_blck_id | string | 차단 항목 ID |
+| data[].proc_nm | string | 프로세스명 |
+| data[].cont | string | 설명 |
+| data[].reg_id | string | 등록자 ID |
+| data[].reg_ts | string | 등록 일시 |
+| data[].mod_id | string | 수정자 ID |
+| data[].mod_ts | string | 수정 일시 |
+
 **호출 위치**
 
 | 컴포넌트 | 라인 |
 |----------|------|
 | `views/policy/VirtualPcAuthPolicySupadm.vue` | 644, 656, 769 |
 | `views/policy/VirtualPcNetworkPolicy.vue` | 640, 652, 798 |
+
+---
+
+### 보안 인증 정책 어댑터 정보 조회
+
+```
+GET /v1/operation/cert/secu/adopter/info/{secuPlcyId}
+```
+
+**Path Parameters**
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| secuPlcyId | string | Y | 보안 인증 정책 ID |
+
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | object | 보안 인증 정책 어댑터 정보 |
+| data.secu_plcy_id | string | 보안 인증 정책 ID |
+| data.secu_plcy_nm | string | 보안 인증 정책명 |
+| data.secu_plcy_tgt_cd | string | 정책 대상 코드 |
+| data.exc_nw_grp_id | string\|null | 예외 네트워크 그룹 ID |
+| data.vpc_auto_login_yn | string | VPC 자동 로그인 여부 (`Y`/`N`) |
+| data.pcly_cert | array | 네트워크 구간별 인증 설정 목록 (`secu/info` 응답의 `pcly_cert`와 동일 구조) |
+| data.reg_id | string\|null | 등록자 ID |
+| data.reg_ts | string\|null | 등록 일시 |
+| data.mod_id | string\|null | 수정자 ID |
+| data.mod_ts | string\|null | 수정 일시 |
 
 ---
 
@@ -646,6 +747,15 @@ GET /v1/operation/policys/cert/vpc
 |------|------|------|------|
 | tnt_id | string | N | 테넌트 ID |
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | array | VPC 인증 정책 목록 |
+| data[].policy_id | string | 정책 ID |
+| data[].cert_plcy_nm | string | 인증 정책명 |
+| data[].tnt_id | string | 테넌트 ID |
+
 **호출 위치**
 
 | 컴포넌트 | 라인 |
@@ -669,6 +779,19 @@ GET /v1/operation/policys/{policy_id}/cert/vpc/
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
 | policy_id | string | Y | 정책 ID |
+
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | object | VPC 인증 정책 상세 |
+| data.policy_id | string | 정책 ID |
+| data.cert_plcy_nm | string | 인증 정책명 |
+| data.tnt_id | string | 테넌트 ID |
+| data.n2nd_auth_type_cd | string | 2차 인증 유형 코드 |
+| data.exc_nw_grp_id | string | 예외 네트워크 그룹 ID |
+| data.login_fail_cnt | number | 로그인 실패 허용 횟수 |
+| data.session_timeout_min | number | 세션 타임아웃(분) |
 
 **호출 위치**
 

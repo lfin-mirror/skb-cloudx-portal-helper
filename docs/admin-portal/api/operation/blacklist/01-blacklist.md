@@ -28,7 +28,6 @@ GET /v1/operation/policys/swblst
 | data[].att_file_nm | string | 첨부 파일명 |
 | data[].tnt_id | string | 테넌트 ID |
 | data[].wtst_yn | string | 화이트리스트 여부 (`Y`/`N`) |
-| data[].json_data | string | JSON 데이터 |
 | data[].reg_conn_id | string | 등록자 계정 |
 | data[].reg_id | string | 등록자 ID |
 | data[].reg_ts | string | 등록 일시 |
@@ -70,6 +69,23 @@ GET /v1/operation/policys/swblst/{blst_file_id}
 |------|------|------|------|
 | page | number | N | 페이지 번호 |
 | limit | number | N | 페이지당 항목 수 |
+
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data | object | SW 차단 목록 파일 상세 |
+| data.blst_file_id | string | 차단 목록 파일 ID |
+| data.att_file_nm | string | 첨부 파일명 |
+| data.wtst_yn | string | 화이트리스트 여부 (`Y`/`N`) |
+| data.tnt_id | string | 테넌트 ID |
+| data.json_data | string | 차단 목록 JSON 직렬화 문자열 |
+| data.reg_id | string | 등록자 ID |
+| data.reg_ts | string | 등록 일시 |
+| data.mod_id | string | 수정자 ID |
+| data.mod_ts | string | 수정 일시 |
+| data.reg_conn_id | string | 등록자 계정 |
+| data.mod_conn_id | string\|null | 수정자 계정 |
 
 **호출 위치**
 

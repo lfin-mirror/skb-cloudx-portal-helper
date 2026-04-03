@@ -105,8 +105,8 @@
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
-| pageinfo.count | string | 총 건수 |
-| pageinfo.ispaging | string | 페이징 여부 |
+| pageinfo.count | number | 총 건수 |
+| pageinfo.ispaging | boolean | 페이징 여부 |
 
 ---
 
@@ -152,6 +152,13 @@ DTO는 목록(`/admin`)과 동일한 `HostAdminList` 사용.
 | reg_ts | string | 등록 일시 |
 | mod_id | string | 수정자 ID |
 | mod_ts | string | 수정 일시 |
+| zone_assgn_yn | string | Zone 배정 여부 |
+| tnt_id | string | 테넌트 ID |
+| tnt_assgn_yn | string | 테넌트 배정 여부 |
+| host_grp_nm | string | 호스트 그룹명 |
+| ha_auto_mng_yn | string\|null | HA 자동 관리 여부 |
+| mod_nm | string\|null | 수정자명 |
+| mod_conn_id | string\|null | 수정자 접속 ID |
 
 ---
 

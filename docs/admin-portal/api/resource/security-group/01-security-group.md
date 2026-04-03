@@ -45,6 +45,23 @@ GET /v1/resource/policies/security-group/{securityGroupId}
 |------|------|------|------|
 | securityGroupId | string | Y | 접근 통제 그룹 ID |
 
+**응답**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| data.security_group_id | string | 접근 통제 그룹 ID |
+| data.secu_grp_nm | string | 접근 통제 그룹명 |
+| data.secu_grp_descp | string | 접근 통제 그룹 설명 |
+| data.rules | array | 규칙 목록 |
+| data.rules[].id | string | 규칙 ID |
+| data.rules[].direction | string | 방향 (`ingress` / `egress`) |
+| data.rules[].protocol | string\|null | 프로토콜 |
+| data.rules[].port_range_min | number | 포트 범위 최소 |
+| data.rules[].port_range_max | number | 포트 범위 최대 |
+| data.rules[].remote_ip_prefix | string | 원격 IP 접두사 |
+
+> 참고: 목록 응답은 OpenStack 원본 필드명(`id`, `name`, `description`)을 사용하고 상세 응답은 내부 DB 필드명(`security_group_id`, `secu_grp_nm`, `secu_grp_descp`)을 사용. 실서버 확인 후 통일 필요.
+
 **호출 위치**
 
 | 컴포넌트 | 라인 |

@@ -53,7 +53,7 @@ GET /v1/operation/outs/interfaces/email
 | linkage_type_cd_nm | string | 연동 유형 코드명 |
 | tnt_id | string | 테넌트 ID |
 | smtp_host | string | SMTP 호스트 |
-| smtp_port | number | SMTP 포트 |
+| smtp_port | string | SMTP 포트 (예: `"25"`) |
 | from_mail | string | 발신 이메일 주소 |
 | use_yn | string | 사용 여부 |
 | passwd_cryptval | string | 비밀번호 암호화 값 |
@@ -86,7 +86,7 @@ PUT /v1/operation/outs/interfaces/email
 | 필드 | 타입 | 필수 | 설명 |
 |------|------|------|------|
 | smtp_host | string | Y | SMTP 호스트 |
-| smtp_port | number | Y | SMTP 포트 |
+| smtp_port | string | Y | SMTP 포트 (예: `"25"`) |
 | passwd_cryptval | string | N | 비밀번호 암호화 값 |
 | from_mail | string | Y | 발신 이메일 주소 |
 | use_yn | string | N | 사용 여부 (`Y`/`N`) |
@@ -292,25 +292,7 @@ PUT /v1/operation/outs/interfaces/{ext_itlk_div_cd}
 
 ## 시스템 라이선스 조회
 
-```
-GET /v1/operation/system/license
-```
-
-**응답**
-
-| 필드 | 타입 | 설명 |
-|------|------|------|
-| version | string | 시스템 버전 (예: v.2.2.9) |
-| license_valid_period | string | 라이선스 유효 기간 (예: 2024.01.01~2026.12.31) |
-| quantity_virtual_pc | string | 라이선스 가상PC 수량 |
-| contact | string | 라이선스 문의 이메일 |
-
-**호출 위치**
-
-| 컴포넌트 | 라인 |
-|----------|------|
-| `views/adminSetting/SystemLicense.vue` | 78 |
-| `views/policy/UserAuthPolicySupadm.vue` | 737 |
+→ [system/01-license.md](../system/01-license.md) 참조
 
 ---
 

@@ -69,6 +69,8 @@
 | tnt_id | string | 테넌트 ID |
 | tnt_nm | string | 테넌트명 |
 | tnt_grp_id | string | 테넌트 그룹 ID |
+| secu_plcy_id | string | 보안 정책 ID |
+| secu_plcy_nm | string | 보안 정책명 |
 | bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
 | bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
 

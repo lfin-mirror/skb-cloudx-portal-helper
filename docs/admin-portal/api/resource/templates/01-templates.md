@@ -49,7 +49,7 @@
 | img_nm | string | 이미지명 |
 | sw_count | number | 설치 SW 수 |
 | reg_conn_id | string | 등록자 로그인 ID |
-| reg_nm | string | 등록자명 |
+| reg_nm | string\|null | 등록자명 |
 | reg_ts | string | 등록 일시 |
 
 ---
@@ -75,7 +75,7 @@
 | descp | string | 템플릿 설명 |
 | img_id | string | 이미지 ID |
 | img_nm | string | 이미지명 |
-| os_typ_cd_nm | string | OS 타입명 |
+| os_typ_cd_nm | string | OS 타입명 (os_typ_cd는 상세 응답에 포함되지 않음) |
 | img_ad_itlk_usg_yn | string | 이미지 AD 연동 여부 |
 | img_sw_l | array | 이미지 SW 목록 (hidden=true, 직렬화 포함) |
 | sw_count | number | SW 수 |
@@ -89,12 +89,24 @@
 | flavor_m.vmm_capa | number | 메모리 용량 (MB) |
 | flavor_m.vhd_capa | number | 디스크 용량 (GB) |
 | flavor_m.flavor_descp | string | 플레이버 설명 |
+| flavor_m.flavor_bas_yn | string | 플레이버 기본 여부 |
+| flavor_m.tpm_yn | string | TPM 여부 |
+| flavor_m.reg_conn_id | string | 플레이버 등록자 접속 ID |
+| flavor_m.reg_ts | string | 플레이버 등록 일시 |
+| flavor_m.mod_conn_id | string | 플레이버 수정자 접속 ID |
+| flavor_m.mod_ts | string | 플레이버 수정 일시 |
+| flavor_m.tnt_id | string\|null | 플레이버 테넌트 ID |
 | reg_id | string | 등록자 ID |
 | reg_nm | string | 등록자명 |
 | reg_conn_id | string | 등록자 접속 ID |
 | reg_ts | string | 등록 일시 |
 | mod_id | string | 수정자 ID |
 | mod_ts | string | 수정 일시 |
+| mod_conn_id | string | 수정자 접속 ID |
+| mod_nm | string | 수정자명 |
+| in_tnt_id | string\|null | 포함 테넌트 ID |
+| not_in_tnt_id | string\|null | 제외 테넌트 ID |
+| tnt_id | string\|null | 테넌트 ID |
 
 ---
 

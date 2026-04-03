@@ -26,6 +26,8 @@ GET /v1/operation/policy/excn/excngrp
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
+| data[].reg_conn_id | string\|null | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string\|null | 수정자 접속 ID (마스킹) |
 
 **에러 코드**
 
@@ -69,6 +71,16 @@ GET /v1/operation/policy/excn/excngrps/{exc_nw_grp_id}
 | grpInfo.mod_id | string | 수정자 ID |
 | grpInfo.mod_ts | string | 수정 일시 |
 | excNwInfo | array | 예외 IP 목록 |
+| excNwInfo[].exc_nw_id | string | 예외 네트워크 항목 ID |
+| excNwInfo[].exc_nw_nm | string | 예외 네트워크명 |
+| excNwInfo[].exc_nw_grp_id | string | 예외 네트워크 그룹 ID |
+| excNwInfo[].cidr | string | CIDR 표기 IP 범위 |
+| excNwInfo[].bit | string | 서브넷 비트 수 |
+| excNwInfo[].tnt_id | string | 테넌트 ID |
+| excNwInfo[].reg_id | string | 등록자 ID |
+| excNwInfo[].reg_ts | string | 등록 일시 |
+| excNwInfo[].mod_id | string | 수정자 ID |
+| excNwInfo[].mod_ts | string | 수정 일시 |
 
 **호출 위치**
 

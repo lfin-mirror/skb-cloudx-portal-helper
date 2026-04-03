@@ -61,6 +61,27 @@
 | data[].subnets[].sbn_nm | string | 서브넷명 |
 | data[].subnets[].cidr | string | CIDR |
 | data[].subnets[].gw | string | 게이트웨이 |
+| data[].subnets[].sbn | string\|null | 서브넷 주소 |
+| data[].subnets[].dns_1 | string | 기본 DNS |
+| data[].subnets[].dns_2 | string | 보조 DNS |
+| data[].subnets[].sbn_descp | string\|null | 서브넷 설명 |
+| data[].subnets[].nw_id | string | 네트워크 ID |
+| data[].subnets[].nw_nm | string | 네트워크명 |
+| data[].subnets[].usg_use_cd | string | 사용 용도 코드 |
+| data[].subnets[].usg_use_cd_nm | string | 사용 용도명 |
+| data[].subnets[].nw_qos_plcy_id | string\|null | 서브넷 QoS 정책 ID |
+| data[].subnets[].nw_qos_plcy_nm | string\|null | 서브넷 QoS 정책명 |
+| data[].subnets[].nw_qos_detail | object\|null | 서브넷 QoS 상세 |
+| data[].subnets[].pool_usg_cnt | string | IP 풀 사용 수 |
+| data[].subnets[].port_usg_cnt | string | 포트 사용 수 |
+| data[].subnets[].reg_id | string | 등록자 ID |
+| data[].subnets[].reg_ts | string | 등록 일시 |
+| data[].subnets[].reg_conn_id | string | 등록자 접속 ID |
+| data[].subnets[].reg_nm | string | 등록자명 |
+| data[].subnets[].mod_id | string | 수정자 ID |
+| data[].subnets[].mod_conn_id | string | 수정자 접속 ID |
+| data[].subnets[].mod_nm | string | 수정자명 |
+| data[].subnets[].mod_ts | string | 수정 일시 |
 | data[].nw_qos_plcy_id | string | 네트워크 QoS 정책 ID |
 | data[].nw_qos_plcy_nm | string | 네트워크 QoS 정책명 |
 | data[].nw_descp | string\|null | 네트워크 설명 |

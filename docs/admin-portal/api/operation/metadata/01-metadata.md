@@ -40,6 +40,8 @@ GET /v1/operation/policys/vm/mdata
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
+| data[].reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **에러 코드**
 

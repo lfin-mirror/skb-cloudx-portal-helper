@@ -55,6 +55,8 @@ GET /v1/operation/policy/bkupsnap/grps
 | data[].group_cnt | number | 연결된 그룹 수 |
 | data[].pool_cnt | number | 연결된 풀 수 |
 | data[].vm_cnt | number | 연결된 VM 수 |
+| data[].reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **에러 코드**
 

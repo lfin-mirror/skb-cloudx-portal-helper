@@ -41,8 +41,16 @@ VPC 그룹 목록 조회.
 
 **응답**
 
+래퍼: `{ data: [...], pageinfo: { count, ispaging }, errCode, errMsg }`
+
 | 필드 | 타입 | 설명 |
 |---|---|---|
+| data[] | array | 그룹 목록 |
+| pageinfo | object | 페이지 정보 |
+| pageinfo.count | number | 전체 항목 수 |
+| pageinfo.ispaging | boolean | 페이징 여부 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | vm_grp_id | string | 그룹 ID |
 | vm_grp_nm | string | 그룹명 |
 | tnt_id | string | 테넌트 ID |
@@ -54,9 +62,9 @@ VPC 그룹 목록 조회.
 | temp_id | string | 템플릿 ID |
 | temp_nm | string | 템플릿명 |
 | gdn_img_cre_yn | string | 골든 이미지 생성 여부 |
-| pool_usg_cnt | string | 풀 사용 수량 |
-| tot_pool_max_vm_cnt | string | 풀 최대 VM 수량 합계 |
-| network_cnt | string | 그룹 네트워크 수 |
+| pool_usg_cnt | number | 풀 사용 수량 |
+| tot_pool_max_vm_cnt | number | 풀 최대 VM 수량 합계 |
+| network_cnt | number | 그룹 네트워크 수 |
 | reg_id | string | 등록자 ID |
 | reg_conn_id | string | 등록자 접속 ID |
 | reg_nm | string | 등록자명 |
@@ -82,38 +90,28 @@ VPC 그룹 상세 조회.
 
 **응답**
 
+래퍼: `{ data: {...}, errCode, errMsg }`
+
+그룹 목록 응답 필드 전체 + 아래 추가 필드.
+
 | 필드 | 타입 | 설명 |
 |---|---|---|
-| vm_grp_id | string | 그룹 ID |
-| vm_grp_nm | string | 그룹명 |
-| tnt_id | string | 테넌트 ID |
-| tnt_nm | string | 테넌트명 |
-| secu_plcy_id | string | 보안 정책 ID |
-| secu_plcy_nm | string | 보안 정책명 |
-| bkup_snap_plcy_id | string | 백업/스냅샷 정책 ID |
-| bkup_snap_plcy_nm | string | 백업/스냅샷 정책명 |
-| temp_id | string | 템플릿 ID |
-| temp_nm | string | 템플릿명 |
-| gdn_img_cre_yn | string | 골든 이미지 생성 여부 |
-| pool_usg_cnt | string | 풀 사용 수량 |
-| tot_pool_max_vm_cnt | string | 풀 최대 VM 수량 합계 |
-| network_cnt | string | 그룹 네트워크 수 |
+| data | object | 그룹 상세 객체 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | networks | array | 그룹 매핑 네트워크 목록 |
-| networks[].vm_grp_id | string | 그룹 ID |
 | networks[].nw_id | string | 네트워크 ID |
 | networks[].nw_nm | string | 네트워크명 |
-| networks[].tnt_id | string | 테넌트 ID |
-| networks[].pool_nw_usg_cnt | string | 풀 네트워크 사용 수 |
+| networks[].nw_typ_cd | string | 네트워크 유형 코드 |
+| networks[].nw_typ_cd_nm | string | 네트워크 유형명 |
 | zones | array | 테넌트 할당 ZONE 목록 |
+| zones[].zone_nm | string | ZONE명 |
 | subnets | array | 사용 가능 서브넷 목록 |
-| reg_id | string | 등록자 ID |
-| reg_conn_id | string | 등록자 접속 ID |
-| reg_nm | string | 등록자명 |
-| reg_ts | string | 등록 일시 |
-| mod_id | string | 수정자 ID |
-| mod_conn_id | string | 수정자 접속 ID |
-| mod_nm | string | 수정자명 |
-| mod_ts | string | 수정 일시 |
+| subnets[].sbn_id | string | 서브넷 ID |
+| subnets[].sbn_nm | string | 서브넷명 |
+| subnets[].nw_nm | string | 네트워크명 |
+| subnets[].cidr | string | CIDR |
+| subnets[].nw_qos_plcy_nm | string | 네트워크 QoS 정책명 |
 
 ---
 
@@ -232,16 +230,26 @@ VPC 풀 목록 조회.
 
 **응답**
 
-배열 형태.
+래퍼: `{ data: [...], pageinfo: { count, ispaging }, errCode, errMsg }`
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
+| data[] | array | 풀 목록 |
+| pageinfo | object | 페이지 정보 |
+| pageinfo.count | number | 전체 항목 수 |
+| pageinfo.ispaging | boolean | 페이징 여부 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | vm_pool_id | string | 풀 ID |
 | vm_pool_nm | string | 풀명 |
 | vm_grp_id | string | 그룹 ID |
+| vm_grp_nm | string | 그룹명 |
 | tnt_id | string | 테넌트 ID |
+| tnt_nm | string | 테넌트명 |
 | tnt_mtd_cd | string | 테넌트 방식 코드 |
 | tnt_mtd_cd_nm | string | 테넌트 방식 코드명 |
+| temp_id | string | 템플릿 ID |
+| temp_nm | string | 템플릿명 |
 | vm_pool_sts_cd | string | 풀 상태 코드 |
 | vm_pool_sts_cd_nm | string | 풀 상태 코드명 |
 | ad_itlk_usg_yn | string | AD 연동 사용 여부 |
@@ -257,7 +265,6 @@ VPC 풀 목록 조회.
 | rset_plcy_id | string | 초기화 정책 ID |
 | volm_sched_plcy_id | string | 볼륨 스케줄링 정책 ID |
 | suppl_dsk_usg_yn | string | 추가 디스크 사용 여부 |
-| temp_id | string | 템플릿 ID |
 | cre_resv_vm_cnt | string | 생성 예약 VM 수 |
 | max_vm_cnt | string | 최대 VM 수 |
 | min_vm_cnt | string | 최소 VM 수 |
@@ -285,10 +292,10 @@ VPC 풀 목록 조회.
 | volumes[].volm_typ_nm | string | 볼륨 타입명 |
 | volumes[].volm_usg_typ | string | 볼륨 사용 타입 코드 |
 | volumes[].volm_usg_typ_nm | string | 볼륨 사용 타입명 |
-| volumes[].tot_capa | number | 전체 용량 |
-| volumes[].usg_capa | number | 사용 용량 |
-| volumes[].psb_capa | number | 잔여 용량 |
-| volumes[].usg_ratio | number | 사용 비율 |
+| volumes[].tot_capa | string | 전체 용량 |
+| volumes[].usg_capa | string | 사용 용량 |
+| volumes[].psb_capa | string | 잔여 용량 |
+| volumes[].usg_ratio | string | 사용 비율 |
 | volumes[].volm_qos_plcy_id | string | QoS 정책 ID |
 | volumes[].volm_qos_plcy_nm | string | QoS 정책명 |
 | volumes[].volm_qos_detail | object | QoS 정책 상세 |
@@ -317,10 +324,15 @@ VPC 풀 상세 조회.
 
 **응답**
 
+래퍼: `{ data: {...}, errCode, errMsg }`
+
 풀 목록 응답 필드 전체 + 아래 추가 필드.
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
+| data | object | 풀 상세 객체 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 | subnets | array | 풀 매핑 서브넷 목록 |
 | subnets[].vm_pool_id | string | 풀 ID |
 | subnets[].sbn_id | string | 서브넷 ID |
@@ -332,6 +344,24 @@ VPC 풀 상세 조회.
 | subnets[].nw_qos_plcy_id | string | 네트워크 QoS 정책 ID |
 | subnets[].nw_qos_plcy_nm | string | 네트워크 QoS 정책명 |
 | subnets[].nw_qos_detail | object | 네트워크 QoS 상세 |
+| volumes[].volm_qos_detail.volm_qos_plcy_id | string | QoS 정책 ID |
+| volumes[].volm_qos_detail.volm_qos_plcy_nm | string | QoS 정책명 |
+| volumes[].volm_qos_detail.volm_typ_id | string | 볼륨 타입 ID |
+| volumes[].volm_qos_detail.volm_typ_nm | string | 볼륨 타입명 |
+| volumes[].volm_qos_detail.volm_qos_rule_unit_cd | string | QoS 규칙 단위 코드 |
+| volumes[].volm_qos_detail.volm_qos_rule_unit_cd_nm | string | QoS 규칙 단위 코드명 |
+| volumes[].volm_qos_detail.volm_read | number | 읽기 QoS |
+| volumes[].volm_qos_detail.volm_read_max | number | 읽기 최대 QoS |
+| volumes[].volm_qos_detail.volm_write | number | 쓰기 QoS |
+| volumes[].volm_qos_detail.volm_write_max | number | 쓰기 최대 QoS |
+| volumes[].volm_qos_detail.reg_id | string | 등록자 ID |
+| volumes[].volm_qos_detail.reg_conn_id | string | 등록자 접속 ID |
+| volumes[].volm_qos_detail.reg_nm | string | 등록자명 |
+| volumes[].volm_qos_detail.reg_ts | string | 등록 일시 |
+| volumes[].volm_qos_detail.mod_id | string | 수정자 ID |
+| volumes[].volm_qos_detail.mod_conn_id | string | 수정자 접속 ID |
+| volumes[].volm_qos_detail.mod_nm | string | 수정자명 |
+| volumes[].volm_qos_detail.mod_ts | string | 수정 일시 |
 
 ---
 
@@ -513,7 +543,7 @@ VPC 풀 삭제.
 
 ### GET /v1/resource/vpcs/pool/{vmPoolId}/ip
 
-풀 IP 목록 조회.
+풀 IP 목록 조회. 상세 명세: [풀 IP 관리](../pools/01-pools.md#풀-ip-관리)
 
 **호출 위치**: `views/virtualPc/mixins/virtualPcGroup.js:415`
 
@@ -538,6 +568,28 @@ VPC 풀 목록 조회 (v2).
 | page | number | N | 페이지 번호 |
 | limit | number | N | 페이지당 항목 수 |
 
+**응답**
+
+`{ data: [...] }` 형태. `data[]` 내부 필드는 [풀 목록 응답](#get-v1resourcevpcspool)과 동일.
+
+---
+
+### GET /v1/resource/vpcs/pool/auto/{companyNm}
+
+회사명 기준 자동 배정 대상 풀 목록 조회.
+
+**호출 위치**: (OpenAPI resource/tenants 태그)
+
+**Path Parameters**
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---|---|---|---|
+| companyNm | string | Y | 회사명 |
+
+**응답**
+
+풀 목록 응답과 동일한 구조. [풀 목록 응답](#get-v1resourcevpcspool) 참조.
+
 ---
 
 ### GET /v1/resource/vpcs/pool/count
@@ -561,6 +613,8 @@ VPC 풀 카운트 조회.
 | data.poo_count | number | 공용 PC 풀 수 |
 | data.vm_total | number | 전체 VM 수 |
 | data.vm_count | number | 배정된 VM 수 |
+| errCode | string\|null | 에러 코드 |
+| errMsg | string\|null | 에러 메시지 |
 
 ---
 

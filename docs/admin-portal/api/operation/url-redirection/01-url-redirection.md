@@ -28,6 +28,8 @@ GET /v1/operation/policy/url/rdrt/disallow/policy
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
+| data[].reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **에러 코드**
 
@@ -68,7 +70,24 @@ GET /v1/operation/policy/url/rdrt/disallow/policy/{url_rdrt_disallow_plcy_id}
 | url_rdrt_disallow_plcy_nm | string | URL 리다이렉션 차단 정책명 |
 | tnt_id | string | 테넌트 ID |
 | tnt_nm | string | 테넌트명 |
-| dms | array | 차단 도메인 목록 (UrlRdrtDisallowDmVO) |
+| dms | array | 차단 도메인 목록 |
+| dms[].url_rdrt_disallow_dm_id | string | 도메인 항목 ID |
+| dms[].dm | string | 도메인 |
+| dms[].cont | string | 설명 |
+| dms[].url_rdrt_disallow_plcy_id | string | 차단 정책 ID |
+| dms[].reg_id | string | 등록자 ID |
+| dms[].reg_ts | string | 등록 일시 |
+| dms[].mod_id | string | 수정자 ID |
+| dms[].mod_ts | string | 수정 일시 |
+| dms[].exp_dms | array | 예외 도메인 목록 |
+| dms[].exp_dms[].url_rdrt_disallow_exp_dm_id | string | 예외 도메인 항목 ID |
+| dms[].exp_dms[].dm | string | 예외 도메인 |
+| dms[].exp_dms[].cont | string | 설명 |
+| dms[].exp_dms[].url_rdrt_disallow_dm_id | string | 상위 도메인 항목 ID |
+| dms[].exp_dms[].reg_id | string | 등록자 ID |
+| dms[].exp_dms[].reg_ts | string | 등록 일시 |
+| dms[].exp_dms[].mod_id | string | 수정자 ID |
+| dms[].exp_dms[].mod_ts | string | 수정 일시 |
 | reg_id | string | 등록자 ID |
 | reg_ts | string | 등록 일시 |
 | mod_id | string | 수정자 ID |

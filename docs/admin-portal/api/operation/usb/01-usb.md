@@ -40,8 +40,8 @@ GET /v1/operation/policies/usb
 | data[].reg_ts | string | 등록 일시 |
 | data[].mod_id | string | 수정자 ID |
 | data[].mod_ts | string | 수정 일시 |
-
-> `UsbPolicyPlain` 서브클래스는 추가로 `reg_conn_id`, `mod_conn_id` 포함.
+| data[].reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data[].mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **에러 코드**
 
