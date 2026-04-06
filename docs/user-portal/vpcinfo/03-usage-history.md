@@ -2,7 +2,7 @@
 type: screen
 title: 이용 내역
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: UsageHistory.vue
 api_endpoints:

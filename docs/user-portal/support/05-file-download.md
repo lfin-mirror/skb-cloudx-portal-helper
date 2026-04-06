@@ -2,7 +2,7 @@
 type: screen
 title: 다운로드
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: FileDownload.vue
 api_endpoints:

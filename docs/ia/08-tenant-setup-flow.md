@@ -2,7 +2,7 @@
 type: flow
 title: 테넌트 초기 구축 유저플로우
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 screens:
   - A1001

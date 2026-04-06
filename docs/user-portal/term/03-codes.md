@@ -2,7 +2,7 @@
 type: concept
 title: 상태 코드 및 에러 코드
 status: stable
-version: v2.2.9
+version: v2.2.10
 tags: [에러코드, 상태코드, 인증, API]
 ---
 

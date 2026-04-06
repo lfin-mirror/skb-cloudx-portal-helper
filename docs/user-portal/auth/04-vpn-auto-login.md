@@ -2,7 +2,7 @@
 type: flow
 title: VPN 자동 로그인
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - login/VpnLogin.vue

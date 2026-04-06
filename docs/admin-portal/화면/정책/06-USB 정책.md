@@ -3,7 +3,7 @@ type: screen
 title: USB 정책
 menu_id: [A050609, T050609, A05060901, T05060901, A05060902, T05060902, A05060903, T05060903, A05060904, T05060904]
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /policy/policy-manage/usb-policy/usb-policy
 access: [SA, TA]

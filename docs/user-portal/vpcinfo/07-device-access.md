@@ -2,7 +2,7 @@
 type: screen
 title: 단말 접속 관리
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: DeviceAccMng.vue
 api_endpoints:

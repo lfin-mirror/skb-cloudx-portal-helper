@@ -3,7 +3,7 @@ type: screen
 title: 도메인 / Zone
 menu_id: [A1001, A1002, T1002]
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /system-resource/domain
 component: Zone.vue

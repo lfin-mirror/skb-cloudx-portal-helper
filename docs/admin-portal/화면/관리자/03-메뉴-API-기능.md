@@ -3,7 +3,7 @@ type: screen
 menu_id: [A1208, A120801, A120802, A120803]
 title: 메뉴 / API / 기능 관리
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 access: [SA]
 related_menus: [T1202, T1201]

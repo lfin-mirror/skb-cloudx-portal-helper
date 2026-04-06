@@ -20,7 +20,7 @@
             "tot_capa": 157357,
             "usg_capa": 11876,
             "usg_ratio": 7,
-            "basic_volm_typ_yn": "Y",
+            "bas_volm_typ_yn": "Y",
             "tnt_list": [
                 {
                     "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",
@@ -49,7 +49,7 @@
             "tot_capa": 157357,
             "usg_capa": 11876,
             "usg_ratio": 7,
-            "basic_volm_typ_yn": "Y",
+            "bas_volm_typ_yn": "Y",
             "tnt_list": [
                 {
                     "tnt_id": "02157c4b5e534cb492ed5c886d3b44d7",

@@ -2,7 +2,7 @@
 type: screen
 title: 개인 디스크 관리
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: PrsDskMng.vue
 api_endpoints:

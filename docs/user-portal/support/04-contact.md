@@ -2,7 +2,7 @@
 type: screen
 title: 1:1 문의
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: ContactList.vue
 api_endpoints:

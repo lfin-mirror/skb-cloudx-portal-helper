@@ -3,7 +3,7 @@ type: screen
 menu_id: [T040602]
 title: Mobile 설치 파일
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /portal/download/url
 component: Url.vue

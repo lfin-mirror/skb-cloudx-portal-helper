@@ -2,7 +2,7 @@
 type: screen
 title: Cloud PC 반납
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: VPcReturn.vue
 api_endpoints:

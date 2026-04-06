@@ -2,7 +2,7 @@
 type: internal
 title: 라우트 정의
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 source_files:
   - src/router/index.js

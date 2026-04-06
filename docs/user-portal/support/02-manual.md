@@ -2,7 +2,7 @@
 type: screen
 title: 매뉴얼
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: Manual.vue
 api_endpoints:

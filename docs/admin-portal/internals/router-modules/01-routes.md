@@ -83,7 +83,6 @@ user-portal과 달리 `/:tenant` 프리픽스 없음. 관리자가 로그인 후
 | `policy-manage/usb-policy/usb-type` | UsbType | A05060902 / T05060902 |
 | `policy-manage/usb-policy/usb-vendor` | UsbVendor | A05060903 / T05060903 |
 | `policy-manage/usb-policy/usb-model` | UsbModel | A05060904 / T05060904 |
-| `policy-manage/security-group` | SecurityGroup | - / T050611 |
 
 ### 서비스 관리 (`/service-manage`, A06/T06)
 

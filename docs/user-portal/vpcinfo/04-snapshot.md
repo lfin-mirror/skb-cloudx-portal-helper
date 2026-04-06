@@ -2,7 +2,7 @@
 type: screen
 title: 스냅샷 및 복원
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: SnapshotRecovery.vue
 api_endpoints:

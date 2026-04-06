@@ -2,7 +2,7 @@
 type: concept
 title: 키로깅 방지 (AntiKeyLogger)
 status: stable
-version: v2.2.9
+version: v2.2.10
 tags: [키로깅, 보안, WebSocket, 에이전트]
 related_screens:
   - ../internals/vuex-store/04-keylogging.md

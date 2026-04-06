@@ -2,7 +2,7 @@
 type: flow
 title: MQTT 기반 모바일 생체 인증
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - login/components/octatco/MobileMetricCert.vue

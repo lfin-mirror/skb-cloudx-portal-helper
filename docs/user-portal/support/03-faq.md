@@ -2,7 +2,7 @@
 type: screen
 title: 자주 묻는 질문 (FAQ)
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: FaqPage.vue
 api_endpoints:

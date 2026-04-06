@@ -3,7 +3,7 @@ type: screen
 menu_id: [T0303]
 title: VOC 내역
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /user-support/vos-histories
 component: VosHistories.vue

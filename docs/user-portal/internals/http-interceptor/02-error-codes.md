@@ -2,7 +2,7 @@
 type: internal
 title: HTTP 에러 코드
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 source_files:
   - src/utils/request.js

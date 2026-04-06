@@ -946,7 +946,7 @@ module.exports = function (router, getScenario) {
   // NAS 스토리지 (legacy)
   // ============================================================
 
-  router.post('/api/v1/legacy/cloud/ad/allSharedfolders', (req, res) => {
+  router.get('/api/v1/legacy/cloud/ad/allSharedfolders', (req, res) => {
     res.json(require('../fixtures/resource/nas-sa-list.json'));
   });
 

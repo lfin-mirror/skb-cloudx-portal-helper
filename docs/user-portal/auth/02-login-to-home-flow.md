@@ -2,7 +2,7 @@
 type: flow
 title: 로그인 → 2차 인증 → 홈 화면 진입 흐름
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - login/index.vue

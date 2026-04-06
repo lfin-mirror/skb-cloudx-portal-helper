@@ -3,7 +3,7 @@ type: screen
 title: Proxy 서버 / 이메일
 menu_id: [A100901, T100901, A100902, T100902, A1010]
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /system-resource/proxy/forward-proxy
 access: [SA, TA]

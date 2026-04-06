@@ -3,7 +3,7 @@ type: screen
 menu_id: [T0403]
 title: FAQ
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /portal/faq
 component: Faq.vue

@@ -2,7 +2,7 @@
 type: flow
 title: 모바일 앱 다운로드 및 접속
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - support/FileDownload.vue

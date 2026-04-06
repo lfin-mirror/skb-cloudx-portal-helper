@@ -2,7 +2,7 @@
 type: screen
 title: Cloud PC 초기화
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: SelfFailover.vue
 api_endpoints:

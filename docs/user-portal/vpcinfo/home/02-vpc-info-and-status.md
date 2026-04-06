@@ -2,7 +2,7 @@
 type: screen
 title: Cloud PC 상세 정보 및 상태
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: VpcInfo.vue
 api_endpoints:

@@ -3,7 +3,7 @@ type: screen
 menu_id: [T0705, T0706, T0707, T0708]
 title: 포트 / 공용 PC(대기) / 자동 할당 맵핑 / IP 관리
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 access: [TA]
 related_menus: [T0201, T0701]
@@ -11,6 +11,7 @@ api_endpoints:
   - GET /v1/resource/port
   - PUT /v1/resource/port/{devId}
   - DELETE /v1/resource/port/{portId}
+  - GET /v1/resource/vpcs/resources/pooled/user_vm
   - DELETE /v1/resource/vpcs/resources/pooled/usr_vm
   - GET /v1/resource/vpcs/auto/mapping/list
   - GET /v1/resource/vpcs/auto/mapping/info/{id}
@@ -23,6 +24,7 @@ api_endpoints:
   - GET /v1/resource/subnets/{sbnId}
   - GET /v1/resource/networks
   - GET /v1/resource/networks/{nwId}
+  - GET /v1/resource/ip/manage
 ---
 
 # 포트 / 공용 PC(대기) / 자동 할당 맵핑 / IP 관리
@@ -38,6 +40,8 @@ api_endpoints:
 경로: /virtual-pc/portManage
 
 컴포넌트: views/virtualPc/PortManagement.vue
+
+라우터에서 주석 처리되어 비활성 상태.
 
 Neutron 포트와 VM의 매핑 관리. 포트 상태 변경(사용/격리) 및 미매핑 포트 삭제.
 
@@ -264,9 +268,9 @@ Split Panel (상하 분할). 상단 목록 + 하단 상세/생성.
 
 ## IP 관리 (T0708)
 
-메뉴 트리에 존재하지만 **독립 라우트 없음** — 재사용 컴포넌트로 다른 화면에 임베디드.
+독립 라우트 /virtual-pc/ip-management 활성 상태. 독립 IpManagement.vue 존재.
 
-컴포넌트: views/virtualPc/components/IpManagement.vue + IpPool.vue
+컴포넌트: views/virtualPc/IpManagement.vue + views/virtualPc/components/IpPool.vue
 
 ### 임베디드 위치
 

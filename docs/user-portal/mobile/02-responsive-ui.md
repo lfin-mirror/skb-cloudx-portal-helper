@@ -2,7 +2,7 @@
 type: flow
 title: 반응형 UI
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - layout/Layout.vue

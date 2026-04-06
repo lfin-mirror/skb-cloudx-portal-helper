@@ -2,7 +2,7 @@
 type: concept
 title: Octatco
 status: stable
-version: v2.2.9
+version: v2.2.10
 tags: [Octatco, FIDO2, WebAuthn, MFA]
 related_screens:
   - ../auth/02-login-to-home-flow.md

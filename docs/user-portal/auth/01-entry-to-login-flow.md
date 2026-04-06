@@ -2,7 +2,7 @@
 type: flow
 title: 엔트리 파일에서 로그인 페이지까지의 흐름
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - App.vue

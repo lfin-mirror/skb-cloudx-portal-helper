@@ -2,7 +2,7 @@
 type: screen
 title: 공지사항
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: NoticeList.vue
 api_endpoints:

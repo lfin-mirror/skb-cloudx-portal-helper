@@ -2,7 +2,7 @@
 type: screen
 title: 장애처리 신청
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: DisReqList.vue
 api_endpoints:

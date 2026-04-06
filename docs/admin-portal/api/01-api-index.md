@@ -52,7 +52,6 @@ admin-portal이 호출하는 모든 API 목록.
 | 스냅샷/백업 생성/복원/삭제 | 스냅샷/백업 | [링크](resource/snapshot/01-snapshot.md) |
 | 영구 디스크 목록/삭제/분리 | 영구 디스크 | [링크](resource/disk/01-disk.md) |
 | 테넌트/관리자/그룹/리소스/네트워크 배정 | 테넌트 리소스 | [링크](resource/tenants/01-tenants.md) |
-| 보안 그룹/규칙/동기화/이력 | VM 인가 (보안 그룹) | [링크](resource/vm-authorization/01-vm-authorization.md) |
 | 풀 IP/템플릿 이력/서브넷 배정/초기화 | 풀 관리 | [링크](resource/pools/01-pools.md) |
 | 마이그레이션/대피 실행/이력 | 마이그레이션 | [링크](resource/migration/01-migration.md) |
 

@@ -2,7 +2,7 @@
 type: screen
 title: 홈 화면 레이아웃 및 폴링
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 component: HomePage.vue
 api_endpoints:

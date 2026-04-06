@@ -2,7 +2,7 @@
 type: flow
 title: 아이디 찾기, 비밀번호 초기화, AD 연동
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 screens:
   - login/components/FindUserId.vue

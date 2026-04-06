@@ -3,7 +3,7 @@ type: screen
 title: Metadata
 menu_id: [A050608, T050608]
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 path: /policy/policy-manage/metadata-policy
 component_sa: MetadataPolicySupadm.vue

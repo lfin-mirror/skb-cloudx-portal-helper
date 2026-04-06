@@ -2,7 +2,7 @@
 type: screen
 title: Cloud PC 기간 연장
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 api_endpoints:
   - GET /v1/user/work/request

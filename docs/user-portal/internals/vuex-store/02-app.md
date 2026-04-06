@@ -2,7 +2,7 @@
 type: internal
 title: app 모듈
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: user
 source_files:
   - src/store/modules/app.js

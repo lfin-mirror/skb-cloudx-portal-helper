@@ -2,7 +2,7 @@
 type: flow
 title: admin-portal / user-portal 간 연결 유저플로우
 status: stable
-version: v2.2.9
+version: v2.2.10
 portal: admin
 screens:
   - T0701
