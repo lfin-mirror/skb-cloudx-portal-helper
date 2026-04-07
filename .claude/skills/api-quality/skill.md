@@ -79,8 +79,34 @@ TeamCreate → 3~4개 api-openapi-gen 병렬 (도메인별 분할)
 팀 종료
 
 → Node 스크립트로 파트 합치기 (js-yaml 사용, 중복 path merge)
-→ _workspace/openapi-admin.yaml 최종 생성
+→ admin + user 통합: tag prefix (admin/*, user/*), user schema는 User_ prefix
+→ docs/openapi-cloudx.yaml 최종 생성
 → YAML 유효성 검증
+```
+
+### OpenAPI 응답 예시 규칙
+
+- 모든 GET API의 response에 `example` 필드를 포함한다.
+- **example 데이터는 mock fixture를 정답으로 사용한다.** 명세서나 DTO가 아닌, 실제 fixture JSON의 데이터를 그대로 example에 넣는다.
+- fixture에 마스킹(`***`)된 값은 그대로 example에 포함한다.
+- handler에서 fixture를 찾는 방법: `mock-server/admin-portal/handlers/*.js`에서 해당 API path의 `require('../fixtures/...')` 경로를 확인.
+- fixture가 없는 API (인라인 응답, POST/PUT/DELETE success)는 example 생략.
+- 중첩 구조(volumes[], subnets[], ports[] 등)도 fixture 그대로 포함.
+- example은 schema 정의와 별개로, `responses.200.content.application/json.example`에 배치:
+
+```yaml
+responses:
+  "200":
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/VpcGroupListResponse'
+        example:
+          data:
+            - vm_grp_id: "7883baf9-ab5b-11f0-8557-3a7bf606d4cf"
+              vm_grp_nm: "Win10"
+              tnt_nm: "TEST_TENANT"
+              ...
 ```
 
 ### full 모드

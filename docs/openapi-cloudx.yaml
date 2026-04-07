@@ -44,6 +44,57 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VpcGroupListResponse'
+              example:
+                data:
+                  - vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                    vm_grp_nm: "TEST_TENANT 그룹 A"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    secu_plcy_id: "sp-0001-aaaa-bbbb-cccccccccccc"
+                    secu_plcy_nm: "기본 보안 정책"
+                    bkup_snap_plcy_id: "bsp-0001-aaaa-bbbb-cccccccccccc"
+                    bkup_snap_plcy_nm: "기본 백업스냅샷 정책"
+                    temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                    temp_nm: "Win10"
+                    gdn_img_cre_yn: "N"
+                    pool_usg_cnt: 2
+                    tot_pool_max_vm_cnt: 20
+                    network_cnt: 1
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-10-20 10:00:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    mod_ts: "2026-03-10 14:00:00"
+                  - vm_grp_id: "a1b2c3d4-0002-11f0-aaaa-222222222222"
+                    vm_grp_nm: "TEST_TENANT 그룹 B"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    secu_plcy_id: "sp-0002-aaaa-bbbb-cccccccccccc"
+                    secu_plcy_nm: "강화 보안 정책"
+                    bkup_snap_plcy_id: "bsp-0002-aaaa-bbbb-cccccccccccc"
+                    bkup_snap_plcy_nm: "주간 백업스냅샷 정책"
+                    temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                    temp_nm: "Win10"
+                    gdn_img_cre_yn: "Y"
+                    pool_usg_cnt: 1
+                    tot_pool_max_vm_cnt: 10
+                    network_cnt: 2
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-11-05 09:30:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    mod_ts: "2026-02-15 11:20:00"
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/vpcs
@@ -76,6 +127,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VpcGroupDetailResponse'
+              example:
+                data:
+                  vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                  vm_grp_nm: "TEST_TENANT 그룹 A"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_nm: "TEST_TENANT"
+                  secu_plcy_id: "sp-0001-aaaa-bbbb-cccccccccccc"
+                  secu_plcy_nm: "기본 보안 정책"
+                  bkup_snap_plcy_id: "bsp-0001-aaaa-bbbb-cccccccccccc"
+                  bkup_snap_plcy_nm: "기본 백업스냅샷 정책"
+                  temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                  temp_nm: "Win10"
+                  gdn_img_cre_yn: "N"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: "2025-10-20 10:00:00"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_conn_id: "***"
+                  mod_nm: "***"
+                  mod_ts: "2026-03-10 14:00:00"
+                  networks:
+                    - nw_id: "nw-0001-aaaa-bbbb-cccccccccccc"
+                      nw_nm: "test-network-01"
+                      nw_typ_cd: "N001VXL"
+                      nw_typ_cd_nm: "VXLAN"
+                  zones:
+                    - zone_nm: "nova"
+                  subnets:
+                    - sbn_id: "sbn-0001-aaaa-bbbb-cccccccccccc"
+                      sbn_nm: "test-subnet-01"
+                      nw_nm: "test-network-01"
+                      cidr: "192.168.10.0/24"
+                      nw_qos_plcy_nm: "-"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/group/{vmGrpId}:
     put:
       tags:
@@ -190,6 +277,165 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VpcPoolListResponse'
+              example:
+                data:
+                  - vm_pool_id: "pool-0001-aaaa-bbbb-111111111111"
+                    vm_pool_nm: "test_tenant-pool-01"
+                    vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                    vm_grp_nm: "TEST_TENANT 그룹 A"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    tnt_mtd_cd: "V001DED"
+                    tnt_mtd_cd_nm: "전용"
+                    temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                    temp_nm: "Win10"
+                    vm_pool_sts_cd: "V010CO"
+                    vm_pool_sts_cd_nm: "완료"
+                    fail_msg: null
+                    fail_cnt: "0"
+                    max_vm_cnt: "10"
+                    min_vm_cnt: "0"
+                    spr_vm_cnt: "2"
+                    allo_vm_cnt: "3"
+                    tot_vm_cnt: "5"
+                    cre_resv_vm_cnt: "0"
+                    assign_ready_vm_cnt: "2"
+                    pool_ready_vm_cnt: "0"
+                    ad_itlk_usg_yn: "N"
+                    ad_vdi_ou: null
+                    auto_allo_yn: "N"
+                    alw_power_on_yn: "N"
+                    init_use_yn: "N"
+                    suppl_dsk_usg_yn: "N"
+                    rset_plcy_id: null
+                    power_mng_plcy_id: null
+                    power_mng_plcy_usg_yn: "N"
+                    zone_nm: "nova"
+                    volm_sched_plcy_id: null
+                    secu_plcy_id: "sp-0001-aaaa-bbbb-cccccccccccc"
+                    secu_plcy_nm: "기본 보안 정책"
+                    bkup_snap_plcy_id: "bsp-0001-aaaa-bbbb-cccccccccccc"
+                    bkup_snap_plcy_nm: "기본 백업스냅샷 정책"
+                    gdn_img_cre_yn: "N"
+                    allo_enable_yn: "Y"
+                    os_typ_cd: "V019WIN"
+                    name_rule_use_yn: "N"
+                    vpc_name_rule_id: null
+                    vpc_name_rule_nm: null
+                    alias_rule_use_yn: "N"
+                    vpc_alias_rule_id: null
+                    vpc_alias_rule_nm: null
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-10-21 10:30:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    mod_ts: "2026-03-15 09:00:00"
+                    volumes:
+                      - vm_pool_id: "pool-0001-aaaa-bbbb-111111111111"
+                        volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                        volm_typ_nm: "netapp"
+                        volm_usg_typ: "V020SYS"
+                        volm_usg_typ_nm: "시스템"
+                        tot_capa: "1024"
+                        usg_capa: "512"
+                        psb_capa: "512"
+                        usg_ratio: "50"
+                        volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                        volm_qos_plcy_nm: "QA2"
+                        volm_qos_detail:
+                          volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                          volm_qos_plcy_nm: "QA2"
+                          volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                          volm_typ_nm: "netapp"
+                          volm_qos_rule_unit_cd: "V018IOP"
+                          volm_qos_rule_unit_cd_nm: "IOPS"
+                          volm_read: 1
+                          volm_read_max: 1
+                          volm_write: 1
+                          volm_write_max: 1
+                          reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          reg_conn_id: "***"
+                          reg_nm: "***"
+                          reg_ts: "2026-02-04 14:46:24"
+                          mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          mod_conn_id: "***"
+                          mod_nm: "***"
+                          mod_ts: "2026-02-04 14:46:24"
+                  - vm_pool_id: "pool-0002-aaaa-bbbb-222222222222"
+                    vm_pool_nm: "test_tenant-pool-02"
+                    vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                    vm_grp_nm: "TEST_TENANT 그룹 A"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    tnt_mtd_cd: "V001POO"
+                    tnt_mtd_cd_nm: "공용"
+                    temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                    temp_nm: "Win10"
+                    vm_pool_sts_cd: "V010ER"
+                    vm_pool_sts_cd_nm: "오류"
+                    fail_msg: null
+                    fail_cnt: "0"
+                    max_vm_cnt: "5"
+                    min_vm_cnt: "0"
+                    spr_vm_cnt: "1"
+                    allo_vm_cnt: "0"
+                    tot_vm_cnt: "2"
+                    cre_resv_vm_cnt: "0"
+                    assign_ready_vm_cnt: "0"
+                    pool_ready_vm_cnt: "2"
+                    ad_itlk_usg_yn: "N"
+                    ad_vdi_ou: null
+                    auto_allo_yn: "Y"
+                    alw_power_on_yn: "Y"
+                    init_use_yn: "Y"
+                    suppl_dsk_usg_yn: "Y"
+                    rset_plcy_id: "rset-0001-aaaa-bbbb-cccccccccccc"
+                    power_mng_plcy_id: null
+                    power_mng_plcy_usg_yn: "N"
+                    zone_nm: "nova"
+                    volm_sched_plcy_id: null
+                    secu_plcy_id: "sp-0001-aaaa-bbbb-cccccccccccc"
+                    secu_plcy_nm: "기본 보안 정책"
+                    bkup_snap_plcy_id: "bsp-0001-aaaa-bbbb-cccccccccccc"
+                    bkup_snap_plcy_nm: "기본 백업스냅샷 정책"
+                    gdn_img_cre_yn: "N"
+                    allo_enable_yn: "Y"
+                    os_typ_cd: "V019WIN"
+                    name_rule_use_yn: "N"
+                    vpc_name_rule_id: null
+                    vpc_name_rule_nm: null
+                    alias_rule_use_yn: "N"
+                    vpc_alias_rule_id: null
+                    vpc_alias_rule_nm: null
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-10-22 11:00:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    mod_ts: "2026-03-20 10:30:00"
+                    volumes:
+                      - vm_pool_id: "pool-0002-aaaa-bbbb-222222222222"
+                        volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                        volm_typ_nm: "netapp"
+                        volm_usg_typ: "V020SYS"
+                        volm_usg_typ_nm: "시스템"
+                        tot_capa: "512"
+                        usg_capa: "100"
+                        psb_capa: "412"
+                        usg_ratio: "20"
+                        volm_qos_plcy_id: null
+                        volm_qos_plcy_nm: "-"
+                        volm_qos_detail: null
+                pageinfo:
+                  count: 5
+                  ispaging: true
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/vpcs
@@ -221,6 +467,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VpcPoolCountResponse'
+              example:
+                data:
+                  total: 3
+                  ded_count: 2
+                  poo_count: 1
+                  vm_total: 25
+                  vm_count: 7
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/pool/auto/{companyNm}:
     get:
       tags:
@@ -254,6 +509,106 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VpcPoolDetailResponse'
+              example:
+                data:
+                  vm_pool_id: "pool-0001-aaaa-bbbb-111111111111"
+                  vm_pool_nm: "test_tenant-pool-01"
+                  vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                  vm_grp_nm: "TEST_TENANT 그룹 A"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_nm: "TEST_TENANT"
+                  tnt_mtd_cd: "V001DED"
+                  tnt_mtd_cd_nm: "전용"
+                  temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                  temp_nm: "Win10"
+                  vm_pool_sts_cd: "V010NM"
+                  vm_pool_sts_cd_nm: "정상"
+                  fail_msg: null
+                  fail_cnt: "0"
+                  max_vm_cnt: "10"
+                  min_vm_cnt: "0"
+                  spr_vm_cnt: "2"
+                  allo_vm_cnt: "3"
+                  tot_vm_cnt: "5"
+                  cre_resv_vm_cnt: "0"
+                  assign_ready_vm_cnt: "2"
+                  pool_ready_vm_cnt: "0"
+                  ad_itlk_usg_yn: "N"
+                  ad_vdi_ou: null
+                  auto_allo_yn: "N"
+                  alw_power_on_yn: "N"
+                  init_use_yn: "N"
+                  suppl_dsk_usg_yn: "N"
+                  rset_plcy_id: null
+                  power_mng_plcy_id: null
+                  power_mng_plcy_usg_yn: "N"
+                  zone_nm: "nova"
+                  volm_sched_plcy_id: null
+                  secu_plcy_id: "sp-0001-aaaa-bbbb-cccccccccccc"
+                  secu_plcy_nm: "기본 보안 정책"
+                  bkup_snap_plcy_id: "bsp-0001-aaaa-bbbb-cccccccccccc"
+                  bkup_snap_plcy_nm: "기본 백업스냅샷 정책"
+                  gdn_img_cre_yn: "N"
+                  allo_enable_yn: "Y"
+                  os_typ_cd: "V019WIN"
+                  name_rule_use_yn: "N"
+                  vpc_name_rule_id: null
+                  vpc_name_rule_nm: null
+                  alias_rule_use_yn: "N"
+                  vpc_alias_rule_id: null
+                  vpc_alias_rule_nm: null
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: "2025-10-21 10:30:00"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_conn_id: "***"
+                  mod_nm: "***"
+                  mod_ts: "2026-03-15 09:00:00"
+                  volumes:
+                    - vm_pool_id: "pool-0001-aaaa-bbbb-111111111111"
+                      volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                      volm_typ_nm: "netapp"
+                      volm_usg_typ: "V020SYS"
+                      volm_usg_typ_nm: "시스템"
+                      tot_capa: "1024"
+                      usg_capa: "512"
+                      psb_capa: "512"
+                      usg_ratio: "50"
+                      volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                      volm_qos_plcy_nm: "QA2"
+                      volm_qos_detail:
+                        volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                        volm_qos_plcy_nm: "QA2"
+                        volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                        volm_typ_nm: "netapp"
+                        volm_qos_rule_unit_cd: "V018IOP"
+                        volm_qos_rule_unit_cd_nm: "IOPS"
+                        volm_read: 1
+                        volm_read_max: 1
+                        volm_write: 1
+                        volm_write_max: 1
+                        reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                        reg_conn_id: "***"
+                        reg_nm: "***"
+                        reg_ts: "2026-02-04 14:46:24"
+                        mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                        mod_conn_id: "***"
+                        mod_nm: "***"
+                        mod_ts: "2026-02-04 14:46:24"
+                  subnets:
+                    - vm_pool_id: "pool-0001-aaaa-bbbb-111111111111"
+                      vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                      sbn_id: "sbn-0001-aaaa-bbbb-cccccccccccc"
+                      sbn_nm: "test-subnet-01"
+                      nw_id: "nw-0001-aaaa-bbbb-cccccccccccc"
+                      nw_nm: "test-network-01"
+                      cidr: "192.168.10.0/24"
+                      nw_qos_plcy_id: null
+                      nw_qos_plcy_nm: "-"
+                      nw_qos_detail: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/vpcs
@@ -385,6 +740,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ImageMismatchedVmListResponse'
+              example:
+                data:
+                  - vmId: "vm-0003-aaaa-bbbb-cccccccccccc"
+                    vmName: "OPS-VM-001"
+                    vmPoolTypeCode: "V001DED"
+                    userConnectStatusCode: "V012DCN"
+                    adminConnectStatusCode: "V012DCN"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/pool/{vmPoolId}/volume:
     post:
       tags:
@@ -444,6 +808,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PoolIpListResponse'
+              example:
+                data:
+                  - ip_id: "IP-001"
+                    ip_addr: "192.168.10.101"
+                    ip_usg_typ_cd: "P005USE"
+                    vm_auth_id: "VM-001"
+                    acct_id: "ACCT-001"
+                  - ip_id: "IP-002"
+                    ip_addr: "192.168.10.102"
+                    ip_usg_typ_cd: "P005USE"
+                    vm_auth_id: "VM-002"
+                    acct_id: "ACCT-002"
+                  - ip_id: "IP-003"
+                    ip_addr: "192.168.10.103"
+                    ip_usg_typ_cd: "P005FREE"
+                    vm_auth_id: null
+                    acct_id: null
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/pool/{vmPoolId}/collection:
     delete:
       tags:
@@ -497,6 +880,80 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_VpcResource'
+              example:
+                data:
+                  - vm_auth_id: "DI0-150001"
+                    acct_id: "da07ae88-c6a7-11f0-ab35-2a759c87295e"
+                    usr_grp_id: "3a343d95-558b-40a3-b5c7-c9137ad180f8"
+                    usr_grp_nm: "TESTTEST"
+                    vm_id: "a40aea6b-2439-4b46-9c74-266e43e9a6b0"
+                    vm_nm: "WD00-0I0-141003"
+                    vm_grp_nm: null
+                    vm_ip: null
+                    vm_als: null
+                    vm_descp: null
+                    vm_on_ctrl_tm: "2026-01-07 17:21:57"
+                    rstr_sts_cd: "U022NOR"
+                    rstr_sts_cd_nm: "정상"
+                    vm_allo_sts_cd: "U017DVA"
+                    vm_allo_sts_cd_nm: "할당"
+                    usr_vm_conn_sts_cd: "V003OF"
+                    usr_vm_conn_sts_cd_nm: "접속 대기"
+                    vm_power_sts_cd: "V002ONC"
+                    vm_power_sts_cd_nm: "전원 켜짐"
+                    vcpu_cnt: "4"
+                    vmm_capa: "8192"
+                    vhd_capa: "100"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    tnt_mtd_cd: "V001DED"
+                    tnt_mtd_cd_nm: "전용 PC"
+                    vm_pool_id: "e6eae543-ab5b-11f0-bce4-22a1b8d92490"
+                    vm_pool_nm: "Win10Dedi"
+                    acct_conn_id: "***"
+                    acct_nm: "***"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-01-07 17:21:23"
+                    mod_ts: "2026-03-17 14:56:31"
+                    assgn_yn: "Y"
+                  - vm_auth_id: "DIF-261005"
+                    acct_id: "21105038-f2b6-11f0-a66b-a6d95c7431b3"
+                    usr_grp_id: "221f53ed-a698-4d62-947b-ed68e0b40382"
+                    usr_grp_nm: "TEST6"
+                    vm_id: "733f186d-469c-4ff1-8060-bc09b22fc4f4"
+                    vm_nm: "WD00-0IF-228001"
+                    vm_grp_nm: null
+                    vm_ip: null
+                    vm_als: null
+                    vm_descp: null
+                    vm_on_ctrl_tm: "2026-03-24 15:12:21"
+                    rstr_sts_cd: "U022NOR"
+                    rstr_sts_cd_nm: "정상"
+                    vm_allo_sts_cd: "U017DVA"
+                    vm_allo_sts_cd_nm: "할당"
+                    usr_vm_conn_sts_cd: "V003OF"
+                    usr_vm_conn_sts_cd_nm: "접속 대기"
+                    vm_power_sts_cd: "V002ONC"
+                    vm_power_sts_cd_nm: "전원 켜짐"
+                    vcpu_cnt: "4"
+                    vmm_capa: "8192"
+                    vhd_capa: "100"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    tnt_mtd_cd: "V001DED"
+                    tnt_mtd_cd_nm: "전용 PC"
+                    vm_pool_id: "e6eae543-ab5b-11f0-bce4-22a1b8d92490"
+                    vm_pool_nm: "Win10Dedi"
+                    acct_conn_id: "***"
+                    acct_nm: "***"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-03-24 15:11:43"
+                    mod_ts: "2026-03-24 15:52:25"
+                    assgn_yn: "Y"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/resources/list/vm2:
     get:
       tags:
@@ -682,6 +1139,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PooledUserVmListResponse'
+              example:
+                data:
+                  - vm_auth_id: "PIF-261002"
+                    acct_id: "16f86f5e-ba1b-11f0-819b-4617b2bd76a9"
+                    acct_nm: "***"
+                    usr_grp_nm: "TEST"
+                    vm_id: "-"
+                    vm_nm: "-"
+                    vm_power_sts_cd: "-"
+                    vm_power_sts_cd_nm: "-"
+                    resrv_alloc_tm: "2026-03-24 14:36:41"
+                    vm_pool_id: "4374408c-dbaa-11f0-a082-9e558d565baa"
+                  - vm_auth_id: "PIE-255001"
+                    acct_id: "0d14c9a4-1ce9-11f1-814a-d2425695d54c"
+                    acct_nm: "***"
+                    usr_grp_nm: "TEST.DEV"
+                    vm_id: "-"
+                    vm_nm: "-"
+                    vm_power_sts_cd: "-"
+                    vm_power_sts_cd_nm: "-"
+                    resrv_alloc_tm: "2026-03-19 15:32:09"
+                    vm_pool_id: "4374408c-dbaa-11f0-a082-9e558d565baa"
   /v1/resource/vpcs/resources/pooled/usr_vm:
     delete:
       tags:
@@ -715,6 +1194,123 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VmDetailResponse'
+              example:
+                data:
+                  vm_auth_id: "DIE-258003"
+                  acct_id: "2b7dfb15-d567-11f0-ab35-2a759c87295e"
+                  acct_conn_id: "***"
+                  acct_nm: "***"
+                  usr_grp_id: "3a343d95-558b-40a3-b5c7-c9137ad180f8"
+                  usr_grp_nm: "TEST.DEV"
+                  vm_als: null
+                  vm_vlid_stt_dt: "2026-03-20"
+                  vm_vlid_end_dt: "2099-12-12"
+                  tnt_mtd_cd: "V001DED"
+                  tnt_mtd_cd_nm: "전용 PC"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_nm: "TEST_TENANT"
+                  vm_pool_id: "8c7a7b39-23fb-11f1-a66b-a6d95c7431b3"
+                  vm_pool_nm: "cirros_pool"
+                  suppl_dsk_usg_yn: "Y"
+                  ad_itlk_usg_yn: "N"
+                  gdn_img_cre_yn: "N"
+                  vm_grp_nm: "Win10"
+                  vm_allo_sts_cd: "U017DVA"
+                  vm_allo_sts_cd_nm: "할당"
+                  vm_allo_typ_cd: "U028M"
+                  vm_allo_typ_cd_nm: "수동 할당"
+                  vm_allo_typ_static_ip_yn: "N"
+                  rstr_sts_cd: "U022NOR"
+                  rstr_sts_cd_nm: "정상"
+                  secu_plcy_id: "69421473-67c0-4873-b86e-e72621942016"
+                  secu_plcy_nm: "TEST_TENANT 가상 PC 보안 기본 정책"
+                  bkup_snap_plcy_id: "2a539b32-ab57-11f0-8896-e288d288c3ed"
+                  bkup_snap_plcy_nm: "TEST_TENANT BACKUP SNAPSHOT 기본 정책"
+                  sort_ord: null
+                  vm_descp: null
+                  reg_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: "2026-03-20 10:25:02"
+                  mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                  mod_conn_id: "***"
+                  mod_nm: "***"
+                  mod_ts: "2026-03-20 10:26:45"
+                  allo_fail_msg: null
+                  vm_id: "0313ff3f-ed08-4bd5-9b77-e0492c47ba6c"
+                  vm_nm: "WD00-0IE-225003"
+                  mnt_yn: "Y"
+                  ad_itlk_succ_yn: null
+                  vcpu_cnt: "1"
+                  vmm_capa: "512"
+                  vhd_capa: "1"
+                  host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                  host_nm: "test_tenant-compute-01"
+                  zone_nm: "Default Zone"
+                  host_sts_cd: "P003NOR"
+                  temp_id: "aea09b33-f1e5-11f0-a66b-a6d95c7431b3"
+                  flavor_id: "a1531fd8-168d-4758-895f-5c2166e3e517"
+                  img_id: "c1750c1c-8f13-4b00-b259-1f62d5961127"
+                  vm_on_ctrl_tm: "2026-03-20 10:25:51"
+                  vm_ip: "192.168.221.227"
+                  static_ip_usg_yn: "N"
+                  os_typ_cd: "T002L32"
+                  os_typ_cd_nm: "Linux 32bit"
+                  usr_vm_conn_sts_cd: "V003OF"
+                  usr_vm_conn_sts_cd_nm: "접속 대기"
+                  adm_vm_conn_sts_cd: "V003OF"
+                  adm_vm_conn_sts_cd_nm: "접속 대기"
+                  vm_power_sts_cd: "V002ONC"
+                  vm_power_sts_cd_nm: "전원 켜짐"
+                  vm_state: "active"
+                  task_state: null
+                  usr_vm_ctrl_tm: "-"
+                  vm_str_ctrl_tm: "2026-03-20 10:25:51"
+                  temp_nm: "S-ADMIN-T"
+                  img_nm: "cirros"
+                  vm_pool_cnt: null
+                  volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                  volm_typ_nm: "netapp"
+                  volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                  volm_qos_plcy_nm: "QA2"
+                  volm_qos_detail:
+                    volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                    volm_qos_plcy_nm: "QA2"
+                    volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    volm_qos_rule_unit_cd: "V018IOP"
+                    volm_qos_rule_unit_cd_nm: "IOPS"
+                    volm_read: 1
+                    volm_read_max: 1
+                    volm_write: 1
+                    volm_write_max: 1
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2026-02-04 14:46:24"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    mod_ts: "2026-02-04 14:46:24"
+                  dsk_sum: "0"
+                  vhd_capa_total: "1"
+                  ports:
+                    - port_id: "3b3cd21b-cac3-416e-a10e-fde8b359a9ab"
+                      port_nm: ""
+                      port_sts_val: "DOWN"
+                      mac: "fa:16:3e:0d:4e:1b"
+                      nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                      nw_nm: "public-net"
+                      sbn_id: "7490641a-cea8-49e1-a996-5ff65b1b5a7d"
+                      sbn_nm: "public-subnet"
+                      cidr: "192.168.221.0/24"
+                      ip: "192.168.221.227"
+                      dev_id: "0313ff3f-ed08-4bd5-9b77-e0492c47ba6c"
+                      dev_ownr: "compute:Default Zone"
+                      nw_qos_plcy_id: null
+                      port_typ_cd: null
+                  network_qos: null
+                  port_qos: null
   /v1/resource/vpcs/resources/{vmAuthId}:
     get:
       tags:
@@ -1368,6 +1964,61 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MigrationItem'
+              example:
+                data:
+                  - mig_id: "b5acd17d-f82f-11f0-a66b-a6d95c7431b3"
+                    src_host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                    src_host_nm: "test_tenant-compute-02"
+                    src_pfrm_host_id: "d049d94c-085e-4de5-99fe-45c612b44d8d"
+                    tgt_host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                    tgt_host_nm: "test_tenant-compute-01"
+                    tgt_pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                    mig_detl: null
+                    job_stt_tm: "2026-01-23 16:47:04"
+                    job_done_tm: null
+                    job_sts_cd: "J008I"
+                    job_sts_cd_nm: "작업중"
+                    src_vm_auth_id: "DI0-150001"
+                    src_vm_nm: "WD00-0I0-141003"
+                    src_vm_id: "a40aea6b-2439-4b46-9c74-266e43e9a6b0"
+                    src_vm_state: "active"
+                    src_rstr_sts_cd: "U022NOR"
+                    reg_id: "76cb326c-eb85-11f0-b910-8243c93cb006"
+                    reg_conn_id: "***@***.kr"
+                    reg_nm: "-"
+                    reg_ts: "2026-01-23 16:47:04"
+                    mod_id: "76cb326c-eb85-11f0-b910-8243c93cb006"
+                    mod_conn_id: "***@***.kr"
+                    mod_nm: "-"
+                    mod_ts: "2026-01-23 16:47:04"
+                  - mig_id: "0e7a3e97-f82f-11f0-814a-d2425695d54c"
+                    src_host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                    src_host_nm: "test_tenant-compute-01"
+                    src_pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                    tgt_host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                    tgt_host_nm: "test_tenant-compute-02"
+                    tgt_pfrm_host_id: "d049d94c-085e-4de5-99fe-45c612b44d8d"
+                    mig_detl: null
+                    job_stt_tm: "2026-01-23 16:42:23"
+                    job_done_tm: "2026-01-23 16:43:30"
+                    job_sts_cd: "J008F"
+                    job_sts_cd_nm: "작업실패"
+                    src_vm_auth_id: "DI0-150001"
+                    src_vm_nm: "WD00-0I0-141003"
+                    src_vm_id: "a40aea6b-2439-4b46-9c74-266e43e9a6b0"
+                    src_vm_state: "active"
+                    src_rstr_sts_cd: "U022NOR"
+                    reg_id: "76cb326c-eb85-11f0-b910-8243c93cb006"
+                    reg_conn_id: "***@***.kr"
+                    reg_nm: "-"
+                    reg_ts: "2026-01-23 16:42:23"
+                    mod_id: "76cb326c-eb85-11f0-b910-8243c93cb006"
+                    mod_conn_id: "***@***.kr"
+                    mod_nm: "-"
+                    mod_ts: "2026-01-23 16:42:23"
+                pageinfo:
+                  count: 14
+                  ispaging: false
   /v1/resource/vpcs/migration/{id}:
     get:
       tags:
@@ -1386,6 +2037,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MigrationItem'
+              example:
+                data:
+                  mig_id: "b5acd17d-f82f-11f0-a66b-a6d95c7431b3"
+                  src_host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                  src_host_nm: "test_tenant-compute-02"
+                  src_pfrm_host_id: "d049d94c-085e-4de5-99fe-45c612b44d8d"
+                  tgt_host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                  tgt_host_nm: "test_tenant-compute-01"
+                  tgt_pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                  mig_detl: null
+                  job_stt_tm: "2026-01-23 16:47:04"
+                  job_done_tm: "2026-01-23 16:48:10"
+                  job_sts_cd: "J008E"
+                  job_sts_cd_nm: "작업완료"
+                  src_vm_auth_id: "DI0-150001"
+                  src_vm_nm: "WD00-0I0-141003"
+                  src_vm_id: "a40aea6b-2439-4b46-9c74-266e43e9a6b0"
+                  src_vm_state: "active"
+                  src_rstr_sts_cd: "U022NOR"
+                  reg_id: "76cb326c-eb85-11f0-b910-8243c93cb006"
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: "2026-01-23 16:47:04"
+                  mod_id: "76cb326c-eb85-11f0-b910-8243c93cb006"
+                  mod_conn_id: "***"
+                  mod_nm: "***"
+                  mod_ts: "2026-01-23 16:47:04"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/migration/multi:
     post:
       tags:
@@ -1530,6 +2210,28 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TemplateHistory'
+              example:
+                data:
+                  - poolId: "pool-0001-aaaa-bbbb-111111111111"
+                    templateId: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                    templateName: "Windows 10 기본"
+                    flavorId: "flvr-0001-aaaa-bbbb-cccccccccccc"
+                    flavorName: "2vCPU-4GB"
+                    imageId: "img-0001-aaaa-bbbb-cccccccccccc"
+                    imageName: "Win10-golden-v1"
+                    createdBy: "***"
+                    createdAt: "2026-01-15T09:00:00"
+                  - poolId: "pool-0001-aaaa-bbbb-111111111111"
+                    templateId: "7c45de2e-cd78-11f0-aaaa-33b2c9e03601"
+                    templateName: "Windows 11 Pro"
+                    flavorId: "flvr-0002-aaaa-bbbb-cccccccccccc"
+                    flavorName: "4vCPU-8GB"
+                    imageId: "img-0002-aaaa-bbbb-cccccccccccc"
+                    imageName: "Win11-golden-v2"
+                    createdBy: "***"
+                    createdAt: "2026-02-20T14:30:00"
+                errCode: null
+                errMsg: null
   /v1/resource/hosts:
     get:
       tags:
@@ -1619,6 +2321,61 @@ paths:
                       $ref: '#/components/schemas/HostAdmin'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                    host_nm: "test_tenant-compute-01"
+                    pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                    host_descp: null
+                    host_ip: "192.168.132.44"
+                    host_sts_cd: "P003NOR"
+                    host_sts_cd_nm: "정상"
+                    hyper_typ: "QEMU"
+                    vcpu_tot_cnt: "96"
+                    vcpu_usg_cnt: "25"
+                    mem_tot_capa: "125"
+                    mem_usg_capa: "49"
+                    str_tot_capa: "1536"
+                    str_usg_capa: "0"
+                    allo_enable_yn: "N"
+                    vm_tot_cnt: "5"
+                    vm_usg_cnt: "4"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_nm: "슈퍼관리자"
+                    reg_conn_id: "superadmin"
+                    reg_ts: "2025-10-17 18:11:14"
+                    mod_id: "platform.scheduler"
+                    mod_ts: "2026-03-27 09:58:00"
+                    zone_nm: "Default Zone"
+                  - host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                    host_nm: "test_tenant-compute-02"
+                    pfrm_host_id: "d049d94c-085e-4de5-99fe-45c612b44d8d"
+                    host_descp: null
+                    host_ip: "192.168.132.45"
+                    host_sts_cd: "P003ERR"
+                    host_sts_cd_nm: "오류"
+                    hyper_typ: "QEMU"
+                    vcpu_tot_cnt: "96"
+                    vcpu_usg_cnt: "24"
+                    mem_tot_capa: "125"
+                    mem_usg_capa: "48"
+                    str_tot_capa: "1536"
+                    str_usg_capa: "0"
+                    allo_enable_yn: "N"
+                    vm_tot_cnt: "5"
+                    vm_usg_cnt: "5"
+                    reg_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    reg_nm: "관리자"
+                    reg_conn_id: "mgtsuper"
+                    reg_ts: "2025-10-31 14:35:56"
+                    mod_id: "platform.scheduler"
+                    mod_ts: "2026-03-27 09:58:00"
+                    zone_nm: "Default Zone"
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/resource/hosts/admin/{id}:
     get:
       tags:
@@ -1638,6 +2395,38 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HostAdminDetail'
+              example:
+                data:
+                  host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                  host_nm: "test_tenant-compute-01"
+                  pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                  host_ip: "192.168.132.44"
+                  hyper_typ: "QEMU"
+                  host_descp: null
+                  host_sts_cd: "P003NOR"
+                  host_sts_cd_nm: "정상"
+                  vcpu_tot_cnt: "96"
+                  vcpu_usg_cnt: "25"
+                  mem_tot_capa: "125"
+                  mem_usg_capa: "49"
+                  str_tot_capa: "1536"
+                  str_usg_capa: "0"
+                  vm_tot_cnt: "5"
+                  vm_usg_cnt: "4"
+                  zone_assgn_yn: "Y"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_nm: "***"
+                  reg_conn_id: "***"
+                  reg_ts: "2025-10-17 18:11:14"
+                  mod_id: "platform.scheduler"
+                  mod_nm: null
+                  mod_conn_id: null
+                  mod_ts: "2026-03-31 11:11:00"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_assgn_yn: "Y"
+                  zone_nm: "Default Zone"
+                  host_grp_nm: "Default Zone"
+                  ha_auto_mng_yn: null
   /v1/resource/hosts/tenant:
     get:
       tags:
@@ -1734,6 +2523,26 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Zone'
+              example:
+                data:
+                  - zone_nm: "zone-a"
+                    zone_descp: "기본 가용 영역 A"
+                    tnt_id: null
+                    host_grp_id: "HG-001"
+                    hosts:
+                      - host_id: "HOST-001"
+                        host_nm: "compute-01"
+                      - host_id: "HOST-002"
+                        host_nm: "compute-02"
+                  - zone_nm: "zone-b"
+                    zone_descp: "가용 영역 B"
+                    tnt_id: "TNT-001"
+                    host_grp_id: "HG-002"
+                    hosts:
+                      - host_id: "HOST-003"
+                        host_nm: "compute-03"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/hosts
@@ -1766,6 +2575,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Zone'
+              example:
+                data:
+                  zone_nm: "zone-a"
+                  zone_descp: "기본 가용 영역 A"
+                  tnt_id: null
+                  host_grp_id: "HG-001"
+                  hosts:
+                    - host_id: "HOST-001"
+                      host_nm: "compute-01"
+                    - host_id: "HOST-002"
+                      host_nm: "compute-02"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/hosts
@@ -1892,6 +2714,38 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/EvacuateHostItem'
+              example:
+                data:
+                  - host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                    host_nm: "test_tenant-compute-02"
+                    pfrm_host_id: "d049d94c-085e-4de5-99fe-45c612b44d8d"
+                    host_sts_cd: "H001ENA"
+                    host_sts_cd_nm: "활성"
+                    host_descp: null
+                    host_ip: "192.168.1.2"
+                    ha_auto_mng_yn: "Y"
+                    hyper_typ: "QEMU"
+                    evac_sts_cd: "E001NONE"
+                    evac_sts_cd_nm: "없음"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    dng_sts_tm: null
+                    evac_grp_id: null
+                  - host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                    host_nm: "test_tenant-compute-01"
+                    pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                    host_sts_cd: "H001ENA"
+                    host_sts_cd_nm: "활성"
+                    host_descp: null
+                    host_ip: "192.168.1.1"
+                    ha_auto_mng_yn: "Y"
+                    hyper_typ: "QEMU"
+                    evac_sts_cd: "E001COMP"
+                    evac_sts_cd_nm: "완료"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    dng_sts_tm: "2026-01-23 16:47:04"
+                    evac_grp_id: "EVAC-GRP-001"
+                errCode: null
+                errMsg: null
   /v1/resource/evacuate/{host_id}:
     post:
       tags:
@@ -1933,6 +2787,28 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/EvacuateHistoryItem'
+              example:
+                data:
+                  - evac_grp_id: "EVAC-GRP-001"
+                    host_nm: "test_tenant-compute-01"
+                    evac_sts_cd: "E001COMP"
+                    evac_sts_cd_nm: "완료"
+                    tgt_vm_cnt: 3
+                    act_vm_cnt: 3
+                    auto_mng_yn: "Y"
+                    evac_stt_ts: "2026-01-23 16:47:04"
+                    evac_done_ts: "2026-01-23 16:52:10"
+                  - evac_grp_id: "EVAC-GRP-002"
+                    host_nm: "test_tenant-compute-02"
+                    evac_sts_cd: "E001PROC"
+                    evac_sts_cd_nm: "진행중"
+                    tgt_vm_cnt: 2
+                    act_vm_cnt: 1
+                    auto_mng_yn: "N"
+                    evac_stt_ts: "2026-03-31 09:10:00"
+                    evac_done_ts: null
+                errCode: null
+                errMsg: null
   /v1/resource/evacuate/history/{evacGrpId}:
     get:
       tags:
@@ -1951,6 +2827,55 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EvacuateHistoryDetail'
+              example:
+                data:
+                  host_nm: "test_tenant-compute-01"
+                  evac_grp_id: "EVAC-GRP-001"
+                  vmList:
+                    - evac_job_no: "1"
+                      evac_grp_id: "EVAC-GRP-001"
+                      tgt_host_nm: "test_tenant-compute-02"
+                      src_host_nm: "test_tenant-compute-01"
+                      tgt_vm_id: "a40aea6b-2439-4b46-9c74-266e43e9a6b0"
+                      tgt_vm_nm: "WD00-0I0-141003"
+                      evac_vm_sts_cd: "E002SUCC"
+                      evac_vm_sts_cd_nm: "성공"
+                      vm_power_sts_cd: "V002ONC"
+                      vm_power_sts_cd_nm: "켜짐"
+                      job_rslt_val: null
+                      job_rslt_detl: null
+                      reg_ts: "2026-01-23 16:47:04"
+                      mod_ts: "2026-01-23 16:52:10"
+                    - evac_job_no: "2"
+                      evac_grp_id: "EVAC-GRP-001"
+                      tgt_host_nm: "test_tenant-compute-02"
+                      src_host_nm: "test_tenant-compute-01"
+                      tgt_vm_id: "b51bfb7c-3540-5c57-ad85-7728fd826e21"
+                      tgt_vm_nm: "WD00-0I0-141004"
+                      evac_vm_sts_cd: "E002SUCC"
+                      evac_vm_sts_cd_nm: "성공"
+                      vm_power_sts_cd: "V002OFC"
+                      vm_power_sts_cd_nm: "꺼짐"
+                      job_rslt_val: null
+                      job_rslt_detl: null
+                      reg_ts: "2026-01-23 16:48:00"
+                      mod_ts: "2026-01-23 16:52:10"
+                    - evac_job_no: "3"
+                      evac_grp_id: "EVAC-GRP-001"
+                      tgt_host_nm: "test_tenant-compute-02"
+                      src_host_nm: "test_tenant-compute-01"
+                      tgt_vm_id: "c62cfc8d-4651-6d68-be96-8839ge937f32"
+                      tgt_vm_nm: "WD00-0I0-141005"
+                      evac_vm_sts_cd: "E002FAIL"
+                      evac_vm_sts_cd_nm: "실패"
+                      vm_power_sts_cd: "V002SUS"
+                      vm_power_sts_cd_nm: "일시중지"
+                      job_rslt_val: "ERROR"
+                      job_rslt_detl: "Failed to migrate VM"
+                      reg_ts: "2026-01-23 16:49:00"
+                      mod_ts: "2026-01-23 16:52:10"
+                errCode: null
+                errMsg: null
   /v1/resource/networks:
     get:
       tags:
@@ -2013,6 +2938,113 @@ paths:
                       $ref: '#/components/schemas/Network'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                    nw_nm: "public-net"
+                    usg_use_cd: "P004P"
+                    usg_use_cd_nm: "Physical Network (External Network)"
+                    nw_typ_cd: "P008FLT"
+                    nw_typ_cd_nm: "FLAT"
+                    nw_descp: null
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_nm: "SuperAdmin"
+                    reg_ts: "2025-10-17 18:11:14"
+                    mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    mod_conn_id: "mgtsuper"
+                    mod_nm: "관리자"
+                    mod_ts: "2026-02-03 14:13:14"
+                    grp_usg_cnt: "2"
+                    port_usg_cnt: "14"
+                    subnet_cnt: "1"
+                    tenants:
+                      - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                        tnt_nm: "TEST_TENANT"
+                    subnets:
+                      - sbn_id: "7490641a-cea8-49e1-a996-5ff65b1b5a7d"
+                        sbn_nm: "public-subnet"
+                        cidr: "192.168.221.0/24"
+                        sbn: null
+                        gw: "192.168.221.1"
+                        dns_1: "8.8.8.8"
+                        dns_2: ""
+                        sbn_descp: null
+                        nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                        nw_nm: "public-net"
+                        nw_qos_plcy_id: null
+                        nw_qos_plcy_nm: null
+                        nw_qos_detail: null
+                        usg_use_cd: "P004P"
+                        usg_use_cd_nm: "Physical Network (External Network)"
+                        pool_usg_cnt: "4"
+                        port_usg_cnt: "14"
+                        reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                        reg_ts: "2025-10-17 18:11:14"
+                        reg_conn_id: "superadmin"
+                        reg_nm: "SuperAdmin"
+                        mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                        mod_conn_id: "mgtsuper"
+                        mod_nm: "관리자"
+                        mod_ts: "2026-02-03 14:13:14"
+                    nw_qos_plcy_id: null
+                    nw_qos_plcy_nm: null
+                    nw_qos_detail: null
+                  - nw_id: "8edaf125-529d-4a58-81e6-588d917c9d4a"
+                    nw_nm: "flat-243"
+                    usg_use_cd: "P004P"
+                    usg_use_cd_nm: "Physical Network (External Network)"
+                    nw_typ_cd: "P008FLT"
+                    nw_typ_cd_nm: "FLAT"
+                    nw_descp: null
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_nm: "SuperAdmin"
+                    reg_ts: "2026-01-06 08:20:53"
+                    mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    mod_conn_id: "mgtsuper"
+                    mod_nm: "관리자"
+                    mod_ts: "2026-02-03 14:13:14"
+                    grp_usg_cnt: "0"
+                    port_usg_cnt: "0"
+                    subnet_cnt: "1"
+                    tenants:
+                      - tnt_id: "53afcfb139b7415081a4d3927ea98660"
+                        tnt_nm: "TEST_TENANTTWO"
+                    subnets:
+                      - sbn_id: "f0a65728-d18a-4e3c-815e-af0f7b529c34"
+                        sbn_nm: "flat-243-subnet"
+                        cidr: "192.168.243.0/24"
+                        sbn: null
+                        gw: "192.168.243.1"
+                        dns_1: "8.8.8.8"
+                        dns_2: ""
+                        sbn_descp: null
+                        nw_id: "8edaf125-529d-4a58-81e6-588d917c9d4a"
+                        nw_nm: "flat-243"
+                        nw_qos_plcy_id: null
+                        nw_qos_plcy_nm: null
+                        nw_qos_detail: null
+                        usg_use_cd: "P004P"
+                        usg_use_cd_nm: "Physical Network (External Network)"
+                        pool_usg_cnt: "0"
+                        port_usg_cnt: "0"
+                        reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                        reg_ts: "2026-01-06 08:20:53"
+                        reg_conn_id: "superadmin"
+                        reg_nm: "SuperAdmin"
+                        mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                        mod_conn_id: "mgtsuper"
+                        mod_nm: "관리자"
+                        mod_ts: "2026-02-03 14:13:14"
+                    nw_qos_plcy_id: null
+                    nw_qos_plcy_nm: null
+                    nw_qos_detail: null
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/networks
@@ -2048,6 +3080,60 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/NetworkDetail'
+              example:
+                data:
+                  nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                  nw_nm: "public-net"
+                  usg_use_cd: "P004P"
+                  usg_use_cd_nm: "Physical Network (External Network)"
+                  nw_typ_cd: "P008FLT"
+                  nw_typ_cd_nm: "FLAT"
+                  nw_descp: null
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_conn_id: "superadmin"
+                  reg_nm: "SuperAdmin"
+                  reg_ts: "2025-10-17 18:11:14"
+                  mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                  mod_conn_id: "mgtsuper"
+                  mod_nm: "관리자"
+                  mod_ts: "2026-02-03 14:13:14"
+                  grp_usg_cnt: "2"
+                  port_usg_cnt: "14"
+                  subnet_cnt: "1"
+                  tenants:
+                    - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      tnt_nm: "TEST_TENANT"
+                  subnets:
+                    - sbn_id: "7490641a-cea8-49e1-a996-5ff65b1b5a7d"
+                      sbn_nm: "public-subnet"
+                      cidr: "192.168.221.0/24"
+                      sbn: null
+                      gw: "192.168.221.1"
+                      dns_1: "8.8.8.8"
+                      dns_2: ""
+                      sbn_descp: null
+                      nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                      nw_nm: "public-net"
+                      nw_qos_plcy_id: null
+                      nw_qos_plcy_nm: null
+                      nw_qos_detail: null
+                      usg_use_cd: "P004P"
+                      usg_use_cd_nm: "Physical Network (External Network)"
+                      pool_usg_cnt: "4"
+                      port_usg_cnt: "14"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2025-10-17 18:11:14"
+                      reg_conn_id: "superadmin"
+                      reg_nm: "SuperAdmin"
+                      mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                      mod_conn_id: "mgtsuper"
+                      mod_nm: "관리자"
+                      mod_ts: "2026-02-03 14:13:14"
+                  nw_qos_plcy_id: null
+                  nw_qos_plcy_nm: null
+                  nw_qos_detail: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/networks
@@ -2138,6 +3224,43 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/NetworkQos'
+              example:
+                data:
+                  - nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                    nw_qos_plcy_nm: "tenant_network_qos"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-12-09 11:12:39"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    mod_ts: "2025-12-09 11:12:39"
+                    rules:
+                      - nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                        nw_qos_rule_id: "2a6ab313-bbf4-40fc-8a28-94cd7c9caeb3"
+                        direction_cd: "V017ISS"
+                        direction_cd_nm: "들어옴"
+                        max_kbps: 10000
+                        max_burst_kbps: 10000
+                        reg_conn_id: "***"
+                        reg_nm: "***"
+                        reg_ts: "2025-12-09 11:12"
+                        mod_conn_id: "***"
+                        mod_nm: "***"
+                        mod_ts: "2025-12-09 11:12"
+                      - nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                        nw_qos_rule_id: "d292b00c-2528-4f30-9b9b-dd5cd71a3222"
+                        direction_cd: "V017ESS"
+                        direction_cd_nm: "내보냄"
+                        max_kbps: 1000
+                        max_burst_kbps: 1000
+                        reg_conn_id: "***"
+                        reg_nm: "***"
+                        reg_ts: "2025-12-09 11:12"
+                        mod_conn_id: "***"
+                        mod_nm: "***"
+                        mod_ts: "2025-12-09 11:12"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
     post:
       tags:
         - admin/resource/networks
@@ -2173,6 +3296,33 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/NetworkQosDetail'
+              example:
+                data:
+                  nw_qos_plcy_id: "5843ec3b-2c1e-4aa8-8485-9b0082654d02"
+                  nw_qos_plcy_nm: "테스트QOS한글"
+                  reg_conn_id: "superadmin"
+                  reg_nm: "SuperAdmin"
+                  reg_ts: "2025-12-05 11:48"
+                  mod_conn_id: "mgtsuper"
+                  mod_nm: "관리자"
+                  mod_ts: "2025-12-05 15:05"
+                  rules:
+                    - nw_qos_plcy_id: "5843ec3b-2c1e-4aa8-8485-9b0082654d02"
+                      nw_qos_rule_id: "15eb76e3-d422-4d78-9b01-1973fb0643d6"
+                      direction_cd: "V017ESS"
+                      direction_cd_nm: "내보냄"
+                      max_kbps: 1000
+                      max_burst_kbps: 1000
+                    - nw_qos_plcy_id: "5843ec3b-2c1e-4aa8-8485-9b0082654d02"
+                      nw_qos_rule_id: "c391bc5a-e326-45a1-a02c-a2fac67f375e"
+                      direction_cd: "V017ISS"
+                      direction_cd_nm: "들어옴"
+                      max_kbps: 1000
+                      max_burst_kbps: 1000
+                  tnt_id: null
+                  tnt_nm: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/networks
@@ -2269,6 +3419,55 @@ paths:
                       $ref: '#/components/schemas/Subnet'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - sbn_id: "c7a73202-e488-4cb3-9b6a-fa1326fd4887"
+                    sbn_nm: "테스트서브넷"
+                    cidr: "192.168.0.0/24"
+                    sbn: "192.168.0.0"
+                    gw: "192.168.0.1"
+                    dns_1: "192.168.0.1"
+                    dns_2: "192.168.2.1"
+                    sbn_descp: null
+                    nw_id: "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e"
+                    nw_nm: "tenant_network"
+                    nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                    nw_qos_plcy_nm: "tenant_network_qos"
+                    nw_qos_detail:
+                      nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                      nw_qos_plcy_nm: "tenant_network_qos"
+                      rules:
+                        - nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                          nw_qos_rule_id: "2a6ab313-bbf4-40fc-8a28-94cd7c9caeb3"
+                          direction_cd: "V017ISS"
+                          direction_cd_nm: "들어옴"
+                          max_kbps: 10000
+                          max_burst_kbps: 10000
+                        - nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                          nw_qos_rule_id: "d292b00c-2528-4f30-9b9b-dd5cd71a3222"
+                          direction_cd: "V017ESS"
+                          direction_cd_nm: "내보냄"
+                          max_kbps: 1000
+                          max_burst_kbps: 1000
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      tnt_nm: "TEST_TENANT"
+                    usg_use_cd: "P004V"
+                    usg_use_cd_nm: "Virtual Network (Internal Network)"
+                    pool_usg_cnt: "0"
+                    port_usg_cnt: "0"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2025-12-17 09:47:24"
+                    reg_conn_id: "superadmin"
+                    reg_nm: "SuperAdmin"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "superadmin"
+                    mod_nm: "SuperAdmin"
+                    mod_ts: "2025-12-17 09:47:24"
+                pageinfo:
+                  count: 1
+                  ispaging: false
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/networks
@@ -2304,6 +3503,35 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/SubnetDetail'
+              example:
+                data:
+                  sbn_id: "c7a73202-e488-4cb3-9b6a-fa1326fd4887"
+                  sbn_nm: "테스트서브넷"
+                  cidr: "192.168.0.0/24"
+                  sbn: "192.168.0.0"
+                  gw: "192.168.0.1"
+                  dns_1: "192.168.0.1"
+                  dns_2: "192.168.2.1"
+                  sbn_descp: null
+                  nw_id: "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e"
+                  nw_nm: "tenant_network"
+                  nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                  nw_qos_plcy_nm: null
+                  nw_qos_detail: null
+                  usg_use_cd: "P004V"
+                  usg_use_cd_nm: "Virtual Network (Internal Network)"
+                  pool_usg_cnt: "0"
+                  port_usg_cnt: "0"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2025-12-17 09:47:24"
+                  reg_conn_id: "superadmin"
+                  reg_nm: "SuperAdmin"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_conn_id: "superadmin"
+                  mod_nm: "SuperAdmin"
+                  mod_ts: "2025-12-17 09:47:24"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/networks
@@ -2377,6 +3605,13 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SubnetIp'
+              example:
+                data:
+                  - able_ip: "192.168.10.101"
+                  - able_ip: "192.168.10.102"
+                  - able_ip: "192.168.10.103"
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/{tntId}/subnet:
     post:
       tags:
@@ -2466,6 +3701,30 @@ paths:
                       $ref: '#/components/schemas/Router'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - rtr_id: "2b77372a-3610-467f-8fbb-e560e4303603"
+                    rtr_nm: "테스트라우터"
+                    rtr_descp: null
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2025-12-17 09:54:09"
+                    reg_nm: null
+                    reg_conn_id: "superadmin"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: null
+                    mod_nm: null
+                    mod_conn_id: "superadmin"
+                    sbn_cnt: 1
+                    nw_nm: "public-net"
+                    nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                    subnetList: null
+                pageinfo:
+                  count: 1
+                  ispaging: false
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/networks
@@ -2501,6 +3760,41 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/RouterDetail'
+              example:
+                data:
+                  rtr_id: "2b77372a-3610-467f-8fbb-e560e4303603"
+                  rtr_nm: "테스트라우터"
+                  rtr_descp: null
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_nm: null
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2025-12-17 09:54"
+                  reg_nm: null
+                  reg_conn_id: "superadmin"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_ts: "2025-12-17 09:54"
+                  mod_nm: null
+                  mod_conn_id: "superadmin"
+                  sbn_cnt: 0
+                  nw_nm: "public-net"
+                  nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                  subnetList:
+                    - rtr_id: null
+                      nw_id: "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e"
+                      sbn_id: "c7a73202-e488-4cb3-9b6a-fa1326fd4887"
+                      nw_nm: "tenant_network"
+                      usg_use_cd: "P004V"
+                      usg_use_cd_nm: "Virtual Network (Internal Network)"
+                      nw_typ_cd: "P008VXL"
+                      sbn_nm: "테스트서브넷"
+                      cidr: "192.168.0.0/24"
+                      sbn: "192.168.0.0"
+                      gw: "192.168.0.1"
+                      dns_1: "192.168.0.1"
+                      dns_2: "192.168.2.1"
+                      sbn_descp: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/networks
@@ -2665,6 +3959,36 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Template'
+              example:
+                data:
+                  - temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                    temp_nm: "Win10"
+                    os_typ_cd_nm: "Windows 64bit"
+                    os_typ_cd: "T002W64"
+                    vcpu_cnt: 4
+                    vmm_capa: 8192
+                    vhd_capa: 100
+                    img_id: "72de23d9-437d-4a1b-bf1f-61852ec6afa4"
+                    img_nm: "windows10"
+                    sw_count: 0
+                    reg_conn_id: "superadmin"
+                    reg_nm: null
+                    reg_ts: "2025-10-17 21:39:43"
+                  - temp_id: "aea09b33-f1e5-11f0-a66b-a6d95c7431b3"
+                    temp_nm: "S-ADMIN-T"
+                    os_typ_cd_nm: "Linux 32bit"
+                    os_typ_cd: "T002L32"
+                    vcpu_cnt: 1
+                    vmm_capa: 512
+                    vhd_capa: 1
+                    img_id: "c1750c1c-8f13-4b00-b259-1f62d5961127"
+                    img_nm: "cirros"
+                    sw_count: 0
+                    reg_conn_id: "mgtsuper"
+                    reg_nm: null
+                    reg_ts: "2026-01-15 16:42:02"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/templates
@@ -2697,6 +4021,48 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TemplateDetail'
+              example:
+                data:
+                  temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                  temp_nm: "Win10"
+                  descp: null
+                  os_typ_cd_nm: "Windows 64bit"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: "2025-10-17 21:39:43"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_conn_id: "***"
+                  mod_nm: "***"
+                  mod_ts: "2026-02-03 14:13:14"
+                  flavor_id: "1a75c0ad-d7a2-459a-a662-0b3255be0641"
+                  img_id: "72de23d9-437d-4a1b-bf1f-61852ec6afa4"
+                  img_nm: "windows10"
+                  img_ad_itlk_usg_yn: null
+                  img_sw_l:
+
+                  flavor_bas_yn: null
+                  bas_temp_yn: "Y"
+                  in_tnt_id: null
+                  not_in_tnt_id: null
+                  flavor_m:
+                    flavor_id: "1a75c0ad-d7a2-459a-a662-0b3255be0641"
+                    flavor_nm: "4c8gb100gb_w10"
+                    vcpu_cnt: 4
+                    vmm_capa: 8192
+                    vhd_capa: 100
+                    flavor_descp: null
+                    flavor_bas_yn: "N"
+                    tpm_yn: "N"
+                    reg_conn_id: "***"
+                    reg_ts: "2025-10-17 21:39:16"
+                    mod_conn_id: "***"
+                    mod_ts: "2026-02-03 14:13:14"
+                    tnt_id: null
+                  tnt_id: null
+                  sw_count: 0
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/templates
@@ -2874,6 +4240,20 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Flavor'
+              example:
+                data:
+                  - flavor_id: "FLVR-001"
+                    flavor_nm: "Small (4vCPU/8GB)"
+                    vcpu_cnt: 4
+                    vmm_capa: 8192
+                    vhd_capa: 100
+                  - flavor_id: "FLVR-002"
+                    flavor_nm: "Medium (8vCPU/16GB)"
+                    vcpu_cnt: 8
+                    vmm_capa: 16384
+                    vhd_capa: 200
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/templates
@@ -2906,6 +4286,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Flavor'
+              example:
+                data:
+                  flavor_id: "FLVR-001"
+                  flavor_nm: "Small (4vCPU/8GB)"
+                  vcpu_cnt: 4
+                  vmm_capa: 8192
+                  vhd_capa: 100
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/templates
@@ -2961,6 +4350,20 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Flavor'
+              example:
+                data:
+                  - flavor_id: "FLVR-001"
+                    flavor_nm: "Small (4vCPU/8GB)"
+                    vcpu_cnt: 4
+                    vmm_capa: 8192
+                    vhd_capa: 100
+                  - flavor_id: "FLVR-002"
+                    flavor_nm: "Medium (8vCPU/16GB)"
+                    vcpu_cnt: 8
+                    vmm_capa: 16384
+                    vhd_capa: 200
+                errCode: null
+                errMsg: null
   /v1/resource/images:
     get:
       tags:
@@ -3011,6 +4414,75 @@ paths:
                       $ref: '#/components/schemas/Image'
                   pageinfo:
                     $ref: '#/components/schemas/PageinfoStr'
+              example:
+                data:
+                  - vm_auth_id: null
+                    vm_id: null
+                    vm_nm: null
+                    vm_power_sts_cd: null
+                    vm_power_sts_cd_nm: null
+                    usr_vm_conn_sts_cd: "V003OF"
+                    usr_vm_conn_sts_cd_nm: "접속 대기"
+                    adm_vm_conn_sts_cd: "V003OF"
+                    adm_vm_conn_sts_cd_nm: "접속 대기"
+                    img_id: "72de23d9-437d-4a1b-bf1f-61852ec6afa4"
+                    img_serv_yn: "Y"
+                    img_sts_cd: "T003CC"
+                    img_sts_cd_nm: "생성 완료"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_nm: "***"
+                    reg_conn_id: "***"
+                    reg_ts: "2025-10-17 18:11:14"
+                    mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    mod_nm: "***"
+                    mod_conn_id: "***"
+                    mod_ts: "2026-02-03 14:13:14"
+                    img_cre_tm: "2025-10-17 17:47:49"
+                    vm_state: "-"
+                    vm_pool_typ_cd: null
+                    img_cre_vm_id: null
+                    img_nm: "windows10"
+                    create_btn: "Y"
+                    conn_btn: "N"
+                    pow_on: "1"
+                    delete_btn: "N"
+                    clear_btn: "N"
+                    convert_btn: "N"
+                  - vm_auth_id: null
+                    vm_id: null
+                    vm_nm: null
+                    vm_power_sts_cd: null
+                    vm_power_sts_cd_nm: null
+                    usr_vm_conn_sts_cd: "V003OF"
+                    usr_vm_conn_sts_cd_nm: "접속 대기"
+                    adm_vm_conn_sts_cd: "V003OF"
+                    adm_vm_conn_sts_cd_nm: "접속 대기"
+                    img_id: "bb82aae9-1bbb-4819-9995-20797e917ade"
+                    img_serv_yn: "Y"
+                    img_sts_cd: "T003CI"
+                    img_sts_cd_nm: "생성중"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_nm: "***"
+                    reg_conn_id: "***"
+                    reg_ts: "2025-10-17 18:11:14"
+                    mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    mod_nm: "***"
+                    mod_conn_id: "***"
+                    mod_ts: "2026-02-03 14:13:14"
+                    img_cre_tm: "2025-10-17 17:41:29"
+                    vm_state: "-"
+                    vm_pool_typ_cd: null
+                    img_cre_vm_id: null
+                    img_nm: "windows11_uefi"
+                    create_btn: "Y"
+                    conn_btn: "N"
+                    pow_on: "1"
+                    delete_btn: "N"
+                    clear_btn: "N"
+                    convert_btn: "N"
+                pageinfo:
+                  count: 3
+                  ispaging: false
     post:
       tags:
         - admin/resource/images
@@ -3037,6 +4509,34 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ImageDetail'
+              example:
+                data:
+                  img_id: "72de23d9-437d-4a1b-bf1f-61852ec6afa4"
+                  img_nm: "windows10"
+                  img_descp: null
+                  img_cre_tm: "2025-10-17 17:47"
+                  img_file_size: "51200"
+                  os_typ_cd: "T002W64"
+                  os_typ_cd_nm: "Windows 64bit"
+                  img_serv_yn: "Y"
+                  img_sts_cd: "T003CC"
+                  img_sts_cd_nm: "생성 완료"
+                  init_cre_yn: "Y"
+                  img_sw_l:
+
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_nm: "***"
+                  reg_conn_id: "superadmin"
+                  reg_ts: "2025-10-17 18:11"
+                  mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                  mod_nm: "***"
+                  mod_conn_id: "mgtsuper"
+                  mod_ts: "2026-02-03 14:13"
+                  tnt_id: null
+                  img_cre_vm_id: null
+                  visibility: "public"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/images
@@ -3139,6 +4639,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ImageStatus'
+              example:
+                data:
+                  vm_id: "vm-golden-001"
+                  vm_status: "21"
+                  vm_status_msg: null
+                errCode: null
+                errMsg: null
   /v1/resource/images/create_vm:
     post:
       tags:
@@ -3297,6 +4804,41 @@ paths:
                       $ref: '#/components/schemas/ProxyL4'
                   pageinfo:
                     $ref: '#/components/schemas/PageinfoStr'
+              example:
+                data:
+                  - proxy_id: "PROXY-L4-001"
+                    proxy_nm: "L4 프록시 01"
+                    sts_cd: "P013NOR"
+                    sts_cd_nm: "정상"
+                    service_ip: "10.0.100.10"
+                    service_min_port: "30000"
+                    service_max_port: "30100"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_ts: "2025-10-17 18:11:14"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-02-03 14:13:14"
+                  - proxy_id: "PROXY-L4-002"
+                    proxy_nm: "L4 프록시 02"
+                    sts_cd: "P013NOR"
+                    sts_cd_nm: "정상"
+                    service_ip: "10.0.100.11"
+                    service_min_port: "30200"
+                    service_max_port: "30300"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_ts: "2025-11-01 10:00:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-01-15 09:00:00"
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/resource/proxy/L7/{path}:
     get:
       tags:
@@ -3326,6 +4868,43 @@ paths:
                       $ref: '#/components/schemas/ProxyL7'
                   pageinfo:
                     $ref: '#/components/schemas/PageinfoStr'
+              example:
+                data:
+                  - proxy_id: "PROXY-L7-001"
+                    proxy_nm: "L7 프록시 01"
+                    sts_cd: "P013NOR"
+                    sts_cd_nm: "정상"
+                    service_ip: "10.0.100.1"
+                    service_port: "443"
+                    max_conn_limit: "100"
+                    usg_conn_cnt: "25"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_ts: "2025-10-17 18:11:14"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-02-03 14:13:14"
+                  - proxy_id: "PROXY-L7-002"
+                    proxy_nm: "L7 프록시 02"
+                    sts_cd: "P013NOR"
+                    sts_cd_nm: "정상"
+                    service_ip: "10.0.100.2"
+                    service_port: "443"
+                    max_conn_limit: "200"
+                    usg_conn_cnt: "50"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_ts: "2025-11-01 10:00:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-01-15 09:00:00"
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/resource/proxy/assign:
     get:
       tags:
@@ -3338,6 +4917,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ProxyAssign'
+              example:
+                data:
+                  proxy_id: "PROXY-001"
+                  proxy_ip: "10.0.100.1"
+                  proxy_port: 8080
+                errCode: null
+                errMsg: null
   /v1/resource/platform/software:
     get:
       tags:
@@ -3352,6 +4938,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/SoftwareVersion'
+              example:
+                data:
+                  - sw_nm: "CloudX Portal"
+                    sub_sw_nm: "Admin Portal"
+                    ver: "v.2.2.9"
+                  - sw_nm: "CloudX Portal"
+                    sub_sw_nm: "User Portal"
+                    ver: "v.2.2.9"
   /v1/resource/tenants:
     get:
       tags:
@@ -3383,6 +4977,18 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TenantSummary'
+              example:
+                data:
+                  - tnt_id: "TNT-001"
+                    tnt_nm: "개발팀"
+                    tnt_grp_id: "TG-001"
+                    tnt_stat_cd: "T001ACT"
+                  - tnt_id: "TNT-002"
+                    tnt_nm: "운영팀"
+                    tnt_grp_id: "TG-001"
+                    tnt_stat_cd: "T001ACT"
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/{tntId}:
     get:
       tags:
@@ -3401,6 +5007,17 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TenantDetail'
+              example:
+                data:
+                  tnt_id: "TNT-001"
+                  tnt_nm: "개발팀"
+                  tnt_grp_id: "TG-001"
+                  secu_plcy_id: "SP-001"
+                  secu_plcy_nm: "기본 보안 정책"
+                  bkup_snap_plcy_id: "BSP-001"
+                  bkup_snap_plcy_nm: "일별 백업 정책"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/tenants
@@ -3483,6 +5100,90 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TenantManagerItem'
+              example:
+                data:
+                  - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    pfrm_tnt_nm: "20251017214527466192"
+                    dm_id: "default"
+                    tnt_descp: ","
+                    ha_auto_mng_yn: "N"
+                    host_tnt_yn: "Y"
+                    vm_grp_usg_yn: "Y"
+                    vcpu_psb_cnt: "-1"
+                    vmm_psb_capa: "-1"
+                    tot_vm_psb_cnt: "1000"
+                    tot_vm_usg_cnt: "9"
+                    phy_sbn_tot_cnt: "1"
+                    phy_sbn_usg_cnt: "1"
+                    vcpu_usg_cnt: "33"
+                    vmm_usg_capa: "66048"
+                    rtr_cnt: "1"
+                    img_cnt: "0"
+                    bkup_snap_plcy_id: "2a539b32-ab57-11f0-8896-e288d288c3ed"
+                    bkup_snap_plcy_nm: "TEST_TENANT BACKUP SNAPSHOT 기본 정책"
+                    volm_sched_plcy_id: "28189ac7-ab57-11f0-8557-3a7bf606d4cf"
+                    l4_proxy_asg_yn: "Y"
+                    l7_proxy_asg_yn: "Y"
+                    tnt_url_id: "TEST_TENANT"
+                    main_tnt_yn: "Y"
+                    ad_itlk_usg_yn: "Y"
+                    octatco_usg_yn: "N"
+                    shar_str_usg_yn: "N"
+                    viwr_con_plcy_yn: "Y"
+                    viwr_con_cnt: "5"
+                    netApp_interlock: null
+                    email_interlock: null
+                    adScript: null
+                    octatco: null
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-10-17 21:45:28"
+                    mod_id: "4fd463b1-b5fa-11f0-a082-9e558d565baa"
+                    mod_ts: "2026-03-03 16:17:19"
+                  - tnt_id: "a3f2e1d0-bc45-11f0-9abc-1234567890ab"
+                    tnt_nm: "개발팀"
+                    pfrm_tnt_nm: "20251101093012345678"
+                    dm_id: "default"
+                    tnt_descp: null
+                    ha_auto_mng_yn: "N"
+                    host_tnt_yn: "N"
+                    vm_grp_usg_yn: "Y"
+                    vcpu_psb_cnt: "32"
+                    vmm_psb_capa: "65536"
+                    tot_vm_psb_cnt: "50"
+                    tot_vm_usg_cnt: "12"
+                    phy_sbn_tot_cnt: "1"
+                    phy_sbn_usg_cnt: "1"
+                    vcpu_usg_cnt: "20"
+                    vmm_usg_capa: "40960"
+                    rtr_cnt: "1"
+                    img_cnt: "2"
+                    bkup_snap_plcy_id: "3b648c43-bc46-11f0-8896-e288d288c3ed"
+                    bkup_snap_plcy_nm: "개발팀 BACKUP SNAPSHOT 기본 정책"
+                    volm_sched_plcy_id: "39299bd8-bc46-11f0-8557-3a7bf606d4cf"
+                    l4_proxy_asg_yn: "N"
+                    l7_proxy_asg_yn: "N"
+                    tnt_url_id: "dev-team"
+                    main_tnt_yn: "N"
+                    ad_itlk_usg_yn: "N"
+                    octatco_usg_yn: "N"
+                    shar_str_usg_yn: "N"
+                    viwr_con_plcy_yn: "N"
+                    viwr_con_cnt: null
+                    netApp_interlock: null
+                    email_interlock: null
+                    adScript: null
+                    octatco: null
+                    reg_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    reg_ts: "2025-11-01 09:30:12"
+                    mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2025-11-01 09:30:12"
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/manager/list/all:
     get:
       tags:
@@ -3497,6 +5198,16 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TenantManagerAllItem'
+              example:
+                data:
+                  - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    dm_id: "default"
+                  - tnt_id: "a3f2e1d0-bc45-11f0-9abc-1234567890ab"
+                    tnt_nm: "개발팀"
+                    dm_id: "default"
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/manager/get/license:
     get:
       tags:
@@ -3505,6 +5216,19 @@ paths:
       responses:
         '200':
           description: 성공
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  max_vm_psb_cnt: "1000"
+                  tnt_cnt: "1"
+                  tot_vm_psb_cnt: "1000"
+                  vcpu_psb_cnt: "-1"
+                  vmm_psb_capa: "-1"
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/manager/autoTenants/{companyNm}:
     get:
       tags:
@@ -3579,6 +5303,404 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TenantManagerDetail'
+              example:
+                data:
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_nm: "TEST_TENANT"
+                  pfrm_tnt_nm: "20251017214527466192"
+                  dm_id: "default"
+                  tnt_descp: ","
+                  ha_auto_mng_yn: "N"
+                  host_tnt_yn: "Y"
+                  vm_grp_usg_yn: "Y"
+                  vcpu_psb_cnt: "-1"
+                  vmm_psb_capa: "-1"
+                  tot_vm_psb_cnt: "1000"
+                  tot_vm_usg_cnt: "9"
+                  phy_sbn_tot_cnt: "1"
+                  phy_sbn_usg_cnt: "1"
+                  vcpu_usg_cnt: "33"
+                  vmm_usg_capa: "66048"
+                  rtr_cnt: "1"
+                  img_cnt: "0"
+                  bkup_snap_plcy_id: "2a539b32-ab57-11f0-8896-e288d288c3ed"
+                  bkup_snap_plcy_nm: "TEST_TENANT BACKUP SNAPSHOT 기본 정책"
+                  volm_sched_plcy_id: "28189ac7-ab57-11f0-8557-3a7bf606d4cf"
+                  l4_proxy_asg_yn: "Y"
+                  l7_proxy_asg_yn: "Y"
+                  tnt_url_id: "TEST_TENANT"
+                  main_tnt_yn: "Y"
+                  ad_itlk_usg_yn: "Y"
+                  octatco_usg_yn: "N"
+                  shar_str_usg_yn: "N"
+                  viwr_con_plcy_yn: "Y"
+                  viwr_con_cnt: "5"
+                  netApp_interlock:
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    cert_id: ""
+                    cert_passwd_cryptval: null
+                    ip: ""
+                    port: ""
+                    grp_fold_cre_size: "500"
+                    descp: null
+                    reg_id: null
+                    reg_ts: null
+                    mod_id: null
+                    mod_ts: null
+                  email_interlock:
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    smtp_host: "relay.skbroadband.com"
+                    smtp_port: "25"
+                    from_mail: "***"
+                    passwd_cryptval: "***"
+                    enpasswd_cryptval: null
+                    protocol_type: "A036TLS"
+                    descp: null
+                    use_yn: "Y"
+                    reg_id: null
+                    reg_ts: null
+                    mod_id: null
+                    mod_ts: null
+                  adScript:
+                    cadno: "f61b6f27-1582-41a8-bfa4-9a472d963e79"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    use_yn: "Y"
+                    adscript_contents: "#ps1_sysnative\n\n$log = 'C:\\Program Files\\Cloudbase Solutions\\Cloudbase-init\\log\\adjoin.log'\necho \"$(Get-Date -format 'u'), Start AD Script\" > $log\n\n# Step 1: Disable Automatic Updates\nsc.exe stop wuauserv | Out-File $log -Append\nsc.exe config wuauserv start=disabled | Out-File $log -Append\necho \"$(Get-Date -format 'u'), Windows Update has been disabled.\" >> $log\n\n# Step 2: Check Current role\necho \"$(Get-Date -format 'u'), Step 2 Check Current Role\" >> $log\nif (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] \"Administrator\")) { Start-Process powershell.exe \"-NoProfile -ExecutionPolicy Bypass -File ``\"$PSCommandPath``\"\" -Verb RunAs; exit }\n\n# Step 3: Set Variable for Active Directory Join\necho \"$(Get-Date -format 'u'), Step 3: Set Variable for Active Directory Join\" >> $log\n\n$domain = \"+adDomain+\"\n$domainHead = $domain.split('.')[0].ToUpper()\n$adminId = \"$domainHead\\+adminId+\"\n$adminPw = \"+adminPw+\"\n$vdiOu = \"+vdiOuName+\"\ntry {\n  $credential = new-object -typename System.Management.Automation.PSCredential -argumentlist $adminId, (ConvertTo-SecureString -AsPlainText $adminPw -Force)\n  echo \"$(Get-Date -format 'u'), Start Add-Computer\" >> $log\n  Add-Computer -Domain $domain -Credential $credential -OUPath $vdiOu -ErrorAction Stop | Out-File $log -Append\n  $dUser = net localgroup administrators | Select-String \"Domain Users\"\n  echo \"$(Get-Date -format 'u'), Check Add-Computer Completed, duser : $dUser\" >> $log\n  while(!$dUser){\n    net localgroup administrators \"$domainHead\\Domain Users\" /add\n    $dUser = net localgroup administrators | Select-String \"Domain Users\"\n    if($dUser){break;}\n  }\n  $users = invoke-command { net localgroup administrators | where {$_} | select -skip 4 }\n  $size = $users.Count\n  echo \"$(Get-Date -format 'u'), Local Users Active no\" >> $log\n  For ($i=0; $i -le $size - 2 ; $i++) {\n    $user = $users.Get($i)\n    echo \"$(Get-Date -format 'u'), users : $user\" >> $log\n    if($user -ne \"$domainHead\\Domain Admins\" -and $user -ne \"$domainHead\\Domain Users\") {\n      net user $user /active:no\n    }\n  }\n  Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon' -Name 'DefaultDomainName' -Value $domain -Force\n  Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon' -Name 'AutoAdminLogon' -Value 0 -Force\n  echo \"$(Get-Date -format 'u'), Restart-Computer\" >> $log\n  shutdown -r -t 0\n} catch {\n  echo \"$(Get-Date -format 'u'), Failed join To Active Directory\" >> $log\n}"
+                    reg_id: "initdata"
+                    reg_ts: "2025-10-29T01:43:06.000+00:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-03-24T00:24:29.003+00:00"
+                  octatco:
+                    cu_octa_id: "e8937e63-bece-11f0-a082-9e558d565baa"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    app_id: ""
+                    server_domain: ""
+                    did: ""
+                    reg_id: "b3335638-becb-11f0-ab35-2a759c87295e"
+                    reg_ts: "2025-11-11 16:20:32"
+                    mod_id: "b3335638-becb-11f0-ab35-2a759c87295e"
+                    mod_ts: "2025-11-11 16:20:32"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: "2025-10-17 21:45:28"
+                  mod_id: "4fd463b1-b5fa-11f0-a082-9e558d565baa"
+                  mod_ts: "2026-03-03 16:17:19"
+                  networks:
+                    - nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                      nw_nm: "public-net"
+                      usg_use_cd: "P004P"
+                      usg_use_cd_nm: "Physical Network (External Network)"
+                      nw_typ_cd: "P008FLT"
+                      nw_typ_cd_nm: "FLAT"
+                      nw_descp: null
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_conn_id: "***"
+                      reg_nm: "***"
+                      reg_ts: "2025-10-17 18:11:14"
+                      mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                      mod_conn_id: "***"
+                      mod_nm: "***"
+                      mod_ts: "2026-02-03 14:13:14"
+                      grp_usg_cnt: "2"
+                      port_usg_cnt: "14"
+                      subnet_cnt: "1"
+                      tenants:
+                        - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                          tnt_nm: "TEST_TENANT"
+                      subnets:
+                        - sbn_id: "7490641a-cea8-49e1-a996-5ff65b1b5a7d"
+                          sbn_nm: "public-subnet"
+                          cidr: "192.168.221.0/24"
+                          sbn: null
+                          gw: "192.168.221.1"
+                          dns_1: "8.8.8.8"
+                          dns_2: ""
+                          sbn_descp: null
+                          nw_id: "52f2f93f-4571-41b9-8c29-ede42ee1128d"
+                          nw_nm: "public-net"
+                          nw_qos_plcy_id: null
+                          nw_qos_plcy_nm: null
+                          nw_qos_detail: null
+                          usg_use_cd: "P004P"
+                          usg_use_cd_nm: "Physical Network (External Network)"
+                          pool_usg_cnt: "4"
+                          port_usg_cnt: "14"
+                          reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          reg_ts: "2025-10-17 18:11:14"
+                          reg_conn_id: "***"
+                          reg_nm: "***"
+                          mod_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                          mod_conn_id: "***"
+                          mod_nm: "***"
+                          mod_ts: "2026-02-03 14:13:14"
+                      nw_qos_plcy_id: null
+                      nw_qos_plcy_nm: null
+                      nw_qos_detail: null
+                    - nw_id: "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e"
+                      nw_nm: "tenant_network"
+                      usg_use_cd: "P004V"
+                      usg_use_cd_nm: "Virtual Network (Internal Network)"
+                      nw_typ_cd: "P008VXL"
+                      nw_typ_cd_nm: "vxLAN"
+                      nw_descp: null
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_conn_id: "***"
+                      reg_nm: "***"
+                      reg_ts: "2025-12-09 11:12:54"
+                      mod_id: "platform.control.manager"
+                      mod_conn_id: null
+                      mod_nm: null
+                      mod_ts: "2025-12-09 11:12:55"
+                      grp_usg_cnt: "0"
+                      port_usg_cnt: "0"
+                      subnet_cnt: "1"
+                      tenants:
+                        - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                          tnt_nm: "TEST_TENANT"
+                      subnets:
+                        - sbn_id: "c7a73202-e488-4cb3-9b6a-fa1326fd4887"
+                          sbn_nm: "테스트서브넷"
+                          cidr: "192.168.0.0/24"
+                          sbn: "192.168.0.0"
+                          gw: "192.168.0.1"
+                          dns_1: "192.168.0.1"
+                          dns_2: "192.168.2.1"
+                          sbn_descp: null
+                          nw_id: "a084fb0c-9c1c-44eb-a6b5-047f00d26e4e"
+                          nw_nm: "tenant_network"
+                          nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                          nw_qos_plcy_nm: null
+                          nw_qos_detail: null
+                          usg_use_cd: "P004V"
+                          usg_use_cd_nm: "Virtual Network (Internal Network)"
+                          pool_usg_cnt: "0"
+                          port_usg_cnt: "0"
+                          reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          reg_ts: "2025-12-17 09:47:24"
+                          reg_conn_id: "***"
+                          reg_nm: "***"
+                          mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          mod_conn_id: "***"
+                          mod_nm: "***"
+                          mod_ts: "2025-12-17 09:47:24"
+                      nw_qos_plcy_id: "8a8c3e87-f1e7-4842-9222-5dfb4f96c757"
+                      nw_qos_plcy_nm: "tenant_network_qos"
+                      nw_qos_detail: null
+                  templates:
+                    - temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                      temp_nm: "Win10"
+                      os_typ_cd: "T002W64"
+                      os_typ_cd_nm: "Windows 64bit"
+                      bas_temp_yn: "Y"
+                      flavor_id: "1a75c0ad-d7a2-459a-a662-0b3255be0641"
+                      img_id: "72de23d9-437d-4a1b-bf1f-61852ec6afa4"
+                    - temp_id: "aea09b33-f1e5-11f0-a66b-a6d95c7431b3"
+                      temp_nm: "S-ADMIN-T"
+                      os_typ_cd: "T002L32"
+                      os_typ_cd_nm: "Linux 32bit"
+                      bas_temp_yn: "Y"
+                      flavor_id: "a1531fd8-168d-4758-895f-5c2166e3e517"
+                      img_id: "c1750c1c-8f13-4b00-b259-1f62d5961127"
+                    - temp_id: "aeadfd93-b881-11f0-ab35-2a759c87295e"
+                      temp_nm: "win11_uefi"
+                      os_typ_cd: "T002W64"
+                      os_typ_cd_nm: "Windows 64bit"
+                      bas_temp_yn: "Y"
+                      flavor_id: "8e496eac-f6df-49f2-9b6d-5eccc05a97ab"
+                      img_id: "bb82aae9-1bbb-4819-9995-20797e917ade"
+                  flavors:
+                    - flavor_id: "076574b9-7be6-4bb4-b24b-b62938911184"
+                      flavor_nm: "TA_TPM 미체크"
+                      flavor_bas_yn: "N"
+                      vcpu_cnt: "4"
+                      vmm_capa: "8192"
+                      vhd_capa: "50"
+                    - flavor_id: "1a75c0ad-d7a2-459a-a662-0b3255be0641"
+                      flavor_nm: "4c8gb100gb_w10"
+                      flavor_bas_yn: "N"
+                      vcpu_cnt: "4"
+                      vmm_capa: "8192"
+                      vhd_capa: "100"
+                    - flavor_id: "41f95a83-b7a7-4c99-9324-87dc6f0ebea1"
+                      flavor_nm: "TA_TPM 체크"
+                      flavor_bas_yn: "N"
+                      vcpu_cnt: "4"
+                      vmm_capa: "8192"
+                      vhd_capa: "50"
+                    - flavor_id: "8e496eac-f6df-49f2-9b6d-5eccc05a97ab"
+                      flavor_nm: "4c8g60g_win11_tpm"
+                      flavor_bas_yn: "Y"
+                      vcpu_cnt: "4"
+                      vmm_capa: "8192"
+                      vhd_capa: "60"
+                    - flavor_id: "a1531fd8-168d-4758-895f-5c2166e3e517"
+                      flavor_nm: "m1.tiny"
+                      flavor_bas_yn: "Y"
+                      vcpu_cnt: "1"
+                      vmm_capa: "512"
+                      vhd_capa: "1"
+                  volumes:
+                    - volm_typ_id: "2f901def-f786-4fbc-8b59-b3368963297b"
+                      volm_typ_nm: "wadfasdfa"
+                      volm_usg_typ: "U034BOT"
+                      volm_usg_typ_nm: "겸용"
+                      tot_capa: 157357
+                      usg_capa: 11903
+                      usg_ratio: 7
+                      loc_dsk_cre_yn: "N"
+                      dsk_cre_cnt: "0"
+                      pool_usg_cnt: "0"
+                      volm_qos_plcy_id: null
+                      volm_qos_plcy_nm: null
+                      volm_qos_detail: null
+                    - volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                      volm_typ_nm: "netapp"
+                      volm_usg_typ: "U034BOT"
+                      volm_usg_typ_nm: "겸용"
+                      tot_capa: 157357
+                      usg_capa: 11903
+                      usg_ratio: 7
+                      loc_dsk_cre_yn: "Y"
+                      dsk_cre_cnt: "0"
+                      pool_usg_cnt: "4"
+                      volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                      volm_qos_plcy_nm: "QA2"
+                      volm_qos_detail:
+                        volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                        volm_qos_plcy_nm: "QA2"
+                        volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                        volm_typ_nm: "netapp"
+                        volm_qos_rule_unit_cd: "V018IOP"
+                        volm_qos_rule_unit_cd_nm: "IOPS"
+                        volm_read: 1
+                        volm_read_max: 1
+                        volm_write: 1
+                        volm_write_max: 1
+                        reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                        reg_conn_id: "***"
+                        reg_nm: "***"
+                        reg_ts: "2026-02-04 14:46:24"
+                        mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                        mod_conn_id: "***"
+                        mod_nm: "***"
+                        mod_ts: "2026-02-04 14:46:24"
+                  groups:
+                    - vm_grp_id: "7883baf9-ab5b-11f0-8557-3a7bf606d4cf"
+                      vm_grp_nm: "Win10"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      tnt_nm: "TEST_TENANT"
+                      secu_plcy_id: "69421473-67c0-4873-b86e-e72621942016"
+                      secu_plcy_nm: "TEST_TENANT 가상 PC 보안 기본 정책"
+                      bkup_snap_plcy_id: "2a539b32-ab57-11f0-8896-e288d288c3ed"
+                      bkup_snap_plcy_nm: "TEST_TENANT BACKUP SNAPSHOT 기본 정책"
+                      temp_id: "5b239b4d-ab56-11f0-bce4-22a1b8d92490"
+                      temp_nm: "Win10"
+                      gdn_img_cre_yn: "N"
+                      pool_usg_cnt: "2"
+                      tot_pool_max_vm_cnt: "11"
+                      network_cnt: "1"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_conn_id: "***"
+                      reg_nm: "***"
+                      reg_ts: "2025-10-17 22:16:20"
+                      mod_id: "8feb884b-eba8-11f0-a5c1-22b10486d9be"
+                      mod_conn_id: "***"
+                      mod_nm: "***"
+                      mod_ts: "2026-03-24 15:54:22"
+                    - vm_grp_id: "eb44d791-b891-11f0-819b-4617b2bd76a9"
+                      vm_grp_nm: "Win11_UEFI"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      tnt_nm: "TEST_TENANT"
+                      secu_plcy_id: "880ca5ce-4a18-4365-88d4-c7429d02cc71"
+                      secu_plcy_nm: "TEST_TENANT_NO_PROXY"
+                      bkup_snap_plcy_id: "e9db046e-b891-11f0-ab35-2a759c87295e"
+                      bkup_snap_plcy_nm: "TEST_TENANT_NOBackup"
+                      temp_id: "aeadfd93-b881-11f0-ab35-2a759c87295e"
+                      temp_nm: "win11_uefi"
+                      gdn_img_cre_yn: "N"
+                      pool_usg_cnt: "2"
+                      tot_pool_max_vm_cnt: "20"
+                      network_cnt: "1"
+                      reg_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                      reg_conn_id: "***"
+                      reg_nm: "***"
+                      reg_ts: "2025-11-03 17:48:50"
+                      mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                      mod_conn_id: "***"
+                      mod_nm: "***"
+                      mod_ts: "2025-11-03 17:48:50"
+                  zones:
+                    - zone_nm: "Default Zone"
+                      host_grp_nm: "Default Zone"
+                      host_grp_id: "6"
+                      host_cnt: "2"
+                      vcpu_tot_cnt: "192"
+                      mem_tot_capa: "250"
+                      public_yn: "N"
+                  hosts:
+                    - host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                      host_nm: "test_tenant-compute-01"
+                      pfrm_host_id: "142afe84-ca5f-46ed-a5b4-96f3056fe782"
+                      host_ip: "192.168.132.44"
+                      hyper_typ: "QEMU"
+                      host_descp: null
+                      host_sts_cd: "P003NOR"
+                      host_sts_cd_nm: "정상"
+                      vcpu_tot_cnt: "96"
+                      vcpu_usg_cnt: "25"
+                      mem_tot_capa: "125"
+                      mem_usg_capa: "49"
+                      str_tot_capa: "1536"
+                      str_usg_capa: "0"
+                      vm_tot_cnt: "5"
+                      vm_usg_cnt: "4"
+                      zone_assgn_yn: "Y"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_nm: "***"
+                      reg_conn_id: "***"
+                      reg_ts: "2025-10-17 18:11:14"
+                      mod_id: "platform.scheduler"
+                      mod_nm: null
+                      mod_conn_id: null
+                      mod_ts: "2026-03-27 14:28:00"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      tnt_assgn_yn: "Y"
+                      zone_nm: "Default Zone"
+                      host_grp_nm: "Default Zone"
+                      ha_auto_mng_yn: "N"
+                    - host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                      host_nm: "test_tenant-compute-02"
+                      pfrm_host_id: "d049d94c-085e-4de5-99fe-45c612b44d8d"
+                      host_ip: "192.168.132.45"
+                      hyper_typ: "QEMU"
+                      host_descp: null
+                      host_sts_cd: "P003NOR"
+                      host_sts_cd_nm: "정상"
+                      vcpu_tot_cnt: "96"
+                      vcpu_usg_cnt: "24"
+                      mem_tot_capa: "125"
+                      mem_usg_capa: "48"
+                      str_tot_capa: "1536"
+                      str_usg_capa: "0"
+                      vm_tot_cnt: "5"
+                      vm_usg_cnt: "5"
+                      zone_assgn_yn: "Y"
+                      reg_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                      reg_nm: "***"
+                      reg_conn_id: "***"
+                      reg_ts: "2025-10-31 14:35:56"
+                      mod_id: "platform.scheduler"
+                      mod_nm: null
+                      mod_conn_id: null
+                      mod_ts: "2026-03-27 14:28:00"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      tnt_assgn_yn: "Y"
+                      zone_nm: "Default Zone"
+                      host_grp_nm: "Default Zone"
+                      ha_auto_mng_yn: "N"
+                errCode: null
+                errMsg: null
     delete:
       tags:
         - admin/resource/tenants
@@ -3651,6 +5773,18 @@ paths:
       responses:
         '200':
           description: 성공
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - volm_typ_id: "VT-001"
+                    volm_typ_nm: "SSD 볼륨"
+                  - volm_typ_id: "VT-002"
+                    volm_typ_nm: "HDD 볼륨"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/tenants
@@ -3713,6 +5847,16 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TenantGroupItem'
+              example:
+                data:
+                  - tnt_grp_id: "TG-001"
+                    tnt_grp_nm: "그룹 A"
+                    tnt_cnt: 2
+                  - tnt_grp_id: "TG-002"
+                    tnt_grp_nm: "그룹 B"
+                    tnt_cnt: 1
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/groups/licenses:
     get:
       tags:
@@ -3762,6 +5906,22 @@ paths:
       responses:
         '200':
           description: 성공
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  tnt_grp_id: "TG-001"
+                  tnt_grp_nm: "그룹 A"
+                  tnt_cnt: 2
+                  tenants:
+                    - tnt_id: "TNT-001"
+                      tnt_nm: "개발팀"
+                    - tnt_id: "TNT-002"
+                      tnt_nm: "운영팀"
+                errCode: null
+                errMsg: null
   /v1/resource/tenants/resources/request/:
     get:
       tags:
@@ -3785,6 +5945,18 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TenantResourceRequestItem'
+              example:
+                data:
+                  - tnt_rsr_req_id: "REQ-001"
+                    tnt_id: "TNT-001"
+                    req_stat_cd: "R001PEND"
+                    reg_ts: "2026-03-20T10:00:00"
+                  - tnt_rsr_req_id: "REQ-002"
+                    tnt_id: "TNT-002"
+                    req_stat_cd: "R001APPR"
+                    reg_ts: "2026-03-18T09:00:00"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/tenants
@@ -3850,6 +6022,16 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TenantNetworkItem'
+              example:
+                data:
+                  - nw_id: "NW-V001"
+                    nw_nm: "가상 네트워크 01"
+                    sbn_id: "SBN-001"
+                  - nw_id: "NW-V002"
+                    nw_nm: "가상 네트워크 02"
+                    sbn_id: "SBN-002"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/tenants
@@ -3897,6 +6079,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TenantCapaPlatforms'
+              example:
+                data:
+                  platforms:
+                    - host_id: "HOST-001"
+                      host_nm: "compute-01"
+                      vcpu_avail: 40
+                      vmm_avail: 163840
+                    - host_id: "HOST-002"
+                      host_nm: "compute-02"
+                      vcpu_avail: 32
+                      vmm_avail: 131072
+                errCode: null
+                errMsg: null
   /v1/resource/domains:
     get:
       tags:
@@ -3911,6 +6106,16 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DomainItem'
+              example:
+                data:
+                  - dm_id: "DM-001"
+                    dm_nm: "corp.example.com"
+                    dm_descp: "기본 도메인"
+                  - dm_id: "DM-002"
+                    dm_nm: "dev.example.com"
+                    dm_descp: "개발팀 도메인"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/tenants
@@ -3932,6 +6137,20 @@ paths:
       responses:
         '200':
           description: 성공
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - dm_id: "DM-001"
+                    dm_nm: "corp.example.com"
+                    dm_descp: "기본 도메인"
+                  - dm_id: "DM-002"
+                    dm_nm: "dev.example.com"
+                    dm_descp: "개발팀 도메인"
+                errCode: null
+                errMsg: null
   /v1/resource/domains/{id}:
     get:
       tags:
@@ -3977,6 +6196,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AdScriptDetail'
+              example:
+                data:
+                  cadno: "CADNO-001"
+                  tnt_id: "TNT-001"
+                  script_content: "# AD 스크립트 내용\nnet use Z: \\\\server\\share /persistent:yes"
+                errCode: null
+                errMsg: null
   /v1/resource/adscript/{cadno}:
     put:
       tags:
@@ -4009,6 +6235,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/InitStatus'
+              example:
+                data:
+                  init_stat_cd: "INIT_COMP"
+                  is_completed: true
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/tenants
@@ -4081,6 +6313,79 @@ paths:
                       $ref: '#/components/schemas/VolumeTypeItem'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - volm_typ_id: "2f901def-f786-4fbc-8b59-b3368963297b"
+                    volm_typ_nm: "wadfasdfa"
+                    loc_dsk_cre_yn: "N"
+                    reg_ts: "2025-11-13 11:58:20"
+                    mod_ts: "2026-03-27 12:20:00"
+                    reg_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                    reg_conn_id: "-"
+                    reg_nm: "decrypt-failed"
+                    mod_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                    mod_conn_id: "-"
+                    mod_nm: "decrypt-failed"
+                    volm_be_nm: "netapp"
+                    volm_qos_plcy_id: null
+                    volm_qos_plcy_nm: "-"
+                    volm_usg_typ: "U034BOT"
+                    volm_usg_typ_nm: "겸용"
+                    tot_capa: 157357
+                    usg_capa: 11876
+                    usg_ratio: 7
+                    bas_volm_typ_yn: "Y"
+                    tnt_list:
+                      - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                        tnt_nm: "TEST_TENANT"
+                    qosDetail: null
+                  - volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    loc_dsk_cre_yn: "N"
+                    reg_ts: "2025-10-17 18:11:15"
+                    mod_ts: "2026-03-27 12:20:00"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    volm_be_nm: "netapp"
+                    volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                    volm_qos_plcy_nm: "QA2"
+                    volm_usg_typ: "U034BOT"
+                    volm_usg_typ_nm: "겸용"
+                    tot_capa: 157357
+                    usg_capa: 11876
+                    usg_ratio: 7
+                    bas_volm_typ_yn: "Y"
+                    tnt_list:
+                      - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                        tnt_nm: "TEST_TENANT"
+                    qosDetail:
+                      volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                      volm_qos_plcy_nm: "QA2"
+                      volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                      volm_typ_nm: "netapp"
+                      volm_qos_rule_unit_cd: "V018IOP"
+                      volm_qos_rule_unit_cd_nm: "IOPS"
+                      volm_read: 1
+                      volm_read_max: 1
+                      volm_write: 1
+                      volm_write_max: 1
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_conn_id: "***"
+                      reg_nm: "***"
+                      reg_ts: "2026-02-04 14:46:24"
+                      mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      mod_conn_id: "***"
+                      mod_nm: "***"
+                      mod_ts: "2026-02-04 14:46:24"
+                pageinfo:
+                  count: "2"
+                  ispaging: "false"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/volumes
@@ -4115,6 +6420,13 @@ paths:
                       - netapp
                       - netapp2
                       - netapp3
+              example:
+                data:
+                  - "netapp"
+                  - "netapp2"
+                  - "netapp3"
+                errCode: null
+                errMsg: null
   /v1/resource/storage/admin:
     get:
       tags:
@@ -4132,6 +6444,83 @@ paths:
       responses:
         '200':
           description: 성공
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                data:
+                  - volm_typ_id: "2f901def-f786-4fbc-8b59-b3368963297b"
+                    volm_typ_nm: "wadfasdfa"
+                    loc_dsk_cre_yn: "N"
+                    reg_ts: "2025-11-13 11:58:20"
+                    mod_ts: "2026-03-27 12:20:00"
+                    reg_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                    reg_conn_id: "-"
+                    reg_nm: "decrypt-failed"
+                    mod_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                    mod_conn_id: "-"
+                    mod_nm: "decrypt-failed"
+                    volm_be_nm: "netapp"
+                    volm_qos_plcy_id: null
+                    volm_qos_plcy_nm: "-"
+                    volm_usg_typ: "U034BOT"
+                    volm_usg_typ_nm: "겸용"
+                    tot_capa: 157357
+                    usg_capa: 11876
+                    usg_ratio: 7
+                    bas_volm_typ_yn: "Y"
+                    tnt_list:
+                      - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                        tnt_nm: "TEST_TENANT"
+                    qosDetail: null
+                  - volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    loc_dsk_cre_yn: "N"
+                    reg_ts: "2025-10-17 18:11:15"
+                    mod_ts: "2026-03-27 12:20:00"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_nm: "***"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "***"
+                    mod_nm: "***"
+                    volm_be_nm: "netapp"
+                    volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                    volm_qos_plcy_nm: "QA2"
+                    volm_usg_typ: "U034BOT"
+                    volm_usg_typ_nm: "겸용"
+                    tot_capa: 157357
+                    usg_capa: 11876
+                    usg_ratio: 7
+                    bas_volm_typ_yn: "Y"
+                    tnt_list:
+                      - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                        tnt_nm: "TEST_TENANT"
+                    qosDetail:
+                      volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                      volm_qos_plcy_nm: "QA2"
+                      volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                      volm_typ_nm: "netapp"
+                      volm_qos_rule_unit_cd: "V018IOP"
+                      volm_qos_rule_unit_cd_nm: "IOPS"
+                      volm_read: 1
+                      volm_read_max: 1
+                      volm_write: 1
+                      volm_write_max: 1
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_conn_id: "***"
+                      reg_nm: "***"
+                      reg_ts: "2026-02-04 14:46:24"
+                      mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      mod_conn_id: "***"
+                      mod_nm: "***"
+                      mod_ts: "2026-02-04 14:46:24"
+                pageinfo:
+                  count: "2"
+                  ispaging: "false"
+                errCode: null
+                errMsg: null
   /v1/resource/storage/resources/count:
     get:
       tags:
@@ -4151,6 +6540,41 @@ paths:
                       $ref: '#/components/schemas/VolumeResourceCountItem'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - volm_typ_id: "2f901def-f786-4fbc-8b59-b3368963297b"
+                    volm_typ_nm: "wadfasdfa"
+                    volm_usg_typ: "U034BOT"
+                    volm_usg_typ_nm: "겸용"
+                    allo_vm_cnt: 0
+                    allo_dsk_cnt: 0
+                    reg_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                    reg_conn_id: null
+                    reg_nm: null
+                    reg_ts: "2025-11-13 11:58:20"
+                    mod_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                    mod_conn_id: null
+                    mod_nm: null
+                    mod_ts: "2026-03-27 12:35:00"
+                  - volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    volm_usg_typ: "U034BOT"
+                    volm_usg_typ_nm: "겸용"
+                    allo_vm_cnt: 9
+                    allo_dsk_cnt: 47
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_nm: "SuperAdmin"
+                    reg_ts: "2025-10-17 18:11:15"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "superadmin"
+                    mod_nm: "SuperAdmin"
+                    mod_ts: "2026-03-27 12:35:00"
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/resource/storage/resources/list:
     get:
       tags:
@@ -4183,6 +6607,41 @@ paths:
                       $ref: '#/components/schemas/VolumeResourceItem'
                   pageinfo:
                     $ref: '#/components/schemas/Pageinfo'
+              example:
+                data:
+                  - volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    dsk_id: "22911232-f74a-4eda-be18-7992659ef56c"
+                    dsk_nm: ""
+                    size: 60
+                    dsk_sts_cd: "V009USE"
+                    dsk_sts_cd_nm: "사용 중"
+                    path: "/dev/vda"
+                    vm_id: "e091b039-b993-49ed-ab6f-8b7800d19b78"
+                    vm_nm: "WD00-0IA-171017"
+                    reg_id: "platform.sync.manager"
+                    reg_ts: "2026-01-20 15:40:49"
+                    mod_id: "platform.sync.manager"
+                    mod_ts: "2026-01-20 15:40:53"
+                  - volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    dsk_id: "10f946b9-9fcc-40dc-bedf-4951447cd803"
+                    dsk_nm: "test_vol"
+                    size: 5
+                    dsk_sts_cd: "V009AVL"
+                    dsk_sts_cd_nm: "사용 가능"
+                    path: null
+                    vm_id: null
+                    vm_nm: null
+                    reg_id: "platform.sync.manager"
+                    reg_ts: "2026-03-17 15:06:43"
+                    mod_id: "platform.sync.manager"
+                    mod_ts: "2026-03-17 17:54:53"
+                pageinfo:
+                  count: 47
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/resource/storage/resources/{id}:
     get:
       tags:
@@ -4201,6 +6660,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VolumeResourceItem'
+              example:
+                data:
+                  volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                  volm_typ_nm: "netapp"
+                  dsk_id: "10f946b9-9fcc-40dc-bedf-4951447cd803"
+                  dsk_nm: "test_vol"
+                  size: 5
+                  dsk_sts_cd: "V009AVL"
+                  dsk_sts_cd_nm: "사용 가능"
+                  path: null
+                  vm_id: null
+                  vm_nm: null
+                  reg_id: "platform.sync.manager"
+                  reg_ts: "2026-03-17 15:06:43"
+                  mod_id: "platform.sync.manager"
+                  mod_ts: "2026-03-17 17:54:53"
+                errCode: null
+                errMsg: null
   /v1/resource/storage/qos:
     get:
       tags:
@@ -4239,6 +6716,46 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DiskQosItem'
+              example:
+                data:
+                  - volm_qos_plcy_id: "69d6235f-434f-4183-b740-5794340f2b1d"
+                    volm_qos_plcy_nm: "QA2"
+                    volm_typ_id: "e3dd1a69-9e2a-4f8d-b1c6-93194b6ff340"
+                    volm_typ_nm: "netapp"
+                    volm_qos_rule_unit_cd: "V018IOP"
+                    volm_qos_rule_unit_cd_nm: "IOPS"
+                    volm_read: 1
+                    volm_read_max: 1
+                    volm_write: 1
+                    volm_write_max: 1
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "superadmin"
+                    reg_nm: "SuperAdmin"
+                    reg_ts: "2026-02-04 14:46:24"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "superadmin"
+                    mod_nm: "SuperAdmin"
+                    mod_ts: "2026-02-04 14:46:24"
+                  - volm_qos_plcy_id: "a1fcf660-752d-4ad9-93af-69627de2dfb7"
+                    volm_qos_plcy_nm: "QA 1"
+                    volm_typ_id: null
+                    volm_typ_nm: "-"
+                    volm_qos_rule_unit_cd: "V018IOP"
+                    volm_qos_rule_unit_cd_nm: "IOPS"
+                    volm_read: 10001
+                    volm_read_max: 10001
+                    volm_write: 10001
+                    volm_write_max: 10001
+                    reg_id: "34dbe69d-afa6-11f0-8896-e288d288c3ed"
+                    reg_conn_id: "mgtsuper"
+                    reg_nm: "관리자"
+                    reg_ts: "2025-11-11 14:02:21"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_conn_id: "superadmin"
+                    mod_nm: "SuperAdmin"
+                    mod_ts: "2026-01-27 11:32:40"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/resource/volumes
@@ -4270,6 +6787,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DiskQosItem'
+              example:
+                data:
+                  volm_qos_plcy_id: "VQOS-001"
+                  volm_qos_plcy_nm: "SSD QoS 정책"
+                  volm_typ_id: null
+                  volm_typ_nm: null
+                  volm_qos_rule_unit_cd: "V018IOP"
+                  volm_qos_rule_unit_cd_nm: "IOPS"
+                  volm_read: 5000
+                  volm_read_max: 10000
+                  volm_write: 3000
+                  volm_write_max: 6000
+                  reg_id: null
+                  reg_conn_id: "***"
+                  reg_nm: "***"
+                  reg_ts: null
+                  mod_id: null
+                  mod_conn_id: "***"
+                  mod_nm: "***"
+                  mod_ts: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/volumes
@@ -4320,6 +6859,31 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VolumeTypeDetail'
+              example:
+                data:
+                  volm_typ_id: "2f901def-f786-4fbc-8b59-b3368963297b"
+                  volm_typ_nm: "wadfasdfa"
+                  volm_be_nm: "netapp"
+                  volm_qos_plcy_id: null
+                  volm_qos_plcy_nm: null
+                  desc: null
+                  volm_usg_typ: "U034BOT"
+                  volm_usg_typ_nm: "겸용"
+                  tot_capa: 157357
+                  usg_capa: 11876
+                  usg_ratio: 7
+                  bas_volm_typ_yn: "Y"
+                  reg_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                  reg_nm: null
+                  reg_conn_id: null
+                  reg_ts: "2025-11-13 11:58:20"
+                  mod_id: "9de275ae-becb-11f0-819b-4617b2bd76a9"
+                  mod_nm: null
+                  mod_conn_id: null
+                  mod_ts: "2026-03-27 12:20:00"
+                  qosDetail: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/resource/volumes
@@ -4379,6 +6943,75 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DiskAddListItem'
+              example:
+                data:
+                  - acct_conn_id: "***"
+                    acct_id: "554c6d89-afca-11f0-b1c9-d6d4b9a99c07"
+                    acct_nm: "***"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    cert_plcy_id: "29e5df6b-ab57-11f0-8557-3a7bf606d4cf"
+                    usr_grp_nm: "TEST"
+                    vm_auth_id: "DI0-150001"
+                    dsk_id: "6fe3ca0f-300e-4b88-9989-ed69072d3f0d"
+                    dsk_nm: "user01_1769566910532"
+                    size: "10"
+                    dsk_typ_cd: "V008ULD"
+                    dsk_typ_cd_nm: "사용자 로컬 디스크"
+                    dsk_sts_cd: "V009USE"
+                    dsk_sts_cd_nm: "사용중"
+                    vm_nm: "WD00-0I0-141003"
+                    reg_conn_id: "***"
+                    reg_id: null
+                    mod_conn_id: "***"
+                    mod_id: null
+                    reg_nm: null
+                    reg_ts: "2026-01-28 11:21:51"
+                    mod_ts: "2026-01-28 11:21:51"
+                    vm_state: "active"
+                    vm_allo_sts_cd: "U017DVA"
+                    vm_allo_sts_cd_nm: "할당됨"
+                    vm_power_sts_cd: "V002ONC"
+                    vm_power_sts_cd_nm: "켜짐"
+                    usr_vm_conn_sts_cd: null
+                    usr_vm_conn_sts_cd_nm: null
+                    adm_vm_conn_sts_cd: null
+                    adm_vm_conn_sts_cd_nm: null
+                  - acct_conn_id: "***"
+                    acct_id: "554c6d89-afca-11f0-b1c9-d6d4b9a99c07"
+                    acct_nm: "***"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    cert_plcy_id: "29e5df6b-ab57-11f0-8557-3a7bf606d4cf"
+                    usr_grp_nm: "TEST"
+                    vm_auth_id: "DI0-150002"
+                    dsk_id: "e4fe2651-8ca6-455f-ba28-ce0ad015ec5f"
+                    dsk_nm: "user01_1768271538188"
+                    size: "50"
+                    dsk_typ_cd: "V008ULD"
+                    dsk_typ_cd_nm: "사용자 로컬 디스크"
+                    dsk_sts_cd: "V009USE"
+                    dsk_sts_cd_nm: "사용중"
+                    vm_nm: "WD00-0I0-141004"
+                    reg_conn_id: "***"
+                    reg_id: null
+                    mod_conn_id: "***"
+                    mod_id: null
+                    reg_nm: null
+                    reg_ts: "2026-01-13 11:32:18"
+                    mod_ts: "2026-01-13 11:32:18"
+                    vm_state: "shutoff"
+                    vm_allo_sts_cd: "U017DVA"
+                    vm_allo_sts_cd_nm: "할당됨"
+                    vm_power_sts_cd: "V002OFC"
+                    vm_power_sts_cd_nm: "꺼짐"
+                    usr_vm_conn_sts_cd: null
+                    usr_vm_conn_sts_cd_nm: null
+                    adm_vm_conn_sts_cd: null
+                    adm_vm_conn_sts_cd_nm: null
+                pageinfo:
+                  count: 7
+                  ispaging: false
   /v1/resource/disk/local/add-detach:
     post:
       tags:
@@ -4464,6 +7097,30 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DiskDetail'
+              example:
+                data:
+                  dsk_id: "6fe3ca0f-300e-4b88-9989-ed69072d3f0d"
+                  dsk_nm: "user01_1769566910532"
+                  cre_volm_id: null
+                  dsk_typ_cd: "V008ULD"
+                  dsk_typ_cd_nm: "사용자 로컬 디스크"
+                  dsk_sts_cd: "V009USE"
+                  dsk_sts_cd_nm: "사용중"
+                  dsk_conn_yn: "Y"
+                  root_volm_yn: "N"
+                  size: 10
+                  path: null
+                  vm_id: "a40aea6b-2439-4b46-9c74-266e43e9a6b0"
+                  vm_nm: "WD00-0I0-141003"
+                  del_yn: "N"
+                  acct_id: "554c6d89-afca-11f0-b1c9-d6d4b9a99c07"
+                  vm_auth_id: "DI0-150001"
+                  volm_typ_nm: null
+                  tnt_mtd_cd: null
+                  dsk_visibility_yn: "Y"
+                  volm_qos_plcy_id: null
+                errCode: null
+                errMsg: null
   /v1/resource/snapshot/{vmAuthId}:
     get:
       tags:
@@ -4562,6 +7219,42 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BackupItem'
+              example:
+                data:
+                  - bkup_dsk_id: "bkup-001-aaa1-bbbb-cccc-ddddeeee0001"
+                    bkup_tgt_dsk_id: "6fe3ca0f-300e-4b88-9989-ed69072d3f0d"
+                    bkup_tgt_dsk_nm: "user01_1769566910532"
+                    bkup_dsk_nm: "user01_1769566910532_backup_01"
+                    max_bkup_cnt: "7"
+                    bkup_snap_id: null
+                    job_sts_val: null
+                    org_dsk_id: null
+                    cre_mtd_cd: "B003SCH"
+                    cre_mtd_cd_nm: "스케줄"
+                    bkup_dsk_sts_cd: "B001FAIL"
+                    bkup_dsk_sts_cd_nm: "실패"
+                    rec_sts_cd: null
+                    rec_sts_cd_nm: null
+                    reg_ts: "2026-03-01 02:00:00"
+                    mod_ts: "2026-03-01 02:05:00"
+                  - bkup_dsk_id: "bkup-002-aaa2-bbbb-cccc-ddddeeee0002"
+                    bkup_tgt_dsk_id: "6fe3ca0f-300e-4b88-9989-ed69072d3f0d"
+                    bkup_tgt_dsk_nm: "user01_1769566910532"
+                    bkup_dsk_nm: "user01_1769566910532_backup_02"
+                    max_bkup_cnt: "7"
+                    bkup_snap_id: null
+                    job_sts_val: null
+                    org_dsk_id: null
+                    cre_mtd_cd: "B003SCH"
+                    cre_mtd_cd_nm: "스케줄"
+                    bkup_dsk_sts_cd: "B001PROC"
+                    bkup_dsk_sts_cd_nm: "진행중"
+                    rec_sts_cd: null
+                    rec_sts_cd_nm: null
+                    reg_ts: "2026-03-08 02:00:00"
+                    mod_ts: "2026-03-08 02:05:00"
+                errCode: null
+                errMsg: null
   /v1/resource/backup/execBackup/{diskId}:
     post:
       tags:
@@ -4643,6 +7336,19 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/NasSharedFolderSA'
+              example:
+                data:
+                  - tnt_nm: "TEST_TENANT"
+                    usedSize: 11876
+                    totalSize: 157357
+                  - tnt_nm: "TEST_TENANTTWO"
+                    usedSize: 0
+                    totalSize: 0
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/legacy/cloud/ad/sharedfolder/directories:
     get:
       tags:
@@ -4679,6 +7385,18 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/NasSharedFolderTA'
+              example:
+                data:
+                  - usr_grp_nm: "개발1팀"
+                    dept_cd: "DEV-STORAGE-01"
+                    used_size: 120
+                    total_size: 500
+                  - usr_grp_nm: "개발2팀"
+                    dept_cd: "DEV-STORAGE-02"
+                    used_size: 80
+                    total_size: 300
+                errCode: null
+                errMsg: null
   /v1/operation/cert/n2nd/ptalType/{ptal_type_cd}:
     get:
       tags:
@@ -6291,6 +9009,20 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EmailInterfaceDetail'
+              example:
+                data:
+                  linkage_type_cd: "A017EM"
+                  linkage_type_cd_nm: "EMAIL 연동"
+                  tnt_id: "ADMIN"
+                  smtp_host: "relay.skbroadband.com"
+                  smtp_port: "25"
+                  from_mail: "relay.cloudpc2@skbroadband.com"
+                  protocol_type: "A036TLS"
+                  use_yn: "Y"
+                  reg_ts: "2025-10-17 21:41:32"
+                  mod_ts: "2026-02-04 09:15:40"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/external
@@ -6315,6 +9047,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NetappInterfaceDetail'
+              example:
+                data:
+                  netapp_host: "netapp.internal"
+                  netapp_port: 443
+                  netapp_user: "admin"
+                  use_yn: "Y"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/external
@@ -6339,6 +9079,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AdInterfaceDetail'
+              example:
+                tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                ad_itlk_usg_yn: "N"
+                info_reg_allow_yn: "N"
+                ad_cert_id: "***"
+                ad_dm: null
+                ad_ip: null
+                ad_port: 389
+                ad_base_dept_ou: null
+                ad_base_usr_ou: null
+                reg_ts: "2025-10-17 21:39:43"
+                mod_ts: "2026-03-10 14:00:00"
     put:
       tags:
         - admin/operation/external
@@ -6359,6 +9111,15 @@ paths:
       responses:
         '200':
           description: Octatco 연동 설정
+          content:
+            application/json:
+              example:
+                data:
+                  octatco_host: "octatco.internal"
+                  octatco_port: 8443
+                  use_yn: "N"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/external
@@ -6402,6 +9163,21 @@ paths:
       responses:
         '200':
           description: 스토리지 스케줄 정보
+          content:
+            application/json:
+              example:
+                data:
+                  - volm_sched_plcy_id: "STOR-SCHED-001"
+                    volm_sched_plcy_nm: "일간 스케줄 정책"
+                    volm_sched_plcy_typ_cd: "S001D"
+                    volm_sched_plcy_typ_cd_nm: "일간"
+                    volm_sched_plcy_tgt_cd: "T001NAS"
+                    volm_sched_plcy_tgt_cd_nm: "NAS"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_ts: "2026-01-15 09:00:00"
+                    mod_ts: "2026-02-03 10:25:30"
+                errCode: null
+                errMsg: null
   /v1/operation/policy/storage/sched:
     post:
       tags:
@@ -6450,6 +9226,36 @@ paths:
                   errMsg:
                     type: string
                     nullable: true
+              example:
+                data:
+                  - vm_auth_id: "DIE-258003"
+                    acct_conn_id: "***"
+                    acct_nm: "***"
+                    vm_nm: "WD00-0IE-225003"
+                    vm_pool_nm: "cirros_pool"
+                    puc_ts: "2026-03-20 10:25:51.000"
+                    pud_ts: null
+                    tuc_ts: null
+                    tud_ts: null
+                    iuc_ts: null
+                    iud_ts: null
+                    auc_ts: null
+                    aud_ts: null
+                  - vm_auth_id: "DIF-261005"
+                    acct_conn_id: "***"
+                    acct_nm: "***"
+                    vm_nm: "WD00-0IF-261005"
+                    vm_pool_nm: "Win10Dedi"
+                    puc_ts: "2026-03-18 09:00:12.000"
+                    pud_ts: "2026-03-18 18:05:30.000"
+                    tuc_ts: null
+                    tud_ts: null
+                    iuc_ts: null
+                    iud_ts: null
+                    auc_ts: null
+                    aud_ts: null
+                errCode: null
+                errMsg: null
   /v1/operation/policy/excn/excngrp:
     get:
       tags:
@@ -6467,6 +9273,28 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/ExcNwGrp'
+              example:
+                data:
+                  - exc_nw_grp_id: "c3b32e48-4e55-11f0-b64d-8ab4b11e8b29"
+                    exc_nw_grp_nm: "exc_network_260108"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-01-08 14:53:20"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-01-08 14:53:20"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                  - exc_nw_grp_id: "a1f04c12-5d31-11f0-b64d-8ab4b11e8b29"
+                    exc_nw_grp_nm: "예외테스트01"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-01-15 09:22:11"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-01-15 09:22:11"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                errCode: null
+                errMsg: null
         '403':
           description: 권한 없음
   /v1/operation/policy/excn/excngrp/{exc_nw_grp_id}:
@@ -6514,6 +9342,41 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ExcNwGrpDetail'
+              example:
+                data:
+                  grpInfo:
+                    exc_nw_grp_id: "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b"
+                    exc_nw_grp_nm: "서초IDC"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-02-03 10:12:30"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-10 14:33:05"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                  excNwInfo:
+                    - exc_nw_id: "nw-001-seocho"
+                      exc_nw_nm: "서초IDC-NW-01"
+                      exc_nw_grp_id: "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b"
+                      cidr: "10.10.1.0"
+                      bit: "24"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2026-02-03 10:12:30"
+                      mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      mod_ts: "2026-02-03 10:12:30"
+                    - exc_nw_id: "nw-002-seocho"
+                      exc_nw_nm: "서초IDC-NW-02"
+                      exc_nw_grp_id: "db9c51ad-7f53-11f0-d86f-acda6d3g0d4b"
+                      cidr: "10.10.2.0"
+                      bit: "24"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2026-02-03 10:12:30"
+                      mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      mod_ts: "2026-02-03 10:12:30"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/excerpt-network
@@ -6562,6 +9425,21 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/UrlDisallowPolicy'
+              example:
+                data:
+                  - url_rdrt_disallow_plcy_id: "99db7d31-cf1c-11f0-819b-4617b2bd76a9"
+                    url_rdrt_disallow_plcy_nm: "test_url_redirection1"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    dm_cnt: 2
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2025-12-02 10:16:59"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-03 10:25:30"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                errCode: null
+                errMsg: null
         '403':
           description: 권한 없음
     post:
@@ -6594,6 +9472,53 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UrlDisallowPolicyDetail'
+              example:
+                data:
+                  url_rdrt_disallow_plcy_id: "99db7d31-cf1c-11f0-819b-4617b2bd76a9"
+                  url_rdrt_disallow_plcy_nm: "test_url_redirection1"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  tnt_nm: "TEST_TENANT"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2025-12-02 10:16:59"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-02-03 10:25:30"
+                  dms:
+                    - url_rdrt_disallow_dm_id: "dm-001-rdrt"
+                      dm: "example.com"
+                      cont: ""
+                      url_rdrt_disallow_plcy_id: "99db7d31-cf1c-11f0-819b-4617b2bd76a9"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2025-12-02 10:16:59"
+                      mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                      mod_ts: "2026-02-03 10:25:30"
+                      exp_dms:
+                        - url_rdrt_disallow_exp_dm_id: "exp-dm-001"
+                          dm: "sub.example.com"
+                          cont: ""
+                          url_rdrt_disallow_dm_id: "dm-001-rdrt"
+                          reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          reg_ts: "2025-12-02 10:16:59"
+                          mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                          mod_ts: "2026-02-03 10:25:30"
+                        - url_rdrt_disallow_exp_dm_id: "exp-dm-002"
+                          dm: "api.example.com"
+                          cont: ""
+                          url_rdrt_disallow_dm_id: "dm-001-rdrt"
+                          reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                          reg_ts: "2025-12-02 10:16:59"
+                          mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                          mod_ts: "2026-02-03 10:25:30"
+                    - url_rdrt_disallow_dm_id: "dm-002-rdrt"
+                      dm: "test-redirect.kr"
+                      cont: ""
+                      url_rdrt_disallow_plcy_id: "99db7d31-cf1c-11f0-819b-4617b2bd76a9"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2025-12-02 10:16:59"
+                      mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                      mod_ts: "2026-02-03 10:25:30"
+                      exp_dms: []
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/url-redirection
@@ -6652,6 +9577,63 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/VmMdataPolicy'
+              example:
+                data:
+                  - vm_mdata_id: "bf92a2c3-ab36-11f0-8557-3a7bf606d4cf"
+                    vm_mdata_tgt_cd: "U006S"
+                    vm_mdata_nm: "VM Metadata Default Policy"
+                    tnt_id: "ADMIN"
+                    mdata:
+                      devices:
+                        monitor_cnt: "3"
+                        monitor: "4KWIDE"
+                        usb30:
+                          controller:
+                            type: "usb"
+                            index: "0"
+                            model: "nec-xhci"
+                        usb20: []
+                        usb_redirection:
+                          redirdev:
+                            - bus: "usb"
+                              type: "spicevmc"
+                            - bus: "usb"
+                              type: "spicevmc"
+                        spice_server:
+                          graphics:
+                            type: "spice"
+                            listen: "0.0.0.0"
+                            port: "-1"
+                            tlsPort: "-1"
+                            autoport: "yes"
+                        input:
+                          - type: "mouse"
+                            bus: "ps2"
+                          - type: "keyboard"
+                            bus: "ps2"
+                        sound:
+                          model: "ich6"
+                      qemu_gstreamer:
+                        env:
+                          name: "GST_PLUGIN_PATH"
+                          value: "default"
+                      qemu_h264:
+                        - env:
+                            name: "SPICE_MAX_BIT_RATE"
+                            value: "10000"
+                        - env:
+                            name: "SPICE_MIN_BIT_RATE"
+                            value: "1000"
+                    cont: ""
+                    volm_qos_plcy_id: ""
+                    reg_id: "init"
+                    reg_ts: "2025-10-17 17:53:27"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-02 18:12:40"
+                    reg_conn_id: "init"
+                    mod_conn_id: "***"
+                errCode: null
+                errMsg: null
         '403':
           description: 권한 없음
     post:
@@ -6684,6 +9666,63 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VmMdataPolicyDetail'
+              example:
+                data:
+                  vm_mdata_id: "bf92a2c3-ab36-11f0-8557-3a7bf606d4cf"
+                  vm_mdata_tgt_cd: "U006S"
+                  vm_mdata_nm: "VM Metadata Default Policy"
+                  tnt_id: "ADMIN"
+                  mdata:
+                    devices:
+                      monitor_cnt: "3"
+                      monitor: "4KWIDE"
+                      usb30:
+                        controller:
+                          type: "usb"
+                          index: "0"
+                          model: "nec-xhci"
+                      usb20: []
+                      usb_redirection:
+                        redirdev:
+                          - bus: "usb"
+                            type: "spicevmc"
+                          - bus: "usb"
+                            type: "spicevmc"
+                      spice_server:
+                        graphics:
+                          type: "spice"
+                          listen: "0.0.0.0"
+                          port: "-1"
+                          tlsPort: "-1"
+                          autoport: "yes"
+                      input:
+                        - type: "mouse"
+                          bus: "ps2"
+                        - type: "keyboard"
+                          bus: "ps2"
+                      sound:
+                        model: "ich6"
+                    qemu_gstreamer:
+                      env:
+                        name: "GST_PLUGIN_PATH"
+                        value: "default"
+                    qemu_h264:
+                      - env:
+                          name: "SPICE_MAX_BIT_RATE"
+                          value: "10000"
+                      - env:
+                          name: "SPICE_MIN_BIT_RATE"
+                          value: "1000"
+                  cont: ""
+                  volm_qos_plcy_id: ""
+                  reg_conn_id: "init"
+                  reg_id: "init"
+                  reg_ts: "2025-10-17 17:53:27"
+                  mod_conn_id: "***"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-02-02 18:12:40"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/metadata
@@ -6725,6 +9764,14 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/SystemLicense'
+              example:
+                data:
+                  version: "v.2.2.9"
+                  license_valid_period: "2024.01.01~2026.12.31"
+                  quantity_virtual_pc: "50000"
+                  contact: "csbiz@skbroadband.com"
+                errCode: null
+                errMsg: null
   /v1/user/usergroups:
     get:
       tags:
