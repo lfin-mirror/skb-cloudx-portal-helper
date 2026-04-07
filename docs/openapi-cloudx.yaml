@@ -865,6 +865,42 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/VpcPoolListResponse'
+              example:
+                data:
+                  - vm_pool_id: "pool-0001-aaaa-bbbb-111111111111"
+                    vm_pool_nm: "test_tenant-pool-01"
+                    vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                    vm_grp_nm: "TEST_TENANT 그룹 A"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    tnt_mtd_cd: "V001DED"
+                    tnt_mtd_cd_nm: "전용"
+                    temp_nm: "Win10"
+                    vm_pool_sts_cd: "V010CO"
+                    vm_pool_sts_cd_nm: "완료"
+                    max_vm_cnt: "10"
+                    tot_vm_cnt: "5"
+                    allo_vm_cnt: "3"
+                    auto_allo_yn: "N"
+                    zone_nm: "nova"
+                  - vm_pool_id: "pool-0002-aaaa-bbbb-222222222222"
+                    vm_pool_nm: "test_tenant-pool-02"
+                    vm_grp_id: "a1b2c3d4-0001-11f0-aaaa-111111111111"
+                    vm_grp_nm: "TEST_TENANT 그룹 A"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    tnt_nm: "TEST_TENANT"
+                    tnt_mtd_cd: "V001POO"
+                    tnt_mtd_cd_nm: "공용"
+                    temp_nm: "Win10"
+                    vm_pool_sts_cd: "V010ER"
+                    vm_pool_sts_cd_nm: "오류"
+                    max_vm_cnt: "5"
+                    tot_vm_cnt: "2"
+                    allo_vm_cnt: "0"
+                    auto_allo_yn: "Y"
+                    zone_nm: "nova"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/resources:
     get:
       tags:
@@ -1331,6 +1367,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_VpcResourceDetail'
+              example:
+                data:
+                  vm_power_sts_cd: "V002OFC"
+                  vm_allo_typ_static_ip_yn: "Y"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/resources/{vmAuthId}/tenant:
     put:
       tags:
@@ -1881,6 +1923,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/PortListItem'
+              example: []
   /v1/resource/port/{devId}:
     put:
       tags:
@@ -2277,6 +2320,39 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/HostHypervisor'
+              example:
+                data:
+                  - host_id: "3b26908e-ab39-11f0-bce4-22a1b8d92490"
+                    host_nm: "test_tenant-compute-01"
+                    host_ip: "192.168.132.44"
+                    host_sts_cd: "P003NOR"
+                    host_sts_cd_nm: "정상"
+                    hyper_typ: "QEMU"
+                    vcpu_tot_cnt: "96"
+                    vcpu_usg_cnt: "25"
+                    mem_tot_capa: "125"
+                    mem_usg_capa: "49"
+                    vm_tot_cnt: "5"
+                    vm_usg_cnt: "4"
+                    zone_nm: "Default Zone"
+                  - host_id: "798d2cda-b61b-11f0-819b-4617b2bd76a9"
+                    host_nm: "test_tenant-compute-02"
+                    host_ip: "192.168.132.45"
+                    host_sts_cd: "P003ERR"
+                    host_sts_cd_nm: "오류"
+                    hyper_typ: "QEMU"
+                    vcpu_tot_cnt: "96"
+                    vcpu_usg_cnt: "24"
+                    mem_tot_capa: "125"
+                    mem_usg_capa: "48"
+                    vm_tot_cnt: "5"
+                    vm_usg_cnt: "5"
+                    zone_nm: "Default Zone"
+                pageinfo:
+                  count: 2
+                  ispaging: false
+                errCode: null
+                errMsg: null
   /v1/resource/hosts/admin:
     get:
       tags:
@@ -7079,6 +7155,32 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_DiskLocalResponse'
+              example:
+                data:
+                  usr_dsk_cnt: 2
+                  dsk_size: 60
+                  usr_dsk_rstt_cnt: 5
+                  usr_dsk_max_size: 200
+                  usr_disk:
+                    - dsk_id: "DSK-001"
+                      dsk_nm: "개인디스크-1"
+                      size: 50
+                      acct_id: "user001"
+                      vm_nm: "VM-001"
+                      vm_auth_id: "VA-001"
+                    - dsk_id: "DSK-002"
+                      dsk_nm: "개인디스크-2"
+                      size: 10
+                      acct_id: "user001"
+                      vm_nm: null
+                      vm_auth_id: null
+                  usr_vm:
+                    - vm_nm: "VM-001"
+                      vm_auth_id: "VA-001"
+                    - vm_nm: "VM-002"
+                      vm_auth_id: "VA-002"
+                errCode: null
+                errMsg: null
   /v1/resource/disk/local/{diskId}:
     get:
       tags:
@@ -7141,6 +7243,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_SnapshotListResponse'
+              example:
+                data:
+                  max_snap_cnt: 5
+                  snap_list:
+                    - snap_id: "SNAP-001"
+                      cre_mtd_cd_nm: "수동"
+                      reg_ts: "2026-03-24 14:30:00"
+                      snap_sts_cd_nm: "완료"
+                      rec_sts_cd: null
+                      rec_sts_cd_nm: null
+                    - snap_id: "SNAP-002"
+                      cre_mtd_cd_nm: "자동"
+                      reg_ts: "2026-03-23 02:00:00"
+                      snap_sts_cd_nm: "완료"
+                      rec_sts_cd: "V012RC"
+                      rec_sts_cd_nm: "복원완료"
+                errCode: null
+                errMsg: null
   /v1/resource/snapshot/execSnapshot/{vmAuthId}:
     post:
       tags:
@@ -7436,6 +7556,64 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/CertN2ndPolicy'
+              example:
+                data:
+                  - cert_plcy_id: "312352b0-2be0-11f1-a5c1-22b10486d9be"
+                    cert_plcy_nm: "SMS 2차인증"
+                    ptal_typ_cd: "A007ADM"
+                    ptal_typ_cd_nm: "관리자 포털"
+                    cert_plcy_tgt_cd: "U003B"
+                    cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                    tot_nw_n2nd_cert_yn: "Y"
+                    tot_nw_n2nd_cert_mtd_cd: "U004SMS"
+                    tot_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                    tot_nw_conn_alow_yn: "Y"
+                    exc_nw_grp_id: null
+                    exc_nw_n2nd_cert_yn: "N"
+                    lin_rstt_usg_yn: "C"
+                    lin_fail_alow_cnt: "5"
+                    lin_rstt_mi_cnt: "30"
+                    sess_expr_mi_cnt: "36"
+                    rest_std_dd_cnt: "60"
+                    passwd_mdfy_dd_cnt: "90"
+                    blst_usg_yn: "Y"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    wtst_usg_yn: "N"
+                    group_cnt: 1
+                    account_cnt: 0
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-03-13 10:14:07"
+                    mod_ts: "2026-03-13 10:14:07"
+                  - cert_plcy_id: "9ce54bed-2bdf-11f1-814a-d2425695d54c"
+                    cert_plcy_nm: "이메일 2차인증"
+                    ptal_typ_cd: "A007ADM"
+                    ptal_typ_cd_nm: "관리자 포털"
+                    cert_plcy_tgt_cd: "U003B"
+                    cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                    tot_nw_n2nd_cert_yn: "Y"
+                    tot_nw_n2nd_cert_mtd_cd: "U004EML"
+                    tot_nw_n2nd_cert_mtd_cd_nm: "이메일 인증"
+                    tot_nw_conn_alow_yn: "Y"
+                    exc_nw_grp_id: null
+                    exc_nw_n2nd_cert_yn: "N"
+                    lin_rstt_usg_yn: "C"
+                    lin_fail_alow_cnt: "5"
+                    lin_rstt_mi_cnt: "30"
+                    sess_expr_mi_cnt: "36"
+                    rest_std_dd_cnt: "60"
+                    passwd_mdfy_dd_cnt: "90"
+                    blst_usg_yn: "Y"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    wtst_usg_yn: "N"
+                    group_cnt: 1
+                    account_cnt: 0
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-03-13 09:55:24"
+                    mod_ts: "2026-03-13 09:55:24"
+                errCode: null
+                errMsg: null
   /v1/operation/cert/n2nd/info/{cert_plcy_id}:
     get:
       tags:
@@ -7454,6 +7632,45 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CertN2ndPolicyDetail'
+              example:
+                data:
+                  cert_plcy_id: "312352b0-2be0-11f1-a5c1-22b10486d9be"
+                  cert_plcy_nm: "SMS 2차인증"
+                  ptal_typ_cd: "A007ADM"
+                  ptal_typ_cd_nm: "관리자 포털"
+                  cert_plcy_tgt_cd: "U003B"
+                  cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                  tot_nw_n2nd_cert_yn: "Y"
+                  tot_nw_n2nd_cert_mtd_cd: "U004SMS"
+                  tot_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                  tot_nw_conn_alow_yn: "Y"
+                  exc_nw_grp_id: null
+                  exc_nw_n2nd_cert_yn: "N"
+                  exc_nw_n2nd_cert_mtd_cd: "U004SMS"
+                  exc_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                  exc_nw_conn_alow_yn: "Y"
+                  lin_rstt_usg_yn: "C"
+                  lin_fail_alow_cnt: "5"
+                  lin_rstt_mi_cnt: "30"
+                  sess_expr_mi_cnt: "36"
+                  rest_std_dd_cnt: "60"
+                  passwd_mdfy_dd_cnt: "90"
+                  vm_rstt_cnt: null
+                  usr_dsk_rstt_cnt: null
+                  usr_dsk_max_size: null
+                  blst_usg_yn: "Y"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  wtst_usg_yn: "N"
+                  group_cnt: 1
+                  account_cnt: 0
+                  reg_conn_id: "***"
+                  mod_conn_id: "***"
+                  reg_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  reg_ts: "2026-03-13 10:14"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-03-13 10:14"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/cert
@@ -7508,6 +7725,28 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/CertN2ndAccount'
+              example:
+                data:
+                  - cert_plcy_id: "312352b0-2be0-11f1-a5c1-22b10486d9be"
+                    usr_grp_id: "grp-001"
+                    usr_grp_nm: "기본 그룹"
+                    acct_id: "ACCT-001"
+                    ognz_nm: "SKB"
+                    blng_dept_nm: "개발팀"
+                    acct_descp: "관리자 계정"
+                    grp_typ_cd: "U002GRP"
+                    grp_typ_cd_nm: "그룹"
+                  - cert_plcy_id: "312352b0-2be0-11f1-a5c1-22b10486d9be"
+                    usr_grp_id: "grp-002"
+                    usr_grp_nm: "운영 그룹"
+                    acct_id: "ACCT-002"
+                    ognz_nm: "SKB"
+                    blng_dept_nm: "운영팀"
+                    acct_descp: "운영 계정"
+                    grp_typ_cd: "U002GRP"
+                    grp_typ_cd_nm: "그룹"
+                errCode: null
+                errMsg: null
   /v1/operation/cert/n2nd/grps:
     post:
       tags:
@@ -7543,6 +7782,52 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/CertN2ndPolicy'
+              example:
+                data:
+                  - cert_plcy_id: "312352b0-2be0-11f1-a5c1-22b10486d9be"
+                    cert_plcy_nm: "SMS 2차인증"
+                    ptal_typ_cd: "A007ADM"
+                    ptal_typ_cd_nm: "관리자 포털"
+                    cert_plcy_tgt_cd: "U003B"
+                    cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                    tot_nw_n2nd_cert_yn: "Y"
+                    tot_nw_n2nd_cert_mtd_cd: "U004SMS"
+                    tot_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                    lin_rstt_usg_yn: "C"
+                    lin_fail_alow_cnt: "5"
+                    sess_expr_mi_cnt: "36"
+                    blst_usg_yn: "Y"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    wtst_usg_yn: "N"
+                    group_cnt: 1
+                    account_cnt: 0
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-03-13 10:14:07"
+                    mod_ts: "2026-03-13 10:14:07"
+                  - cert_plcy_id: "5caeaa80-ab58-11f0-8557-3a7bf606d4cf"
+                    cert_plcy_nm: "USER_AUTH_03"
+                    ptal_typ_cd: "A007USR"
+                    ptal_typ_cd_nm: "사용자 포털"
+                    cert_plcy_tgt_cd: "U003B"
+                    cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                    tot_nw_n2nd_cert_yn: "N"
+                    tot_nw_n2nd_cert_mtd_cd: "U004SMS"
+                    tot_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                    lin_rstt_usg_yn: "T"
+                    lin_fail_alow_cnt: "5"
+                    sess_expr_mi_cnt: "30"
+                    blst_usg_yn: "Y"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    wtst_usg_yn: "N"
+                    group_cnt: 0
+                    account_cnt: 0
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2025-10-17 22:20:00"
+                    mod_ts: "2025-10-17 22:20:00"
+                errCode: null
+                errMsg: null
   /v1/operation/policys/cert/n2nd/multi:
     post:
       tags:
@@ -7569,6 +7854,45 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CertN2ndPolicyDetail'
+              example:
+                data:
+                  cert_plcy_id: "312352b0-2be0-11f1-a5c1-22b10486d9be"
+                  cert_plcy_nm: "SMS 2차인증"
+                  ptal_typ_cd: "A007ADM"
+                  ptal_typ_cd_nm: "관리자 포털"
+                  cert_plcy_tgt_cd: "U003B"
+                  cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                  tot_nw_n2nd_cert_yn: "Y"
+                  tot_nw_n2nd_cert_mtd_cd: "U004SMS"
+                  tot_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                  tot_nw_conn_alow_yn: "Y"
+                  exc_nw_grp_id: null
+                  exc_nw_n2nd_cert_yn: "N"
+                  exc_nw_n2nd_cert_mtd_cd: "U004SMS"
+                  exc_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                  exc_nw_conn_alow_yn: "Y"
+                  lin_rstt_usg_yn: "C"
+                  lin_fail_alow_cnt: "5"
+                  lin_rstt_mi_cnt: "30"
+                  sess_expr_mi_cnt: "36"
+                  rest_std_dd_cnt: "60"
+                  passwd_mdfy_dd_cnt: "90"
+                  vm_rstt_cnt: null
+                  usr_dsk_rstt_cnt: null
+                  usr_dsk_max_size: null
+                  blst_usg_yn: "Y"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  wtst_usg_yn: "N"
+                  group_cnt: 1
+                  account_cnt: 0
+                  reg_conn_id: "***"
+                  mod_conn_id: "***"
+                  reg_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  reg_ts: "2026-03-13 10:14"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-03-13 10:14"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/cert
@@ -7605,6 +7929,45 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CertN2ndPolicyDetail'
+              example:
+                data:
+                  cert_plcy_id: "5caeaa80-ab58-11f0-8557-3a7bf606d4cf"
+                  cert_plcy_nm: "USER_AUTH_03"
+                  ptal_typ_cd: "A007USR"
+                  ptal_typ_cd_nm: "사용자 포털"
+                  cert_plcy_tgt_cd: "U003B"
+                  cert_plcy_tgt_cd_nm: "테넌트 기본 인증정책"
+                  tot_nw_n2nd_cert_yn: "N"
+                  tot_nw_n2nd_cert_mtd_cd: "U004SMS"
+                  tot_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                  tot_nw_conn_alow_yn: "Y"
+                  exc_nw_grp_id: null
+                  exc_nw_n2nd_cert_yn: "N"
+                  exc_nw_n2nd_cert_mtd_cd: "U004SMS"
+                  exc_nw_n2nd_cert_mtd_cd_nm: "SMS 인증"
+                  exc_nw_conn_alow_yn: "N"
+                  lin_rstt_usg_yn: "T"
+                  lin_fail_alow_cnt: "5"
+                  lin_rstt_mi_cnt: "6"
+                  sess_expr_mi_cnt: "30"
+                  rest_std_dd_cnt: "30"
+                  passwd_mdfy_dd_cnt: "90"
+                  vm_rstt_cnt: "3"
+                  usr_dsk_rstt_cnt: "3"
+                  usr_dsk_max_size: "150"
+                  blst_usg_yn: "Y"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  wtst_usg_yn: "N"
+                  group_cnt: 0
+                  account_cnt: 0
+                  reg_conn_id: "***"
+                  mod_conn_id: "***"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2025-10-17 22:20"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_ts: "2025-10-17 22:20"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/cert
@@ -7652,6 +8015,21 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/SecuPolicySummary'
+              example:
+                data:
+                  - secu_plcy_id: "bf92a294-ab36-11f0-8557-3a7bf606d4cf"
+                    secu_plcy_nm: "가상 PC 보안 기본 정책"
+                    secu_plcy_tgt_cd: "U006S"
+                    secu_plcy_tgt_cd_nm: "Super Admin 기본 보안정책"
+                    group_cnt: 0
+                    pool_cnt: 0
+                    vm_cnt: 0
+                    reg_ts: "2025-10-17 17:53:27"
+                    mod_ts: "2026-03-24 15:06:38"
+                    reg_conn_id: "init"
+                    mod_conn_id: "***"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/operation/cert
@@ -7682,6 +8060,52 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SecuPolicyDetail'
+              example:
+                data:
+                  secu_plcy_id: "bf92a294-ab36-11f0-8557-3a7bf606d4cf"
+                  secu_plcy_nm: "가상 PC 보안 기본 정책"
+                  secu_plcy_tgt_cd: "U006S"
+                  secu_plcy_tgt_cd_nm: null
+                  exc_nw_grp_id: null
+                  vpc_auto_login_yn: "N"
+                  viwr_expr_usg_yn: "Y"
+                  viwr_expr_mi_cnt: "60"
+                  acc_blck_plcy_id: null
+                  url_rdrt_blck_plcy_id: null
+                  pcly_cert:
+                    - secu_plcy_auth_id: "bf93ddac-ab36-11f0-8557-3a7bf606d4cf"
+                      secu_plcy_id: "bf92a294-ab36-11f0-8557-3a7bf606d4cf"
+                      conn_net_cd: "U005TOT"
+                      conn_net_cd_nm: "모든 네트워크"
+                      clb_shar_auth_cd: "U009PT"
+                      clb_shar_auth_cd_nm: "단방향(가상->로컬)"
+                      drag_drop_auth_cd: "U010PS"
+                      drag_drop_auth_cd_nm: "단방향(로컬->가상)"
+                      usb_plcy_id: null
+                      usb_plcy_nm: null
+                      url_rdrt_auth_cd: "U012PO"
+                      url_rdrt_auth_cd_nm: "허용"
+                      prt_conn_auth_cd: "U007PO"
+                      prt_conn_auth_cd_nm: "허용"
+                      mult_mtor_auth_cd: "U026PO"
+                      mult_mtor_auth_cd_nm: "허용"
+                      scr_capture_yn: "N"
+                  url_rdrt_disallow_plcy_id: null
+                  vm_mdata_id: "bf92a2c3-ab36-11f0-8557-3a7bf606d4cf"
+                  proxy_type_cd: "P012NON"
+                  vm_mdata_nm: "VM Metadata Default Policy"
+                  acc_blck: []
+                  url_blck: null
+                  auto_resol_usg_yn: "Y"
+                  wmk_usg_yn: "N"
+                  reg_id: "init"
+                  reg_ts: "2025-10-17 17:53:27"
+                  mod_id: "8feb884b-eba8-11f0-a5c1-22b10486d9be"
+                  mod_ts: "2026-03-24 15:06:38"
+                  noauth_proc_blck_plcy_id: null
+                  noAuthProcBlckPlcyDetailVo: null
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/cert
@@ -7725,6 +8149,24 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/NoauthPolicySummary'
+              example:
+                data:
+                  - noauth_proc_blck_plcy_id: "9b0a3624-00a0-11f1-a5c1-22b10486d9be"
+                    noauth_proc_blck_plcy_nm: "비인가정책01"
+                    cnt: 1
+                    reg_ts: "2026-02-03 10:35:22"
+                    mod_ts: "2026-02-03 10:38:26"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                  - noauth_proc_blck_plcy_id: "5a213e74-ee27-11f0-814a-d2425695d54c"
+                    noauth_proc_blck_plcy_nm: "noauth"
+                    cnt: 1
+                    reg_ts: "2026-01-10 22:22:03"
+                    mod_ts: "2026-01-10 22:23:46"
+                    reg_conn_id: null
+                    mod_conn_id: null
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/operation/cert
@@ -7775,6 +8217,25 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/NoauthPolicyDetail'
+              example:
+                data:
+                  noauth_proc_blck_plcy_id: "9b0a3624-00a0-11f1-a5c1-22b10486d9be"
+                  noauth_proc_blck_plcy_nm: "비인가정책01"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2026-02-03 10:35:22"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_ts: "2026-02-03 10:38:26"
+                  noauth_proc_blck:
+                    - noauth_proc_blck_plcy_id: "9b0a3624-00a0-11f1-a5c1-22b10486d9be"
+                      noauth_proc_blck_id: "blck-proc-001"
+                      proc_nm: "unauthorized_tool.exe"
+                      cont: "비인가 도구 실행 차단"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2026-02-03 10:35:22"
+                      mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      mod_ts: "2026-02-03 10:35:22"
+                errCode: null
+                errMsg: null
   /v1/operation/cert/secu/noauth/{blck_plcy_id}/blck:
     get:
       tags:
@@ -7798,6 +8259,26 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/NoauthProcBlck'
+              example:
+                data:
+                  - noauth_proc_blck_plcy_id: "9b0a3624-00a0-11f1-a5c1-22b10486d9be"
+                    noauth_proc_blck_id: "blck-proc-001"
+                    proc_nm: "unauthorized_tool.exe"
+                    cont: "비인가 도구 실행 차단"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-02-03 10:35:22"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-02-03 10:35:22"
+                  - noauth_proc_blck_plcy_id: "9b0a3624-00a0-11f1-a5c1-22b10486d9be"
+                    noauth_proc_blck_id: "blck-proc-002"
+                    proc_nm: "screen_recorder.exe"
+                    cont: "화면 녹화 프로그램 차단"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-02-03 10:36:00"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2026-02-03 10:36:00"
+                errCode: null
+                errMsg: null
   /v1/operation/cert/secu/adopter/info/{secuPlcyId}:
     get:
       tags:
@@ -7819,6 +8300,34 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/SecuPolicyAdapter'
+              example:
+                data:
+                  secu_plcy_id: "69421473-67c0-4873-b86e-e72621942016"
+                  secu_plcy_nm: "***"
+                  secu_plcy_tgt_cd: "U006T"
+                  exc_nw_grp_id: null
+                  vpc_auto_login_yn: "N"
+                  pcly_cert:
+                    - secu_plcy_auth_id: "***"
+                      secu_plcy_id: "69421473-67c0-4873-b86e-e72621942016"
+                      conn_net_cd: "U005TOT"
+                      conn_net_cd_nm: "모든 네트워크"
+                      clb_shar_auth_cd: "U009PD"
+                      clb_shar_auth_cd_nm: "양방향"
+                      drag_drop_auth_cd: "U010PS"
+                      drag_drop_auth_cd_nm: "단방향(로컬->가상)"
+                      usb_plcy_id: null
+                      url_rdrt_auth_cd: "U012PO"
+                      url_rdrt_auth_cd_nm: "허용"
+                      prt_conn_auth_cd: "U007PO"
+                      prt_conn_auth_cd_nm: "허용"
+                      mult_mtor_auth_cd: "U026PO"
+                      mult_mtor_auth_cd_nm: "허용"
+                      scr_capture_yn: "N"
+                  reg_id: null
+                  reg_ts: null
+                  mod_id: null
+                  mod_ts: null
   /v1/operation/policys/cert/vpc:
     get:
       tags:
@@ -7841,6 +8350,16 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/VpcCertPolicySummary'
+              example:
+                data:
+                  - policy_id: "VPC-CERT-001"
+                    cert_plcy_nm: "기본 VPC 인증 정책"
+                    tnt_id: "TNT-001"
+                  - policy_id: "VPC-CERT-002"
+                    cert_plcy_nm: "강화 VPC 인증 정책"
+                    tnt_id: "TNT-001"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - admin/operation/cert
@@ -7882,6 +8401,17 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/VpcCertPolicyDetail'
+              example:
+                data:
+                  policy_id: "VPC-CERT-001"
+                  cert_plcy_nm: "기본 VPC 인증 정책"
+                  tnt_id: "TNT-001"
+                  n2nd_auth_type_cd: "A008OTP"
+                  exc_nw_grp_id: "EXCN-GRP-001"
+                  login_fail_cnt: 5
+                  session_timeout_min: 30
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/cert
@@ -7925,6 +8455,20 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/CertItem'
+              example:
+                data:
+                  - ca_typ_cd: "M006PV"
+                    secret_name: "ci-handler-cert"
+                    namespace: "cloudpc"
+                    version: "3"
+                    serial_number: "98d0283d5f1e4ab0da283c1a123fd0e7"
+                    signature_algorithm: "SHA256withRSA"
+                    issuer: "CN=plat-ci-handler"
+                    subject: "CN=plat-ci-handler"
+                    valid_start: "2025-10-17 17:54:18"
+                    valid_end: "2035-10-15 17:54:18"
+                errCode: null
+                errMsg: null
   /v1/operation/secu/cert/list/{type}/server:
     get:
       tags:
@@ -7962,6 +8506,30 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/CertItem'
+              example:
+                data:
+                  - ca_typ_cd: "M006PV"
+                    secret_name: "app-api-gateway"
+                    namespace: "cloudpc"
+                    version: "3"
+                    serial_number: "a0ec01e0f0f70019cf53a47c2f4314f8"
+                    signature_algorithm: "SHA256withRSA"
+                    issuer: "CN=app-api-gateway"
+                    subject: "CN=app-api-gateway"
+                    valid_start: "2025-10-17 17:54:36"
+                    valid_end: "2035-10-15 17:54:36"
+                  - ca_typ_cd: "M006PV"
+                    secret_name: "app-file-server"
+                    namespace: "cloudpc"
+                    version: "3"
+                    serial_number: "79414c3b1a0d5553ac08567f68857eb1"
+                    signature_algorithm: "SHA256withRSA"
+                    issuer: "CN=app-file-server"
+                    subject: "CN=app-file-server"
+                    valid_start: "2025-10-17 17:55:02"
+                    valid_end: "2035-10-15 17:55:02"
+                errCode: null
+                errMsg: null
   /v1/operation/secu/cert/infm:
     get:
       tags:
@@ -7988,6 +8556,42 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/CertInfmItem'
+              example:
+                data:
+                  - scert_infm_no: "1"
+                    infm_tm: "2026.03.27 03:00"
+                    infm_typ_cd: "M00530M"
+                    infm_typ_cd_nm: "30일 알림(e-mail)"
+                    scert_typ_cd: "M006SV"
+                    scert_typ_cd_nm: "서버 인증서"
+                    host_id: "127.0.0.1"
+                    host_nm: "localhost"
+                    vlid_stt_dt: "2024.10.22"
+                    vlid_end_dt: "2025.11.23"
+                    scert_ver: "3"
+                    isur_nm: "C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018"
+                    reg_id: "scheduler"
+                    reg_ts: "2026-03-27 03:00:58"
+                    mod_id: "scheduler"
+                    mod_ts: "2026-03-27 03:00:58"
+                  - scert_infm_no: "2"
+                    infm_tm: "2026.03.27 03:00"
+                    infm_typ_cd: "M00530M"
+                    infm_typ_cd_nm: "30일 알림(e-mail)"
+                    scert_typ_cd: "M006SV"
+                    scert_typ_cd_nm: "서버 인증서"
+                    host_id: "127.0.0.1"
+                    host_nm: "localhost"
+                    vlid_stt_dt: "2024.10.22"
+                    vlid_end_dt: "2025.11.23"
+                    scert_ver: "3"
+                    isur_nm: "C=BE, O=GlobalSign nv-sa, CN=GlobalSign RSA OV SSL CA 2018"
+                    reg_id: "scheduler"
+                    reg_ts: "2026-03-27 03:00:58"
+                    mod_id: "scheduler"
+                    mod_ts: "2026-03-27 03:00:58"
+                errCode: null
+                errMsg: null
   /v1/operation/secu/cert/download/{type}:
     get:
       tags:
@@ -8044,6 +8648,34 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/UsbPolicy'
+              example:
+                data:
+                  - usb_policy_id: "63ade450-8a06-4ef0-ba2e-c59fca3b9bc7"
+                    usb_policy_target_code: "U006S"
+                    usb_policy_name: "A001"
+                    usb_policy_auth_code: "U011PR"
+                    usb_policy_description: ""
+                    usb_types: null
+                    usb_vendors: null
+                    tenant_id: "ADMIN"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-02-02 18:13:53"
+                    mod_ts: "2026-02-02 18:32:01"
+                  - usb_policy_id: "4bc6fe90-1d2e-4a83-b7c5-e91f2d3a8b04"
+                    usb_policy_target_code: "U006T"
+                    usb_policy_name: "USB정책01"
+                    usb_policy_auth_code: "U011AL"
+                    usb_policy_description: "테넌트 기본 USB 정책"
+                    usb_types: null
+                    usb_vendors: null
+                    tenant_id: "TEST_TENANT"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-02-10 09:21:44"
+                    mod_ts: "2026-02-10 09:21:44"
+                errCode: null
+                errMsg: null
         '400':
           description: 잘못된 요청 파라미터
         '403':
@@ -8524,6 +9156,28 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/AccBlckPolicy'
+              example:
+                data:
+                  - acc_blck_plcy_id: "363eb356-e01d-41a2-bae7-a76599d32528"
+                    acc_blck_plcy_nm: "***"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    reg_ts: "2026-02-04 19:12:46"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-04 19:12:46"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                  - acc_blck_plcy_id: "ceab2764-15ab-49ed-a1fb-cd53a99dc6ef"
+                    acc_blck_plcy_nm: "internal"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2025-11-12 14:17:57"
+                    mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    mod_ts: "2025-12-02 14:28:25"
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                errCode: null
+                errMsg: null
         '400':
           description: 잘못된 요청 파라미터
         '403':
@@ -8558,6 +9212,43 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AccBlckPolicyDetail'
+              example:
+                data:
+                  plcyInfo:
+                    acc_blck_plcy_id: "ACC-BLCK-001"
+                    acc_blck_plcy_nm: "IP 차단 정책"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_conn_id: "***"
+                    reg_ts: "2026-01-15 09:00:00"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_conn_id: "***"
+                    mod_ts: "2026-02-03 10:25:30"
+                  blckList:
+                    - acc_blck_plcy_id: "ACC-BLCK-001"
+                      acc_blck_plcy_nm: "IP 차단 정책"
+                      acc_blck_serv_id: "SVC-001"
+                      acc_blck_serv_nm: "웹 서비스"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      ip: "192.168.100.0/24"
+                      port: "80"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2026-01-15 09:00:00"
+                      mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                      mod_ts: "2026-02-03 10:25:30"
+                    - acc_blck_plcy_id: "ACC-BLCK-001"
+                      acc_blck_plcy_nm: "IP 차단 정책"
+                      acc_blck_serv_id: "SVC-002"
+                      acc_blck_serv_nm: "내부 API"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      ip: "10.10.0.0/16"
+                      port: "8080"
+                      reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                      reg_ts: "2026-01-15 09:00:00"
+                      mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                      mod_ts: "2026-02-03 10:25:30"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/access-control
@@ -8623,6 +9314,57 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/BkupSnapPolicy'
+              example:
+                data:
+                  - bkup_snap_plcy_id: "bf94bbc8-ab36-11f0-8557-3a7bf606d4cf"
+                    bkup_snap_plcy_nm: "백업/스냅샷 기본 정책"
+                    bkup_snap_plcy_tgt_cd: "U023S"
+                    bkup_snap_plcy_tgt_cd_nm: "Super Admin 기본 정책"
+                    auto_bkup_yn: "Y"
+                    bkup_prid_cd: "U027D"
+                    bkup_prid_cd_nm: "일별"
+                    bkup_set_time: "01"
+                    max_bkup_cnt: "5"
+                    auto_snap_yn: "Y"
+                    snap_prid_cd: "U027W"
+                    snap_prid_cd_nm: "주별"
+                    snap_set_time: "01"
+                    snap_set_dw_cd: "U024SUN"
+                    snap_set_dw_cd_nm: "일요일"
+                    max_snap_cnt: "5"
+                    tnt_id: ""
+                    group_cnt: 0
+                    pool_cnt: 0
+                    vm_cnt: 0
+                    reg_conn_id: "init"
+                    mod_conn_id: "init"
+                    reg_ts: "2025-10-17 17:53:27"
+                    mod_ts: "2025-10-17 17:53:27"
+                  - bkup_snap_plcy_id: "3fe70692-f8d7-4d8a-93eb-ccf592c1397b"
+                    bkup_snap_plcy_nm: "TEST_TENANT_NOBackup_2"
+                    bkup_snap_plcy_tgt_cd: "U023T"
+                    bkup_snap_plcy_tgt_cd_nm: "테넌트 정책"
+                    auto_bkup_yn: "N"
+                    bkup_prid_cd: ""
+                    bkup_prid_cd_nm: null
+                    bkup_set_time: null
+                    max_bkup_cnt: null
+                    auto_snap_yn: "N"
+                    snap_prid_cd: ""
+                    snap_prid_cd_nm: null
+                    snap_set_time: null
+                    snap_set_dw_cd: null
+                    max_snap_cnt: null
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    group_cnt: 0
+                    pool_cnt: 0
+                    vm_cnt: 0
+                    reg_conn_id: "***"
+                    mod_conn_id: "***"
+                    reg_ts: "2026-02-04 19:06:00"
+                    mod_ts: "2026-02-04 19:06:00"
+                errCode: null
+                errMsg: null
         '400':
           description: 잘못된 요청 파라미터
         '403':
@@ -8657,6 +9399,39 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BkupSnapPolicyDetail'
+              example:
+                data:
+                  bkup_snap_plcy_id: "bf94bbc8-ab36-11f0-8557-3a7bf606d4cf"
+                  bkup_snap_plcy_nm: "백업/스냅샷 기본 정책"
+                  bkup_snap_plcy_tgt_cd: "U023S"
+                  bkup_snap_plcy_tgt_cd_nm: "Super Admin 기본 정책"
+                  auto_bkup_yn: "Y"
+                  bkup_prid_cd: "U027D"
+                  bkup_prid_cd_nm: "일별"
+                  bkup_set_time: "01"
+                  bkup_set_dw_cd: null
+                  bkup_set_dd: null
+                  max_bkup_cnt: "5"
+                  auto_snap_yn: "Y"
+                  snap_prid_cd: "U027W"
+                  snap_prid_cd_nm: "주별"
+                  snap_set_time: "01"
+                  snap_set_dw_cd: "U024SUN"
+                  snap_set_dw_cd_nm: "일요일"
+                  snap_set_dd: null
+                  max_snap_cnt: "5"
+                  tnt_id: null
+                  reg_id: "init"
+                  reg_conn_id: null
+                  reg_ts: "2025-10-17 17:53:27"
+                  mod_id: "init"
+                  mod_conn_id: null
+                  mod_ts: "2025-10-17 17:53:27"
+                  group_cnt: 0
+                  pool_cnt: 0
+                  vm_cnt: 0
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/backup
@@ -8710,6 +9485,30 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/SwBlstFile'
+              example:
+                data:
+                  - blst_file_id: "blst-bk-001-2026"
+                    att_file_nm: "blacklist_2026Q1.csv"
+                    wtst_yn: "N"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-01-15 09:00:00"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-01-15 09:00:00"
+                    reg_conn_id: "***"
+                    mod_conn_id: null
+                  - blst_file_id: "blst-wt-001-2026"
+                    att_file_nm: "whitelist_2026Q1.csv"
+                    wtst_yn: "Y"
+                    tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                    reg_ts: "2026-02-01 11:30:00"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-01 11:30:00"
+                    reg_conn_id: "***"
+                    mod_conn_id: null
+                errCode: null
+                errMsg: null
         '400':
           description: 잘못된 요청 파라미터
         '403':
@@ -8767,6 +9566,21 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/SwBlstFileDetail'
+              example:
+                data:
+                  blst_file_id: "blst-bk-001-2026"
+                  att_file_nm: "blacklist_2026Q1.csv"
+                  wtst_yn: "N"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  json_data: "[{\"sw_nm\":\"MalwareA.exe\",\"sw_vendor\":\"Unknown\",\"sw_hash\":\"d41d8cd98f00b204e9800998ecf8427e\"},{\"sw_nm\":\"SpywareB.exe\",\"sw_vendor\":\"Unknown\",\"sw_hash\":\"098f6bcd4621d373cade4e832627b4f6\"}]"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2026-01-15 09:00:00"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-01-15 09:00:00"
+                  reg_conn_id: "***"
+                  mod_conn_id: null
+                errCode: null
+                errMsg: null
   /v1/operation/policys/swblst/{blst_file_id}/downLoad:
     get:
       tags:
@@ -8812,6 +9626,22 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PowerMgtPolicyDetail'
+              example:
+                data:
+                  power_mng_plcy_id: "PWR-PLY-001"
+                  plcy_stt_dt: "2026-01-01"
+                  plcy_end_dt: "2026-12-31"
+                  power_end_time: "23:00"
+                  power_stt_time: "08:00"
+                  sche_type: "WEEK"
+                  week_sche: "1111100"
+                  mons_sche: null
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2026-01-15 09:00:00"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-02-03 10:25:30"
+                errCode: null
+                errMsg: null
         '404':
           description: 정책 없음
     put:
@@ -8863,6 +9693,17 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RsetPolicyDetail'
+              example:
+                data:
+                  rset_plcy_id: "RSET-PLY-001"
+                  rset_plcy_cd: "R001W"
+                  rset_end_time: "03:00"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2026-01-15 09:00:00"
+                  mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                  mod_ts: "2026-02-03 10:25:30"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/power
@@ -8915,6 +9756,20 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/LnetPolicy'
+              example:
+                data:
+                  - sbn_id: "SBN-001"
+                    sbn_nm: "내부 서브넷 A"
+                    tnt_id: "TNT-001"
+                    ip_range: "192.168.10.0/24"
+                    use_yn: "Y"
+                  - sbn_id: "SBN-002"
+                    sbn_nm: "내부 서브넷 B"
+                    tnt_id: "TNT-001"
+                    ip_range: "192.168.20.0/24"
+                    use_yn: "Y"
+                errCode: null
+                errMsg: null
         '400':
           description: 잘못된 요청 파라미터
         '403':
@@ -8949,6 +9804,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LnetPolicyDetail'
+              example:
+                data:
+                  sbn_id: "SBN-001"
+                  sbn_nm: "내부 서브넷 A"
+                  tnt_id: "TNT-001"
+                  ip_range: "192.168.10.0/24"
+                  gateway: "192.168.10.1"
+                  use_yn: "Y"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - admin/operation/network
@@ -8997,6 +9862,32 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/ExtInterface'
+              example:
+                data:
+                  - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    linkage_type_cd: "EMAIL"
+                    linkage_type_cd_nm: "이메일"
+                    ad_itlk_usg_yn: "N"
+                    shar_str_usg_yn: "Y"
+                    reg_id: "init"
+                    reg_ts: "2025-10-17 17:53:27"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-03 10:25:30"
+                    reg_conn_id: "init"
+                    mod_conn_id: "***"
+                  - tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                    linkage_type_cd: "NETAPP"
+                    linkage_type_cd_nm: "네트워크 스토리지"
+                    ad_itlk_usg_yn: "N"
+                    shar_str_usg_yn: "Y"
+                    reg_id: "init"
+                    reg_ts: "2025-10-17 17:53:27"
+                    mod_id: "34dcc29e-afa6-11f0-8896-e288d288c3ed"
+                    mod_ts: "2026-02-03 10:25:30"
+                    reg_conn_id: "init"
+                    mod_conn_id: "***"
+                errCode: null
+                errMsg: null
   /v1/operation/outs/interfaces/email:
     get:
       tags:
@@ -9820,6 +10711,53 @@ paths:
                           $ref: '#/components/schemas/UsergroupListItem'
                       pageinfo:
                         $ref: '#/components/schemas/PageInfo'
+              example:
+                data:
+                  data:
+                    - usr_grp_id: "f1a2b3c4-0001-11f0-aaaa-111111111111"
+                      usr_grp_nm: "QA_TEST"
+                      grp_typ_cd: "U001USR"
+                      grp_typ_cd_nm: "General User"
+                      grp_sts_cd: "U002NR"
+                      grp_sts_cd_nm: "정상 등록"
+                      usr_cnt: 12
+                      vm_as_cnt: 8
+                      cert_plcy_nm: "TEST_TENANT 사용자 기본 인증 정책"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      shar_str_usg_yn: "N"
+                      grp_fold_size: "500"
+                      work_mng_use_yn: "N"
+                      auto_vm_delete: "N"
+                      reg_nm: "***"
+                      reg_conn_id: "***"
+                      mod_conn_id: "***"
+                      reg_ts: "2025-10-17 21:45:30"
+                      mod_ts: "2026-03-10 14:20:00"
+                    - usr_grp_id: "f1a2b3c4-0002-11f0-aaaa-222222222222"
+                      usr_grp_nm: "TEST_그룹"
+                      grp_typ_cd: "U001USR"
+                      grp_typ_cd_nm: "General User"
+                      grp_sts_cd: "U002NR"
+                      grp_sts_cd_nm: "정상 등록"
+                      usr_cnt: 8
+                      vm_as_cnt: 5
+                      cert_plcy_nm: "TEST_TENANT 사용자 기본 인증 정책"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      shar_str_usg_yn: "Y"
+                      grp_fold_size: "10240"
+                      work_mng_use_yn: "Y"
+                      auto_vm_delete: "N"
+                      reg_nm: "***"
+                      reg_conn_id: "***"
+                      mod_conn_id: "***"
+                      reg_ts: "2025-11-01 10:00:00"
+                      mod_ts: "2026-02-15 09:30:00"
+                  pageinfo:
+                    isSort: false
+                    pageCount: 20
+                    sortType: ""
+                    count: 5
+                    ispaging: true
   /v1/user/usergroups/{usr_grp_id}:
     get:
       tags:
@@ -9842,6 +10780,37 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/UsergroupDetail'
+              example:
+                data:
+                  usr_grp_id: "f1a2b3c4-0001-11f0-aaaa-111111111111"
+                  usr_grp_nm: "QA_TEST"
+                  grp_typ_cd: "U001USR"
+                  grp_typ_cd_nm: "일반"
+                  grp_sts_cd: "U002NR"
+                  grp_sts_cd_nm: "정상"
+                  descp: "QA 테스트 그룹"
+                  usr_cnt: 12
+                  total_usr_cnt: 12
+                  vm_as_cnt: 8
+                  cert_plcy_nm: "TEST_TENANT 사용자 기본 인증 정책"
+                  cert_plcy_id: "cp-0001-aaaa-bbbb-cccccccccccc"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  shar_str_usg_yn: "N"
+                  grp_fold_size: "500"
+                  work_mng_use_yn: "N"
+                  auto_vm_delete: "N"
+                  acct_mod_psb_yn: "Y"
+                  client_update_yn: "N"
+                  ad_itlk_usg_yn: "N"
+                  expire_auto_delete_yn: "N"
+                  lang: "A001KO"
+                  reg_nm: "***"
+                  reg_conn_id: "***"
+                  mod_conn_id: "***"
+                  reg_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  reg_ts: "2025-10-17 21:45:30"
+                  mod_id: "bf8eb4fd-ab36-11f0-8557-3a7bf606d4cf"
+                  mod_ts: "2026-03-10 14:20:00"
   /v1/user/accounts:
     get:
       tags:
@@ -9896,6 +10865,53 @@ paths:
                           $ref: '#/components/schemas/AccountListItem'
                       pageinfo:
                         $ref: '#/components/schemas/PageInfo'
+              example:
+                data:
+                  data:
+                    - acct_id: "554c6d89-afca-11f0-b1c9-d6d4b9a99c07"
+                      acct_nm: "***"
+                      acct_conn_id: "***"
+                      acct_sts_cd: "U013NR"
+                      acct_sts_cd_nm: "정상"
+                      acct_conn_sts_cd: "U014ON"
+                      acct_conn_sts_cd_nm: "접속중"
+                      usr_grp_id: "f1a2b3c4-0001-11f0-aaaa-111111111111"
+                      usr_grp_nm: "QA_TEST"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      email: "***@***.kr"
+                      mob_no: "***"
+                      ognz_nm: "품질팀"
+                      blng_dept_nm: "품질팀"
+                      ad_itlk_acct_yn: "N"
+                      acct_vlid_stt_dt: "2025-11-01"
+                      acct_vlid_end_dt: "2027-11-01"
+                      reg_ts: "2025-11-01 10:00:00"
+                      mod_ts: "2026-03-20 11:00:00"
+                    - acct_id: "16f86f5e-ba1b-11f0-819b-4617b2bd76a9"
+                      acct_nm: "***"
+                      acct_conn_id: "***"
+                      acct_sts_cd: "U013NR"
+                      acct_sts_cd_nm: "정상"
+                      acct_conn_sts_cd: "U014OF"
+                      acct_conn_sts_cd_nm: "미접속"
+                      usr_grp_id: "f1a2b3c4-0001-11f0-aaaa-111111111111"
+                      usr_grp_nm: "QA_TEST"
+                      tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                      email: "***@***.kr"
+                      mob_no: "***"
+                      ognz_nm: "개발팀"
+                      blng_dept_nm: "개발팀"
+                      ad_itlk_acct_yn: "N"
+                      acct_vlid_stt_dt: "2025-10-20"
+                      acct_vlid_end_dt: "2027-10-20"
+                      reg_ts: "2025-10-20 14:30:00"
+                      mod_ts: "2026-02-10 09:00:00"
+                  pageinfo:
+                    isSort: false
+                    pageCount: 20
+                    sortType: ""
+                    count: 5
+                    ispaging: true
   /v1/user/accounts/{acct_id}:
     get:
       tags:
@@ -9918,6 +10934,41 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/AccountDetail'
+              example:
+                data:
+                  acct_id: "214e1403-cd12-11f0-a1b2-3c4d5e6f7890"
+                  acct_nm: "***"
+                  acct_conn_id: "***"
+                  acct_sts_cd: "U013NR"
+                  acct_sts_cd_nm: "정상"
+                  acct_conn_sts_cd: "U014ON"
+                  acct_conn_sts_cd_nm: "접속중"
+                  usr_grp_id: "f1a2b3c4-0004-11f0-aaaa-444444444444"
+                  usr_grp_nm: "SKBTEST"
+                  usr_grp_full_nm: "SKBTEST"
+                  tnt_id: "02157c4b5e534cb492ed5c886d3b44d7"
+                  email: "***@***.kr"
+                  mob_no: "***"
+                  ognz_nm: "인프라팀"
+                  blng_dept_nm: "인프라팀"
+                  dept_cd: "D001"
+                  ad_itlk_acct_yn: "Y"
+                  acct_vlid_stt_dt: "2026-01-15"
+                  acct_vlid_end_dt: "2028-01-15"
+                  cert_plcy_nm: "SKBTEST 그룹 인증 정책"
+                  shar_str_usg_yn: "Y"
+                  grp_fold_size: 20480
+                  priv_fold_size: 5120
+                  work_mng_use_yn: "Y"
+                  client_update_yn: "N"
+                  acct_passwd: "***"
+                  passwd_mod_dt: "2026-03-01"
+                  reg_nm: "***"
+                  reg_conn_id: "***"
+                  mod_nm: "***"
+                  mod_conn_id: "***"
+                  reg_ts: "2026-01-15 11:20:00"
+                  mod_ts: "2026-04-01 10:00:00"
   /v1/auth/authentications/:
     post:
       tags:
@@ -10201,6 +11252,13 @@ paths:
                 type: array
                 items:
                   type: object
+              example:
+                data:
+                  - installer_nm: "KeyLogging Agent"
+                    installer_ver: "1.0.0"
+                    installer_url: "/downloads/keylogging-agent.exe"
+                errCode: null
+                errMsg: null
   /v1/nauth/system/notices/public:
     get:
       tags:
@@ -10232,6 +11290,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_PublicNotice'
+              example:
+                data:
+                  - title: "[안내] Cloud PC 서비스 이용 안내"
+                    noti_wrt_no: 1
+                  - title: "[공지] 정기 점검 일정 안내"
+                    noti_wrt_no: 2
+                errCode: null
+                errMsg: null
   /v1/nauth/system/popup:
     get:
       tags:
@@ -10253,6 +11319,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_PopupMessage'
+              example:
+                data:
+                  show_yn: "N"
+                  cont: ""
+                  check_yn: "N"
+                errCode: null
+                errMsg: null
   /v1/nauth/system/portals/ui/{tntUrlId}/public:
     get:
       tags:
@@ -10274,6 +11347,21 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_PortalUiPublic'
+              example:
+                data:
+                  lin_bg_yn: "N"
+                  lin_bg_stor_path: ""
+                  ptal_bg_yn: "N"
+                  ptal_bg_stor_path: ""
+                  ptal_img_yn: "N"
+                  ptal_img_stor_path: ""
+                  fvcn_yn: "N"
+                  fvcn_stor_path: ""
+                  copyright_txt: "© 2026 SK Broadband. All rights reserved."
+                  inquiry_txt: "문의: support@skbroadband.com"
+                  contact_txt: "1588-0000"
+                errCode: null
+                errMsg: null
   /v1/nauth/system/{tntUrlId}/getToday:
     get:
       tags:
@@ -10299,6 +11387,12 @@ paths:
                   today:
                     type: string
                     description: 서버 기준 현재 날짜 및 시간
+              example:
+                data:
+                  today: "20260325"
+                  time: "14:30:00"
+                errCode: null
+                errMsg: null
   /v1/nauth/user/tenant/exist:
     get:
       tags:
@@ -10320,6 +11414,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_TenantExistResponse'
+              example:
+                data:
+                  tntExist: true
+                  adItlkUsgYn: "false"
+                  adModYn: "false"
+                  octatcoUsgYn: false
+                  userPtalKlpUseYn: false
+                  userPtalKlpAllowUnsupportedOs: "Y"
+                errCode: null
+                errMsg: null
   /v1/nauth/user/tntMain:
     get:
       tags:
@@ -10338,6 +11442,11 @@ paths:
                   tnt_url_id:
                     type: string
                     description: 기본 테넌트 URL ID (null이면 404로 이동)
+              example:
+                data:
+                  tnt_url_id: "tenant1"
+                errCode: null
+                errMsg: null
   /v1/nauth/user/auth/check:
     post:
       tags:
@@ -10587,6 +11696,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_VmAuthorizationResponse'
+              example:
+                data:
+                  vmId: "vm-aabbcc001"
+                  vmPowerStateCode: "V002ONC"
+                  vmAllocationStatus: "할당됨"
+                  vmAllocationStatusCode: "U017DVA"
+                  tenantMethodCode: "V001DED"
+                  vmValidStartDate: "20250101"
+                  vmValidEndDate: "29990101"
+                  lastStartTime: "2026-03-25 09:00:00"
+                  lastUserConnectionTime: "2026-03-25 09:05:32"
+                  securityPolicyId: "SECPLCY-001"
+                  vmAuthorizationId: "VA-001"
+                  vmName: "VM-001"
+                  vcpuCount: 4
+                  vmemoryCapacity: 8192
+                  vharddiskCapacity: 100
+                  ip: "192.168.10.101"
+                  adInterlockUsageYn: "Y"
+                  adInterlockSuccessYn: "Y"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/resources/{vmAuthId}/user:
     put:
       tags:
@@ -10649,6 +11780,20 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_VmPoolItem'
+              example:
+                data:
+                  - vm_pool_id: "POOL-001"
+                    vm_pool_nm: "표준 개발 풀"
+                    vcpu_cnt: 4
+                    vmm_capa: 8192
+                    os_name: "Windows 10 Enterprise"
+                  - vm_pool_id: "POOL-002"
+                    vm_pool_nm: "고성능 업무 풀"
+                    vcpu_cnt: 8
+                    vmm_capa: 16384
+                    os_name: "Windows 11 Enterprise"
+                errCode: null
+                errMsg: null
   /v1/resource/vpcs/resources/vm_auto_assign:
     post:
       tags:
@@ -10688,6 +11833,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_CertPolicyInfoResponse'
+              example:
+                data:
+                  vm_rstt_cnt: 3
   /v1/operation/cert/secu/info/{securityPolicyId}:
     get:
       tags:
@@ -10708,6 +11856,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_SecurityPolicyResponse'
+              example:
+                data:
+                  secu_plcy_id: "bf92a294-ab36-11f0-8557-3a7bf606d4cf"
+                  secu_plcy_nm: "가상 PC 보안 기본 정책"
+                  secu_plcy_tgt_cd: "U006S"
+                  viwr_expr_usg_yn: "Y"
+                  viwr_expr_mi_cnt: "60"
+                  pcly_cert:
+                    - secu_plcy_auth_id: "bf93ddac-ab36-11f0-8557-3a7bf606d4cf"
+                      conn_net_cd: "U005TOT"
+                      conn_net_cd_nm: "모든 네트워크"
+                      clb_shar_auth_cd: "U009PT"
+                      clb_shar_auth_cd_nm: "단방향(가상->로컬)"
+                      prt_conn_auth_cd: "U007PO"
+                      prt_conn_auth_cd_nm: "허용"
+                      scr_capture_yn: "N"
+                  wmk_usg_yn: "N"
+                  auto_resol_usg_yn: "Y"
+                errCode: null
+                errMsg: null
   /v1/user/accounts/{acctId}:
     get:
       tags:
@@ -10728,6 +11896,23 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_AccountDetailResponse'
+              example:
+                data:
+                  acct_conn_id: "kim.dev"
+                  acct_nm: "김개발"
+                  acct_id: "user001"
+                  email: "kim.dev@skb.co.kr"
+                  mob_no: "010-1234-5678"
+                  ognz_nm: "SK브로드밴드"
+                  blng_dept_nm: "클라우드플랫폼개발팀"
+                  acct_vlid_stt_dt: "20250101"
+                  acct_vlid_end_dt: "29990101"
+                  usr_grp_nm: "일반 사용자"
+                  serv_grp_id: "SG-001"
+                  ad_itlk_acct_yn: "Y"
+                  tnt_url_id: "skb"
+                errCode: null
+                errMsg: null
   /v1/user/accounts/usg/history:
     get:
       tags:
@@ -10786,6 +11971,24 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_UsageHistoryItem'
+              example:
+                data:
+                  - usg_typ_cd: "Z006A1"
+                    act_tm: "2026-03-25 09:01:15"
+                    act_cd_nm: "접속"
+                    ptal_typ_cd_nm: "사용자 포털"
+                    conn_ip: "10.10.1.55"
+                    vm_nm: null
+                    tnt_mtd_cd_nm: null
+                  - usg_typ_cd: "Z006C1"
+                    act_tm: "2026-03-25 09:05:32"
+                    act_cd_nm: "연결"
+                    ptal_typ_cd_nm: "사용자 포털"
+                    conn_ip: "10.10.1.55"
+                    vm_nm: "VM-001"
+                    tnt_mtd_cd_nm: "전용 PC"
+                errCode: null
+                errMsg: null
   /v1/user/device-access/{acctId}/identifier-info:
     get:
       tags:
@@ -10811,6 +12014,22 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/User_DeviceIdentifierInfo'
+              example:
+                data:
+                  - acct_dvc_ident_id: "DVC-IDENT-001"
+                    clnt_dvc_type: "Windows"
+                    dvc_nm: "LAPTOP-KIM-DEV"
+                    dvc_id: "ABC1234567890"
+                    mac_addr: "AA-BB-CC-DD-EE-01"
+                    ip_addr: "10.10.1.55"
+                  - acct_dvc_ident_id: "DVC-IDENT-002"
+                    clnt_dvc_type: "MacOS"
+                    dvc_nm: "MacBook-Pro-김개발"
+                    dvc_id: "DEF9876543210"
+                    mac_addr: "AA-BB-CC-DD-EE-02"
+                    ip_addr: "10.10.1.88"
+                errCode: null
+                errMsg: null
   /v1/user/device-access/{acctDvcIdentId}/identifier-info:
     delete:
       tags:
@@ -10858,6 +12077,24 @@ paths:
                       count:
                         type: integer
                         description: 전체 이력 건수
+              example:
+                data:
+                  - acct_dvc_ident_hist_id: "DVC-HIST-001"
+                    clnt_dvc_type: "Windows"
+                    dvc_nm: "LAPTOP-KIM-DEV"
+                    dvc_id: "ABC1234567890"
+                    mac_addr: "AA-BB-CC-DD-EE-01"
+                    ip_addr: "10.10.1.55"
+                  - acct_dvc_ident_hist_id: "DVC-HIST-002"
+                    clnt_dvc_type: "MacOS"
+                    dvc_nm: "MacBook-Pro-김개발"
+                    dvc_id: "DEF9876543210"
+                    mac_addr: "AA-BB-CC-DD-EE-02"
+                    ip_addr: "10.10.1.88"
+                pageinfo:
+                  count: 3
+                errCode: null
+                errMsg: null
   /v1/user/device-identifier/{acctDvcIdentHistId}/hist:
     put:
       tags:
@@ -10920,6 +12157,16 @@ paths:
                     acct_mod_psb_yn:
                       type: string
                       description: 계정 정보 수정 가능 여부 (Y/N)
+              example:
+                data:
+                  - usr_grp_id: "GRP-001"
+                    usr_grp_nm: "일반 사용자"
+                    acct_mod_psb_yn: "Y"
+                  - usr_grp_id: "GRP-002"
+                    usr_grp_nm: "공용 PC 사용자"
+                    acct_mod_psb_yn: "N"
+                errCode: null
+                errMsg: null
   /v1/user/work/request:
     get:
       tags:
@@ -10994,6 +12241,24 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_WorkRequestItem'
+              example:
+                data:
+                  - usr_req_id: "REQ-001"
+                    reg_ts: "2026-03-20 10:15:00"
+                    usr_req_div_cd: "J003USE"
+                    usr_req_div_cd_nm: "Cloud PC 신청"
+                    pgrs_sts_cd: "J001S"
+                    pgrs_sts_cd_nm: "신청"
+                    demd_detl: "개발 업무용 Cloud PC 신청합니다."
+                  - usr_req_id: "REQ-002"
+                    reg_ts: "2026-03-10 14:00:00"
+                    usr_req_div_cd: "J003DAR"
+                    usr_req_div_cd_nm: "단말 등록"
+                    pgrs_sts_cd: "J001A"
+                    pgrs_sts_cd_nm: "승인"
+                    demd_detl: "업무용 노트북 단말 등록 요청합니다."
+                errCode: null
+                errMsg: null
     post:
       tags:
         - user/user/work
@@ -11041,6 +12306,11 @@ paths:
                   list_count:
                     type: integer
                     description: 조건에 해당하는 전체 건수
+              example:
+                data:
+                  list_count: 3
+                errCode: null
+                errMsg: null
   /v1/user/work/request/{usrReqId}:
     put:
       tags:
@@ -11121,6 +12391,18 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_NoticeListItem'
+              example:
+                data:
+                  - noti_wrt_no: 5
+                    title: "[필독] 2026년 2분기 Cloud PC 정기 점검 안내"
+                    reg_conn_id: "admin"
+                    reg_ts: "2026-03-20 10:00:00"
+                  - noti_wrt_no: 4
+                    title: "VDI 클라이언트 v3.2.1 업데이트 안내"
+                    reg_conn_id: "admin"
+                    reg_ts: "2026-03-15 14:00:00"
+                errCode: null
+                errMsg: null
   /v1/system/notices/count:
     get:
       tags:
@@ -11154,6 +12436,11 @@ paths:
                   list_count:
                     type: integer
                     description: 전체 공지 건수
+              example:
+                data:
+                  list_count: 5
+                errCode: null
+                errMsg: null
   /v1/system/notices/{notiWrtNo}:
     get:
       tags:
@@ -11174,6 +12461,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_NoticeDetailResponse'
+              example:
+                data:
+                  noti_wrt_no: 5
+                  title: "[필독] 2026년 2분기 Cloud PC 정기 점검 안내"
+                  cont: "<p>2026년 4월 5일(일) 02:00 ~ 06:00 정기 점검</p>"
+                  acct_nm: "운영팀 관리자"
+                  reg_ts: "2026-03-20 10:00:00"
+                  wri_att_file_l: []
+                errCode: null
+                errMsg: null
   /v1/system/faqs:
     get:
       tags:
@@ -11229,6 +12526,16 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_FaqListItem'
+              example:
+                data:
+                  - faq_wrt_no: 1
+                    title: "Cloud PC에 접속이 되지 않을 때 어떻게 하나요?"
+                    faq_typ_cd_nm: "장애"
+                  - faq_wrt_no: 2
+                    title: "VDI 클라이언트 프로그램은 어디서 다운로드하나요?"
+                    faq_typ_cd_nm: "이용 방법"
+                errCode: null
+                errMsg: null
   /v1/system/faqs/count:
     get:
       tags:
@@ -11262,6 +12569,11 @@ paths:
                   list_count:
                     type: integer
                     description: 전체 FAQ 건수
+              example:
+                data:
+                  list_count: 3
+                errCode: null
+                errMsg: null
   /v1/system/faqs/{faqWrtNo}:
     get:
       tags:
@@ -11282,6 +12594,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_FaqDetailResponse'
+              example:
+                data:
+                  faq_wrt_no: 1
+                  title: "Cloud PC에 접속이 되지 않을 때 어떻게 하나요?"
+                  faq_typ_cd_nm: "장애"
+                  asw_cont: "<p>VDI 클라이언트 최신 버전 확인 후 포털에서 전원 상태를 확인하세요.</p>"
+                errCode: null
+                errMsg: null
   /v1/system/qnas:
     get:
       tags:
@@ -11314,6 +12634,20 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_QnaListItem'
+              example:
+                data:
+                  - adv_req_wrt_no: 3
+                    title: "개인 디스크 연결 후 Cloud PC에서 보이지 않습니다"
+                    adv_typ_cd_nm: "장애"
+                    adv_pgrs_sts_cd_nm: "답변 대기"
+                    reg_ts: "2026-03-24 16:20:00"
+                  - adv_req_wrt_no: 2
+                    title: "Cloud PC 사용 기간 연장 신청 방법 문의"
+                    adv_typ_cd_nm: "이용 방법"
+                    adv_pgrs_sts_cd_nm: "답변 완료"
+                    reg_ts: "2026-03-10 11:05:00"
+                errCode: null
+                errMsg: null
     post:
       tags:
         - user/system/qnas
@@ -11345,6 +12679,11 @@ paths:
                   list_count:
                     type: integer
                     description: 전체 1:1 문의 건수
+              example:
+                data:
+                  list_count: 3
+                errCode: null
+                errMsg: null
   /v1/system/qnas/{advReqWrtNo}:
     get:
       tags:
@@ -11365,6 +12704,18 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User_QnaDetailResponse'
+              example:
+                data:
+                  adv_req_wrt_no: 3
+                  title: "개인 디스크 연결 후 Cloud PC에서 보이지 않습니다"
+                  adv_cont: "어제 개인 디스크를 VM-001에 연결했는데, Cloud PC에 로그인해도 드라이브가 표시되지 않습니다."
+                  asw_cont: null
+                  wri_att_file_l:
+                    - stor_file_id: "FILE-001"
+                      org_file_nm: "화면캡처_디스크없음.png"
+                      att_file_loc_cd: "U"
+                errCode: null
+                errMsg: null
     put:
       tags:
         - user/system/qnas
@@ -11422,6 +12773,18 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User_PortalGuideItem'
+              example:
+                data:
+                  - ui_file_div_nm: "Windows64 Client"
+                    ui_file_nm: "CloudX_VDI_Client_v3.2.1_Windows64.exe"
+                    stor_file_id: "FILE-WIN-001"
+                    title: "CloudX VDI 클라이언트 (Windows 64비트)"
+                  - ui_file_div_nm: "MacOS Client"
+                    ui_file_nm: "CloudX_VDI_Client_v3.2.1_MacOS.dmg"
+                    stor_file_id: "FILE-MAC-001"
+                    title: "CloudX VDI 클라이언트 (macOS)"
+                errCode: null
+                errMsg: null
   /v1/fileService/uploads:
     post:
       tags:
