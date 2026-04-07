@@ -53,6 +53,11 @@ module.exports = function (router, getScenario) {
     res.json({ data: { adChk: 'N' } });
   });
 
+  // 사용자 그룹 상세 조회
+  router.get('/api/v1/user/usergroups/:id', (req, res) => {
+    res.json(require('../fixtures/user/usergroups-detail.json'));
+  });
+
   // 사용자 그룹 목록 조회
   router.get('/api/v1/user/usergroups', (req, res) => {
     res.json(require('../fixtures/user/usergroups-list.json'));
@@ -133,6 +138,11 @@ module.exports = function (router, getScenario) {
       ? require('../fixtures/user/account-admin-detail.json')
       : require('../fixtures/user/account-admin-detail-ta.json');
     res.json(fixture);
+  });
+
+  // 사용자 계정 상세 조회
+  router.get('/api/v1/user/accounts/:id', (req, res) => {
+    res.json(require('../fixtures/user/accounts-detail.json'));
   });
 
   // 업무 요청 목록

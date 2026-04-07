@@ -35,30 +35,50 @@ SA/TA 토큰에 따라 응답 데이터가 다름. SA는 슈퍼관리자 계정 
 
 **응답**
 
+래퍼: `{ data: { data: [...], pageinfo: {...} } }`
+
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| data | array | 사용자 계정 목록 |
-| data[].acct_id | string | 계정 ID (PK) |
-| data[].acct_conn_id | string | 계정 로그인 ID |
-| data[].acct_nm | string | 사용자명 |
-| data[].email | string | 이메일 |
-| data[].mob_no | string | 휴대전화 번호 |
-| data[].acct_sts_cd | string | 계정 상태 코드 |
-| data[].tnt_id | string | 테넌트 ID |
-| data[].usr_grp_id | string | 사용자 그룹 ID |
-| data[].usr_grp_nm | string | 사용자 그룹명 |
-| data[].cert_plcy_id | string | 인증 정책 ID |
-| data[].acct_vlid_stt_dt | string | 계정 유효기간 시작일 |
-| data[].acct_vlid_end_dt | string | 계정 유효기간 종료일 |
-| data[].ad_itlk_acct_yn | string | AD 연동 계정 여부 |
-| pageinfo.count | number | 전체 건수 |
-
-**에러 코드**
-
-| 코드 | 설명 |
-|------|------|
-| 400 | 잘못된 요청 파라미터 |
-| 403 | 권한 없음 |
+| data.data[] | array | 사용자 계정 목록 |
+| data.data[].acct_id | string | 계정 ID (PK) |
+| data.data[].acct_conn_id | string | 계정 로그인 ID (마스킹) |
+| data.data[].acct_nm | string | 사용자명 (마스킹) |
+| data.data[].email | string | 이메일 (마스킹) |
+| data.data[].mob_no | string | 휴대전화 번호 (마스킹) |
+| data.data[].acct_sts_cd | string | 계정 상태 코드 (`U013NR` 정상 / `U013LK` 잠김 / `U013DM` 휴면 등) |
+| data.data[].acct_sts_cd_nm | string | 계정 상태명 |
+| data.data[].tnt_id | string | 테넌트 ID |
+| data.data[].usr_grp_id | string | 사용자 그룹 ID |
+| data.data[].usr_grp_nm | string | 사용자 그룹명 |
+| data.data[].ognz_nm | string | 조직명 |
+| data.data[].blng_dept_nm | string | 소속 부서명 |
+| data.data[].dept_cd | string | 부서 코드 |
+| data.data[].cert_plcy_id | string | 인증 정책 ID |
+| data.data[].cert_plcy_nm | string | 인증 정책명 |
+| data.data[].cert_plcy_tgt_cd | string | 인증 정책 대상 코드 (`U020TNT` 테넌트 / `U020GRP` 그룹) |
+| data.data[].cert_plcy_tgt_cd_nm | string | 인증 정책 대상 코드명 |
+| data.data[].acct_vlid_stt_dt | string | 계정 유효기간 시작일 |
+| data.data[].acct_vlid_end_dt | string | 계정 유효기간 종료일 |
+| data.data[].ad_itlk_acct_yn | string | AD 연동 계정 여부 (`Y`/`N`) |
+| data.data[].acct_conn_sts_cd | string | 접속 상태 코드 (`U014ON` 접속중 / `U014OF` 미접속) |
+| data.data[].acct_conn_sts_cd_nm | string | 접속 상태명 |
+| data.data[].lst_conn_tm | string | 마지막 접속 일시 |
+| data.data[].passwd_err_cnt | number | 비밀번호 오류 횟수 |
+| data.data[].acct_descp | string | 계정 설명 |
+| data.data[].sms_recv_yn | string | SMS 수신 여부 (`Y`/`N`) |
+| data.data[].email_recv_yn | string | 이메일 수신 여부 (`Y`/`N`) |
+| data.data[].del_yn | string | 삭제 여부 (`Y`/`N`) |
+| data.data[].expire_auto_delete_yn | string | 만료 자동 삭제 여부 (`Y`/`N`) |
+| data.data[].work_mng_use_yn | string | 근태관리 사용 여부 (`Y`/`N`) |
+| data.data[].client_update_yn | string | 클라이언트 업데이트 여부 (`Y`/`N`) |
+| data.data[].search_list_yn | string | 검색 목록 여부 (`Y`/`N`) |
+| data.data[].reg_id | string | 등록자 ID |
+| data.data[].reg_ts | string | 등록 일시 |
+| data.data[].mod_id | string | 수정자 ID |
+| data.data[].mod_ts | string | 수정 일시 |
+| data.pageinfo.count | number | 전체 건수 |
+| data.pageinfo.ispaging | boolean | 페이징 여부 |
+| data.pageinfo.pageCount | number | 페이지당 항목 수 |
 
 **호출 위치**
 
@@ -197,25 +217,59 @@ GET /v1/user/accounts/{acct_id}
 
 **응답**
 
+래퍼: `{ data: {...} }`
+
 | 필드 | 타입 | 설명 |
 |------|------|------|
-| acct_id | string | 계정 ID |
-| acct_conn_id | string | 로그인 ID |
-| acct_nm | string | 사용자명 |
-| email | string | 이메일 |
-| mob_no | string | 휴대전화 번호 |
-| acct_sts_cd | string | 계정 상태 코드 |
-| tnt_id | string | 테넌트 ID |
-| usr_grp_id | string | 사용자 그룹 ID |
-| cert_plcy_id | string | 인증 정책 ID |
-| cert_plcy_tgt_cd_nm | string | 인증 정책 대상 코드명 |
-| acct_vlid_stt_dt | string | 유효기간 시작일 |
-| acct_vlid_end_dt | string | 유효기간 종료일 |
-| ad_itlk_acct_yn | string | AD 연동 계정 여부 |
-| adModYn | boolean | AD 수정 가능 여부 |
-| viwr_con_plcy_yn | string | 뷰어 접속 정책 여부 |
-| tnt_viwr_con_plcy_yn | string | 테넌트 뷰어 접속 정책 여부 |
-| tnt_work_mng_use_yn | string | 테넌트 근태관리 사용 여부 |
+| data.acct_id | string | 계정 ID |
+| data.acct_conn_id | string | 로그인 ID (마스킹) |
+| data.acct_nm | string | 사용자명 (마스킹) |
+| data.acct_passwd | string | 비밀번호 (마스킹) |
+| data.email | string | 이메일 (마스킹) |
+| data.mob_no | string | 휴대전화 번호 (마스킹) |
+| data.acct_sts_cd | string | 계정 상태 코드 |
+| data.acct_sts_cd_nm | string | 계정 상태명 |
+| data.tnt_id | string | 테넌트 ID |
+| data.usr_grp_id | string | 사용자 그룹 ID |
+| data.usr_grp_nm | string | 사용자 그룹명 |
+| data.usr_grp_full_nm | string | 사용자 그룹 전체명 |
+| data.ognz_nm | string | 조직명 |
+| data.blng_dept_nm | string | 소속 부서명 |
+| data.dept_cd | string | 부서 코드 |
+| data.cert_plcy_id | string | 인증 정책 ID |
+| data.cert_plcy_nm | string | 인증 정책명 |
+| data.cert_plcy_tgt_cd | string | 인증 정책 대상 코드 |
+| data.cert_plcy_tgt_cd_nm | string | 인증 정책 대상 코드명 |
+| data.acct_vlid_stt_dt | string | 유효기간 시작일 |
+| data.acct_vlid_end_dt | string | 유효기간 종료일 |
+| data.ad_itlk_acct_yn | string | AD 연동 계정 여부 (`Y`/`N`) |
+| data.acct_conn_sts_cd | string | 접속 상태 코드 |
+| data.acct_conn_sts_cd_nm | string | 접속 상태명 |
+| data.lst_conn_tm | string | 마지막 접속 일시 |
+| data.passwd_err_cnt | number | 비밀번호 오류 횟수 |
+| data.passwd_mod_dt | string | 비밀번호 변경일 |
+| data.acct_descp | string | 계정 설명 |
+| data.sms_recv_yn | string | SMS 수신 여부 (`Y`/`N`) |
+| data.email_recv_yn | string | 이메일 수신 여부 (`Y`/`N`) |
+| data.del_yn | string | 삭제 여부 (`Y`/`N`) |
+| data.expire_auto_delete_yn | string | 만료 자동 삭제 여부 (`Y`/`N`) |
+| data.work_mng_use_yn | string | 근태관리 사용 여부 (`Y`/`N`) |
+| data.client_update_yn | string | 클라이언트 업데이트 여부 (`Y`/`N`) |
+| data.search_list_yn | string | 검색 목록 여부 (`Y`/`N`) |
+| data.vm_as_cnt | number | 할당 VM 수 |
+| data.conn_ip | string | 접속 IP |
+| data.shar_str_usg_yn | string | 공유 스토리지 사용 여부 (`Y`/`N`) |
+| data.grp_fold_size | number | 그룹 폴더 크기 (MB) |
+| data.priv_fold_size | number | 개인 폴더 크기 (MB) |
+| data.info_reg_allow_yn | string | 정보 등록 허용 여부 (`Y`/`N`) |
+| data.reg_nm | string | 등록자명 (마스킹) |
+| data.reg_ts | string | 등록 일시 |
+| data.reg_id | string | 등록자 ID |
+| data.reg_conn_id | string | 등록자 접속 ID (마스킹) |
+| data.mod_nm | string | 수정자명 (마스킹) |
+| data.mod_ts | string | 수정 일시 |
+| data.mod_id | string | 수정자 ID |
+| data.mod_conn_id | string | 수정자 접속 ID (마스킹) |
 
 **호출 위치**
 
