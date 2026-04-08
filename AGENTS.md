@@ -25,6 +25,10 @@
 - `docs/ia/`: 정보 아키텍처 (메뉴 트리, 유저플로우, 데이터 관계도)
 - `docs/prd.md`: 플랫폼 PRD
 - `.claude/rules/`: 작업 규칙 (세부 내용)
+- `.claude/skills/api-quality/`: API 품질 관리 스킬 (DTO 대조, 정합성 검증, OpenAPI 변환)
+- `.claude/agents/`: API 검증 에이전트 (reviewer, fixer, openapi-gen)
+- `docs/openapi-cloudx.yaml`: OpenAPI 3.0 통합 명세 (admin + user)
+- `_workspace/`: 에이전트 작업 산출물 (gitignored)
 
 ## Run Commands
 

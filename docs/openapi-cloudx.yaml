@@ -5,9 +5,7 @@ info:
   version: v2.2.10
 servers:
   - url: http://127.0.0.1:3000/api
-    description: Admin Mock Server
-  - url: http://127.0.0.1:3001/api
-    description: User Mock Server
+    description: Mock Server
 security:
   - bearerAuth: []
 paths:

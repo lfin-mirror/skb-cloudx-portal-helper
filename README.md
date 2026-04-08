@@ -79,54 +79,7 @@ npx playwright install chromium
 
 ### 포털 패키지 설치
 
-**user-portal** (Node lts/jod, npm):
-
-```bash
-cd user-portal && npm install
-```
-
-**admin-portal** (Node 11.15.0, yarn):
-
-admin-portal은 node-sass 4.x를 사용하므로 Apple Silicon Mac(M1/M2/M3)에서는 Rosetta(x86_64) 모드가 필요하다.
-
-```bash
-# Rosetta 미설치 시
-softwareupdate --install-rosetta
-
-# Node 11에 yarn 설치 (최초 1회)
-arch -x86_64 zsh -c 'source ~/.nvm/nvm.sh && nvm use 11.15.0 && npm install -g yarn'
-
-# 패키지 설치
-arch -x86_64 zsh -c 'source ~/.nvm/nvm.sh && nvm use 11.15.0 && cd admin-portal && yarn install --force'
-```
-
-Intel Mac은 `arch -x86_64` 없이 직접 실행 가능.
-
-### user-portal 설정
-
-`user-portal/config/application.json`의 API URL을 mock 서버로 변경한다:
-
-```json
-{
-  "VUE_APP_API_URI": "http://localhost:3000/api",
-  "VUE_APP_REMOTE_URI": "http://localhost:3000",
-  "VUE_APP_FILE_URI": "http://localhost:3000"
-}
-```
-
-이 변경은 커밋하지 않는다. git에서 추적을 제외하려면:
-
-```bash
-cd user-portal
-git update-index --assume-unchanged config/application.json
-```
-
-원복이 필요할 때:
-
-```bash
-git update-index --no-assume-unchanged config/application.json
-git checkout config/application.json
-```
+[docs/portal-setup.md](docs/portal-setup.md) 참조 (패키지 설치 + user-portal 설정).
 
 ## 사용법
 
@@ -138,9 +91,16 @@ cd skb-cloudx-portal-helper && npm run mock
 
 # 터미널 2: user-portal dev server
 cd user-portal && npm run serve
+
+# 터미널 2 (admin-portal 개발 시): admin-portal dev server
+arch -x86_64 zsh -c 'source ~/.nvm/nvm.sh && nvm use 11.15.0 && cd admin-portal && yarn serve'
 ```
 
-브라우저에서 `http://localhost:8080/tenant1/login` 접속. dev server가 `config/application.json`을 읽어서 API 요청을 mock 서버(`localhost:3000`)로 보낸다. HMR이 동작하므로 코드 수정 시 즉시 반영된다.
+mock 서버는 요청 헤더 `X-CloudPC-Request-Poc`로 포털을 구분한다 (`POCUSER` → user-portal, `POCADMIN` → admin-portal). 각 포털의 axios 인터셉터가 이 헤더를 자동 주입하므로 별도 설정 불필요.
+
+**user-portal**: 브라우저에서 `http://localhost:8080/tenant1/login` 접속. dev server가 `config/application.json`을 읽어서 API 요청을 mock 서버(`localhost:3000`)로 보낸다. HMR이 동작하므로 코드 수정 시 즉시 반영된다.
+
+**admin-portal**: SA/TA 로그인, 권한 전환 등 상세 설정은 [docs/portal-setup.md](docs/portal-setup.md) 참조.
 
 기본 상태에서는 모든 API가 `success` 시나리오로 응답한다. 아이디/비밀번호에 아무 값이나 입력해도 로그인이 성공한다. mock 서버는 입력값을 검증하지 않고 현재 설정된 시나리오의 fixture를 그대로 반환한다.
 
@@ -323,57 +283,6 @@ test('SMS 2차 인증', async ({ page }) => {
 });
 ```
 
-## admin-portal 지원
-
-### 포털 분기
-
-mock 서버는 요청 헤더 `X-CloudPC-Request-Poc`로 포털을 구분한다:
-
-- `POCUSER` → `user-portal/handlers/` 라우터
-- `POCADMIN` → `admin-portal/handlers/` 라우터
-
-각 포털의 axios 인터셉터가 이 헤더를 자동으로 주입하므로 별도 설정 불필요.
-
-### SA / TA 로그인
-
-admin-portal 로그인 시 **아이디에 따라** 역할이 결정된다:
-
-| 아이디 입력값 | 역할 | 토큰 |
-|--------------|------|------|
-| `sa`, `superadmin` 등 (`sa` 포함) | Super Admin | `Bearer mock-sa-token` |
-| `ta`, `tenantadmin` 등 (그 외) | Tenant Admin | `Bearer mock-ta-token` |
-
-비밀번호는 아무 값이나 입력하면 된다.
-
-이후 메뉴 API(`/v1/user/admin/groups/menus`)는 토큰을 보고 SA/TA 메뉴 트리를 반환한다.
-
-### SA ↔ TA 권한 전환
-
-`/v1/authRemake` API로 런타임에 역할을 전환한다. admin-portal의 권한 전환 모달에서 호출되며, 요청 body의 `grp_typ_cd`로 분기한다:
-
-- `U001SUP` → SA로 전환, `Bearer mock-sa-token` 발급
-- `U001TNT` → TA로 전환, `Bearer mock-ta-token` 발급
-
-### admin-portal 핸들러 구조
-
-```
-mock-server/admin-portal/
-├── handlers/
-│   ├── gw.js              # 로그인 (아이디로 SA/TA 분기), 로그아웃, 권한 전환
-│   ├── nauth.js           # 2차 인증, 아이디 찾기, 임시 비밀번호, 포털 UI 공개 조회
-│   ├── auth.js            # 본인 확인, 비밀번호 변경
-│   ├── resource.js        # VPC/호스트/네트워크/스토리지/템플릿/스냅샷/디스크/테넌트/풀/마이그레이션
-│   ├── user.js            # 메뉴 목록 (SA/TA), 계정, 그룹
-│   ├── system.js          # 공지/FAQ/VOC/팝업/포털UI/가이드/메뉴관리
-│   ├── operation.js       # 인증정책/USB/백업/접근차단/블랙리스트/네트워크/전원/메타데이터/외부연동
-│   └── monitoring.js      # 알람/감사로그/대시보드/위젯/통계
-└── fixtures/              # 200+개 JSON 응답 데이터
-    ├── menus-sa.json, menus-ta.json
-    ├── resource/          # VPC, 호스트, 네트워크, 스토리지 등
-    ├── operation/         # 정책, USB, 외부연동 등
-    └── monitoring/        # 대시보드, 통계, 알람 등
-```
-
 ## fixture 추가
 
 새 API mock을 추가하려면:
@@ -395,5 +304,6 @@ mock-server/admin-portal/
 | `docs/user-portal/` | user-portal 문서 (화면/흐름/내부구조/용어) |
 | `docs/user-portal/api/` | user-portal API 명세 |
 | `docs/CLAUDE.md` | 문서 규칙 인덱스 |
+| `docs/openapi-cloudx.yaml` | OpenAPI 3.0 통합 명세 (admin + user, Hoppscotch 임포트용) |
 
 상세 규칙은 `docs/CLAUDE.md` 참조.

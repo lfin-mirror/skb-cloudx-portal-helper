@@ -14,3 +14,17 @@
 | `docs-release.md` | `docs/**/*.md` | 경로 B — 릴리스 기반 문서 업데이트 프로세스 |
 | `testing.md` | `e2e/**` | Playwright E2E, 시나리오 제어, 검증 |
 | `gitea.md` | `**` | Gitea REST API 연동 |
+
+## 스킬
+
+| 스킬 | 경로 | 용도 |
+|------|------|------|
+| `api-quality` | `.claude/skills/api-quality/skill.md` | API 품질 관리 — DTO 대조, 3-way 정합성 검증, OpenAPI 변환 |
+
+## 에이전트
+
+| 에이전트 | 경로 | 역할 |
+|---------|------|------|
+| `api-reviewer` | `.claude/agents/api-reviewer.md` | API 명세서를 DTO/fixture/OpenAPI와 대조하여 불일치 검증 |
+| `api-fixer` | `.claude/agents/api-fixer.md` | 검증 보고서 기반 명세서·OpenAPI 동기화 수정 |
+| `api-openapi-gen` | `.claude/agents/api-openapi-gen.md` | API 명세서 markdown → OpenAPI 3.0 YAML 변환 |

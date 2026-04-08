@@ -18,6 +18,7 @@ OpenStack 기반 VDI 플랫폼의 화면 분석, API 명세, 정보 아키텍처
 | OpenStack 개념 이해 | [openstack/시스템 자원/](admin-portal/openstack/시스템%20자원/00-읽기-가이드.md) |
 | API 명세 | [admin API](admin-portal/api/01-api-index.md) / [user API](user-portal/api/01-api-index.md) |
 | VDI 용어 | [term/](term/) |
+| OpenAPI 명세 (Hoppscotch) | [openapi-cloudx.yaml](openapi-cloudx.yaml) |
 
 ## 폴더 구조
 
