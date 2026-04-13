@@ -20,6 +20,7 @@
 | 스킬 | 경로 | 용도 |
 |------|------|------|
 | `api-quality` | `.claude/skills/api-quality/skill.md` | API 품질 관리 — DTO 대조, 3-way 정합성 검증, OpenAPI 변환 |
+| `docs-release` | `.claude/skills/docs-release/skill.md` | 릴리스 문서 업데이트 — 버전 간 diff 분석, 화면/API 문서 업데이트, changelog 생성 |
 
 ## 에이전트
 
@@ -28,3 +29,6 @@
 | `api-reviewer` | `.claude/agents/api-reviewer.md` | API 명세서를 DTO/fixture/OpenAPI와 대조하여 불일치 검증 |
 | `api-fixer` | `.claude/agents/api-fixer.md` | 검증 보고서 기반 명세서·OpenAPI 동기화 수정 |
 | `api-openapi-gen` | `.claude/agents/api-openapi-gen.md` | API 명세서 markdown → OpenAPI 3.0 YAML 변환 |
+| `release-analyst` | `.claude/agents/release-analyst.md` | 릴리스 버전 간 diff 추출 + 문서 영향 분석 |
+| `doc-updater` | `.claude/agents/doc-updater.md` | 소스코드 기반 화면/API 문서 업데이트 (병렬) |
+| `release-finalizer` | `.claude/agents/release-finalizer.md` | changelog 작성, frontmatter 버전 업데이트, OpenAPI 버전 반영 |

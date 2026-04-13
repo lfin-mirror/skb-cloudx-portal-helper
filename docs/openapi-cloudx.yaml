@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: CloudX VDI Platform API
   description: CloudX VDI 플랫폼 API (admin-portal + user-portal)
-  version: v2.2.10
+  version: v2.2.11
 servers:
   - url: http://127.0.0.1:3000/api
     description: Mock Server

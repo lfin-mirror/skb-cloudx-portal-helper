@@ -29,6 +29,7 @@
 - `.claude/agents/`: API 검증 에이전트 (reviewer, fixer, openapi-gen)
 - `docs/openapi-cloudx.yaml`: OpenAPI 3.0 통합 명세 (admin + user)
 - `_workspace/`: 에이전트 작업 산출물 (gitignored)
+- `.claude/skills/docs-release/`: 릴리스 문서 업데이트 스킬 (diff 분석 → 문서 업데이트 → changelog)
 
 ## Run Commands
 
