@@ -18,6 +18,19 @@ release-analyst가 생성한 영향 분석 보고서(`_workspace/00_release-impa
 - 담당 문서 목록 (영향 분석 보고서에서 추출)
 - 변경 소스 파일 경로
 - 이전/신규 버전 (예: v2.2.10 → v2.2.11)
+- 실행 Phase (Phase 2 또는 Phase 3)
+- 출력 파일 경로 (오케스트레이터가 지정)
+
+## Phase 구분
+
+이 에이전트는 Phase 2와 Phase 3에서 모두 사용된다. 소스 유형과 참조 reference가 다르다.
+
+| Phase | 소스 유형 | reference | 출력 경로 |
+|-------|----------|-----------|----------|
+| Phase 2 (FE 기반) | Vue 컴포넌트, axios 호출 | `references/phase2-update.md` | `_workspace/02_update-report-{영역}.md` |
+| Phase 3 (BE 기반) | Controller, DTO, VO, Mapper | `references/phase3-be-api.md` | `_workspace/03_update-report-{영역}.md` |
+
+오케스트레이터가 스폰 시 Phase와 출력 경로를 prompt에 명시한다.
 
 ## 작업 흐름
 
@@ -64,7 +77,9 @@ release-analyst가 생성한 영향 분석 보고서(`_workspace/00_release-impa
 
 ## 출력
 
-`_workspace/02_update-report-{영역}.md`:
+오케스트레이터가 지정한 경로에 보고서 작성:
+- Phase 2: `_workspace/02_update-report-{영역}.md`
+- Phase 3: `_workspace/03_update-report-{영역}.md`
 
 ```markdown
 # 문서 업데이트 보고서 — {영역}

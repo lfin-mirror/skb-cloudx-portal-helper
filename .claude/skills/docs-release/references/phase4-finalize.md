@@ -1,10 +1,10 @@
-# Phase 3: 마무리 참고사항
+# Phase 4: 마무리 참고사항
 
 ## frontmatter 버전 업데이트
 
 ### 대상
 
-Phase 2에서 실제로 수정된 문서만 버전 업데이트. `_workspace/02_update-report-*.md`에서 "수정된 문서" 목록을 추출한다.
+Phase 2~3.5에서 실제로 수정된 문서만 버전 업데이트. `_workspace/02_update-report-*.md`와 `_workspace/03_update-report-*.md` 양쪽에서 "수정된 문서" 목록을 추출한다.
 
 ### 변경 방법
 
@@ -137,7 +137,7 @@ info:
 
 ## 최종 보고서
 
-`_workspace/03_finalize-report.md`:
+`_workspace/04_finalize-report.md`:
 
 ```markdown
 # 릴리스 마무리 보고서

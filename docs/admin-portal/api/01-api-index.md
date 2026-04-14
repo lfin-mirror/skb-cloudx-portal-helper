@@ -54,6 +54,7 @@ admin-portal이 호출하는 모든 API 목록.
 | 테넌트/관리자/그룹/리소스/네트워크 배정 | 테넌트 리소스 | [링크](resource/tenants/01-tenants.md) |
 | 풀 IP/템플릿 이력/서브넷 배정/초기화 | 풀 관리 | [링크](resource/pools/01-pools.md) |
 | 마이그레이션/대피 실행/이력 | 마이그레이션 | [링크](resource/migration/01-migration.md) |
+| 보안그룹 CRUD/Rule/동기화/이력, VM 보안그룹 변경 | 보안그룹 | [링크](resource/security-group/01-security-group.md) |
 
 ## user — 사용자 관리
 

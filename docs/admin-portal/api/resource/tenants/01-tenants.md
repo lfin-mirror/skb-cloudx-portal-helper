@@ -102,7 +102,12 @@
 |---|---|---|---|
 | tntId | string | Y | 테넌트 ID |
 
-**Request Body**: 수정할 테넌트 정보 필드.
+**Request Body**: 수정할 테넌트 정보 필드. 키로깅 방지 필드 포함:
+
+| 필드 | 타입 | 필수 | 설명 |
+|---|---|---|---|
+| user_ptal_klp_use_yn | String | N | 사용자 포털 키로깅 방지 사용 여부 (기본값 `Y`) |
+| clnt_viwr_klp_use_yn | String | N | 클라이언트 뷰어 키로깅 방지 사용 여부 (기본값 `Y`) |
 
 ---
 
@@ -169,6 +174,8 @@
 | shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
 | viwr_con_plcy_yn | string | 단말 접속 관리 사용 여부 |
 | viwr_con_cnt | string | Mac 주소 최대 등록 수 |
+| user_ptal_klp_use_yn | String | 사용자 포털 키로깅 방지 사용 여부 (기본값 `Y`) |
+| clnt_viwr_klp_use_yn | String | 클라이언트 뷰어 키로깅 방지 사용 여부 (기본값 `Y`) |
 | netApp_interlock | object | NetApp 연동 정보 |
 | email_interlock | object | 이메일 연동 정보 |
 | adScript | object | AD 스크립트 정보 |
@@ -246,6 +253,8 @@
 | shar_str_usg_yn | string | 공유 스토리지 사용 여부 |
 | viwr_con_plcy_yn | string | 단말 접속 관리 사용 여부 |
 | viwr_con_cnt | string | Mac 주소 최대 등록 수 |
+| user_ptal_klp_use_yn | String | 사용자 포털 키로깅 방지 사용 여부 (기본값 `Y`) |
+| clnt_viwr_klp_use_yn | String | 클라이언트 뷰어 키로깅 방지 사용 여부 (기본값 `Y`) |
 | networks | array | 할당 네트워크 목록 (네트워크 + subnets 중첩) |
 | templates | array | 할당 템플릿 목록 (temp_id, temp_nm, os_typ_cd 등) |
 | flavors | array | 할당 Flavor 목록 (flavor_id, vcpu_cnt, vmm_capa, vhd_capa 등) |

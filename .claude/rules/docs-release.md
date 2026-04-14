@@ -66,6 +66,10 @@ git diff v2.2.9..v2.3.0 -- '*.vue' '*.js'
 - frontmatter의 `menu_id`로 검색
 - frontmatter의 `api_endpoints`로 검색
 
+## 자동화
+
+상세 파이프라인(Phase 0~4, 에이전트 분리, api-quality 연계, 사용자 확인 게이트)은 `.claude/skills/docs-release/skill.md` 참조.
+
 ## AI 실행 명령 예시
 
 ```

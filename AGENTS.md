@@ -26,7 +26,7 @@
 - `docs/prd.md`: 플랫폼 PRD
 - `.claude/rules/`: 작업 규칙 (세부 내용)
 - `.claude/skills/api-quality/`: API 품질 관리 스킬 (DTO 대조, 정합성 검증, OpenAPI 변환)
-- `.claude/agents/`: API 검증 에이전트 (reviewer, fixer, openapi-gen)
+- `.claude/agents/`: 에이전트 정의 (api-quality: reviewer/fixer/openapi-gen, docs-release: release-analyst/doc-updater/release-finalizer, branch-audit: commit-auditor/cross-reviewer/lineage-tracer/report-writer)
 - `docs/openapi-cloudx.yaml`: OpenAPI 3.0 통합 명세 (admin + user)
 - `_workspace/`: 에이전트 작업 산출물 (gitignored)
 - `.claude/skills/docs-release/`: 릴리스 문서 업데이트 스킬 (diff 분석 → 문서 업데이트 → changelog)
