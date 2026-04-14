@@ -918,6 +918,10 @@ module.exports = function (router, getScenario) {
     res.json(SUCCESS());
   });
 
+  router.post('/api/v1/resource/policies/security-group/:securityGroupId/sync', (req, res) => {
+    res.json(require('../fixtures/resource/security-group-sync-result.json'));
+  });
+
   router.get('/api/v1/resource/policies/security-group/:securityGroupId', (req, res) => {
     res.json(require('../fixtures/resource/security-group-detail.json'));
   });
@@ -927,7 +931,7 @@ module.exports = function (router, getScenario) {
   });
 
   router.post('/api/v1/resource/policies/security-group/sync', (req, res) => {
-    res.json(SUCCESS());
+    res.json(require('../fixtures/resource/security-group-sync-result.json'));
   });
 
   router.post('/api/v1/resource/policies/security-group', (req, res) => {
@@ -939,6 +943,10 @@ module.exports = function (router, getScenario) {
   });
 
   router.delete('/api/v1/resource/policies/security-group/:id', (req, res) => {
+    res.json(SUCCESS());
+  });
+
+  router.put('/api/v1/resource/vm/:vmId/security-group', (req, res) => {
     res.json(SUCCESS());
   });
 

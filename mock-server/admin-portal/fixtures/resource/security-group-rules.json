@@ -1,33 +1,69 @@
 {
-  "data": [
-    {
-      "id": "RULE-001",
-      "direction": "ingress",
-      "protocol": "tcp",
-      "port_range_min": 22,
-      "port_range_max": 22,
-      "remote_ip_prefix": "0.0.0.0/0",
-      "ethertype": "IPv4"
-    },
-    {
-      "id": "RULE-002",
-      "direction": "egress",
-      "protocol": null,
-      "port_range_min": null,
-      "port_range_max": null,
-      "remote_ip_prefix": "0.0.0.0/0",
-      "ethertype": "IPv4"
-    },
-    {
-      "id": "RULE-003",
-      "direction": "ingress",
-      "protocol": "tcp",
-      "port_range_min": 3389,
-      "port_range_max": 3389,
-      "remote_ip_prefix": "10.0.0.0/8",
-      "ethertype": "IPv4"
-    }
-  ],
-  "errCode": null,
-  "errMsg": null
+    "data": [
+        {
+            "id": "r1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "tenant_id": "t1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "security_group_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "direction": "ingress",
+            "ethertype": "IPv4",
+            "protocol": "tcp",
+            "port_range_min": "22",
+            "port_range_max": "22",
+            "remote_ip_prefix": "0.0.0.0/0",
+            "remote_group_id": null,
+            "description": "SSH 접속 허용",
+            "action": "allow",
+            "del_yn": "N",
+            "reg_conn_id": "***",
+            "reg_nm": "***",
+            "reg_ts": "2025-10-17 18:11:14",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2025-10-17 18:11:14"
+        },
+        {
+            "id": "r2b3c4d5-e6f7-8901-bcde-f12345678901",
+            "tenant_id": "t1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "security_group_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "direction": "egress",
+            "ethertype": "IPv4",
+            "protocol": null,
+            "port_range_min": null,
+            "port_range_max": null,
+            "remote_ip_prefix": "0.0.0.0/0",
+            "remote_group_id": null,
+            "description": "모든 아웃바운드 허용",
+            "action": "allow",
+            "del_yn": "N",
+            "reg_conn_id": "***",
+            "reg_nm": "***",
+            "reg_ts": "2025-10-17 18:11:14",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2025-10-17 18:11:14"
+        },
+        {
+            "id": "r3c4d5e6-f7a8-9012-cdef-123456789012",
+            "tenant_id": "t1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "security_group_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "direction": "ingress",
+            "ethertype": "IPv4",
+            "protocol": "tcp",
+            "port_range_min": "3389",
+            "port_range_max": "3389",
+            "remote_ip_prefix": "10.0.0.0/8",
+            "remote_group_id": null,
+            "description": "RDP 접속 허용 (내부망)",
+            "action": "allow",
+            "del_yn": "N",
+            "reg_conn_id": "***",
+            "reg_nm": "***",
+            "reg_ts": "2025-11-05 14:30:00",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2025-11-05 14:30:00"
+        }
+    ],
+    "errCode": null,
+    "errMsg": null
 }

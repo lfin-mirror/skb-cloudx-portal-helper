@@ -4,22 +4,43 @@
             "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
             "name": "default",
             "description": "Default security group",
+            "tenant_id": "t1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "rules": null,
+            "del_yn": "N",
             "reg_conn_id": "***",
-            "reg_ts": "2025-10-17 18:11:14"
+            "reg_nm": "***",
+            "reg_ts": "2025-10-17 18:11:14",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2025-12-01 10:30:00"
         },
         {
             "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
             "name": "web-server-sg",
             "description": "HTTP/HTTPS 허용",
+            "tenant_id": "t1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "rules": null,
+            "del_yn": "N",
             "reg_conn_id": "***",
-            "reg_ts": "2025-11-05 14:30:00"
+            "reg_nm": "***",
+            "reg_ts": "2025-11-05 14:30:00",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2025-11-20 09:00:00"
         },
         {
             "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
             "name": "db-server-sg",
             "description": "MariaDB 3306 포트 허용",
+            "tenant_id": "t1a2b3c4-d5e6-7890-abcd-ef1234567890",
+            "rules": null,
+            "del_yn": "N",
             "reg_conn_id": "***",
-            "reg_ts": "2025-12-10 09:15:30"
+            "reg_nm": "***",
+            "reg_ts": "2025-12-10 09:15:30",
+            "mod_conn_id": "***",
+            "mod_nm": "***",
+            "mod_ts": "2026-01-05 11:45:00"
         }
     ],
     "errCode": null,
