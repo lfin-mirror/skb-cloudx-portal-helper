@@ -5,7 +5,7 @@ description: 릴리스 버전 간 diff를 분석하여 화면 문서, API 명세
 
 # Docs Release — 릴리스 문서 업데이트 오케스트레이터
 
-코드만 머지된 릴리스의 변경사항을 분석하고, 화면 문서·API 명세·OpenAPI·changelog를 업데이트하는 5단계 파이프라인.
+코드만 머지된 릴리스의 변경사항을 분석하고, 화면 문서·API 명세·mock 서버·OpenAPI·changelog를 업데이트하는 6단계 파이프라인.
 
 ## 입력
 
@@ -26,7 +26,8 @@ description: 릴리스 버전 간 diff를 분석하여 화면 문서, API 명세
 |---------|------|-------|
 | `release-analyst` | `.claude/agents/release-analyst.md` | 0, 1 |
 | `doc-updater` | `.claude/agents/doc-updater.md` | 2, 3 |
-| `release-finalizer` | `.claude/agents/release-finalizer.md` | 4 |
+| `mock-updater` | `.claude/agents/mock-updater.md` | 4 |
+| `release-finalizer` | `.claude/agents/release-finalizer.md` | 5 |
 
 ## 파이프라인
 
@@ -65,12 +66,19 @@ Phase 3.5: API 품질 검증 (api-quality 스킬 연계)
 
   ↓ 사용자 확인 게이트
 
-Phase 4: 마무리 (release-finalizer)
+Phase 4: Mock 서버 업데이트 (mock-updater × N, 병렬)
+  - admin-portal: fixture/handler 추가·수정
+  - user-portal: fixture/handler 추가·수정
+  → _workspace/04_mock-update-report-{포털}.md
+
+  ↓ 사용자 확인 게이트
+
+Phase 5: 마무리 (release-finalizer)
   → frontmatter version 업데이트
   → 변경 이력 추가
-  → changelog 작성
+  → changelog 작성 (mock 서버 변경사항 포함)
   → OpenAPI version + schema 업데이트
-  → _workspace/04_finalize-report.md
+  → _workspace/05_finalize-report.md
 ```
 
 ## Phase 2 도메인 분할 (FE 기반)
@@ -108,6 +116,17 @@ Phase 2에서 API 명세 변경이 없었으면 Phase 3도 스킵.
 
 API 변경이 없었으면 Phase 3.5도 스킵.
 
+## Phase 4 Mock 서버 업데이트
+
+Phase 2~3.5에서 확정된 API 명세를 기반으로 mock-server의 fixture/handler를 동기화. 포털별로 병렬 실행.
+
+| # | 영역 | 대상 | 작업 |
+|---|------|------|------|
+| 1 | admin-portal | `mock-server/admin-portal/` | fixture 추가/수정 + handler 등록/수정 + codeMap 업데이트 |
+| 2 | user-portal | `mock-server/user-portal/` | fixture 추가/수정 + handler 등록/수정 |
+
+해당 포털에 API 변경이 없으면 스킵.
+
 ## Phase 2 vs 3 역할 분리
 
 | Phase | 소스 | 관점 | 결과 |
@@ -115,6 +134,7 @@ API 변경이 없었으면 Phase 3.5도 스킵.
 | 2 (FE 기반) | Vue 컴포넌트, axios 호출 | 화면에서 어떤 API를 호출하는지, 요청 파라미터 | 화면 문서 `## API` 섹션, API 명세 경로/동작 |
 | 3 (BE 기반) | Controller, DTO, VO, Mapper | 실제 응답 필드, 타입, 상속 체인 | API 명세 응답 필드 표, 신규 API 명세 |
 | 3.5 (검증) | fixture, 명세, OpenAPI | 3자 정합성 | 불일치 수정, OpenAPI schema 반영 |
+| 4 (Mock) | 확정된 API 명세 | mock-server fixture/handler 동기화 | fixture 추가/수정, handler 등록/수정 |
 
 ## 오케스트레이터 실행 로직
 
@@ -187,7 +207,25 @@ Skill("api-quality", args="dto-review 대상: Phase 3에서 수정된 API 명세
 Skill("api-quality", args="consistency 대상: 변경된 API 명세")
 ```
 
-### Phase 4 실행
+### Phase 4 실행 (Mock 서버, 병렬)
+
+```python
+for portal in [admin-portal, user-portal]:
+    Agent(
+        subagent_type="general-purpose",
+        prompt=f"""
+        {mock-updater.md 내용}
+        담당 포털: {portal}
+        변경된 API 명세: _workspace/02_update-report-*.md, _workspace/03_update-report-*.md에서 추출
+        버전: {old_version} → {new_version}
+        references/phase4-mock.md 참조.
+        """,
+        model="opus",
+        run_in_background=True
+    )
+```
+
+### Phase 5 실행
 
 ```python
 Agent(
@@ -198,8 +236,9 @@ Agent(
     날짜: {today}
 
     _workspace/00_release-impact.md, _workspace/02_update-report-*.md,
-    _workspace/03_update-report-*.md를 읽고 마무리 작업 수행.
-    references/phase4-finalize.md 참조.
+    _workspace/03_update-report-*.md, _workspace/04_mock-update-report-*.md를
+    읽고 마무리 작업 수행.
+    references/phase5-finalize.md 참조.
     """,
     model="opus"
 )
@@ -216,8 +255,10 @@ Agent(
 | Phase 2→3 | Phase 2에서 수정/생성된 API 명세 파일 |
 | Phase 3→게이트 | `_workspace/03_update-report-*.md` (BE 기반 보강 보고서) |
 | Phase 3→3.5 | 변경된 API 명세 목록 |
-| Phase 3.5→4 | api-quality 검증/수정 결과 |
-| Phase 4→사용자 | `_workspace/04_finalize-report.md` + `docs/changelog/` |
+| Phase 3.5→4 | api-quality 검증/수정 결과 + 확정된 API 명세 |
+| Phase 4→게이트 | `_workspace/04_mock-update-report-*.md` (mock 업데이트 보고서) |
+| Phase 4→5 | Phase 4 mock 업데이트 보고서 (changelog에 반영) |
+| Phase 5→사용자 | `_workspace/05_finalize-report.md` + `docs/changelog/` |
 
 ## 버그픽스 처리 원칙
 
@@ -239,6 +280,8 @@ changelog에는 포함:
 - 소스 파일 추적 불가: "수동 확인 필요"로 기록, 수정하지 않음
 - Phase 3에서 BE 소스 미존재 (gateway 등): 해당 API 스킵, Phase 3.5 consistency로 보완
 - OpenAPI 대규모 변경: Phase 3.5 api-quality openapi-gen 모드에서 처리
+- Phase 4에서 API 명세에 응답 구조 없음: fixture 생성 불가, "수동 확인 필요" 기록
+- Phase 4에서 handler 구조 파악 불가: 스킵, 보고서에 기록
 
 ## 기존 스킬과의 관계
 
@@ -257,7 +300,8 @@ changelog에는 포함:
 3. Phase 2: doc-updater 2개 (admin-screen + admin-api) → 문서 3개 수정
 4. Phase 3: resource-api 1개 → API 명세 1개 보강
 5. Phase 3.5: dto-review → 불일치 0건
-6. Phase 4: version bump + changelog 작성
+6. Phase 4: mock-updater 1개 (admin-portal) → fixture 1개 수정, handler 변경 없음
+7. Phase 5: version bump + changelog 작성
 
 ### 정상 (대규모 릴리스)
 
@@ -266,7 +310,8 @@ changelog에는 포함:
 3. Phase 2: doc-updater 4개 병렬 → 화면 문서 + API 명세 1차 업데이트
 4. Phase 3: doc-updater 2개 병렬 (resource-api, operation-api) → API 명세 BE 보강
 5. Phase 3.5: dto-review → 불일치 3건 수정, consistency → OpenAPI 동기화
-6. Phase 4: version bump + changelog + OpenAPI 재생성
+6. Phase 4: mock-updater 2개 병렬 (admin-portal, user-portal) → fixture/handler 추가·수정
+7. Phase 5: version bump + changelog + OpenAPI 재생성
 
 ### API 변경 없는 릴리스
 
@@ -274,7 +319,8 @@ changelog에는 포함:
 2. Phase 2: admin-screen만 실행 (admin-api, user-* 스킵)
 3. Phase 3: 스킵 (API 명세 변경 없음)
 4. Phase 3.5: 스킵
-5. Phase 4: changelog만 작성 (버그픽스 기록)
+5. Phase 4: 스킵 (API 변경 없음)
+6. Phase 5: changelog만 작성 (버그픽스 기록)
 
 ### 에러 (레포 일부 미존재)
 

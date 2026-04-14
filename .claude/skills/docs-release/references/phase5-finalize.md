@@ -1,4 +1,4 @@
-# Phase 4: 마무리 참고사항
+# Phase 5: 마무리 참고사항
 
 ## frontmatter 버전 업데이트
 
@@ -101,6 +101,9 @@ grep -rl "version: v2.2.10" docs/
 ### app-ms-operation
 - {변경 내용}
 
+## mock 서버
+- {fixture/handler 변경 사항 — Phase 4 보고서 기반}
+
 ## 문서
 - 수정: {N}개
 - 신규: {N}개
@@ -109,6 +112,13 @@ grep -rl "version: v2.2.10" docs/
 ### 변경 없는 섹션
 
 해당 포털/MS에 변경이 없으면 섹션 자체를 생략. "변경 없음"이라고 적지 않음.
+
+### mock 서버 섹션
+
+Phase 4 보고서(`_workspace/04_mock-update-report-*.md`)에서 추출:
+- 신규 fixture/handler 수
+- 수정된 fixture/handler 수
+- codeMap 추가 항목
 
 ## OpenAPI 업데이트
 
@@ -137,7 +147,7 @@ info:
 
 ## 최종 보고서
 
-`_workspace/04_finalize-report.md`:
+`_workspace/05_finalize-report.md`:
 
 ```markdown
 # 릴리스 마무리 보고서

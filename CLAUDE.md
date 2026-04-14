@@ -31,4 +31,5 @@
 | `api-openapi-gen` | `.claude/agents/api-openapi-gen.md` | API 명세서 markdown → OpenAPI 3.0 YAML 변환 |
 | `release-analyst` | `.claude/agents/release-analyst.md` | 릴리스 버전 간 diff 추출 + 문서 영향 분석 |
 | `doc-updater` | `.claude/agents/doc-updater.md` | 소스코드 기반 화면/API 문서 업데이트 (병렬) |
+| `mock-updater` | `.claude/agents/mock-updater.md` | API 명세 기반 mock-server fixture/handler 추가·수정 (병렬) |
 | `release-finalizer` | `.claude/agents/release-finalizer.md` | changelog 작성, frontmatter 버전 업데이트, OpenAPI 버전 반영 |
