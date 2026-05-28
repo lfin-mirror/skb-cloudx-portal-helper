@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "menu_id": "U",
+      "menu_nm": "USER_PORTAL",
+      "menuList": [
+        {
+          "menu_id": "U01",
+          "menu_nm": "Cloud PC 관리",
+          "menuList": [
+            { "menu_id": "U0101", "menu_nm": "Cloud PC 신청", "menuList": [] },
+            { "menu_id": "U0102", "menu_nm": "개인 디스크 관리", "menuList": [] },
+            { "menu_id": "U0103", "menu_nm": "이용 내역", "menuList": [] },
+            { "menu_id": "U0104", "menu_nm": "스냅샷 및 복원", "menuList": [] },
+            { "menu_id": "U0105", "menu_nm": "Cloud PC 초기화", "menuList": [] },
+            { "menu_id": "U0106", "menu_nm": "Cloud PC 반납", "menuList": [] },
+            { "menu_id": "U0107", "menu_nm": "단말 접속 정보 등록", "menuList": [] },
+            { "menu_id": "U0108", "menu_nm": "단말 접속 정보 현황", "menuList": [] }
+          ]
+        },
+        {
+          "menu_id": "U02",
+          "menu_nm": "고객지원",
+          "menuList": [
+            { "menu_id": "U0201", "menu_nm": "공지사항", "menuList": [] },
+            { "menu_id": "U0202", "menu_nm": "매뉴얼", "menuList": [] },
+            { "menu_id": "U0203", "menu_nm": "자주 묻는 질문", "menuList": [] },
+            { "menu_id": "U0204", "menu_nm": "1:1 문의", "menuList": [] },
+            { "menu_id": "U0205", "menu_nm": "다운로드", "menuList": [] },
+            { "menu_id": "U0206", "menu_nm": "장애처리 신청", "menuList": [] }
+          ]
+        }
+      ]
+    }
+  ],
+  "errCode": null,
+  "errMsg": null
+}

@@ -9,6 +9,7 @@
     "test:headed": "npx playwright test --config=e2e/playwright.config.js --headed",
     "test:ui": "npx playwright test --config=e2e/playwright.config.js --ui",
     "test:auth": "npx playwright test --config=e2e/playwright.config.js tests/auth/",
+    "test:menu-api": "npx playwright test --config=e2e/playwright.config.js tests/api/user-portal-menu.spec.js",
     "report": "npx playwright show-report e2e/report",
     "start": "bash scripts/start.sh"
   },
