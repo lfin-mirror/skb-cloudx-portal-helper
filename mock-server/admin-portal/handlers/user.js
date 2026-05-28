@@ -169,4 +169,8 @@ module.exports = function (router, getScenario) {
     const fixturePath = fixtureMap[divCd] || fixtureMap.J003USE;
     res.json(require(fixturePath));
   });
+
+  router.get('/api/v1/mock/user-portal/menu', (req, res) => {
+    res.json(require('../fixtures/user/user-portal-menu.json'));
+  });
 };

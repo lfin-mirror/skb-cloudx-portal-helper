@@ -1,0 +1,146 @@
+[
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U001",
+    "menu_nm": "Cloud PC 관리",
+    "up_menu_id": null,
+    "menu_level": "1",
+    "bas_sort_ord": 1,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00101",
+    "menu_nm": "Cloud PC 신청",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 1,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00102",
+    "menu_nm": "개인 디스크 관리",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 2,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00103",
+    "menu_nm": "이용 내역",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 3,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00104",
+    "menu_nm": "스냅샷 및 복원",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 4,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00105",
+    "menu_nm": "Cloud PC 초기화",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 5,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00106",
+    "menu_nm": "Cloud PC 반납",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 6,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00107",
+    "menu_nm": "단말 접속 정보 등록",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 7,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00108",
+    "menu_nm": "단말 접속 정보 현황",
+    "up_menu_id": "U001",
+    "menu_level": "2",
+    "bas_sort_ord": 8,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U002",
+    "menu_nm": "고객지원",
+    "up_menu_id": null,
+    "menu_level": "1",
+    "bas_sort_ord": 2,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00201",
+    "menu_nm": "공지사항",
+    "up_menu_id": "U002",
+    "menu_level": "2",
+    "bas_sort_ord": 1,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00202",
+    "menu_nm": "매뉴얼",
+    "up_menu_id": "U002",
+    "menu_level": "2",
+    "bas_sort_ord": 2,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00203",
+    "menu_nm": "자주 묻는 질문",
+    "up_menu_id": "U002",
+    "menu_level": "2",
+    "bas_sort_ord": 3,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00204",
+    "menu_nm": "1:1 문의",
+    "up_menu_id": "U002",
+    "menu_level": "2",
+    "bas_sort_ord": 4,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00205",
+    "menu_nm": "다운로드",
+    "up_menu_id": "U002",
+    "menu_level": "2",
+    "bas_sort_ord": 5,
+    "show_yn": "Y"
+  },
+  {
+    "ptal_typ_cd": "A007USR",
+    "menu_id": "U00206",
+    "menu_nm": "장애처리 신청",
+    "up_menu_id": "U002",
+    "menu_level": "2",
+    "bas_sort_ord": 6,
+    "show_yn": "Y"
+  }
+]

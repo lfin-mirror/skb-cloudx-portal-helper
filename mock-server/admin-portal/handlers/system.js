@@ -1,5 +1,57 @@
+const portalMenuFixture = require('../fixtures/user/portal-menus.json');
+
+const portalMenuState = new Map();
+const activeTenantByPortalType = new Map();
+
+function clone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function getPortalMenuKey(tntId, ptalTypCd) {
+  return `${tntId}:${ptalTypCd || 'A007USR'}`;
+}
+
+function getPortalMenus(tntId, ptalTypCd) {
+  const key = getPortalMenuKey(tntId, ptalTypCd);
+  if (!portalMenuState.has(key)) {
+    portalMenuState.set(key, clone(portalMenuFixture));
+  }
+  return portalMenuState.get(key);
+}
+
+function toVisibleMenu(menu) {
+  const { show_yn, ...visibleMenu } = menu;
+  return visibleMenu;
+}
+
 module.exports = function (router, getScenario) {
   const actionSuccess = require('../fixtures/action-success.json');
+
+  router.get('/api/v1/portals/menus/:tnt_id', (req, res) => {
+    const ptalTypCd = req.query.ptal_typ_cd || 'A007USR';
+    activeTenantByPortalType.set(ptalTypCd, req.params.tnt_id);
+
+    res.json(clone(getPortalMenus(req.params.tnt_id, ptalTypCd)));
+  });
+
+  router.put('/api/v1/portals/menus/:tnt_id', (req, res) => {
+    const { ptal_typ_cd, menu_id, show_yn } = req.body || {};
+    const ptalTypCd = ptal_typ_cd || 'A007USR';
+    activeTenantByPortalType.set(ptalTypCd, req.params.tnt_id);
+
+    const menu = getPortalMenus(req.params.tnt_id, ptalTypCd).find((item) => item.menu_id === menu_id);
+    if (menu) {
+      menu.show_yn = show_yn === 'N' ? 'N' : 'Y';
+    }
+
+    res.json({ result: 'success' });
+  });
+
+  router.get('/api/v1/portals/:ptal_typ_cd/menus', (req, res) => {
+    const tntId = activeTenantByPortalType.get(req.params.ptal_typ_cd) || '02157c4b5e534cb492ed5c886d3b44d7';
+    const menus = getPortalMenus(tntId, req.params.ptal_typ_cd);
+    res.json(menus.filter((menu) => menu.show_yn === 'Y').map(toVisibleMenu));
+  });
 
   // ── 공지사항 ──────────────────────────────────────────────────
   router.get('/api/v1/system/notices', (req, res) => {
