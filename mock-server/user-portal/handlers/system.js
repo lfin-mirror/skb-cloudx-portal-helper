@@ -1,3 +1,10 @@
+const portalMenuFixture = require('../../admin-portal/fixtures/user/portal-menus.json');
+
+function toVisibleMenu(menu) {
+  const { show_yn, ...visibleMenu } = menu;
+  return visibleMenu;
+}
+
 module.exports = function (app, getScenario) {
   app.get('/api/v1/system/notices/count', (req, res) => {
     const fixture = require('../fixtures/system/notice-count.json');
@@ -62,5 +69,21 @@ module.exports = function (app, getScenario) {
   app.get('/api/v1/system/portals/guides', (req, res) => {
     const fixture = require('../fixtures/system/guides.json');
     res.json(fixture);
+  });
+
+  app.get('/api/v1/system/portals/:ptal_typ_cd/menus', (req, res) => {
+    if (req.query.scenario === 'error') {
+      return res.status(500).json({
+        data: null,
+        errCode: 'INTERNAL_SERVER_ERROR',
+        errMsg: 'mock portal menus error',
+      });
+    }
+
+    res.json(
+      portalMenuFixture
+        .filter((menu) => menu.ptal_typ_cd === req.params.ptal_typ_cd && menu.show_yn === 'Y')
+        .map(toVisibleMenu)
+    );
   });
 };
